@@ -4,7 +4,7 @@
 
 Clone repository ini, lalu buat symbolic link folder project ke dalam folder hybris.
 
-### Linux
+#### Linux
 
 ```bash
 cd demo_hybris
@@ -12,7 +12,7 @@ ln -s $(pwd)/custom $HYBRIS_HOME_DIR/hybris/bin/custom
 ln -s $(pwd)/config $HYBRIS_HOME_DIR/hybris/config
 ```
 
-### Windows
+#### Windows
 
 ```bash
 # make pr to update this section
@@ -22,7 +22,7 @@ ln -s $(pwd)/config $HYBRIS_HOME_DIR/hybris/config
 
 Masuk pada direktori platform pada hybris, kemudian jalankan ant all dan diteruskan dengan command ant initialize.
 
-### Linux
+#### Linux
 
 ```bash
 cd $HYBRIS_HOME_DIR/hybris/bin/platform
@@ -31,7 +31,7 @@ ant all
 ant initialize
 ```
 
-### Windows
+#### Windows
 
 ```bash
 cd $HYBRIS_HOME_DIR/hybris/bin/platform
@@ -44,7 +44,7 @@ ant initialize
 
 Untuk menjalankan project, eksekusi command berikut.
 
-### Linux
+#### Linux
 
 ```bash
 cd $HYBRIS_HOME_DIR/hybris/bin/platform
