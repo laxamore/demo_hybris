@@ -1,0 +1,19 @@
+{
+    "name": "demosmartedit",
+    "extension": {
+        "type": "inner",
+        "angularApp": "demosmartedit"
+    },
+    "typescript": {
+        "entry": "./src/index.ts",
+        "dist": "./dist/index.js"
+    },
+    "legacy": {
+        "js": ["./src/**/*.js"],
+        "ngTemplates": {
+            "moduleName": "demosmarteditTemplates",
+            "includePathInName": false,
+            "files": ["./src/**/*.html"]
+        }
+    }
+}
