@@ -6,10 +6,10 @@
 #
 
 # Language
-$lang=en
+$lang=id
 
 # SiteTheme
 UPDATE SiteTheme;code[unique=true];name[lang=$lang]
  ;light;"Light Theme"
-    ;dark;"Dark Theme"
-
+ ;dark;"Dark Theme"
+ 

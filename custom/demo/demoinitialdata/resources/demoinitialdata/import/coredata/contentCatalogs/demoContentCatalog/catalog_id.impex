@@ -2,14 +2,11 @@
 # Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
 # -----------------------------------------------------------------------
 #
-# Import Themes
+# Import the Content Catalog
 #
 
 # Language
-$lang=en
+$lang=id
 
-# SiteTheme
-UPDATE SiteTheme;code[unique=true];name[lang=$lang]
- ;light;"Light Theme"
-    ;dark;"Dark Theme"
-
+# Create Content Catalog
+UPDATE ContentCatalog;id[unique=true];name[lang=$lang]

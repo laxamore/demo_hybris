@@ -6,7 +6,7 @@
 #
 
 # Language
-$lang=en
+$lang=id
 
 # Languages
 UPDATE Language;isocode[unique=true];name[lang=$lang]
