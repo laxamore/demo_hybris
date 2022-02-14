@@ -17,7 +17,7 @@ $others = others(code, $catalogVersion)
 $data_sheet = data_sheet(code, $catalogVersion)
 $medias = medias(code, $catalogVersion)
 $galleryImages = galleryImages(qualifier, $catalogVersion)
-$siteResource = jar:org.demo.initialdata.setup.InitialDataSystemSetup&/demoinitialdata/import/sampledata/productCatalogs/$productCatalog
+$siteResource = jar:com.demo.initialdata.setup.InitialDataSystemSetup&/demoinitialdata/import/sampledata/productCatalogs/$productCatalog
 
 # Create Media
 INSERT_UPDATE Media; mediaFormat(qualifier); code[unique = true]         ; $media                                     ; mime[default = 'image/jpeg']; $catalogVersion; folder(qualifier)
