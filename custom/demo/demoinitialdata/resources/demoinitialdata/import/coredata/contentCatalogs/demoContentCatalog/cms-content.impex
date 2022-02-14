@@ -467,6 +467,7 @@ INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]     ; n
                          ;                          ; SiteLogoSlot           ; Default Site Logo Slot          ; true
                          ;                          ; HomepageNavLinkSlot    ; Default Homepage Link           ; true
                          ;                          ; MiniCartSlot           ; Mini Cart                       ; true
+                         ;                          ; TopNavigationBarSlot   ; Top Navigation Bar              ; true
                          ;                          ; NavigationBarSlot      ; Navigation Bar                  ; true
                          ;                          ; TabsSlot               ; Tabs                            ; true
                          ;                          ; WideContentSlot        ; Wide Content                    ; true

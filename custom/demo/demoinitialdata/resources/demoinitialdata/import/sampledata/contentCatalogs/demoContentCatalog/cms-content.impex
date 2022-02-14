@@ -1084,9 +1084,9 @@ INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]        
 
 
 
-INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]; cmsComponents(uid, $contentCV)
-#                         ;                          ; NavigationBarSlot ; DemoCategoryNavComponent,breadcrumbComponent
-                         ;                          ; NavigationBarSlot ; DemoCategoryNavComponent
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]   ; cmsComponents(uid, $contentCV)
+                         ;                          ; TopNavigationBarSlot ; TopHeaderNavComponent
+                         ;                          ; NavigationBarSlot    ; HeaderNavComponent
 
 
 # CMS Link Components
@@ -1169,22 +1169,27 @@ INSERT_UPDATE CMSNavigationNode; uid[unique = true]; $contentCV[unique = true]; 
 # End Root
 
 # Level 0
-INSERT_UPDATE CMSNavigationNode; uid[unique = true]; $contentCV[unique = true]; name            ; &nodeRef      ; parent(uid, $contentCV)
-                               ; HeaderNavNode     ;                          ; Header Nav Node ; HeaderNavNode ; DemoSiteRootNode
-                               ; FooterNavNode     ;                          ; Footer Nav Node ; FooterNavNode ; DemoSiteRootNode
+INSERT_UPDATE CMSNavigationNode; uid[unique = true]; $contentCV[unique = true]; name                ; &nodeRef         ; parent(uid, $contentCV)
+                               ; TopHeaderNavNode  ;                          ; Top Header Nav Node ; TopHeaderNavNode ; DemoSiteRootNode
+                               ; HeaderNavNode     ;                          ; Header Nav Node     ; HeaderNavNode    ; DemoSiteRootNode
+                               ; FooterNavNode     ;                          ; Footer Nav Node     ; FooterNavNode    ; DemoSiteRootNode
 # End Level 0
 
 # Level 1
-INSERT_UPDATE CMSNavigationNode; uid[unique = true]  ; $contentCV[unique = true]; name                 ; &nodeRef            ; parent(uid, $contentCV)
+INSERT_UPDATE CMSNavigationNode; uid[unique = true]           ; $contentCV[unique = true]; name                             ; &nodeRef                     ; parent(uid, $contentCV)
+# TopHeaderNavNode
+                               ; TopWarrantyActivationNavNode ;                          ; Top Warranty Activation Nav Node ; TopWarrantyActivationNavNode ; TopHeaderNavNode
+                               ; TopConfrimationNavNode       ;                          ; Top Confrimation Nav Node        ; TopConfrimationNavNode       ; TopHeaderNavNode
+                               ; TopOrderTrackingNavNode      ;                          ; Top Order Tracking Nav Node      ; TopOrderTrackingNavNode      ; TopHeaderNavNode
 # HeaderNavNode
-                               ; ProductNavNode      ;                          ; Product Nav Node     ; ProductNavNode      ; HeaderNavNode
-                               ; AboutUsNavNode      ;                          ; About Us Nav Node    ; AboutUsNavNode      ; HeaderNavNode
-                               ; BlogsNavNode        ;                          ; Blogs Nav Node       ; BlogsNavNode        ; HeaderNavNode
-                               ; TestimonialNavNode  ;                          ; Testimonial Nav Node ; TestimonialNavNode  ; HeaderNavNode
+                               ; ProductNavNode               ;                          ; Product Nav Node                 ; ProductNavNode               ; HeaderNavNode
+                               ; AboutUsNavNode               ;                          ; About Us Nav Node                ; AboutUsNavNode               ; HeaderNavNode
+                               ; BlogsNavNode                 ;                          ; Blogs Nav Node                   ; BlogsNavNode                 ; HeaderNavNode
+                               ; TestimonialNavNode           ;                          ; Testimonial Nav Node             ; TestimonialNavNode           ; HeaderNavNode
 # FooterNavNode
-                               ; ProductGroupNavNode ;                          ; Product Footer Group ; ProductGroupNavNode ; FooterNavNode
-                               ; SupportGroupNavNode ;                          ; Support Footer Group ; SupportGroupNavNode ; FooterNavNode
-                               ; AboutGroupNavNode   ;                          ; About Footer Group   ; AboutGroupNavNode   ; FooterNavNode
+                               ; ProductGroupNavNode          ;                          ; Product Footer Group             ; ProductGroupNavNode          ; FooterNavNode
+                               ; SupportGroupNavNode          ;                          ; Support Footer Group             ; SupportGroupNavNode          ; FooterNavNode
+                               ; AboutGroupNavNode            ;                          ; About Footer Group               ; AboutGroupNavNode            ; FooterNavNode
 # End Level 1
 
 # Level 2
@@ -1219,10 +1224,14 @@ INSERT_UPDATE CMSNavigationNode; uid[unique = true]; $contentCV[unique = true]; 
 # End Navigation Node
 
 # Navigation Component
-# Main Navigation Component
-INSERT_UPDATE CategoryNavigationComponent; $contentCV[unique = true]; uid[unique = true]       ; name                          ; navigationNode(&nodeRef); &componentRef            ; wrapAfter; styleClass
-                                         ;                          ; DemoCategoryNavComponent ; Category Navigation Component ; HeaderNavNode           ; DemoCategoryNavComponent ; 10       ;
-# End Main Navigation Component
+# Top Header Navigation Component
+INSERT_UPDATE CategoryNavigationComponent; $contentCV[unique = true]; uid[unique = true]    ; name                            ; navigationNode(&nodeRef); &componentRef         ; wrapAfter; styleClass
+                                         ;                          ; TopHeaderNavComponent ; Top Header Navigation Component ; TopHeaderNavNode        ; TopHeaderNavComponent ; 10       ;
+# End Top Header Navigation Component
+# Header Navigation Component
+INSERT_UPDATE CategoryNavigationComponent; $contentCV[unique = true]; uid[unique = true] ; name                        ; navigationNode(&nodeRef); &componentRef      ; wrapAfter; styleClass
+                                         ;                          ; HeaderNavComponent ; Header Navigation Component ; HeaderNavNode           ; HeaderNavComponent ; 10       ;
+# End Header Navigation Component
 # Footer Navigation Component
 INSERT_UPDATE FooterNavigationComponent; $contentCV[unique = true]; uid[unique = true]        ; name                        ; navigationNode(&nodeRef); &componentRef             ; wrapAfter; showLanguageCurrency
                                        ;                          ; FooterNavigationComponent ; Footer Navigation Component ; FooterNavNode           ; FooterNavigationComponent ; 4        ; true
@@ -1230,13 +1239,13 @@ INSERT_UPDATE FooterNavigationComponent; $contentCV[unique = true]; uid[unique =
 # End Navigation Component
 
 # CMS Navigation Entry
-# Main Navigation Entry
+# Header Navigation Entry
 INSERT_UPDATE CMSNavigationEntry; uid[unique = true]      ; $contentCV[unique = true]; name                              ; navigationNode(&nodeRef); item(CMSLinkComponent.uid, CMSLinkComponent.$contentCV);
                                 ; ProductNavNodeEntry     ;                          ; Product Navgaition Node Entry     ; ProductNavNode          ; ProductLink
                                 ; AboutUsNavNodeEntry     ;                          ; About Us Navigation Node Entry    ; AboutUsNavNode          ; AboutUsLink                                            ;
                                 ; BlogsNavNodeEntry       ;                          ; Blogs Navigation Node Entry       ; BlogsNavNode            ; BlogsLink                                              ;
                                 ; TestimonialNavNodeEntry ;                          ; Testimonial Navigation Node Entry ; TestimonialNavNode      ; TestimonialLink                                        ;
-# End Main Navigation Entry
+# End Header Navigation Entry
 # Footer Navigation Entry
 INSERT_UPDATE CMSNavigationEntry; uid[unique = true]             ; $contentCV[unique = true]; name                                      ; navigationNode(&nodeRef)  ; item(CMSLinkComponent.uid, CMSLinkComponent.$contentCV);
                                 ; ProductFooterNavNodeEntry      ;                          ; Product Navigation Node Entry             ; ProductFooterNavNode      ; ProductLink                                            ;
