@@ -17,3 +17,8 @@ UPDATE Category; code[unique = true]; $catalogVersion; name[lang = $lang]
                ; FASHION            ;                ; Fashion
                ; SHIRT              ;                ; Shirt
                ; TROUSER            ;                ; Trouser
+                ; BED ;; Bed
+                ; SOFA ;; Sofa
+                ; SOFABED ;; Sofa Bed
+                ; PILLOW    ;; Pillow
+                ; BOLSTER ;; Bolster
