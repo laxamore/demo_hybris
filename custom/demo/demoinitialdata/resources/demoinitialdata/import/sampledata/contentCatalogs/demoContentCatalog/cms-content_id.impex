@@ -16,8 +16,8 @@ $productCV=catalogVersion(catalog(id[default=$productCatalog]),version[default='
 $picture=media(code, $contentCV);
 $medias=medias(code, $contentCV);
 $mediaContainer=media(qualifier, $contentCV)[lang=$lang];
-$siteResource=jar:org.demo.initialdata.setup.InitialDataSystemSetup&/demoinitialdata/import/sampledata/contentCatalogs/$contentCatalog
-$productResource=jar:org.demo.initialdata.setup.InitialDataSystemSetup&/demoinitialdata/import/sampledata/productCatalogs/$productCatalog
+$siteResource=jar:com.demo.initialdata.setup.InitialDataSystemSetup&/demoinitialdata/import/sampledata/contentCatalogs/$contentCatalog
+$productResource=jar:com.demo.initialdata.setup.InitialDataSystemSetup&/demoinitialdata/import/sampledata/productCatalogs/$productCatalog
 
 # Language
 $lang=id
@@ -569,3 +569,23 @@ UPDATE FooterNavigationComponent;$contentCV[unique=true];uid[unique=true];notice
 UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[lang=en];
                             ;;DemoParagraphComponent;"Test Demo Page";
                             ;;DemoParagraphComponent2;"Test Demo Page - Bottom Slot";
+
+
+
+
+#Homepage Banner DEMO
+
+INSERT_UPDATE Media;mediaFormat(qualifier);$contentCV[unique=true];code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];mime[default='image/jpeg'];realfilename;folder(qualifier)[default='images'];altText
+                   ;widescreen;;banner-demo-project.jpg;$siteResource/images/banners/homepage/responsive/banner-demo-project.jpg;;banner-demo-project.jpg;;"Demo In The Box"
+
+
+
+INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
+                            ;demo-homepage-project-id;banner-demo-project.jpg
+
+
+UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
+                                      ;;BannerDemoInTheBox;demo-homepage-project-id
+
+
+
