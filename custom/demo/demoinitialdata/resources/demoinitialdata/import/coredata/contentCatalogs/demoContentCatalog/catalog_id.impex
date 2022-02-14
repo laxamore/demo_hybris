@@ -6,7 +6,8 @@
 #
 
 # Language
-$lang=id
+$lang = id
 
 # Create Content Catalog
-UPDATE ContentCatalog;id[unique=true];name[lang=$lang]
+UPDATE ContentCatalog; id[unique = true]      ; name[lang = $lang]
+                     ; demoContentCatalog ; "Demo Content Catalog"

@@ -127,22 +127,5 @@
         <exclude name="**/*.impex"/>
         	
     </patternset>
-
-    <target name="runantbind">
-       <bindImpexTemplate
-             addonname="demoinitialdata"
-             contentCatalog="demoContentCatalog"
-             productCatalog="demoProductCatalog"
-             storeName="demo"
-             classificationCatalog="demoClassificationCatalog"
-             storeUid="demo"
-             defaultPromoGrp="demoPromoGrp"
-             contentCatalogName="Demo Content Catalog"
-             productCatalogName="Demo Product Catalog"
-             vendor="demoVendor"
-             indexedType="demoProductType"
-             facetSearchConfigName="demoIndex"
-       />
-       <echo message="finished bind config"/>
-    </target>
+    
 </project>

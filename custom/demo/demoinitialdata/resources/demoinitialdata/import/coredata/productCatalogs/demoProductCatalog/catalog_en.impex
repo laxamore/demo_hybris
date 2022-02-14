@@ -10,3 +10,7 @@ $lang=en
 
 # Create Catalog
 UPDATE Catalog;id[unique=true];name[lang=$lang]
+;demoProductCatalog;"Demo Product Catalog"
+
+UPDATE ClassificationSystem;id[unique=true];name[lang=$lang]
+;demoClassificationCatalog;"Demo Classification Catalog"

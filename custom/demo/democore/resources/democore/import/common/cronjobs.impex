@@ -23,7 +23,7 @@ INSERT_UPDATE RetentionJob;code[unique=true];retentionRule(code);batchSize[defau
 ;ticketsFSStagnationJob;ticketsFSStagnationRule;
 
 # FS CRON JOB
-INSERT_UPDATE CronJob;code[unique=true];job(code)[unique=true];sessionLanguage(isoCode)[default=id]
+INSERT_UPDATE CronJob;code[unique=true];job(code)[unique=true];sessionLanguage(isoCode)[default=en]
 ;customersWithOrdersRetentionCronJob;customersWithOrdersRetentionJob;
 ;customersWithoutOrdersRetentionCronJob;customersWithoutOrdersRetentionJob;
 ;ordersRetentionCronJob;ordersRetentionJob;

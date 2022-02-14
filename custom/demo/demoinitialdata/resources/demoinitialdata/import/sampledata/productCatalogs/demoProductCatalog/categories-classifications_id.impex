@@ -4,18 +4,26 @@
 # ImpEx for Importing Category Classifications
 
 # Macros / Replacement Parameter definitions
-$productCatalog=demoProductCatalog
-$productCatalogName=Demo Product Catalog
-$classificationCatalog=demoClassificationCatalog
+$productCatalog = demoProductCatalog
+$productCatalogName = Demo Product Catalog
+$classificationCatalog = demoClassificationCatalog
 
-$classCatalogVersion=catalogversion(catalog(id[default='$classificationCatalog']),version[default='1.0'])[unique=true,default='$classificationCatalog:1.0']
-$classSystemVersion=systemVersion(catalog(id[default='$classificationCatalog']),version[default='1.0'])[unique=true]
+$classCatalogVersion = catalogversion(catalog(id[default='$classificationCatalog']), version[default='1.0'])[unique=true, default='$classificationCatalog:1.0']
+$classSystemVersion = systemVersion(catalog(id[default='$classificationCatalog']), version[default='1.0'])[unique=true]
 
 # Language
-$lang=id
+$lang = id
 
 # Insert Classifications
-UPDATE ClassificationClass;code[unique=true];$classCatalogVersion;name[lang=$lang]
+UPDATE ClassificationClass; $classCatalogVersion; code[unique = true]; name[lang = $lang]
+                          ;                     ; sizeshirt          ; Ukuran Baju
+                          ;                     ; sizetrouser        ; Ukuran Celana
+                          ;                     ; color              ; Warna
 
 # Insert Classification Attributes
-UPDATE ClassificationAttribute;code[unique=true];$classSystemVersion;name[lang=$lang]
+UPDATE ClassificationAttribute; $classSystemVersion; code[unique = true]; name[lang = $lang]
+                              ;                    ; dada               ; Dada
+                              ;                    ; pinggang           ; Pinggang
+                              ;                    ; panggul            ; Panggul
+                              ;                    ; panjang            ; Panjang
+                              ;                    ; warna              ; Warna

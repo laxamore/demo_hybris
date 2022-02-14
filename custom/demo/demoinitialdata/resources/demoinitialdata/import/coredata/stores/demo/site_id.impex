@@ -6,7 +6,8 @@
 #
 
 # Language
-$lang=id
+$lang = id
 
 # Create CMS Site
-UPDATE CMSSite;uid[unique=true];name[lang=$lang];locale[lang=$lang]
+UPDATE CMSSite; uid[unique = true]; name[lang = $lang]; locale[lang = $lang]
+              ; demo          ; Demo Site          ; "Demo Site"

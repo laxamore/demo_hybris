@@ -10,6 +10,7 @@ $lang=en
 
 # SiteTheme
 UPDATE SiteTheme;code[unique=true];name[lang=$lang]
- ;light;"Light Theme"
-    ;dark;"Dark Theme"
-
+ ;alpha;"Alpha"
+ ;black;"Black"
+ ;blue;"Blue"
+ ;lambda;"Lambda"

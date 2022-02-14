@@ -37,5 +37,4 @@
         <cms:component component="${feature}" element="div" class="yComponentWrapper"/>
     </cms:pageSlot>
 
-    <h1 class="hello">Hello World!!</h1>
 </template:page>

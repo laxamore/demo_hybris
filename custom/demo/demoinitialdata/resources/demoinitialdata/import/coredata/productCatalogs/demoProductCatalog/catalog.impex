@@ -8,7 +8,7 @@
 $productCatalog=demoProductCatalog
 $classificationCatalog=demoClassificationCatalog
 $catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
-$languages=id,en
+$languages=en,id
 
 # Product catalog
 INSERT_UPDATE Catalog;id[unique=true]
