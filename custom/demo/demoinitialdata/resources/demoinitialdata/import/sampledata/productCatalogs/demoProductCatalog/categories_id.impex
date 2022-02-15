@@ -17,3 +17,9 @@ UPDATE Category; code[unique = true]; $catalogVersion; name[lang = $lang]
                ; FASHION            ;                ; Pakaian
                ; SHIRT              ;                ; Baju
                ; TROUSER            ;                ; Celana
+
+               ; BED                ;                ; Bed
+               ; SOFA               ;                ; Sofa
+               ; SOFABED            ;                ; Sofa Bed
+               ; PILLOW             ;                ; Bantal
+               ; BOLSTER            ;                ; Guling

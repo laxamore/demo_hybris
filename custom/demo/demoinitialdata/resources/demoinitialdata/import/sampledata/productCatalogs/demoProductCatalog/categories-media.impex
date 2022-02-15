@@ -10,7 +10,7 @@ $productCatalogName=__PRODUCT_CATALOG_FULL_NAME__
 $catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
 $thumbnail=thumbnail(code, $catalogVersion)
 $picture=picture(code, $catalogVersion)
-$siteResource=jar:org.demo.initialdata.setup.InitialDataSystemSetup&/demoinitialdata/import/productCatalogs/$productCatalog
+$siteResource=jar:com.demo.initialdata.setup.InitialDataSystemSetup&/demoinitialdata/import/productCatalogs/$productCatalog
 
 # Import Category Media
 INSERT_UPDATE Media;code[unique=true];realfilename;@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator];mime[default='image/jpeg'];$catalogVersion

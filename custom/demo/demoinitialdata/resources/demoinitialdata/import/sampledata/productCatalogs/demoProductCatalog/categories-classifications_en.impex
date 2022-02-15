@@ -20,10 +20,21 @@ UPDATE ClassificationClass; $classCatalogVersion; code[unique = true]; name[lang
                           ;                     ; sizetrouser        ; Trouser Size
                           ;                     ; color              ; Color
 
+                          ;                     ; bed                ; Bed
+                          ;                     ; sofa               ; Sofa
+                          ;                     ; sofabed            ; Sofabed
+                          ;                     ; pillow             ; Pillow
+                          ;                     ; bolster            ; Bolster
+
+
 # Insert Classification Attributes
 UPDATE ClassificationAttribute; $classSystemVersion; code[unique = true]; name[lang = $lang]
                               ;                    ; dada               ; Chest
                               ;                    ; pinggang           ; Waist
                               ;                    ; panggul            ; Hip
-                              ;                    ; panjang            ; Inside
+                              ;                    ; pnjang             ; Inside
                               ;                    ; warna              ; Color
+
+                              ;                    ; panjang            ; Length
+                              ;                    ; lebar              ; Width
+                              ;                    ; tinggi             ; Height
