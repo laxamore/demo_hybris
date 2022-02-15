@@ -23,13 +23,24 @@ INSERT_UPDATE ClassificationClass; $classCatalogVersion; code[unique = true]; al
                                  ;                     ; sizetrouser        ;
                                  ;                     ; color              ;
 
+                                 ;                     ; bed                ;
+                                 ;                     ; sofa               ;
+                                 ;                     ; sofabed            ;
+                                 ;                     ; pillow             ;
+                                 ;                     ; bolster            ;
+
 # Insert Classification Attributes
 INSERT_UPDATE ClassificationAttribute; $classSystemVersion; code[unique = true]
                                      ;                    ; dada
                                      ;                    ; pinggang
                                      ;                    ; panggul
-                                     ;                    ; panjang
+                                     ;                    ; pnjang
                                      ;                    ; warna
+
+                                     ;                    ; panjang
+                                     ;                    ; lebar
+                                     ;                    ; tinggi
+
 
 # Links ClassificationClasses to Categories
 INSERT_UPDATE CategoryCategoryRelation; $categories; $supercategories
@@ -37,10 +48,27 @@ INSERT_UPDATE CategoryCategoryRelation; $categories; $supercategories
                                       ; TROUSER    ; sizetrouser
                                       ; FASHION    ; color
 
+                                      ; BED        ; bed
+                                      ; SOFA       ; sofa
+                                      ; SOFABED    ; sofabed
+                                      ; PILLOW     ; pillow
+                                      ; BOLSTER    ; bolster
+
 # Assign ClassificationAttribute to ClassificationClass
 INSERT_UPDATE ClassAttributeAssignment; $class      ; $attribute; position; $unit; attributeType(code[default = string]); multiValued[default = false]; range[default = false]; localized[default = false]
                                       ; sizeshirt   ; dada      ; 1       ;      ;                                      ;                             ;                       ;
                                       ; sizeshirt   ; pinggang  ; 2       ;      ;                                      ;                             ;                       ;
                                       ; sizetrouser ; panggul   ; 1       ;      ;                                      ;                             ;                       ;
-                                      ; sizetrouser ; panjang   ; 2       ;      ;                                      ;                             ;                       ;
+                                      ; sizetrouser ; pnjang    ; 2       ;      ;                                      ;                             ;                       ;
                                       ; color       ; warna     ; 1       ;      ;                                      ;                             ;                       ;
+
+                                      ; bed         ; panjang   ; 1       ;      ;                                      ;                             ;                       ;
+                                      ; bed         ; lebar     ; 2       ;      ;                                      ;                             ;                       ;
+                                      ; bed         ; tinggi    ; 3       ;      ;                                      ;                             ;                       ;
+                                      ; sofa        ; panjang   ; 1       ;      ;                                      ;                             ;                       ;
+                                      ; sofabed     ; panjang   ; 1       ;      ;                                      ;                             ;                       ;
+                                      ; pillow      ; panjang   ; 1       ;      ;                                      ;                             ;                       ;
+                                      ; pillow      ; lebar     ; 2       ;      ;                                      ;                             ;                       ;
+                                      ; pillow      ; tinggi    ; 3       ;      ;                                      ;                             ;                       ;
+                                      ; bolster     ; panjang   ; 1       ;      ;                                      ;                             ;                       ;
+                                      ; bolster     ; lebar     ; 2       ;      ;                                      ;                             ;                       ;
