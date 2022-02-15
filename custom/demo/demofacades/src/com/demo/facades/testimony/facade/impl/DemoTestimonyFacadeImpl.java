@@ -10,12 +10,12 @@ import java.util.List;
 public class DemoTestimonyFacadeImpl implements DemoTestimonyFacade {
 
     @Resource
-    private DemoTestimonyService demoTestimonyService;
+    private DemoTestimonyFacade demoTestimonyFacade;
 
     @Override
-    public Testimony getProductById(String name){
+    public Testimony getTestimonyById(String name){
 
-        Testimony testimony = demoTestimonyService.getTestimonyById(name);
+        Testimony testimony = demoTestimonyFacade.getTestimonyById(name);
         if(null != testimony){
             return testimony;
         } else {
@@ -23,9 +23,9 @@ public class DemoTestimonyFacadeImpl implements DemoTestimonyFacade {
         }
     }
     @Override
-    public List<Testimony> getProduct(){
+    public List<Testimony> getTestimony(){
 
-        Testimony testimony = (Testimony) demoTestimonyService.getTestimony();
+        Testimony testimony = (Testimony) demoTestimonyFacade.getTestimony();
         if(null != testimony){
             return (List<Testimony>) testimony;
         } else {

@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface DemoTestimonyFacade {
 
-    Testimony getProductById(String name);
-    List<Testimony> getProduct();
+    Testimony getTestimonyById(String name);
+    List<Testimony> getTestimony();
 }
