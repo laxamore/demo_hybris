@@ -6,21 +6,133 @@
 #% impex.setLocale(Locale.ENGLISH);
 
 # Macros / Replacement Parameter definitions
-$productCatalog=demoProductCatalog
-$productCatalogName=Demo Product Catalog
-$classificationCatalog=demoClassificationCatalog
+$productCatalog = demoProductCatalog
+$productCatalogName = Demo Product Catalog
+$classificationCatalog = demoClassificationCatalog
 
-$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
-$clAttrModifiers=system='$classificationCatalog',version='1.0',translator=de.hybris.platform.catalog.jalo.classification.impex.ClassificationAttributeTranslator
+$catalogVersion = catalogversion(catalog(id[default=$productCatalog]), version[default='Staged'])[unique=true, default=$productCatalog:Staged]
+$clAttrModifiers = system='$classificationCatalog', version='1.0', translator=de.hybris.platform.catalog.jalo.classification.impex.ClassificationAttributeTranslator, lang=en
 
 # Insert Product Classifications
 
 # replace <string> and <int> with actual values
-$feature1=@<string>, <int>[$clAttrModifiers];  
-$feature2=@<string>, <int>[$clAttrModifiers];  
-$feature3=@<string>, <int>[$clAttrModifiers];  
-$feature4=@<string>, <int>[$clAttrModifiers];  
-$feature6=@<string>, <int>[$clAttrModifiers];  
-$feature7=@<string>, <int>[$clAttrModifiers];  
-$feature8=@<string>, <int>[$clAttrModifiers];  
-INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature6;$feature7;$feature8;$catalogVersion;
+$feature1 = @panjang[$clAttrModifiers];
+$feature2 = @lebar[$clAttrModifiers];
+$feature3 = @tinggi[$clAttrModifiers];
+
+
+INSERT_UPDATE Product; code[unique = true]; $feature1; $feature2; $feature3; $catalogVersion;
+                     ; IA1                ; 90       ; 200      ;          ;
+                     ; IA2                ; 100      ; 200      ;          ;
+                     ; IA3                ; 120      ; 200      ;          ;
+                     ; IA4                ; 140      ; 200      ;          ;
+                     ; IA5                ; 160      ; 200      ;          ;
+                     ; IA6                ; 180      ; 200      ;          ;
+                     ; IA7                ; 200      ; 200      ;          ;
+
+                     ; IX1                ; 90       ; 200      ; 27       ;
+                     ; IX2                ; 100      ; 200      ; 27       ;
+                     ; IX3                ; 120      ; 200      ; 27       ;
+                     ; IX4                ; 140      ; 200      ; 27       ;
+                     ; IX5                ; 160      ; 200      ; 27       ;
+                     ; IX6                ; 180      ; 200      ; 27       ;
+                     ; IX7                ; 200      ; 200      ; 27       ;
+
+                     ; SJ1                ; 90       ; 200      ; 23       ;
+                     ; SJ2                ; 100      ; 200      ; 23       ;
+                     ; SJ3                ; 120      ; 200      ; 23       ;
+                     ; SJ4                ; 140      ; 200      ; 23       ;
+                     ; SJ5                ; 160      ; 200      ; 23       ;
+                     ; SJ6                ; 180      ; 200      ; 23       ;
+                     ; SJ7                ; 200      ; 200      ; 23       ;
+
+                     ; SJPT1              ; 90       ; 200      ; 27       ;
+                     ; SJPT2              ; 100      ; 200      ; 27       ;
+                     ; SJPT3              ; 120      ; 200      ; 27       ;
+                     ; SJPT4              ; 140      ; 200      ; 27       ;
+                     ; SJPT5              ; 160      ; 200      ; 27       ;
+                     ; SJPT6              ; 180      ; 200      ; 27       ;
+                     ; SJPT7              ; 200      ; 200      ; 27       ;
+
+                     ; ID1                ; 90       ; 200      ; 27       ;
+                     ; ID2                ; 100      ; 200      ; 27       ;
+                     ; ID3                ; 120      ; 200      ; 27       ;
+                     ; ID4                ; 140      ; 200      ; 27       ;
+                     ; ID5                ; 160      ; 200      ; 27       ;
+                     ; ID6                ; 180      ; 200      ; 27       ;
+                     ; ID7                ; 200      ; 200      ; 27       ;
+
+                     ; I1011              ; 90       ; 200      ; 24       ;
+                     ; I1012              ; 100      ; 200      ; 24       ;
+                     ; I1013              ; 120      ; 200      ; 24       ;
+                     ; I1014              ; 140      ; 200      ; 24       ;
+                     ; I1015              ; 160      ; 200      ; 24       ;
+                     ; I1016              ; 180      ; 200      ; 24       ;
+                     ; I1017              ; 200      ; 200      ; 24       ;
+
+                     ; IH1                ; 90       ; 200      ; 20       ;
+                     ; IH2                ; 100      ; 200      ; 20       ;
+                     ; IH3                ; 120      ; 200      ; 20       ;
+                     ; IH4                ; 140      ; 200      ; 20       ;
+                     ; IH5                ; 160      ; 200      ; 20       ;
+                     ; IH6                ; 180      ; 200      ; 20       ;
+                     ; IH7                ; 200      ; 200      ; 20       ;
+
+                     ; IH151              ; 90       ; 200      ; 20       ;
+                     ; IH152              ; 100      ; 200      ; 20       ;
+                     ; IH153              ; 120      ; 200      ; 20       ;
+                     ; IH154              ; 140      ; 200      ; 20       ;
+                     ; IH155              ; 160      ; 200      ; 20       ;
+                     ; IH156              ; 180      ; 200      ; 20       ;
+                     ; IH157              ; 200      ; 200      ; 20       ;
+
+                     ; IK1                ; 90       ; 200      ; 23       ;
+                     ; IK2                ; 100      ; 200      ; 23       ;
+                     ; IK3                ; 120      ; 200      ; 23       ;
+                     ; IK4                ; 140      ; 200      ; 23       ;
+                     ; IK5                ; 160      ; 200      ; 23       ;
+                     ; IK6                ; 180      ; 200      ; 23       ;
+                     ; IK7                ; 200      ; 200      ; 23       ;
+
+                     ; IP1                ; 90       ; 200      ; 28       ;
+                     ; IP2                ; 100      ; 200      ; 28       ;
+                     ; IP3                ; 120      ; 200      ; 28       ;
+                     ; IP4                ; 140      ; 200      ; 28       ;
+                     ; IP5                ; 160      ; 200      ; 28       ;
+                     ; IP6                ; 180      ; 200      ; 28       ;
+                     ; IP7                ; 200      ; 200      ; 28       ;
+
+                     ; OH1                ; 90       ; 200      ; 28       ;
+                     ; OH2                ; 100      ; 200      ; 28       ;
+                     ; OH3                ; 120      ; 200      ; 28       ;
+                     ; OH4                ; 140      ; 200      ; 28       ;
+                     ; OH5                ; 160      ; 200      ; 28       ;
+                     ; OH6                ; 180      ; 200      ; 28       ;
+                     ; OH7                ; 200      ; 200      ; 28       ;
+
+                     ; OL1                ; 90       ; 200      ; 28       ;
+                     ; OL2                ; 100      ; 200      ; 28       ;
+                     ; OL3                ; 120      ; 200      ; 28       ;
+                     ; OL4                ; 140      ; 200      ; 28       ;
+                     ; OL5                ; 160      ; 200      ; 28       ;
+                     ; OL6                ; 180      ; 200      ; 28       ;
+                     ; OL7                ; 200      ; 200      ; 28       ;
+
+                     ; OP1                ; 90       ; 200      ; 28       ;
+                     ; OP2                ; 100      ; 200      ; 28       ;
+                     ; OP3                ; 120      ; 200      ; 28       ;
+                     ; OP4                ; 140      ; 200      ; 28       ;
+                     ; OP5                ; 160      ; 200      ; 28       ;
+                     ; OP6                ; 180      ; 200      ; 28       ;
+                     ; OP7                ; 200      ; 200      ; 28       ;
+
+                     ; S1                 ;          ;          ;          ;
+                     ; S2                 ;          ;          ;          ;
+                     ; SB1                ;          ;          ;          ;
+                     ; SB2                ;          ;          ;          ;
+                     ; KL1                ; 80       ; 200      ;          ;
+                     ; G1                 ; 79       ; 33       ;          ;
+                     ; B1                 ; 68       ; 45       ; 5        ;
+
+
+
