@@ -606,3 +606,17 @@ INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=tr
 UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
                                       ;;BannerDemoAbout;demo-about-project
 
+
+
+#DEMO About tentang
+
+UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[$lang]
+;;DemoAboutTentang;"
+<div class=""about-tentang"">
+    <h2>Tentang INTHEBOX</h2><br>
+    <p>INTHEBOX adalah merek kasur berkualitas dan perlengkapan tidur dengan material premium.</p>
+    <p>Produk lainnya terdiri dari bantal, guling, dan sofa bed. Semua pilihan produk menggunakan material berkualitas.</p>
+</div>
+"
+
+

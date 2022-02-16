@@ -12,8 +12,6 @@
         <cms:component component="${feature}" element="div" class="no-space yComponentWrapper"/>
     </cms:pageSlot>
 
-    <p>test</p>
-
     <cms:pageSlot position="Section3" var="feature" element="div" class="row no-margin" >
         <cms:component component="${feature}" element="div" class="no-space yComponentWrapper"/>
     </cms:pageSlot>
