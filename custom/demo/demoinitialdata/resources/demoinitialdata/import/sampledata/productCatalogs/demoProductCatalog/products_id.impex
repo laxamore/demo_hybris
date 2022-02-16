@@ -1,34 +1,3 @@
-## -----------------------------------------------------------------------
-## Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
-## -----------------------------------------------------------------------
-## ImpEx for Importing Product Localisations
-#
-## Macros / Replacement Parameter definitions
-#$productCatalog = demoProductCatalog
-#$productCatalogName = Demo Product Catalog
-#
-#$catalogVersion = catalogversion(catalog(id[default=$productCatalog]), version[default='Staged'])[unique=true, default=$productCatalog:Staged]
-#
-## Language
-#$lang = id
-#
-## Update allProducts with localisations
-#UPDATE DemoProduct; code[unique = true]; $catalogVersion; name[lang = $lang]; description[lang = $lang]
-#                      ; PULLNBEAR          ;                ; Pull & Bear       ; Pull & Bear T-Shirt
-#                      ; CONVERSE           ;                ; Converse          ; Converse T-Shirt
-#                      ; HURLEY             ;                ; Hurley            ; Hurley T-Shirt
-#                      ; COLE               ;                ; Cole              ; Cole Jeans
-#
-#UPDATE DemoVariantProduct; code[unique = true]; name[lang = $lang]
-#                             ; PB-SHIRT-1         ; Pull & Bear Shirt 1
-#                             ; PB-SHIRT-2         ; Pull & Bear Shirt 1
-#                             ; CV-S1              ; Converse Shirt 1
-#                             ; CV-S2              ; Converse Shirt 2
-#                             ; HURLEY-T-1         ; Husley Shirt 1
-#                             ; HURLEY-T-2         ; Husley Shirt 1
-#                             ; COLE-T-1           ; Cole Jeans 1
-#                             ; COLE-C-1           ; Cole Chino 1
-
 # -----------------------------------------------------------------------
 # Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
 # -----------------------------------------------------------------------
@@ -45,11 +14,6 @@ $approved = approvalstatus(code)[default='approved']
 
 # Insert Products
 INSERT_UPDATE DemoProduct; code[unique = true]; name                                          ; $supercategories; varianttype(code)[default = 'DemoVariantProduct']; $approved; unit(code)[default = pieces]; $catalogVersion
-#                             ; PULLNBEAR          ; Pull & Bear ; "SHIRT"         ;                                                      ;          ;                             ;
-#                             ; CONVERSE           ; Converse    ; "SHIRT"         ;                                                      ;          ;                             ;
-#                             ; HURLEY             ; Hurley      ; "SHIRT"         ;                                                      ;          ;                             ;
-#                             ; COLE               ; Cole        ; "TROUSER"       ;                                                      ;          ;                             ;
-
 # INPUT KASUR
                          ; INTHEBOX-ALPHA     ; INTHEBOX ALPHA                                ; "BED"           ;                                                  ;          ;                             ;
                          ; INTHEBOX-X         ; INTHEBOX X                                    ; "BED"           ;                                                  ;          ;                             ;
@@ -71,16 +35,6 @@ INSERT_UPDATE DemoProduct; code[unique = true]; name                            
                          ; SOFA-BED           ; SOFA BED                                      ; "SOFABED"       ;                                                  ;          ;                             ;
                          ; BANTAL             ; BANTAL                                        ; "PILLOW"        ;                                                  ;          ;                             ;
                          ; GULING             ; GULING                                        ; "BOLSTER"       ;                                                  ;          ;                             ;
-
-#INSERT_UPDATE DemoVariantProduct; $baseProduct; code[unique = true]; sku   ; material; unit(code)[default = pieces]; $approved; $catalogVersion; $supercategories; description
-#                                    ; PULLNBEAR   ; PB-SHIRT-1         ; PBT1  ; Cotton  ;                             ;          ;                ; "SHIRT"         ; Pull & Bear T-Shirt
-#                                    ; PULLNBEAR   ; PB-SHIRT-2         ; PBT2  ; Cotton  ;                             ;          ;                ; "SHIRT"         ; Pull & Bear T-Shirt
-#                                    ; CONVERSE    ; CV-S1              ; CVS1  ; Cotton  ;                             ;          ;                ; "SHIRT"         ; Converse T-Shirt
-#                                    ; CONVERSE    ; CV-S2              ; CVS2  ; Cotton  ;                             ;          ;                ; "SHIRT"         ; Converse T-Shirt
-#                                    ; HURLEY      ; HURLEY-T-1         ; HT1   ; Cotton  ;                             ;          ;                ; "SHIRT"         ; Hurley T-Shirt
-#                                    ; HURLEY      ; HURLEY-T-2         ; HT2   ; Cotton  ;                             ;          ;                ; "SHIRT"         ; Hurley T-Shirt
-#                                    ; COLE        ; COLE-T-1           ; COL1  ; Jeans   ;                             ;          ;                ; "TROUSER"       ; Cole Jeans
-#                                    ; COLE        ; COLE-C-1           ; COLC1 ; Chino   ;                             ;          ;                ; "TROUSER"       ; Cole Chino
 
 INSERT_UPDATE DemoVariantProduct; $baseProduct      ; code[unique = true]; type              ; name                                                           ; size       ; $approved; $catalogVersion; $supercategories; desc                                                                                                                                          ; description
 # INPUT KASUR

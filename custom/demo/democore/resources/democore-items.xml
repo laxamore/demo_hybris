@@ -109,9 +109,9 @@
                 <attributes>
                     <attribute qualifier="searchable" type="java.lang.Boolean">
                         <description>Is searchable Product</description>
-                        <modifiers />
+                        <modifiers/>
                         <defaultvalue>Boolean.valueOf(true)</defaultvalue>
-                        <persistence type="property" />
+                        <persistence type="property"/>
                     </attribute>
                 </attributes>
             </itemtype>
@@ -136,7 +136,8 @@
                 </attributes>
             </itemtype>
 
-            <itemtype code="Testimony" autocreate="true" generate="true" extends="GenericItem" jaloclass="com.demo.core.jalo.Testimony">
+            <itemtype code="Testimony" autocreate="true" generate="true" extends="GenericItem"
+                      jaloclass="com.demo.core.jalo.Testimony">
                 <deployment table="Testimony" typecode="15140"/>
                 <attributes>
                     <attribute qualifier="code" type="java.lang.String">
@@ -156,18 +157,45 @@
                     </attribute>
                     <attribute qualifier="paragraph" type="java.lang.String">
                         <description>Testimony Paragraph</description>
-                        <modifiers read="true" write="true" search="true" optional="true" unique="false"/>
+                        <modifiers/>
+                        <persistence type="property">
+                            <columntype database="oracle">
+                                <value>CLOB</value>
+                            </columntype>
+                            <columntype database="sap">
+                                <value>NCLOB</value>
+                            </columntype>
+                            <columntype>
+                                <value>HYBRIS.LONG_STRING</value>
+                            </columntype>
+                        </persistence>
+                    </attribute>
+                    <attribute qualifier="time" type="java.util.Date">
+                        <description>Testimony Creation Time</description>
+                        <modifiers initial="true"/>
                         <persistence type="property"/>
                     </attribute>
-                    <attribute qualifier="time" type="java.lang.String">
-                        <description>Testimony Time</description>
-                        <modifiers read="true" write="true" search="true" optional="true" unique="false"/>
+                    <attribute type="java.lang.Double" qualifier="rating">
+                        <description>
+                            Testimony Rating
+                        </description>
+                        <modifiers optional="false"/>
+                        <defaultvalue>5.0</defaultvalue>
                         <persistence type="property"/>
                     </attribute>
+                    <!--                    <attribute qualifier="time" type="java.util.Date">-->
+                    <!--                        <description>Testimony Time</description>-->
+                    <!--                        <modifiers read="true" write="true" search="true" optional="true" unique="false"/>-->
+                    <!--                        <persistence type="property">-->
+                    <!--                            <columntype>-->
+                    <!--                                <value>HYBRIS.LONG_STRING</value>-->
+                    <!--                            </columntype>-->
+                    <!--                        </persistence>-->
+                    <!--                    </attribute>-->
                 </attributes>
                 <indexes>
                     <index name="testimony_idx" unique="true">
-                        <key attribute="code" />
+                        <key attribute="code"/>
                     </index>
                 </indexes>
             </itemtype>
