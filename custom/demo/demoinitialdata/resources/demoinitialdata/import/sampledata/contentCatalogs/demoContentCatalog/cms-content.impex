@@ -1306,20 +1306,20 @@ INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];positi
 
 # Homepage Banner DEMO
 
-#INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];name;urlLink;&componentRef
-#                                             ;;BannerDemoInTheBox;Banner Demo InTheBox;;BannerDemoInTheBox
-#                                             ;;BannerDemoInTheBox-2;Banner Demo InTheBox 2;;BannerDemoInTheBox-2
+INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];name;urlLink;&componentRef
+                                             ;;BannerDemoInTheBox;Banner Demo InTheBox;;BannerDemoInTheBox
+                                             ;;BannerDemoInTheBox-2;Banner Demo InTheBox 2;;BannerDemoInTheBox-2
 
 
-INSERT_UPDATE BannerComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef
-                             ;;BannerDemoInTheBoxComponent;Banner Demo InTheBox;BannerDemoInTheBoxComponent
-                             ;;BannerDemoInTheBoxComponent-2;Banner Demo InTheBox 2;BannerDemoInTheBoxComponent-2
+#INSERT_UPDATE BannerComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef
+#                             ;;BannerDemoInTheBoxComponent;Banner Demo InTheBox;BannerDemoInTheBoxComponent
+#                             ;;BannerDemoInTheBoxComponent-2;Banner Demo InTheBox 2;BannerDemoInTheBoxComponent-2
 
 
-INSERT_UPDATE RotatingImagesComponent;$contentCV[unique=true];uid[unique=true];name;banners(&componentRef);&componentRef
-                                     ;;BannerDemoCarousel;Demo Banner inthebox Carousel;BannerDemoInTheBoxComponent,BannerDemoInTheBoxComponent-2;BannerDemoCarousel
+#INSERT_UPDATE RotatingImagesComponent;$contentCV[unique=true];uid[unique=true];name;banners(&componentRef);&componentRef
+#                                     ;;BannerDemoCarousel;Demo Banner inthebox Carousel;BannerDemoInTheBoxComponent,BannerDemoInTheBoxComponent-2;BannerDemoCarousel
 
 
 INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active[default=true];cmsComponents(&componentRef)
-                         ;;Section1Slot-Homepage;Section 1 Banner;;BannerDemoCarousel
+                         ;;Section1Slot-Homepage;Section 1 Banner;;BannerDemoInTheBox,BannerDemoInTheBox-2
 

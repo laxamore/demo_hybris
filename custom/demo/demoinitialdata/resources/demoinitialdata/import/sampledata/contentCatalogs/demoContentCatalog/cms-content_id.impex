@@ -581,18 +581,16 @@ INSERT_UPDATE Media;mediaFormat(qualifier);$contentCV[unique=true];code[unique=t
 
 
 
-#INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
-#                            ;demo-homepage-project-id;banner-demo-project.jpg
-#                            ;demo-homepage-project-id-2;banner-demo-project-2.jpg
+INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
+                            ;demo-homepage-project-id;banner-demo-project.jpg
+                            ;demo-homepage-project-id-2;banner-demo-project-2.jpg
 
-#UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
-#                                      ;;BannerDemoInTheBox;demo-homepage-project-id
-#                                      ;;BannerDemoInTheBox-2;demo-homepage-project-id-2
+UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
+                                      ;;BannerDemoInTheBox;demo-homepage-project-id
+                                      ;;BannerDemoInTheBox-2;demo-homepage-project-id-2
 
-UPDATE BannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=$lang]
-                      ;;BannerDemoInTheBoxComponent;banner-demo-project.jpg
-                      ;;BannerDemoInTheBoxComponent-2;banner-demo-project-2.jpg
-
-
+#UPDATE BannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=$lang]
+#                      ;;BannerDemoInTheBoxComponent;banner-demo-project.jpg
+#                      ;;BannerDemoInTheBoxComponent-2;banner-demo-project-2.jpg
 
 
