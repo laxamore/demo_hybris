@@ -595,4 +595,14 @@ UPDATE BannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=$l
 
 
 
+#Banner About DEMO
+
+INSERT_UPDATE Media;mediaFormat(qualifier);$contentCV[unique=true];code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];mime[default='image/png'];realfilename;folder(qualifier)[default='images'];altText
+                   ;widescreen;;about-banner.png;$siteResource/images/banners/homepage/responsive/about-banner.png;;about-banner.png;;"Banner About"
+
+INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
+                            ;demo-about-project;about-banner.png
+
+UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
+                                      ;;BannerDemoAbout;demo-about-project
 

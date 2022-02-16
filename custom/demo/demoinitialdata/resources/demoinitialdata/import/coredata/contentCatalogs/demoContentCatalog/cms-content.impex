@@ -947,3 +947,55 @@ INSERT_UPDATE ContentPage;$contentCV[unique=true];uid[unique=true];name;masterTe
                          ;;demo-page;Demo Page;DemoPageTemplate;demo-page
                          ;;testing-page;Testing Page;DemoPageTemplate;testing-page
 
+
+
+#DEMO about INTHEBOX
+
+
+INSERT_UPDATE PageTemplate;$contentCV[unique=true];uid[unique=true];name;frontendTemplateName;restrictedPageTypes(code);active[default=true]
+                          ;;DemoAboutTemplate;demo about template;about/DemoAboutTemplatePage;CategoryPage,ContentPage;false
+
+INSERT_UPDATE ContentSlotName;name[unique=true];template(uid,$contentCV)[unique=true][default='DemoAboutTemplate'];validComponentTypes(code);compTypeGroup(code)
+                             ;SiteLogo;;;logo
+                             ;HeaderLinks;;;headerlinks
+                             ;SearchBox;;;searchbox
+                             ;MiniCart;;;minicart
+                             ;NavigationBar;;;navigation
+                             ;Section1;;;wide
+                             ;Section2;;;wide
+                             ;Section3;;;wide
+                             ;Section4;;;wide
+                             ;Section5;;;wide
+                             ;Section6;;;wide
+                             ;VariantSelector;;ProductVariantSelectorComponent;narrow
+                             ;AddToCart;;ProductAddToCartComponent;narrow
+                             ;CrossSelling;;ProductReferencesComponent;narrow
+                             ;UpSelling;;ProductReferencesComponent;narrow
+                             ;Footer;;;footer
+                             ;Tabs;;CMSTabParagraphContainer
+                             ;TopHeaderSlot;;;wide
+                             ;BottomHeaderSlot;;;wide
+                             ;PlaceholderContentSlot;;;
+
+
+UPDATE PageTemplate;$contentCV[unique=true];uid[unique=true];velocityTemplate[translator=de.hybris.platform.commerceservices.impex.impl.FileLoaderValueTranslator]
+                   ;;DemoAboutTemplate;$jarResourceCms/structure-view/structure_demoAboutTemplate.vm
+
+INSERT_UPDATE ContentSlotForTemplate;$contentCV[unique=true];uid[unique=true];position[unique=true];pageTemplate(uid,$contentCV)[unique=true][default='DemoAboutTemplate'];contentSlot(uid,$contentCV)[unique=true];allowOverwrite
+;;SiteLogo-DemoAbout;SiteLogo;;SiteLogoSlot;true
+;;HomepageLink-DemoAbout;HomepageNavLink;;HomepageNavLinkSlot;true
+;;NavigationBar-DemoAbout;NavigationBar;;NavigationBarSlot;true
+;;MiniCart-DemoAbout;MiniCart;;MiniCartSlot;true
+;;Footer-DemoAbout;Footer;;FooterSlot;true
+;;HeaderLinks-DemoAbout;HeaderLinks;;HeaderLinksSlot;true
+;;SearchBox-DemoAbout;SearchBox;;SearchBoxSlot;true
+;;TopHeaderSlot-DemoAbout;TopHeaderSlot;;TopHeaderSlot;true
+;;BottomHeaderSlot-DemoAbout;BottomHeaderSlot;;BottomHeaderSlot;true
+;;PlaceholderContentSlot-DemoAbout;PlaceholderContentSlot;;PlaceholderContentSlot;true
+
+
+INSERT_UPDATE ContentPage;$contentCV[unique=true];uid[unique=true];name;masterTemplate(uid,$contentCV);label;defaultPage[default='true'];approvalStatus(code)[default='approved'];homepage[default='true']
+                         ;;DemoAboutPageTemplate;Demo About page template;DemoAboutTemplate;about;;;
+
+
+
