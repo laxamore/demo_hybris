@@ -13,13 +13,45 @@
 
 <div class="demo-headers">
     <div class="demo-top-header">
-        <nav:demoTopHeaderNavigation/>
+        <div class="demo-top-header-paragraph">
+            <div class="paragraph1">
+                <cms:pageSlot position="TopLeftParagraph" var="component">
+                    <c:if test="${component.uid=='TopHeaderLeftLogoComponent1'}">
+                        <cms:component component="${component}"/>
+                    </c:if>
+                </cms:pageSlot>
+
+                <cms:pageSlot position="TopLeftParagraph" var="component">
+                    <c:if test="${component.uid=='TopHeaderLeftParagraphComponent1'}">
+                        <cms:component component="${component}"/>
+                    </c:if>
+                </cms:pageSlot>
+            </div>
+
+            <div class="paragraph2">
+                <cms:pageSlot position="TopLeftParagraph" var="component">
+                    <c:if test="${component.uid=='TopHeaderLeftLogoComponent2'}">
+                        <cms:component component="${component}"/>
+                    </c:if>
+                </cms:pageSlot>
+
+                <cms:pageSlot position="TopLeftParagraph" var="component">
+                    <c:if test="${component.uid=='TopHeaderLeftParagraphComponent2'}">
+                        <cms:component component="${component}"/>
+                    </c:if>
+                </cms:pageSlot>
+            </div>
+        </div>
+
+        <div class="demo-top-header-nav">
+            <nav:demoTopHeaderNavigation/>
+        </div>
     </div>
     <div class="demo-bottom-header">
         <div class="demo-bottom-header-content">
             <%--Website Logo--%>
             <div class="demo-web-logo">
-                <cms:pageSlot position="SiteLogo" var="logo" limit="1">
+                <cms:pageSlot position="HeaderLogo" var="logo" limit="1">
                     <cms:component component="${logo}" element="div" class="yComponentWrapper"/>
                 </cms:pageSlot>
             </div>
@@ -31,22 +63,18 @@
 
             <%--Login--%>
             <div class="demo-bottom-header-login">
-                <cms:pageSlot position="NavigationBar" var="component">
-                    <c:if test="${component.uid=='LoginLink'}">
-                        <c:if test="${component.visible}">
-                            <cms:component component="${component}"/>
-                        </c:if>
+                <cms:pageSlot position="LoginLink" var="component">
+                    <c:if test="${component.visible}">
+                        <cms:component component="${component}"/>
                     </c:if>
                 </cms:pageSlot>
             </div>
 
             <%--Cart--%>
             <div class="demo-bottom-header-cart">
-                <cms:pageSlot position="NavigationBar" var="component">
-                    <c:if test="${component.uid=='CartHeaderLogoComponent'}">
-                        <c:if test="${component.visible}">
-                            <cms:component component="${component}"/>
-                        </c:if>
+                <cms:pageSlot position="CartLink" var="component">
+                    <c:if test="${component.visible}">
+                        <cms:component component="${component}"/>
                     </c:if>
                 </cms:pageSlot>
             </div>

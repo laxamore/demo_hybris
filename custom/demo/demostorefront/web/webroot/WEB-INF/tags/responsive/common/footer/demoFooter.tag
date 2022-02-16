@@ -8,4 +8,3 @@
         <cms:component component="${feature}"/>
     </cms:pageSlot>
 </footer>
-

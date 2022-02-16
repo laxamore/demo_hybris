@@ -104,5 +104,74 @@
             </itemtype>
         </typegroup>
 
+        <typegroup name="Demo">
+            <itemtype code="DemoProduct" autocreate="true" generate="true" extends="Product">
+                <attributes>
+                    <attribute qualifier="searchable" type="java.lang.Boolean">
+                        <description>Is searchable Product</description>
+                        <modifiers />
+                        <defaultvalue>Boolean.valueOf(true)</defaultvalue>
+                        <persistence type="property" />
+                    </attribute>
+                </attributes>
+            </itemtype>
+
+            <itemtype code="DemoVariantProduct" extends="VariantProduct" autocreate="true" generate="true">
+                <attributes>
+                    <attribute qualifier="type" type="java.lang.String">
+                        <description>Type</description>
+                        <modifiers search="true" write="true" read="true" optional="true" initial="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="size" type="java.lang.String">
+                        <description>Size</description>
+                        <modifiers search="true" write="true" read="true" optional="true" initial="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="desc" type="java.lang.String">
+                        <description>Price</description>
+                        <modifiers search="true" write="true" read="true" optional="true" initial="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                </attributes>
+            </itemtype>
+
+            <itemtype code="Testimony" autocreate="true" generate="true" extends="GenericItem" jaloclass="com.demo.core.jalo.Testimony">
+                <deployment table="Testimony" typecode="15140"/>
+                <attributes>
+                    <attribute qualifier="code" type="java.lang.String">
+                        <description>Testimony Code</description>
+                        <modifiers read="true" write="true" search="true" optional="false" unique="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="name" type="java.lang.String">
+                        <description>Testimony Name</description>
+                        <modifiers read="true" write="true" search="true" optional="true" unique="false"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="text" type="java.lang.String">
+                        <description>Testimony Text</description>
+                        <modifiers read="true" write="true" search="true" optional="true" unique="false"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="paragraph" type="java.lang.String">
+                        <description>Testimony Paragraph</description>
+                        <modifiers read="true" write="true" search="true" optional="true" unique="false"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="time" type="java.lang.String">
+                        <description>Testimony Time</description>
+                        <modifiers read="true" write="true" search="true" optional="true" unique="false"/>
+                        <persistence type="property"/>
+                    </attribute>
+                </attributes>
+                <indexes>
+                    <index name="testimony_idx" unique="true">
+                        <key attribute="code" />
+                    </index>
+                </indexes>
+            </itemtype>
+        </typegroup>
+
     </itemtypes>
 </items>

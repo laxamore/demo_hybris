@@ -4,5 +4,5 @@
 
 
 <cms:pageSlot position="NavigationBar" var="component">
-    <cms:component component="${component}"/>
+	<cms:component component="${component}"/>
 </cms:pageSlot>
