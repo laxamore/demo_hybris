@@ -44,7 +44,7 @@ INSERT_UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]   
                               ;                          ; PrivacyPolicyLink               ; Privacy Policy Link                 ; /privacy-policy        ; PrivacyPolicyLink               ; PrivacyPolicyLink               ;
                               ;                          ; OfflineStoreLink                ; Offline Show Link                   ; /offline-store         ; OfflineStoreLink                ; OfflineStoreLink                ;
                               ;                          ; PaymentConfrimationLink         ; Payment Confrimation Link           ; /payment-confrimation  ; PaymentConfrimationLink         ; PaymentConfrimationLink         ;
-                              ;                          ; ProductLink                     ; Product Link                        ; /catalog               ; ProductLink                     ; ProductLink                     ;
+                              ;                          ; ProductLink                     ; Product Link                        ; /c/catalog             ; ProductLink                     ; ProductLink                     ;
                               ;                          ; AboutUsLink                     ; About us Link                       ; /Bed/Sofa/c/SOFA       ; AboutUsLink                     ; AboutUsLink                     ;
                               ;                          ; BlogsLink                       ; Blogs Link                          ; /Bed/Sofa/c/SOFA       ; BlogsLink                       ; BlogsLink                       ;
                               ;                          ; TestimonialLink                 ; Testimonial Link                    ; /testimony             ; TestimonialLink                 ; TestimonialLink                 ;
@@ -203,4 +203,28 @@ INSERT_UPDATE CMSNavigationEntry; uid[unique = true]             ; $contentCV[un
                                 ; TestimonialFooterNavNodeEntry  ;                          ; Testimonial Footer Navigation Node Entry  ; TestimonialFooterNavNode  ; TestimonialLink                                        ;
 # End Footer Navigation Entry
 # End CMS Navigation Entry
+
+# ProductGridPage
+INSERT_UPDATE ListOrderFormAction; $contentCV[unique = true]; uid[unique = true]  ; url        ; name              ; &actionRef
+                                 ;                          ; ListOrderFormAction ; /orderForm ; Order Form Action ; ListOrderFormAction
+
+INSERT_UPDATE ListPickUpInStoreAction; $contentCV[unique = true]; uid[unique = true]      ; url                                         ; name                        ; &actionRef
+                                     ;                          ; ListPickUpInStoreAction ; /store-pickup/{productCode}/pointOfServices ; Pickup in Store Action List ; ListPickUpInStoreAction
+
+INSERT_UPDATE ListAddToCartAction; $contentCV[unique = true]; uid[unique = true]  ; url       ; name                            ; &actionRef
+                                 ;                          ; ListAddToCartAction ; /cart/add ; Product Add To Cart Action List ; ListAddToCartAction
+
+INSERT_UPDATE ProductRefinementComponent; $contentCV[unique = true]; uid[unique = true]       ; name                               ; &componentRef
+                                        ;                          ; RefinementFacetComponent ; Product Refinement Facet Component ; RefinementFacetComponent
+
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]         ; name                               ; active; cmsComponents(&componentRef)
+                         ;                          ; ProductGridSlot            ; Product Grid Slot for Product List ; true  ; ProductGridComponent
+                         ;                          ; ProductLeftRefinementsSlot ; Product Left Refinements           ; true  ; RefinementFacetComponent
+
+INSERT_UPDATE ProductGridComponent; $contentCV[unique = true]; uid[unique = true]   ; name                   ; actions(uid, $contentCV)                    ; &componentRef
+                                  ;                          ; ProductGridComponent ; Product Grid Component ; ListPickUpInStoreAction,ListAddToCartAction ; ProductGridComponent
+
+UPDATE ProductGridComponent; $contentCV[unique = true]; uid[unique = true]   ; actions(&actionRef)[mode = append]
+                           ;                          ; ProductGridComponent ; ListOrderFormAction
+# End ProductGridPage
 # End Navigation

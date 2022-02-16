@@ -21,7 +21,6 @@
 # Languages
 INSERT_UPDATE Language; isocode[unique = true]; fallbackLanguages(isocode); active[default = true]
                       ; id                    ;                           ; ;
-                      ; en                    ; id                        ; ;
 
 # Currencies
 INSERT_UPDATE Currency; isocode[unique = true]; conversion; digits; symbol

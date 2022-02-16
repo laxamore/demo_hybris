@@ -16,7 +16,7 @@ $jarResourceCms = $config-jarResourceCmsValue
 # HomePage
 # Create Content Slots
 INSERT_UPDATE PageTemplate; $contentCV[unique = true]; uid[unique = true]; name               ; frontendTemplateName         ; restrictedPageTypes(code); active[default = true]
-                          ;                          ; HomePageTemplate  ; Home Page Template ; layout/demoLandingLayoutPage ; ContentPage,CategoryPage ;
+                          ;                          ; HomePageTemplate  ; Home Page Template ; layout/demoLandingLayoutPage ; ContentPage              ;
 
 INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]        ; name                          ; active
 # Headers
@@ -88,7 +88,69 @@ INSERT_UPDATE ContentSlotForTemplate; $contentCV[unique = true]; uid[unique = tr
 # End Footers
 
 INSERT_UPDATE ContentPage; $contentCV[unique = true]; uid[unique = true]; name     ; masterTemplate(uid, $contentCV); label    ; defaultPage[default = 'true']; approvalStatus(code)[default = 'approved']; homepage[default = 'true']
-                         ;                          ; homepage          ; Homepage ; HomePageTemplate               ; homepage ;                              ;                                           ;
+                         ;                          ; homePage          ; HomePage ; HomePageTemplate               ; homepage ;                              ;                                           ;
 # End HomePage
 
+
+
+
+
+# Product Grid page
+INSERT_UPDATE PageTemplate; $contentCV[unique = true]; uid[unique = true]      ; name                       ; frontendTemplateName         ; restrictedPageTypes(code); active[default = true]
+                          ;                          ; ProductGridPageTemplate ; Product Grid Page Template ; category/demoProductGridPage ; ProductPage              ;
+
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]         ; name                          ; active
+                         ;                          ; BannerProductGridPageSlot  ; Banner Product Grid Page Slot ; true
+                         ;                          ; ProductLeftRefinementsSlot ; Product Left Refinements Slot ; true
+                         ;                          ; ProductGridSlot            ; Product Grid Slot             ; true
+
+INSERT_UPDATE ContentSlotName; name[unique = true]    ; template(uid, $contentCV)[unique = true][default = 'ProductGridPageTemplate']; validComponentTypes(code); compTypeGroup(code)
+# Headers
+                             ; TopLeftParagraph       ;                                                                              ;                          ; narrow
+                             ; TopRightNavigationBar  ;                                                                              ;                          ; navigation
+                             ; HeaderLogo             ;                                                                              ;                          ; logo
+                             ; MiddleNavigationBar    ;                                                                              ;                          ; navigation
+                             ; LoginLink              ;                                                                              ;                          ; navigation
+                             ; CartLink               ;                                                                              ;                          ; navigation
+# End Headers
+# Category Page Content
+                             ; Banner                 ;                                                                              ;                          ; wide
+                             ; ProductLeftRefinements ;                                                                              ;                          ; narrow
+                             ; ProductGrid            ;                                                                              ;                          ; wide
+# End Category Page Content
+# Footers
+                             ; FooterLogo             ;                                                                              ;                          ; logo
+                             ; FooterSubscribe        ;                                                                              ;                          ; narrow
+                             ; FooterHeader           ;                                                                              ;                          ; footer
+                             ; FooterNavigation       ;                                                                              ;                          ; navigation
+                             ; FooterContact          ;                                                                              ;                          ; footer
+                             ; FooterCopyright        ;                                                                              ;                          ; footer
+# End Footers
+#
+INSERT_UPDATE ContentSlotForTemplate; $contentCV[unique = true]; uid[unique = true]                     ; position[unique = true]; pageTemplate(uid, $contentCV)[unique = true][default = 'ProductGridPageTemplate']; contentSlot(uid, $contentCV)[unique = true]; allowOverwrite
+# Headers
+                                    ;                          ; TopLeftParagraph-ProductGridPage       ; TopLeftParagraph       ;                                                                                  ; TopLeftParagraphSlot                       ; true
+                                    ;                          ; TopRightNavigationBar-ProductGridPage  ; TopRightNavigationBar  ;                                                                                  ; TopRightNavigationBarSlot                  ; true
+                                    ;                          ; HeaderLogo-ProductGridPage             ; HeaderLogo             ;                                                                                  ; HeaderLogoSlot                             ; true
+                                    ;                          ; MiddleNavigationBar-ProductGridPage    ; MiddleNavigationBar    ;                                                                                  ; MiddleNavigationBarSlot                    ; true
+                                    ;                          ; LoginLink-ProductGridPage              ; LoginLink              ;                                                                                  ; LoginLinkSlot                              ; true
+                                    ;                          ; CartLink-ProductGridPage               ; CartLink               ;                                                                                  ; CartLinkSlot                               ; true
+# End Headers
+# Category Page Content
+                                    ;                          ; Banner-ProductGridPage                 ; Banner                 ;                                                                                  ; BannerProductGridPageSlot                  ; true
+                                    ;                          ; ProductLeftRefinements-ProductGridPage ; ProductLeftRefinements ;                                                                                  ; ProductLeftRefinementsSlot                 ; true
+                                    ;                          ; ProductGrid-ProductGridPage            ; ProductGrid            ;                                                                                  ; ProductGridSlot                            ; true
+# End Category Page Content
+# Footers
+                                    ;                          ; FooterLogo-ProductGridPage             ; FooterLogo             ;                                                                                  ; FooterLogoSlot                             ; true
+                                    ;                          ; FooterSubscribe-ProductGridPage        ; FooterSubscribe        ;                                                                                  ; FooterSubscribeSlot                        ; true
+                                    ;                          ; FooterHeader-ProductGridPage           ; FooterHeader           ;                                                                                  ; FooterHeaderSlot                           ; true
+                                    ;                          ; FooterNavigation-ProductGridPage       ; FooterNavigation       ;                                                                                  ; FooterNavigationSlot                       ; true
+                                    ;                          ; FooterContact-ProductGridPage          ; FooterContact          ;                                                                                  ; FooterContactSlot                          ; true
+                                    ;                          ; FooterCopyright-ProductGridPage        ; FooterCopyright        ;                                                                                  ; FooterCopyrightSlot                        ; true
+# End Footers
+
+INSERT_UPDATE CategoryPage; $contentCV[unique = true]; uid[unique = true]; name              ; masterTemplate(uid, $contentCV); defaultPage; approvalStatus(code)[default = 'approved']
+                          ;                          ; productGrid       ; Product Grid Page ; ProductGridPageTemplate        ; true       ;
+# End Category Page
 # End Demo Site
