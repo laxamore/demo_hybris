@@ -26,20 +26,12 @@ $jarResourceCms = jar:com.demo.initialdata.setup.InitialDataSystemSetup&/demoini
 UPDATE CMSSite; uid[unique = true]; defaultPreviewCategory(code, $productCV); defaultPreviewProduct(code, $productCV); defaultPreviewCatalog(id)
               ; demo              ; FASHION                                 ; PB-SHIRT-1                             ; $productCatalog
 
-# Site Logo
-INSERT_UPDATE Media; $contentCV[unique = true]; code[unique = true]              ; realfilename       ; @media[translator = de.hybris.platform.impex.jalo.media.MediaDataTranslator]; mime[default = 'image/jpeg']; altText            ; folder(qualifier)[default = 'images']
-                   ;                          ; /images/theme/logo-hybris.png    ; logo-hybris.png    ; $siteResource/images/theme/logo-hybris.png                                  ; image/png                   ; hybris Accelerator ;
-                   ;                          ; /images/theme/logo-hybris_zh.png ; logo-hybris_zh.png ; $siteResource/images/theme/logo-hybris_zh.png                               ; image/png                   ; hybris Accelerator ;
 
-# Site Logo Component
-INSERT_UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]; name                ; &componentRef     ; urlLink
-                                   ;                          ; SiteLogoComponent ; Site Logo Component ; SiteLogoComponent ; "/"
 
 # CMS Link Components
 INSERT_UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]     ; name                          ; url                                       ; &linkRef               ; &componentRef          ; target(code)[default = 'sameWindow']; $category; $product;
                               ;                          ; HomepageNavLink        ; Home Page Nav Link            ; /                                         ; HomepageNavLink        ; HomepageNavLink        ;                                     ;          ;         ;
                               ;                          ; StoreFinderLink        ; Store Finder Link             ; /store-finder                             ; StoreFinderLink        ; StoreFinderLink        ;                                     ;          ;         ;
-                              ;                          ; LoginLink              ; Login Link                    ; /login                                    ; LoginLink              ; LoginLink              ;                                     ;          ;         ;
                               ;                          ; AllBrandsCategoryLink  ; All Brands Category Link      ; /c/FASHION                                ; AllBrandsCategoryLink  ; AllBrandsCategoryLink  ;                                     ; FASHION  ;         ;
                               ;                          ; AllBedsCategoryLink    ; All Beds Link                 ; /c/FASHION                                ; AllBedsCategoryLink    ; AllBedsCategoryLink    ;                                     ; FASHION  ;         ;
                               ;                          ; SpringBedCategoryLink  ; Spring Bed Link               ; /c/SHIRT                                  ; SpringBedCategoryLink  ; SpringBedCategoryLink  ;                                     ; SHIRT    ;         ;
@@ -1084,9 +1076,6 @@ INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]        
 
 
 
-INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]   ; cmsComponents(uid, $contentCV)
-                         ;                          ; TopNavigationBarSlot ; TopHeaderNavComponent
-                         ;                          ; NavigationBarSlot    ; HeaderNavComponent
 
 
 # CMS Link Components
@@ -1144,20 +1133,70 @@ INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true] 
 
 # Demo Website
 
-# CMS Link
-INSERT_UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]     ; name                     ; url                    ; &linkRef               ; &componentRef          ; target(code)[default = 'sameWindow']; $category; $product;
-                              ;                          ; WarrantyActivationLink ; Warranty Activation Link ; /warranty-registration ; WarrantyActivationLink ; WarrantyActivationLink ;                                     ;          ;         ;
-                              ;                          ; OrderTrackingLink      ; Order Tracking Link      ; /waybill-status        ; OrderTrackingLink      ; OrderTrackingLink      ;                                     ;          ;         ;
-                              ;                          ; FAQLink                ; FAQ Link                 ; /faq                   ; FAQLink                ; FAQLink                ;                                     ;          ;         ;
-                              ;                          ; HelpLink               ; Help Link                ; /help                  ; HelpLink               ; HelpLink               ;                                     ;          ;         ;
-                              ;                          ; TermsAndConditionLink  ; Terms And Condition Link ; /terms-and-conditions  ; TermsAndConditionLink  ; TermsAndConditionLink  ;                                     ;          ;         ;
-                              ;                          ; PrivacyPolicyLink      ; Privacy Policy Link      ; /privacy-policy        ; PrivacyPolicyLink      ; PrivacyPolicyLink      ;                                     ;          ;         ;
-                              ;                          ; OfflineStoreLink       ; Offline Shopw Link       ; /offline-store         ; OfflineStoreLink       ; OfflineStoreLink       ;                                     ;          ;         ;
+# Content Slot
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]; cmsComponents(uid, $contentCV)
+                         ;                          ; TopHeaderSlot     ; TopHeaderNavComponent,TopHeaderLeftContainer1,TopHeaderLeftContainer2
+                         ;                          ; NavigationBarSlot ; HeaderNavComponent,LoginLink,CartHeaderLogoComponent
+# End Content Slot
+
+# Start CMS Link
+INSERT_UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]              ; name                                ; url                    ; &linkRef                        ; &componentRef                   ; target(code)[default = 'sameWindow']; $category; $product
+                              ;                          ; LoginLink                       ; Login Link                          ; /login                 ; LoginLink                       ; LoginLink                       ;                                     ;          ;
+                              ;                          ; WarrantyActivationLink          ; Warranty Activation Link            ; /warranty-registration ; WarrantyActivationLink          ; WarrantyActivationLink          ;                                     ;          ;
+                              ;                          ; TopHeaderWarrantyActivationLink ; Top Header Warranty Activation Link ; /warranty-registration ; TopHeaderWarrantyActivationLink ; TopHeaderWarrantyActivationLink ;                                     ;          ;
+                              ;                          ; OrderTrackingLink               ; Order Tracking Link                 ; /waybill-status        ; OrderTrackingLink               ; OrderTrackingLink               ;                                     ;          ;
+                              ;                          ; FAQLink                         ; FAQ Link                            ; /faq                   ; FAQLink                         ; FAQLink                         ;                                     ;          ;
+                              ;                          ; HelpLink                        ; Help Link                           ; /help                  ; HelpLink                        ; HelpLink                        ;                                     ;          ;
+                              ;                          ; TermsAndConditionLink           ; Terms And Condition Link            ; /terms-and-conditions  ; TermsAndConditionLink           ; TermsAndConditionLink           ;                                     ;          ;
+                              ;                          ; PrivacyPolicyLink               ; Privacy Policy Link                 ; /privacy-policy        ; PrivacyPolicyLink               ; PrivacyPolicyLink               ;                                     ;          ;
+                              ;                          ; OfflineStoreLink                ; Offline Show Link                   ; /offline-store         ; OfflineStoreLink                ; OfflineStoreLink                ;                                     ;          ;
+                              ;                          ; PaymentConfrimationLink         ; Payment Confrimation Link           ; /payment-confrimation  ; PaymentConfrimationLink         ; PaymentConfrimationLink         ;                                     ;          ;
 # End CMS Link
 
+# Start Site Logo
+# Site Logo Media
+INSERT_UPDATE Media; $contentCV[unique = true]; code[unique = true]                   ; realfilename          ; @media[translator = de.hybris.platform.impex.jalo.media.MediaDataTranslator]; mime[default = 'image/jpeg']; altText        ; folder(qualifier)[default = 'images']
+                   ;                          ; /images/headers/header-logo-white.png ; header-logo-white.png ; $siteResource/images/headers/header-logo-white.png                          ; image/png                   ; Demo Site Logo ;
+# End Logo Media
+# Site Logo Component
+INSERT_UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]; name                ; &componentRef     ; urlLink
+                                   ;                          ; SiteLogoComponent ; Site Logo Component ; SiteLogoComponent ; "/"
+# End Logo Component
+# End Site Logo
 
+# Start Top Left Header
+# Top Left Header Logo Media
+INSERT_UPDATE Media; $contentCV[unique = true]; code[unique = true]                           ; realfilename                  ; @media[translator = de.hybris.platform.impex.jalo.media.MediaDataTranslator]; mime[default = 'image/jpeg']; altText; folder(qualifier)[default = 'images']
+                   ;                          ; /images/headers/header-icon-10y-warranty.png  ; header-icon-10y-warranty.png  ; $siteResource/images/headers/header-icon-10y-warranty.png                   ; image/png                   ;        ;
+                   ;                          ; /images/headers/header-icon-free-shipping.png ; header-icon-free-shipping.png ; $siteResource/images/headers/header-icon-free-shipping.png                  ; image/png                   ;        ;
+# End Top Left Header Logo Media
+# Top Left Header Logo Component
+INSERT_UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]          ; name                             ; &componentRef
+                                   ;                          ; TopHeaderLeftLogoComponent1 ; Top Header Left Logo Component 1 ; TopHeaderLeftLogoComponent1
+                                   ;                          ; TopHeaderLeftLogoComponent2 ; Top Header Left Logo Component 2 ; TopHeaderLeftLogoComponent2
+# End Top Left Header Logo Component
+# Top Left Header Paragraph
+INSERT_UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]               ; name                                  ; &componentRef
+                                   ;                          ; TopHeaderLeftParagraphComponent1 ; Top Header Left Paragraph Component 1 ; TopHeaderLeftParagraphComponent1
+                                   ;                          ; TopHeaderLeftParagraphComponent2 ; Top Header Left Paragraph Component 2 ; TopHeaderLeftParagraphComponent2
+# End Left Header Paragraph
+# Top Left Header Paragraph Container
+INSERT_UPDATE CMSTabParagraphContainer; $contentCV[unique = true]; uid[unique = true]      ; name                        ; visible; simpleCMSComponents(uid, $contentCV)                         ; &componentRef
+                                      ;                          ; TopHeaderLeftContainer1 ; Top Header Left Container 1 ; true   ; TopHeaderLeftLogoComponent1,TopHeaderLeftParagraphComponent1 ; TopHeaderLeftContainer1
+                                      ;                          ; TopHeaderLeftContainer2 ; Top Header Left Contaier 2  ; true   ; TopHeaderLeftLogoComponent2,TopHeaderLeftParagraphComponent2 ; TopHeaderLeftContainer2
+# Top Left Header Paragraph Container
+# End Top Left Header
 
-
+# Cart Header
+# Cart Header Logo Media
+INSERT_UPDATE Media; $contentCV[unique = true]; code[unique = true]           ; realfilename  ; @media[translator = de.hybris.platform.impex.jalo.media.MediaDataTranslator]; mime[default = 'image/jpeg']; altText; folder(qualifier)[default = 'images']
+                   ;                          ; /images/headers/cart-icon.png ; cart-icon.png ; $siteResource/images/headers/cart-icon.png                                  ; image/png                   ;        ;
+# End Cart Header Logo Media
+# Cart Header Logo Component
+INSERT_UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]      ; name                       ; &componentRef           ; urlLink
+                                   ;                          ; CartHeaderLogoComponent ; Cart Header Logo Component ; CartHeaderLogoComponent ; "/cart"
+# End Cart Header Logo Component
+# End Cart Header
 
 # Navigation
 # Start Navigation Node
@@ -1239,6 +1278,12 @@ INSERT_UPDATE FooterNavigationComponent; $contentCV[unique = true]; uid[unique =
 # End Navigation Component
 
 # CMS Navigation Entry
+# Top Header Navigation Entry
+INSERT_UPDATE CMSNavigationEntry; uid[unique = true]                ; $contentCV[unique = true]; name                                          ; navigationNode(&nodeRef)     ; item(CMSLinkComponent.uid, CMSLinkComponent.$contentCV)
+                                ; TopWarrantyActivationNavNodeEntry ;                          ; Top Warranty Activation Navgaition Node Entry ; TopWarrantyActivationNavNode ; TopHeaderWarrantyActivationLink
+                                ; TopConfrimationNavNodeEntry       ;                          ; Top Confrimation Navigation Node Entry        ; TopConfrimationNavNode       ; PaymentConfrimationLink
+                                ; TopOrderTrackingNavNodeEntry      ;                          ; Top Order Tracking Node Entry                 ; TopOrderTrackingNavNode      ; OrderTrackingLink
+# End Top Header Navigation Entry
 # Header Navigation Entry
 INSERT_UPDATE CMSNavigationEntry; uid[unique = true]      ; $contentCV[unique = true]; name                              ; navigationNode(&nodeRef); item(CMSLinkComponent.uid, CMSLinkComponent.$contentCV);
                                 ; ProductNavNodeEntry     ;                          ; Product Navgaition Node Entry     ; ProductNavNode          ; ProductLink

@@ -27,9 +27,6 @@ $hoverOverImage = hoverOverImage(code, $contentCV)
 $Image = image(code, $contentCV)
 
 
-# Site Logo Component
-UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]; $picture[lang = $lang]
-                            ;                          ; SiteLogoComponent ; /images/theme/logo-hybris.png ;
 
 # CMS Link Components
 UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]; linkName[lang = $lang]
@@ -519,20 +516,51 @@ UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]     
                             ;                          ; DemoParagraphComponent  ; "Test Demo Page"               ;
                             ;                          ; DemoParagraphComponent2 ; "Test Demo Page - Bottom Slot" ;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Demo Website
+
+# Site Logo Component
+UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]; $picture[lang = $lang]
+                            ;                          ; SiteLogoComponent ; /images/headers/header-logo-white.png ;
+
+# Top Left Header Logo Component
+UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]          ; $picture[lang = $lang]
+                            ;                          ; TopHeaderLeftLogoComponent1 ; /images/headers/header-icon-10y-warranty.png
+                            ;                          ; TopHeaderLeftLogoComponent2 ; /images/headers/header-icon-free-shipping.png
+
+# Top Left Header Paragraph Component
+UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]               ; content[lang = $lang];
+                            ;                          ; TopHeaderLeftParagraphComponent1 ; "Garansi 10 Tahun"
+                            ;                          ; TopHeaderLeftParagraphComponent2 ; "Free Shipping pulau Jawa & Sumatera"
+# Cart Icon Logo
+UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]      ; $picture[lang = $lang]
+                            ;                          ; CartHeaderLogoComponent ; /images/headers/cart-icon.png
+
 # Navigation
 # Header
 # CMS Navigation Nodes
-UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]; linkName[lang = $lang]
-                       ;                          ; AboutUsLink       ; "Tentang Kami"
-                       ;                          ; BlogsLink         ; "Blog"
-                       ;                          ; ProductLink       ; "Produk"
-                       ;                          ; TestimonialLink   ; "Testimoni"
-
-UPDATE CMSNavigationNode; $contentCV[unique = true]; uid[unique = true] ; title[lang = $lang]
-                        ;                          ; ProductNavNode     ; "Garansi"
-                        ;                          ; AboutUsNavNode     ; "Tentang Kami"
-                        ;                          ; BlogsNavNode       ; "Blog"
-                        ;                          ; TestimonialNavNode ; "Testimoni"
+UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]              ; linkName[lang = $lang]
+                       ;                          ; AboutUsLink                     ; "Tentang Kami"
+                       ;                          ; BlogsLink                       ; "Blog"
+                       ;                          ; ProductLink                     ; "Produk"
+                       ;                          ; TestimonialLink                 ; "Testimoni"
+                       ;                          ; TopHeaderWarrantyActivationLink ; "Garansi"
+                       ;                          ; PaymentConfrimationLink         ; "Konfrimasi"
+                       ;                          ; LoginLink                       ; "LOGIN"
 
 # CMS Navigation Nodes
 UPDATE CMSNavigationNode; $contentCV[unique = true]; uid[unique = true]; title[lang = $lang]
