@@ -7,19 +7,20 @@
 <div class="demo-footer">
     <div class="demo-footer-top">
         <div class="demo-footer-container">
-            <cms:pageSlot position="FooterLogo1" var="feature" class="demo-footer-logo-1">
+            <cms:pageSlot position="FooterLogo1" var="feature" element="div" class="demo-footer-logo-1">
                 <cms:component component="${feature}"/>
             </cms:pageSlot>
 
             <user:demoSubscribe/>
 
-            <cms:pageSlot position="FooterLogo2" var="feature" class="demo-footer-logo-2">
+            <cms:pageSlot position="FooterLogo2" var="feature" element="div" class="demo-footer-logo-2">
                 <cms:component component="${feature}"/>
             </cms:pageSlot>
         </div>
 
         <div class="demo-footer-container">
-            <cms:pageSlot position="FooterNavigation" var="feature" class="demo-footer-top-navigation-group">
+            <cms:pageSlot position="FooterNavigation" var="feature" element="div"
+                          class="demo-footer-top-navigation-group">
                 <c:forEach items="${feature.navigationNode.children}" var="childLevel1">
                     <div class="demo-footer-top-navigation">
                         <div class="demo-footer-top-navigation-title">${fn:escapeXml(childLevel1.title)}</div>
@@ -38,17 +39,19 @@
         </div>
     </div>
 
-    <div class="demo-footer-bottom">
-        <div class="demo-footer-container">
-            <cms:pageSlot position="FooterContact" var="feature" class="demo-footer-contact">
-                <cms:component component="${feature}"/>
-            </cms:pageSlot>
-        </div>
+    <div class="demo-footer-bottom-container">
+        <div class="demo-footer-bottom">
+            <div class="demo-footer-container">
+                <cms:pageSlot position="FooterContact" var="feature" element="div" class="demo-footer-contact">
+                    <cms:component component="${feature}"/>
+                </cms:pageSlot>
+            </div>
 
-        <div class="demo-footer-container">
-            <cms:pageSlot position="FooterCopyright" var="feature" class="demo-footer-copyright">
-                <cms:component component="${feature}"/>
-            </cms:pageSlot>
+            <div class="demo-footer-container">
+                <cms:pageSlot position="FooterCopyright" var="feature" element="div" class="demo-footer-copyright">
+                    <cms:component component="${feature}"/>
+                </cms:pageSlot>
+            </div>
         </div>
     </div>
 </div>
