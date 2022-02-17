@@ -4,13 +4,14 @@
 #
 # Import Delivery Modes / Zones
 #
+#% impex.setLocale(Locale.GERMAN)
 
 # Currencies
-$idCurrency = IDR
+$indonesiaCurrency = IDR
 
 # Delivery Zones
 INSERT_UPDATE Zone; code[unique = true]; countries(isocode)
-                  ; id                 ; ID
+                  ; indonesia          ; ID
 
 # Zone Delivery Modes
 INSERT_UPDATE ZoneDeliveryMode; code[unique = true]    ; net  ; active[default = true]
@@ -20,15 +21,19 @@ INSERT_UPDATE ZoneDeliveryMode; code[unique = true]    ; net  ; active[default =
                               ; standard-gross         ; false
                               ; free-standard-shipping ; true ; false ;
 
+# Indonesia
+INSERT_UPDATE ZoneDeliveryModeValue; deliveryMode(code)[unique = true]; zone(code)[default = 'indonesia'][unique = true]; currency(isocode)[unique = true]; value ; minimum[unique = true]
+                                   ; premium-net                      ;                                                 ; $indonesiaCurrency              ; 12000 ; 0,00
+                                   ; premium-gross                    ;                                                 ; $indonesiaCurrency              ; 10000 ; 0,00
+                                   ; standard-net                     ;                                                 ; $indonesiaCurrency              ; 7000  ; 0,00
+                                   ; standard-gross                   ;                                                 ; $indonesiaCurrency              ; 5000  ; 0,00
 
-# ID
-INSERT_UPDATE ZoneDeliveryModeValue; deliveryMode(code)[unique = true]; zone(code)[default = 'id'][unique = true]; currency(isocode)[unique = true]; value ; minimum[unique = true]
-                                   ; premium-gross                    ;                                          ; $idCurrency                     ; 10,99 ; 0,00
-                                   ; premium-net                      ;                                          ; $idCurrency                     ; 99,99 ; 0,00
-                                   ; standard-gross                   ;                                          ; $idCurrency                     ; 5,99  ; 0,00
-                                   ; standard-net                     ;                                          ; $idCurrency                     ; 59,99 ; 0,00
 
 # Pickup Delivery Mode
 INSERT_UPDATE PickUpDeliveryMode; code[unique = true]; active[default = true]; supportedMode(code)
-                                ; pickup             ;
+                                ; pickup             ;                       ; BUY_AND_COLLECT
 
+##############################
+# Insert DeliveryMode taxes
+##############################
+INSERT_UPDATE ProductTaxCode; productCode[unique = true]; taxCode; taxArea[unique = true]
