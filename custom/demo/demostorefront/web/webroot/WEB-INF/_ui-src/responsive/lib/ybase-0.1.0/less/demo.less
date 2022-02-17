@@ -226,44 +226,53 @@ main {
     }
   }
 
-  .demo-footer-bottom {
+  .demo-footer-bottom-container {
     display: flex;
     flex-direction: row;
     width: 100%;
-    max-width: 1080px;
-
-    padding: 1rem 4rem;
     background-color: #6086c2;
 
-    .content {
-      color: white;
-      font-size: 1.2rem;
-      font-weight: 500;
-    }
+    align-items: center;
+    justify-content: center;
 
-    .demo-footer-container {
-      width: 50%;
-    }
-
-    .demo-footer-contact {
+    .demo-footer-bottom {
       display: flex;
       flex-direction: row;
+      width: 100%;
+      max-width: 1080px;
 
-      justify-content: start;
-      align-items: center;
+      padding: 1rem 4rem;
 
       .content {
-        padding-left: 0.75rem;
-        padding-right: 4rem;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 500;
       }
-    }
 
-    .demo-footer-copyright {
-      display: flex;
-      flex-direction: row;
+      .demo-footer-container {
+        width: 50%;
+      }
 
-      justify-content: end;
-      align-items: center;
+      .demo-footer-contact {
+        display: flex;
+        flex-direction: row;
+
+        justify-content: start;
+        align-items: center;
+
+        .content {
+          padding-left: 0.75rem;
+          padding-right: 4rem;
+        }
+      }
+
+      .demo-footer-copyright {
+        display: flex;
+        flex-direction: row;
+
+        justify-content: end;
+        align-items: center;
+      }
     }
   }
 }
