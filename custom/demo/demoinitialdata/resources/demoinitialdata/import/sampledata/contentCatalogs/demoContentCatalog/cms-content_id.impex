@@ -569,3 +569,10 @@ UPDATE FooterNavigationComponent;$contentCV[unique=true];uid[unique=true];notice
 UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[lang=en];
                             ;;DemoParagraphComponent;"Test Demo Page";
                             ;;DemoParagraphComponent2;"Test Demo Page - Bottom Slot";
+
+#batsu modip
+INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
+                            ;Catalog-Header;$siteResource/images/theme/catalog-header.png
+
+UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
+                                      ;;Catalog-Header;/images/theme/catalog-header.png

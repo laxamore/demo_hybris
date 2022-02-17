@@ -32,7 +32,7 @@
 			</ycommerce:testId>
             <br>
  			<ycommerce:testId code="product_productSize">
- 				<a class="desc" href="${fn:escapeXml(productUrl)}">
+ 				<a class="size" href="${fn:escapeXml(productUrl)}">
  					<c:out escapeXml="false" value="${ycommerce:sanitizeHTML(product.size)}" />
  				</a>
  			</ycommerce:testId>

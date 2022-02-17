@@ -6,9 +6,10 @@
 
 	<div class="row">		
 		<cms:pageSlot position="Section1" var="feature" element="div" class="product-list-section1-slot">
-			<cms:component component="${feature}" element="div" class="col-xs-12 yComponentWrapper product-list-section1-component"/>
+			<cms:component component="${feature}" element="div" class="catalog-header"/>
 		</cms:pageSlot>		
 	</div>
+
 	<div class="row">
 		<div class="col-xs-3">
 			<cms:pageSlot position="ProductLeftRefinements" var="feature" element="div" class="product-list-left-refinements-slot">
