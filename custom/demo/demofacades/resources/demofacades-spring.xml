@@ -182,4 +182,19 @@
 	</bean>
 
 	<bean id="genderData" class="com.demo.facades.product.data.GenderData" scope="prototype"/>
+
+<!--	DemoProduct-->
+	<alias alias="demoProductFacade" name="demoProductFacade"/>
+	<bean id="demoProductFacade" class="com.demo.facades.product.facade.impl.DemoProductFacadeImpl"/>
+	<alias alias="demoTestimonyFacade" name="demoTestimonyFacade"/>
+	<bean id="demoTestimonyFacade" class="com.demo.facades.testimony.facade.impl.DemoTestimonyFacadeImpl"/>
+<!--	DemoPopulator-->
+	<alias name="defaultDemoSearchResultProductPopulator" alias="demoSearchResultProductPopulator"/>
+	<bean id="defaultDemoSearchResultProductPopulator" class="com.demo.facades.populators.DemoSearchResultProductPopulator" parent="defaultCommerceSearchResultProductPopulator">
+	</bean>
+
+	<bean parent="modifyPopulatorList">
+		<property name="list" ref="commerceSearchResultProductConverter"/>
+		<property name="add" ref="demoSearchResultProductPopulator"/>
+	</bean>
 </beans>
