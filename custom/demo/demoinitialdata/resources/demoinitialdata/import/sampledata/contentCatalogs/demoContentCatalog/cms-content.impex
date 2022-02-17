@@ -1339,17 +1339,43 @@ INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];positi
 
 #About tentang demo
 
+#INSERT_UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef
+#                                   ;;DemoAboutTentang;About Tentang;DemoAboutTentang
+
+#INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];cmsComponents(&componentRef)
+#                         ;;Section2Slot-AboutPage;DemoAboutTentang
+
+#INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];position[unique=true];page(uid,$contentCV)[unique=true][default='DemoAboutPageTemplate'];contentSlot(uid,$contentCV)[unique=true]
+#                                ;;Section2-AboutPage;Section2;;Section2Slot-AboutPage
+
+
+#About info DEMO
+
 INSERT_UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef
-                                   ;;DemoAboutTentang;About Tentang;DemoAboutTentang
+                                   ;;DemoAboutApa;About Apa;DemoAboutApa
+                                   ;;DemoAboutKenapa;About Kenapa;DemoAboutKenapa
+                                   ;;DemoAboutCara;About Cara;DemoAboutCara
+
+INSERT_UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef
+                             ;;BannerInfo1Component;Image 1 info;BannerInfo1Component
+                             ;;BannerInfo2Component;Image 2 info;BannerInfo2Component
+                             ;;BannerInfo3Component;Image 3 info;BannerInfo3Component
+
 
 INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];cmsComponents(&componentRef)
-                         ;;Section2Slot-AboutPage;DemoAboutTentang
+                         ;;Section3ASlot-AboutPage;DemoAboutApa
+                         ;;Section3BSlot-AboutPage;BannerInfo1Component
+                         ;;Section4ASlot-AboutPage;BannerInfo2Component
+                         ;;Section4BSlot-AboutPage;DemoAboutKenapa
+                         ;;Section5ASlot-AboutPage;DemoAboutCara
+                         ;;Section5BSlot-AboutPage;BannerInfo3Component
 
 INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];position[unique=true];page(uid,$contentCV)[unique=true][default='DemoAboutPageTemplate'];contentSlot(uid,$contentCV)[unique=true]
-                                ;;Section2-AboutPage;Section2;;Section2Slot-AboutPage
-
-
-
-
+                                ;;Section3A-AboutPage;Section3A;;Section3ASlot-AboutPage
+                                ;;Section3B-AboutPage;Section3B;;Section3BSlot-AboutPage
+                                ;;Section4A-AboutPage;Section4A;;Section4ASlot-AboutPage
+                                ;;Section4B-AboutPage;Section4B;;Section4BSlot-AboutPage
+                                ;;Section5A-AboutPage;Section5A;;Section5ASlot-AboutPage
+                                ;;Section5B-AboutPage;Section5B;;Section5BSlot-AboutPage
 
 

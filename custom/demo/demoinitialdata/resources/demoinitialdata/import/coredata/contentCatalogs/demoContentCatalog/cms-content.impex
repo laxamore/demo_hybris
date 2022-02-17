@@ -949,6 +949,7 @@ INSERT_UPDATE ContentPage;$contentCV[unique=true];uid[unique=true];name;masterTe
 
 
 
+
 #DEMO about INTHEBOX
 
 
@@ -963,9 +964,12 @@ INSERT_UPDATE ContentSlotName;name[unique=true];template(uid,$contentCV)[unique=
                              ;NavigationBar;;;navigation
                              ;Section1;;;wide
                              ;Section2;;;wide
-                             ;Section3;;;wide
-                             ;Section4;;;wide
-                             ;Section5;;;wide
+                             ;Section3A;;;narrow
+                             ;Section3B;;;narrow
+                             ;Section4A;;;narrow
+                             ;Section4B;;;narrow
+                             ;Section5A;;;narrow
+                             ;Section5B;;;narrow
                              ;Section6;;;wide
                              ;VariantSelector;;ProductVariantSelectorComponent;narrow
                              ;AddToCart;;ProductAddToCartComponent;narrow

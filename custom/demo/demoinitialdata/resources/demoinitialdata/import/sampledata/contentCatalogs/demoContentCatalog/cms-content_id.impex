@@ -610,13 +610,54 @@ UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[la
 
 #DEMO About tentang
 
+#UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[$lang]
+#;;DemoAboutTentang;"
+#<div class=""about-tentang"">
+#    <h2>Tentang INTHEBOX</h2><br>
+#    <p>INTHEBOX adalah merek kasur berkualitas dan perlengkapan tidur dengan material premium.</p>
+#    <p>Produk lainnya terdiri dari bantal, guling, dan sofa bed. Semua pilihan produk menggunakan material berkualitas.</p>
+#</div>
+#"
+
+
+#DEMO info
+
 UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[$lang]
-;;DemoAboutTentang;"
-<div class=""about-tentang"">
-    <h2>Tentang INTHEBOX</h2><br>
-    <p>INTHEBOX adalah merek kasur berkualitas dan perlengkapan tidur dengan material premium.</p>
-    <p>Produk lainnya terdiri dari bantal, guling, dan sofa bed. Semua pilihan produk menggunakan material berkualitas.</p>
+;;DemoAboutApa;"
+<div class=""about-info-apa"">
+    <h2>Apa Itu Kasur INTHEBOX?</h2><br>
+    <p>Kasur INTHEBOX adalah spring bed yang dikemas dalam box dan akan langsung mengembang sempurna ketika dibuka. Kini sudah ada banyak pilihan produk dengan harga yang terjangkau. Ketahui lebih lanjut agar kamu bisa memiliki tidur yang berkualitas.</p>
+    <br>
+    <a href=""#"" class=""btn btn-primary"" role=""button"">Selengkapnya</a>
 </div>
 "
+;;DemoAboutKenapa;"
+<div class=""about-info-kenapa"">
+    <h2>Kenapa Harus Pilih INTHEBOX?</h2><br>
+    <p>Ada banyak kelebihan kasur INTHEBOX, khususnya bisa meningkatkan kualitas tidur dan istirahat kamu. Semua produk INTHEBOX dibuat dengan material premium, teknologi modern, dan desain yang elegan. Bisa dapat bantal gratis, free ongkir, dan garansi 10 tahun.</p>
+    <br>
+    <a href=""#"" class=""btn btn-primary"" role=""button"">Selengkapnya</a>
+</div>
+"
+;;DemoAboutCara;"
+<div class=""about-info-cara"">
+    <h2>Cara Beli Kasur INTHEBOX</h2><br>
+    <p>Bisa dibeli melalui website dengan cara cek daftar produk, masukkan ke keranjang, dan lakukan pembayaran. Mau lebih praktis? Segera WhatsApp ke 0819234659. Bisa juga dibeli online di marketplace kesayangan kamu atau langsung ke supermarket besar di kotamu.</p>
+    <br>
+    <a href=""#"" class=""btn btn-primary"" role=""button"">Selengkapnya</a>
+</div>
+"
+
+
+INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];mime[default='image/jpeg'];realfilename;folder(qualifier)[default='images'];altText
+                   ;;about-info-1.png;$siteResource/images/banners/homepage/responsive/about-info-1.png;;about-info-1.png;;"info 1"
+                   ;;about-info-2.png;$siteResource/images/banners/homepage/responsive/about-info-2.png;;about-info-2.png;;"info 2"
+                   ;;about-info-3.png;$siteResource/images/banners/homepage/responsive/about-info-3.png;;about-info-3.png;;"info 3"
+
+
+UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=$lang]
+                            ;;BannerInfo1Component;about-info-1.png
+                            ;;BannerInfo2Component;about-info-2.png
+                            ;;BannerInfo3Component;about-info-3.png
 
 

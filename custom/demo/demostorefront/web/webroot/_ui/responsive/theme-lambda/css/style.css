@@ -8069,29 +8069,87 @@ a.ui-button:active,
   filter: alpha(opacity=35);
   /* support: IE8 - See #6059 */
 }
-.page-homepage .main__inner-wrapper .slider_component .stripViewer ul li a img {
-  min-width: 100vw;
-  max-width: 100vw;
-}
-.page-DemoAboutPageTemplate .main__inner-wrapper .yCmsContentSlot {
+.page-DemoAboutPageTemplate .main__inner-wrapper .tentang {
   background-color: #6086c2;
 }
-.page-DemoAboutPageTemplate .main__inner-wrapper .yCmsContentSlot .yCmsComponent .content {
-  margin-top: 70px;
-  margin-bottom: 70px;
+.page-DemoAboutPageTemplate .main__inner-wrapper .tentang .yCmsComponent .content {
+  margin-top: clamp(20px, 5vw, 5vw);
+  margin-bottom: clamp(20px, 5vw, 5vw);
+  margin-left: clamp(10px, 15vw, 15vw);
+  margin-right: clamp(10px, 15vw, 15vw);
 }
-.page-DemoAboutPageTemplate .main__inner-wrapper .yCmsContentSlot .yCmsComponent .content div {
+.page-DemoAboutPageTemplate .main__inner-wrapper .tentang .yCmsComponent .content div {
   color: white;
   text-align: center;
   font-family: Verdana, sans-serif;
 }
-.page-DemoAboutPageTemplate .main__inner-wrapper .yCmsContentSlot .yCmsComponent .content div h2 {
-  font-size: 36px;
+.page-DemoAboutPageTemplate .main__inner-wrapper .tentang .yCmsComponent .content div h2 {
+  font-size: clamp(20px, 2.5vw, 2.5vw);
   font-weight: 600;
 }
-.page-DemoAboutPageTemplate .main__inner-wrapper .yCmsContentSlot .yCmsComponent .content div p {
+.page-DemoAboutPageTemplate .main__inner-wrapper .tentang .yCmsComponent .content div p {
   font-weight: 400;
-  font-size: 16px;
+  font-size: clamp(12px, 1.1vw, 1.1vw);
+}
+.page-DemoAboutPageTemplate .main__inner-wrapper .about-info-1 {
+  width: 100%;
+  background-color: #7fc5f9;
+  color: black;
+  font-family: Verdana, sans-serif;
+}
+.page-DemoAboutPageTemplate .main__inner-wrapper .about-info-1 .about-info-1-isi {
+  margin-top: clamp(20px, 3vw, 3vw);
+  margin-bottom: clamp(20px, 3vw, 3vw);
+  margin-left: clamp(10px, 15vw, 15vw);
+  margin-right: clamp(10px, 15vw, 15vw);
+}
+.page-DemoAboutPageTemplate .main__inner-wrapper .about-info-1 .about-info-1-isi .about-info-1-para h2 {
+  font-size: clamp(20px, 2.5vw, 2.5vw);
+  font-weight: 600;
+}
+.page-DemoAboutPageTemplate .main__inner-wrapper .about-info-1 .about-info-1-isi .about-info-1-para p {
+  font-weight: 400;
+  font-size: clamp(12px, 1.1vw, 1.1vw);
+}
+.page-DemoAboutPageTemplate .main__inner-wrapper .about-info-2 {
+  width: 100%;
+  background-color: #7fc5f9;
+  color: black;
+  font-family: Verdana, sans-serif;
+}
+.page-DemoAboutPageTemplate .main__inner-wrapper .about-info-2 .about-info-2-isi {
+  margin-top: clamp(20px, 3vw, 3vw);
+  margin-bottom: clamp(20px, 3vw, 3vw);
+  margin-left: clamp(10px, 15vw, 15vw);
+  margin-right: clamp(10px, 15vw, 15vw);
+}
+.page-DemoAboutPageTemplate .main__inner-wrapper .about-info-2 .about-info-2-isi .about-info-2-para h2 {
+  font-size: clamp(20px, 2.5vw, 2.5vw);
+  font-weight: 600;
+}
+.page-DemoAboutPageTemplate .main__inner-wrapper .about-info-2 .about-info-2-isi .about-info-2-para p {
+  font-weight: 400;
+  font-size: clamp(12px, 1.1vw, 1.1vw);
+}
+.page-DemoAboutPageTemplate .main__inner-wrapper .about-info-3 {
+  width: 100%;
+  background-color: #7fc5f9;
+  color: black;
+  font-family: Verdana, sans-serif;
+}
+.page-DemoAboutPageTemplate .main__inner-wrapper .about-info-3 .about-info-3-isi {
+  margin-top: clamp(20px, 3vw, 3vw);
+  margin-bottom: clamp(20px, 3vw, 3vw);
+  margin-left: clamp(10px, 15vw, 15vw);
+  margin-right: clamp(10px, 15vw, 15vw);
+}
+.page-DemoAboutPageTemplate .main__inner-wrapper .about-info-3 .about-info-3-isi .about-info-3-para h2 {
+  font-size: clamp(20px, 2.5vw, 2.5vw);
+  font-weight: 600;
+}
+.page-DemoAboutPageTemplate .main__inner-wrapper .about-info-3 .about-info-3-isi .about-info-3-para p {
+  font-weight: 400;
+  font-size: clamp(12px, 1.1vw, 1.1vw);
 }
 body {
   overflow-x: hidden;
