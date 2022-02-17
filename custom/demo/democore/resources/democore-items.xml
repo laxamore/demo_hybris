@@ -31,8 +31,28 @@
 
         <!-- Add your item definitions here -->
 
-
         <!-- TypeGroups are for structure of this file only -->
+
+        <typegroup name="CustomCMSComponent">
+            <itemtype code="DemoCMSComponent" extends="SimpleCMSComponent" generate="true" autocreate="true" jaloclass="com.demo.core.jalo.DemoCMSComponent">
+                <description>Demo CMS Component</description>
+                <attributes>
+                    <attribute qualifier="title" type="java.lang.String">
+                        <modifiers read="true" write="true" />
+                        <persistence type="property" />
+                    </attribute>
+                    <attribute qualifier="image" type="Media">
+                        <modifiers read="true" write="true" />
+                        <persistence type="property" />
+                    </attribute>
+                    <attribute qualifier="description" type="java.lang.String">
+                        <modifiers write="true" read="true" />
+                        <persistence type="property" />
+                    </attribute>
+                </attributes>
+            </itemtype>
+        </typegroup>
+
 
         <typegroup name="Apparel">
             <itemtype code="ApparelProduct" extends="Product"

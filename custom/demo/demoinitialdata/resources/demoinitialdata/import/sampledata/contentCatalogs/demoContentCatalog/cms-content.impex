@@ -17,9 +17,9 @@ $mediaContainer=media(qualifier, $contentCV);
 $contentPage=contentPage(uid, $contentCV);
 $product=product(code, $productCV)
 $category=category(code, $productCV)
-$siteResource=jar:org.demo.initialdata.setup.InitialDataSystemSetup&/demoinitialdata/import/sampledata/contentCatalogs/$contentCatalog
-$productResource=jar:org.demo.initialdata.setup.InitialDataSystemSetup&/demoinitialdata/import/sampledata/productCatalogs/$productCatalog
-$jarResourceCms=jar:org.demo.initialdata.setup.InitialDataSystemSetup&/demoinitialdata/import/sampledata/cockpits/cmscockpit
+$siteResource=jar:com.demo.initialdata.setup.InitialDataSystemSetup&/demoinitialdata/import/sampledata/contentCatalogs/$contentCatalog
+$productResource=jar:com.demo.initialdata.setup.InitialDataSystemSetup&/demoinitialdata/import/sampledata/productCatalogs/$productCatalog
+$jarResourceCms=jar:com.demo.initialdata.setup.InitialDataSystemSetup&/demoinitialdata/import/sampledata/cockpits/cmscockpit
 
 
 # CMS Site Settings
@@ -775,7 +775,7 @@ INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];active;cmsCom
 #INSERT_UPDATE DemoEaseOfAnyWhereCMSComponent;$contentCV[unique=true];uid[unique=true];&componentRef
 #                                            ;;HomePageEaseOfAnyWhere1;HomePageEaseOfAnyWhere1
 #                                            ;;HomePageEaseOfAnyWhere2;HomePageEaseOfAnyWhere2
-#
+
 #INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];active;cmsComponents(&componentRef)
 #                         ;;Section3BSlot-Homepage;true;HomePageEaseOfAnyWhere1,HomePageEaseOfAnyWhere2
 #
@@ -1300,5 +1300,33 @@ INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;c
 # Create Content Slots for Page
 INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];position[unique=true];page(uid,$contentCV)[unique=true][default='testing-page'];contentSlot(uid,$contentCV)[unique=true]
                                 ;;MiddleContent-TestingPage;MiddleContent;;MiddleContent-TestingPage
+
+
+
+
+
+
+
+
+# Banner UnboxingInTheBox
+
+#INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];name;urlLink;&componentRef
+#                                             ;;DemoHompageUnboxingInTheBoxBannerComponent1;Demo Hompage Unboxing In The Box Banner Component;;DemoHompageUnboxingInTheBoxBannerComponent1
+#                                             ;;DemoHompageUnboxingInTheBoxBannerComponent2;Demo Hompage Unboxing In The Box Banner Component;;DemoHompageUnboxingInTheBoxBannerComponent2
+#                                             ;;DemoHompageUnboxingInTheBoxBannerComponent3;Demo Hompage Unboxing In The Box Banner Component;;DemoHompageUnboxingInTheBoxBannerComponent3
+#                                             ;;DemoHompageUnboxingInTheBoxBannerComponent4;Demo Hompage Unboxing In The Box Banner Component;;DemoHompageUnboxingInTheBoxBannerComponent4
+#
+#
+#INSERT_UPDATE DemoCMSComponent;$contentCV[unique=true];uid[unique=true];&componentRef
+#                              ;;TextUnboxingInTheBoxComponent1;TextUnboxingInTheBoxComponent1
+#                              ;;TextUnboxingInTheBoxComponent2;TextUnboxingInTheBoxComponent2
+#                              ;;TextUnboxingInTheBoxComponent3;TextUnboxingInTheBoxComponent3
+#                              ;;TextUnboxingInTheBoxComponent4;TextUnboxingInTheBoxComponent4
+
+INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];active;cmsComponents(&componentRef)
+                         ;;Section3Slot-Homepage;true;TextUnboxingInTheBoxComponent1, TextUnboxingInTheBoxComponent2, TextUnboxingInTheBoxComponent3, TextUnboxingInTheBoxComponent4
+
+INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];position[unique=true];page(uid,$contentCV)[unique=true][default='homepage'];contentSlot(uid,$contentCV)[unique=true]
+                                ;;Section3-homepage;Section3;;Section3Slot-Homepage
 
 
