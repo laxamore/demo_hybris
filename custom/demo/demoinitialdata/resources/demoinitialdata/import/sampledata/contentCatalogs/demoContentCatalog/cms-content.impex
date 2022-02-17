@@ -24,12 +24,21 @@ $jarResourceCms = jar:com.demo.initialdata.setup.InitialDataSystemSetup&/demoini
 
 # Content Slot
 INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]        ; cmsComponents(uid, $contentCV)
+# Headers
                          ;                          ; TopLeftParagraphSlot      ; TopHeaderLeftContainer1,TopHeaderLeftContainer2
                          ;                          ; TopRightNavigationBarSlot ; TopHeaderNavComponent
                          ;                          ; HeaderLogoSlot            ; SiteLogoComponent
                          ;                          ; MiddleNavigationBarSlot   ; HeaderNavComponent
                          ;                          ; LoginLinkSlot             ; LoginLink
                          ;                          ; CartLinkSlot              ; CartHeaderLogoComponent
+# End Headers
+# Footers
+                         ;                          ; FooterLogo1Slot           ; SiteLogoComponent
+                         ;                          ; FooterLogo2Slot           ; FooterLogoComponent1,FooterLogoComponent2,FooterLogoComponent3
+                         ;                          ; FooterNavigationSlot      ; FooterNavigationComponent
+                         ;                          ; FooterContactSlot         ; BottomLeftFooterContainer1,BottomLeftFooterContainer2
+                         ;                          ; FooterCopyrightSlot       ; BottomRightFooterParagraphComponent
+# End Footers
 # End Content Slot
 
 # Start CMS Link
@@ -94,6 +103,51 @@ INSERT_UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = tru
                                    ;                          ; CartHeaderLogoComponent ; Cart Header Logo Component ; CartHeaderLogoComponent ; "/cart"
 # End Cart Header Logo Component
 # End Cart Header
+
+# Start Footer Logo
+# Footer Logo Media
+INSERT_UPDATE Media; $contentCV[unique = true]; code[unique = true]        ; realfilename  ; @media[translator = de.hybris.platform.impex.jalo.media.MediaDataTranslator]; mime[default = 'image/jpeg']; altText; folder(qualifier)[default = 'images']
+                   ;                          ; /images/logo/facebook.svg  ; facebook.svg  ; $siteResource/images/logo/facebook.svg                                      ; image/svg                   ;        ;
+                   ;                          ; /images/logo/instagram.svg ; instagram.svg ; $siteResource/images/logo/instagram.svg                                     ; image/svg                   ;        ;
+                   ;                          ; /images/logo/email.svg     ; email.svg     ; $siteResource/images/logo/email.svg                                         ; image/svg                   ;        ;
+# End Footer Logo Media
+# Footer Logo Component
+INSERT_UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]   ; name                    ; &componentRef
+                                   ;                          ; FooterLogoComponent1 ; Footer Logo Component 1 ; FooterLogoComponent1
+                                   ;                          ; FooterLogoComponent2 ; Footer Logo Component 2 ; FooterLogoComponent2
+                                   ;                          ; FooterLogoComponent3 ; Footer Logo Component 3 ; FooterLogoComponent3
+# End Footer Logo Component
+# End Footer Logo
+
+# Start Bottom Left Footer
+# Bottom Left Footer Logo Media
+INSERT_UPDATE Media; $contentCV[unique = true]; code[unique = true]                     ; realfilename            ; @media[translator = de.hybris.platform.impex.jalo.media.MediaDataTranslator]; mime[default = 'image/jpeg']; altText; folder(qualifier)[default = 'images']
+                   ;                          ; /images/footers/footer-icon-call.png    ; footer-icon-call.png    ; $siteResource/images/footers/footer-icon-call.png                           ; image/png                   ;        ;
+                   ;                          ; /images/footers/footer-icon-message.png ; footer-icon-message.png ; $siteResource/images/footers/footer-icon-message.png                        ; image/png                   ;        ;
+# End Bottom Left Footer Logo Media
+# Bottom Left Footer Logo Component
+INSERT_UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]             ; name                                ; &componentRef
+                                   ;                          ; BottomLeftFooterLogoComponent1 ; Bottom Left Footer Logo Component 1 ; BottomLeftFooterLogoComponent1
+                                   ;                          ; BottomLeftFooterLogoComponent2 ; Bottom Left Footer Logo Component 2 ; BottomLeftFooterLogoComponent2
+# End Bottom Left Footer Logo Component
+# Bottom Left Footer Paragraph
+INSERT_UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]                  ; name                                     ; &componentRef
+                                   ;                          ; BottomLeftFooterParagraphComponent1 ; Bottom Left Footer Paragraph Component 1 ; BottomLeftFooterParagraphComponent1
+                                   ;                          ; BottomLeftFooterParagraphComponent2 ; Bottom Left Footer Paragraph Component 2 ; BottomLeftFooterParagraphComponent2
+# End Bottom Left Footer Paragraph
+# Bottom Left Footer Paragraph Container
+INSERT_UPDATE CMSTabParagraphContainer; $contentCV[unique = true]; uid[unique = true]         ; name                           ; visible; simpleCMSComponents(uid, $contentCV)                               ; &componentRef
+                                      ;                          ; BottomLeftFooterContainer1 ; Bottom Left Footer Container 1 ; true   ; BottomLeftFooterLogoComponent1,BottomLeftFooterParagraphComponent1 ; BottomLeftFooterContainer1
+                                      ;                          ; BottomLeftFooterContainer2 ; Bottom Left Footer Contaier 2  ; true   ; BottomLeftFooterLogoComponent2,BottomLeftFooterParagraphComponent2 ; BottomLeftFooterContainer2
+# Bottom Left Footer Paragraph Container
+# End Bottom Left Footer
+
+# Start Bottom Right Footer
+# Bootom Right Footer Paragraph
+INSERT_UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]                  ; name                                    ; &componentRef
+                                   ;                          ; BottomRightFooterParagraphComponent ; Bottom Right Footer Paragraph Component ; BottomRightFooterParagraphComponent
+# End Bottom Right Footer Paragraph
+# End Bottom Right Footer
 
 # Navigation
 # Start Navigation Node
@@ -169,8 +223,8 @@ INSERT_UPDATE CategoryNavigationComponent; $contentCV[unique = true]; uid[unique
                                          ;                          ; HeaderNavComponent ; Header Navigation Component ; HeaderNavNode           ; HeaderNavComponent ; 10       ;
 # End Header Navigation Component
 # Footer Navigation Component
-INSERT_UPDATE FooterNavigationComponent; $contentCV[unique = true]; uid[unique = true]        ; name                        ; navigationNode(&nodeRef); &componentRef             ; wrapAfter; showLanguageCurrency
-                                       ;                          ; FooterNavigationComponent ; Footer Navigation Component ; FooterNavNode           ; FooterNavigationComponent ; 4        ; true
+INSERT_UPDATE FooterNavigationComponent; $contentCV[unique = true]; uid[unique = true]        ; name                        ; navigationNode(&nodeRef); &componentRef             ; showLanguageCurrency
+                                       ;                          ; FooterNavigationComponent ; Footer Navigation Component ; FooterNavNode           ; FooterNavigationComponent ; true
 # End Footer Navigation Component
 # End Navigation Component
 
