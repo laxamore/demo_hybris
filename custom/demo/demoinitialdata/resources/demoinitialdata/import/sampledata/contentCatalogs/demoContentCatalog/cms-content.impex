@@ -1304,29 +1304,24 @@ INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];positi
 
 
 
-
-
-
-
 # Banner UnboxingInTheBox
 
-#INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];name;urlLink;&componentRef
-#                                             ;;DemoHompageUnboxingInTheBoxBannerComponent1;Demo Hompage Unboxing In The Box Banner Component;;DemoHompageUnboxingInTheBoxBannerComponent1
-#                                             ;;DemoHompageUnboxingInTheBoxBannerComponent2;Demo Hompage Unboxing In The Box Banner Component;;DemoHompageUnboxingInTheBoxBannerComponent2
-#                                             ;;DemoHompageUnboxingInTheBoxBannerComponent3;Demo Hompage Unboxing In The Box Banner Component;;DemoHompageUnboxingInTheBoxBannerComponent3
-#                                             ;;DemoHompageUnboxingInTheBoxBannerComponent4;Demo Hompage Unboxing In The Box Banner Component;;DemoHompageUnboxingInTheBoxBannerComponent4
-#
-#
-#INSERT_UPDATE DemoCMSComponent;$contentCV[unique=true];uid[unique=true];&componentRef
-#                              ;;TextUnboxingInTheBoxComponent1;TextUnboxingInTheBoxComponent1
-#                              ;;TextUnboxingInTheBoxComponent2;TextUnboxingInTheBoxComponent2
-#                              ;;TextUnboxingInTheBoxComponent3;TextUnboxingInTheBoxComponent3
-#                              ;;TextUnboxingInTheBoxComponent4;TextUnboxingInTheBoxComponent4
+INSERT_UPDATE Media;mediaFormat(qualifier);$contentCV[unique=true];code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];mime[default='image/png'];realfilename;folder(qualifier)[default='images'];altText
+                   ;tablet;;img-keluarkan.png;$siteResource/images/banners/homepage/unboxinginthebox/keluarkan.png;;keluarkan.png;;"Keluarkan"
+                   ;tablet;;img-posisikan.png;$siteResource/images/banners/homepage/unboxinginthebox/posisikan.png;;posisikan.png;;"posisikan"
+                   ;tablet;;img-bukaplastik.png;$siteResource/images/banners/homepage/unboxinginthebox/bukaplastik.png;;bukaplastik.png;;"bukaplastik"
+                   ;tablet;;img-tunggumengembang.png;$siteResource/images/banners/homepage/unboxinginthebox/tunggumengembang.png;;tunggumengembang.png;;"Tunggu Mengembang"
+
+INSERT_UPDATE DemoCMSComponent;$contentCV[unique=true];uid[unique=true];title;image(code);description;&componentRef
+                              ;;TextUnboxingInTheBoxComponent1;Keluarkan;img-keluarkan.png;Keluarkan kasur INTHEBOX dari kemasannya secara perlahan-lahan;TextUnboxingInTheBoxComponent1
+                              ;;TextUnboxingInTheBoxComponent2;Posisikan;img-posisikan.png;Keluarkan kasur INTHEBOX dari kemasannya secara perlahan-lahan;TextUnboxingInTheBoxComponent2
+                              ;;TextUnboxingInTheBoxComponent3;Bukaplastik;img-bukaplastik.png;Lepaskan plastik pembungkus dan pastikan logo INTHEBOX ada di bawah;TextUnboxingInTheBoxComponent3
+                              ;;TextUnboxingInTheBoxComponent4;Tunggu mengembang;img-tunggumengembang.png;Kasur INTHEBOX akan langsung mengembang. Tunggu 60 menit untuk digunakan;TextUnboxingInTheBoxComponent4
+
 
 INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];active;cmsComponents(&componentRef)
                          ;;Section3Slot-Homepage;true;TextUnboxingInTheBoxComponent1, TextUnboxingInTheBoxComponent2, TextUnboxingInTheBoxComponent3, TextUnboxingInTheBoxComponent4
 
 INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];position[unique=true];page(uid,$contentCV)[unique=true][default='homepage'];contentSlot(uid,$contentCV)[unique=true]
                                 ;;Section3-homepage;Section3;;Section3Slot-Homepage
-
 

@@ -569,31 +569,3 @@ UPDATE FooterNavigationComponent;$contentCV[unique=true];uid[unique=true];notice
 UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[lang=en];
                             ;;DemoParagraphComponent;"Test Demo Page";
                             ;;DemoParagraphComponent2;"Test Demo Page - Bottom Slot";
-
-
-# Banner UnboxingInTheBox
-
-INSERT_UPDATE Media;mediaFormat(qualifier);$contentCV[unique=true];code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];mime[default='image/png'];realfilename;folder(qualifier)[default='images'];altText
-                   ;tablet;;img-keluarkan.png;$siteResource/images/banners/homepage/unboxinginthebox/keluarkan.png;;keluarkan.png;;"Keluarkan"
-                   ;tablet;;img-posisikan.png;$siteResource/images/banners/homepage/unboxinginthebox/posisikan.png;;posisikan.png;;"posisikan"
-                   ;tablet;;img-bukaplastik.png;$siteResource/images/banners/homepage/unboxinginthebox/bukaplastik.png;;bukaplastik.png;;"bukaplastik"
-                   ;tablet;;img-tunggumengembang.png;$siteResource/images/banners/homepage/unboxinginthebox/tunggumengembang.png;;tunggumengembang.png;;"Tunggu Mengembang"
-
-#INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
-#                            ;demo-homepage-unboxinginthebox1;keluarkan.png
-#                            ;demo-homepage-unboxinginthebox2;posisikan.png
-#                            ;demo-homepage-unboxinginthebox3;bukaplastik.png
-#                            ;demo-homepage-unboxinginthebox4;tunggumengembang.png
-#
-#INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
-#                                             ;;DemoHompageUnboxingInTheBoxBannerComponent1;demo-homepage-unboxinginthebox1
-#                                             ;;DemoHompageUnboxingInTheBoxBannerComponent2;demo-homepage-unboxinginthebox2
-#                                             ;;DemoHompageUnboxingInTheBoxBannerComponent3;demo-homepage-unboxinginthebox3
-#                                             ;;DemoHompageUnboxingInTheBoxBannerComponent4;demo-homepage-unboxinginthebox4
-
-INSERT_UPDATE DemoCMSComponent;$contentCV[unique=true];uid[unique=true];title;image(code);description;&componentRef
-                              ;;TextUnboxingInTheBoxComponent1;Keluarkan;img-keluarkan.png;Keluarkan kasur INTHEBOX dari kemasannya secara perlahan-lahan;TextUnboxingInTheBoxComponent1
-                              ;;TextUnboxingInTheBoxComponent2;Posisikan;img-posisikan.png;Keluarkan kasur INTHEBOX dari kemasannya secara perlahan-lahan;TextUnboxingInTheBoxComponent2
-                              ;;TextUnboxingInTheBoxComponent3;Bukaplastik;img-bukaplastik.png;Lepaskan plastik pembungkus dan pastikan logo INTHEBOX ada di bawah;TextUnboxingInTheBoxComponent3
-                              ;;TextUnboxingInTheBoxComponent4;Tunggu mengembang;img-tunggumengembang.png;Kasur INTHEBOX akan langsung mengembang. Tunggu 60 menit untuk digunakan;TextUnboxingInTheBoxComponent4
-
