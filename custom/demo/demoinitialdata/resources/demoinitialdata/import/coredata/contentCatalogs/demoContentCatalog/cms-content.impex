@@ -151,6 +151,7 @@ INSERT_UPDATE CategoryPage; $contentCV[unique = true]; uid[unique = true]; name 
 # End Demo Site
 
 
+
 #DEMO about INTHEBOX
 
 
@@ -211,5 +212,3 @@ INSERT_UPDATE ContentPage;$contentCV[unique=true];uid[unique=true];name;masterTe
                          ;;DemoAboutPageTemplate;About;DemoAboutTemplate;about;;;
 
 #END OF ABOUT
-
-
