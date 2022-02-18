@@ -16,14 +16,14 @@ $lang = id
 
 # Insert Classifications
 UPDATE ClassificationClass; $classCatalogVersion; code[unique = true]; name[lang = $lang]
-                          ;                     ; sizeshirt          ; Ukuran Baju
-                          ;                     ; sizetrouser        ; Ukuran Celana
-                          ;                     ; color              ; Warna
+                          ;                     ; bed                ; Bed
+                          ;                     ; sofa               ; Sofa
+                          ;                     ; sofabed            ; Sofabed
+                          ;                     ; pillow             ; Bantal
+                          ;                     ; bolster            ; Guling
 
 # Insert Classification Attributes
 UPDATE ClassificationAttribute; $classSystemVersion; code[unique = true]; name[lang = $lang]
-                              ;                    ; dada               ; Dada
-                              ;                    ; pinggang           ; Pinggang
-                              ;                    ; panggul            ; Panggul
                               ;                    ; panjang            ; Panjang
-                              ;                    ; warna              ; Warna
+                              ;                    ; lebar              ; Lebar
+                              ;                    ; tinggi             ; Tinggi

@@ -5,7 +5,7 @@
 # Create the BaseStore
 #
 
-$storeUid=__STORE_UID__
+$storeUid=demo
 $checkoutFlowGroup=responsiveCheckoutGroup
 
 # Base Store
