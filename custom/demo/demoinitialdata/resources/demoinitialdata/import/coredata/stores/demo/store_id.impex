@@ -10,4 +10,3 @@ $lang = id
 
 # Create Base Store
 UPDATE BaseStore; uid[unique = true]; name[lang = $lang]
-                ; demo          ; "Demo Store"

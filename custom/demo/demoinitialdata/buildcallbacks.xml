@@ -58,74 +58,95 @@
 		<macrodef name="demoinitialdata_before_dist_copy"/>
 		<macrodef name="demoinitialdata_after_dist_copy"/>
 
---><project name="demoinitialdata_buildcallbacks">
-    	
+-->
+<project name="demoinitialdata_buildcallbacks">
+
     <import file="${ext.demoinitialdata.path}/resources/demoinitialdata/ant/ant-bind-impex-template.xml"/>
-    	
+
     <!-- 
 		Called whenever 'ant ear' is used. this callback can be used to modify the content of the ear file
 
 		${ear.path}: 			path to ear
 	-->
-    	
+
     <macrodef name="demoinitialdata_before_ear">
-        		
+
         <sequential>
-            			
+
             <!-- you can do anything before the EAR file is being packed -->
-            		
+
         </sequential>
-        	
+
     </macrodef>
-    	
+
     <macrodef name="demoinitialdata_clean_classpath_file">
-        		
+
         <sequential>
-            			
-            <copy failonerror="true" file="${ext.demoinitialdata.path}/.classpath" overwrite="true" tofile="${ext.demoinitialdata.path}/.classpath.edit">
-                				
+
+            <copy failonerror="true" file="${ext.demoinitialdata.path}/.classpath" overwrite="true"
+                  tofile="${ext.demoinitialdata.path}/.classpath.edit">
+
                 <filterchain>
-                    					
+
                     <linecontainsregexp negate="true">
-                        						
+
                         <regexp pattern="^(\t\t\t\t|)$"/>
-                          
+
                         <!-- added by script -->
-                        					
+
                     </linecontainsregexp>
-                    				
+
                 </filterchain>
-                			
+
             </copy>
-            			
-            <move failonerror="true" file="${ext.demoinitialdata.path}/.classpath.edit" overwrite="true" tofile="${ext.demoinitialdata.path}/.classpath"/>
-            		
+
+            <move failonerror="true" file="${ext.demoinitialdata.path}/.classpath.edit" overwrite="true"
+                  tofile="${ext.demoinitialdata.path}/.classpath"/>
+
         </sequential>
-        	
+
     </macrodef>
-    	
+
     <macrodef name="demoinitialdata_after_clean">
-        		
+
         <sequential>
-            			
+
             <echo level="info" message="Generating .classpath file for demoinitialdata"/>
-            			
+
             <create_extension_classpath_file extname="demoinitialdata"/>
-            			
+
             <demoinitialdata_clean_classpath_file/>
-            		
+
         </sequential>
-        	
+
     </macrodef>
-    	
+
     <!-- exclude impex files from localization -->
-    	
+
     <patternset id="demoinitialdata.localization.pattern">
-        		
+
         <patternset refid="localization.defaultpattern"/>
-        		
+
         <exclude name="**/*.impex"/>
-        	
+
     </patternset>
-    
+
+    <target name="runantbind">
+        <bindImpexTemplate
+                addonname="demoinitialdata"
+                contentCatalog="demoContentCatalog"
+                productCatalog="demoProductCatalog"
+                storeName="demo"
+                classificationCatalog="demoClassificationCatalog"
+                storeUid="demo"
+                defaultPromoGrp="demoPromoGrp"
+                contentCatalogName="Demo Content Catalog"
+                productCatalogName="Demo Product Catalog"
+                vendor="demoVendor"
+                indexedType="demoProductType"
+                facetSearchConfigName="demoIndex"
+        />
+        <echo message="finished bind config"/>
+    </target>
+
 </project>
