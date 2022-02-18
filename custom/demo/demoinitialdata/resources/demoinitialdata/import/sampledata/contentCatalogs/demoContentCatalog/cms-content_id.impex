@@ -103,3 +103,11 @@ UPDATE FooterNavigationComponent; $contentCV[unique = true]; uid[unique = true] 
                                 ;                          ; FooterNavigationComponent ; "Copyright © {0} SAP SE or an SAP affiliate company. All rights reserved."
 # End Footer
 # End Navigation
+
+
+
+
+#UPDATE BannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=$lang]
+#                      ;;BannerDemoInTheBoxComponent;banner-demo-project.jpg
+#                      ;;BannerDemoInTheBoxComponent-2;banner-demo-project-2.jpg
+
