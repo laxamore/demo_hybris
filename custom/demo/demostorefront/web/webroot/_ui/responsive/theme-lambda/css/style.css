@@ -8151,6 +8151,44 @@ a.ui-button:active,
   font-weight: 400;
   font-size: clamp(12px, 1.1vw, 1.1vw);
 }
+.page-DemoAboutPageTemplate .main__inner-wrapper .faq {
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  color: black;
+  font-family: Verdana, sans-serif;
+}
+.page-DemoAboutPageTemplate .main__inner-wrapper .faq .faq-head {
+  margin-top: clamp(10px, 2vw, 2vw);
+  margin-bottom: clamp(10px, 2vw, 2vw);
+  margin-left: clamp(10px, 15vw, 15vw);
+  margin-right: clamp(10px, 15vw, 15vw);
+}
+.page-DemoAboutPageTemplate .main__inner-wrapper .faq .faq-head h2 {
+  font-size: clamp(20px, 2.5vw, 2.5vw);
+  font-weight: 600;
+}
+.page-DemoAboutPageTemplate .main__inner-wrapper .faq .faq-content {
+  margin-top: clamp(10px, 2vw, 2vw);
+  margin-bottom: clamp(10px, 2vw, 2vw);
+  margin-left: clamp(10px, 15vw, 15vw);
+  margin-right: clamp(10px, 15vw, 15vw);
+}
+.page-DemoAboutPageTemplate .main__inner-wrapper .faq .faq-content .faq-content-row .question h3 {
+  font-size: clamp(15px, 1.5vw, 1.5vw);
+  font-weight: 600;
+}
+.page-DemoAboutPageTemplate .main__inner-wrapper .faq .faq-content .faq-content-row .answer {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+.page-DemoAboutPageTemplate .main__inner-wrapper .faq .faq-content .faq-content-row .answer p {
+  font-size: clamp(12px, 1.1vw, 1.1vw);
+}
+.page-DemoAboutPageTemplate .main__inner-wrapper .faq .faq-content .faq-content-row .collapsible {
+  cursor: pointer;
+}
 body {
   overflow-x: hidden;
   position: relative;

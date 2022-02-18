@@ -1351,31 +1351,68 @@ INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];positi
 
 #About info DEMO
 
-INSERT_UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef
-                                   ;;DemoAboutApa;About Apa;DemoAboutApa
-                                   ;;DemoAboutKenapa;About Kenapa;DemoAboutKenapa
-                                   ;;DemoAboutCara;About Cara;DemoAboutCara
+#INSERT_UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef
+#                                   ;;DemoAboutApa;About Apa;DemoAboutApa
+#                                   ;;DemoAboutKenapa;About Kenapa;DemoAboutKenapa
+#                                   ;;DemoAboutCara;About Cara;DemoAboutCara
 
-INSERT_UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef
-                             ;;BannerInfo1Component;Image 1 info;BannerInfo1Component
-                             ;;BannerInfo2Component;Image 2 info;BannerInfo2Component
-                             ;;BannerInfo3Component;Image 3 info;BannerInfo3Component
+#INSERT_UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef
+#                             ;;BannerInfo1Component;Image 1 info;BannerInfo1Component
+#                             ;;BannerInfo2Component;Image 2 info;BannerInfo2Component
+#                             ;;BannerInfo3Component;Image 3 info;BannerInfo3Component
+
+
+#INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];cmsComponents(&componentRef)
+ #                        ;;Section3ASlot-AboutPage;DemoAboutApa
+#                         ;;Section3BSlot-AboutPage;BannerInfo1Component
+#                         ;;Section4ASlot-AboutPage;BannerInfo2Component
+#                         ;;Section4BSlot-AboutPage;DemoAboutKenapa
+#                         ;;Section5ASlot-AboutPage;DemoAboutCara
+#                         ;;Section5BSlot-AboutPage;BannerInfo3Component
+
+#INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];position[unique=true];page(uid,$contentCV)[unique=true][default='DemoAboutPageTemplate'];contentSlot(uid,$contentCV)[unique=true]
+#                                ;;Section3A-AboutPage;Section3A;;Section3ASlot-AboutPage
+#                                ;;Section3B-AboutPage;Section3B;;Section3BSlot-AboutPage
+#                                ;;Section4A-AboutPage;Section4A;;Section4ASlot-AboutPage
+#                                ;;Section4B-AboutPage;Section4B;;Section4BSlot-AboutPage
+#                                ;;Section5A-AboutPage;Section5A;;Section5ASlot-AboutPage
+#                                ;;Section5B-AboutPage;Section5B;;Section5BSlot-AboutPage
+
+
+
+#About FAQ DEMO
+INSERT_UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef
+                                   ;;DemoFAQHead;FAQ Head;DemoFAQHead
+                                   ;;DemoFAQQuest1;FAQ Question 1;DemoFAQQuest1
+                                   ;;DemoFAQAns1;FAQ Answer 1;DemoFAQAns1
+                                   ;;DemoFAQQuest2;FAQ Question 2;DemoFAQQuest2
+                                   ;;DemoFAQAns2;FAQ Answer 2;DemoFAQAns2
+                                   ;;DemoFAQQuest3;FAQ Question 3;DemoFAQQuest3
+                                   ;;DemoFAQAns3;FAQ Answer 3;DemoFAQAns3
+                                   ;;DemoFAQQuest4;FAQ Question 4;DemoFAQQuest4
+                                   ;;DemoFAQAns4;FAQ Answer 4;DemoFAQAns4
 
 
 INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];cmsComponents(&componentRef)
-                         ;;Section3ASlot-AboutPage;DemoAboutApa
-                         ;;Section3BSlot-AboutPage;BannerInfo1Component
-                         ;;Section4ASlot-AboutPage;BannerInfo2Component
-                         ;;Section4BSlot-AboutPage;DemoAboutKenapa
-                         ;;Section5ASlot-AboutPage;DemoAboutCara
-                         ;;Section5BSlot-AboutPage;BannerInfo3Component
+                         ;;Section6ASlot-AboutPage;DemoFAQHead
+                         ;;Section6BSlot-AboutPage;DemoFAQQuest1
+                         ;;Section6CSlot-AboutPage;DemoFAQAns1
+                         ;;Section6DSlot-AboutPage;DemoFAQQuest2
+                         ;;Section6ESlot-AboutPage;DemoFAQAns2
+                         ;;Section6FSlot-AboutPage;DemoFAQQuest3
+                         ;;Section6GSlot-AboutPage;DemoFAQAns3
+                         ;;Section6HSlot-AboutPage;DemoFAQQuest4
+                         ;;Section6ISlot-AboutPage;DemoFAQAns4
+
 
 INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];position[unique=true];page(uid,$contentCV)[unique=true][default='DemoAboutPageTemplate'];contentSlot(uid,$contentCV)[unique=true]
-                                ;;Section3A-AboutPage;Section3A;;Section3ASlot-AboutPage
-                                ;;Section3B-AboutPage;Section3B;;Section3BSlot-AboutPage
-                                ;;Section4A-AboutPage;Section4A;;Section4ASlot-AboutPage
-                                ;;Section4B-AboutPage;Section4B;;Section4BSlot-AboutPage
-                                ;;Section5A-AboutPage;Section5A;;Section5ASlot-AboutPage
-                                ;;Section5B-AboutPage;Section5B;;Section5BSlot-AboutPage
-
+                                ;;Section6A-AboutPage;Section6A;;Section6ASlot-AboutPage
+                                ;;Section6B-AboutPage;Section6B;;Section6BSlot-AboutPage
+                                ;;Section6C-AboutPage;Section6C;;Section6CSlot-AboutPage
+                                ;;Section6D-AboutPage;Section6D;;Section6DSlot-AboutPage
+                                ;;Section6E-AboutPage;Section6E;;Section6ESlot-AboutPage
+                                ;;Section6F-AboutPage;Section6F;;Section6FSlot-AboutPage
+                                ;;Section6G-AboutPage;Section6G;;Section6GSlot-AboutPage
+                                ;;Section6H-AboutPage;Section6H;;Section6HSlot-AboutPage
+                                ;;Section6I-AboutPage;Section6I;;Section6ISlot-AboutPage
 
