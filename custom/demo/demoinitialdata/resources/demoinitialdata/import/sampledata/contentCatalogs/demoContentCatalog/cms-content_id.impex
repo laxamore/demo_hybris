@@ -5,16 +5,26 @@
 # English Localisation
 
 # Macros / Replacement Parameter definitions
-$contentCatalog = demoContentCatalog
+$contentCatalog=demoContentCatalog
+$contentCatalogName=Demo Content Catalog
+$productCatalog=demoProductCatalog
+$productCatalogName=Demo Product Catalog
 
-$contentCV = catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]), CatalogVersion.version[default=Staged])[default=$contentCatalog:Staged]
-$picture = media(code, $contentCV);
-$siteResource = jar:com.demo.initialdata.setup.InitialDataSystemSetup&/demoinitialdata/import/sampledata/contentCatalogs/$contentCatalog
-$medias = medias(code, $contentCV);
-$mediaContainer = media(qualifier, $contentCV)[lang=$lang];
+$contentCV=catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]),CatalogVersion.version[default=Staged])[default=$contentCatalog:Staged]
+$productCV=catalogVersion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
+
+$picture=media(code, $contentCV);
+$medias=medias(code, $contentCV);
+$mediaContainer=media(qualifier, $contentCV)[lang=$lang];
+$siteResource=jar:com.demo.initialdata.setup.InitialDataSystemSetup&/demoinitialdata/import/sampledata/contentCatalogs/$contentCatalog
+$productResource=jar:com.demo.initialdata.setup.InitialDataSystemSetup&/demoinitialdata/import/sampledata/productCatalogs/$productCatalog
 
 # Language
-$lang = id
+$lang=id
+
+$backGroundImage=backGroundImage(code, $contentCV)
+$hoverOverImage=hoverOverImage(code, $contentCV)
+$Image=image(code, $contentCV)
 
 # Demo Website
 
@@ -35,9 +45,29 @@ UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]     
 UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]      ; $picture[lang = $lang]
                             ;                          ; CartHeaderLogoComponent ; /images/headers/cart-icon.png
 
+# Bottom Left Footer Logo Component
+UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]   ; $picture[lang = $lang]
+                            ;                          ; FooterLogoComponent1 ; /images/logo/facebook.svg
+                            ;                          ; FooterLogoComponent2 ; /images/logo/instagram.svg
+                            ;                          ; FooterLogoComponent3 ; /images/logo/email.svg
+
+# Bottom Left Footer Logo Component
+UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]             ; $picture[lang = $lang]
+                            ;                          ; BottomLeftFooterLogoComponent1 ; /images/footers/footer-icon-call.png
+                            ;                          ; BottomLeftFooterLogoComponent2 ; /images/footers/footer-icon-message.png
+
+# Bottom Left Footer Paragraph Component
+UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]                  ; content[lang = $lang];
+                            ;                          ; BottomLeftFooterParagraphComponent1 ; "(021) 30306286"
+                            ;                          ; BottomLeftFooterParagraphComponent2 ; "+62 819 234 659"
+
+# Bottom Right Footer Paragraph Component
+UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]                  ; content[lang = $lang];
+                            ;                          ; BottomRightFooterParagraphComponent ; "Copyright © 2019-2022 PT Duta Mas Mandiri"
+
 # Navigation
 # Header
-# CMS Navigation Nodes
+
 UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]              ; linkName[lang = $lang]
                        ;                          ; AboutUsLink                     ; "Tentang Kami"
                        ;                          ; BlogsLink                       ; "Blog"
@@ -48,8 +78,10 @@ UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]          
                        ;                          ; LoginLink                       ; "LOGIN"
 
 # CMS Navigation Nodes
-UPDATE CMSNavigationNode; $contentCV[unique = true]; uid[unique = true]; title[lang = $lang]
-#                        ;                          ; MyAccountNavNode  ; "My Account"
+UPDATE CMSNavigationNode; $contentCV[unique = true]; uid[unique = true]  ; title[lang = $lang]
+                        ;                          ; ProductGroupNavNode ; PRODUK
+                        ;                          ; SupportGroupNavNode ; SUPPORT
+                        ;                          ; AboutGroupNavNode   ; ABOUT
 # End Header
 
 # Footer
@@ -72,7 +104,7 @@ UPDATE FooterNavigationComponent; $contentCV[unique = true]; uid[unique = true] 
 # End Footer
 # End Navigation
 
-#batsu modip
+#batsu modip - Catalog Header
 INSERT_UPDATE Media; mediaFormat(qualifier); $contentCV[unique = true]; code[unique = true]              ; realfilename       ; @media[translator = de.hybris.platform.impex.jalo.media.MediaDataTranslator]; mime[default = 'image/jpeg']; altText            ; folder(qualifier)[default = 'images']
                    ; widescreen            ;                          ; /images/theme/catalog-header.png ; catalog-header.png ; $siteResource/images/theme/catalog-header.png                               ; image/png                   ; hybris Accelerator ;
 

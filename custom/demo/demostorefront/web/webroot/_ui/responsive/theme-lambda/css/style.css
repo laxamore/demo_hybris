@@ -8803,7 +8803,7 @@ ul.nav__links::after {
   vertical-align: middle;
   width: 100%;
 }
-.navigation--middle .nav__left .site-search ul.ui-autocomplete li .thumb + .name + .size + .desc {
+.navigation--middle .nav__left .site-search ul.ui-autocomplete li .thumb + .name {
   padding: 0 10px;
 }
 .navigation--middle .nav__left .site-search ul.ui-autocomplete li .price {
@@ -18809,37 +18809,43 @@ select[multiple].input-sm {
 .demo-bottom-header .demo-bottom-header-content .demo-bottom-header-login a {
   color: white;
 }
-/* batsu */
-.catalog-header {
-  width: 100%;
+.section-unboxing {
+  margin-top: -2px;
+  background-color: #d4effc;
+  padding: 40px 0;
+  color: #6086c2;
 }
-.catalog-header .simple-banner {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+.header-unboxing {
+  font-family: Bw Gradual;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 0;
+}
+.title-unboxing {
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-weight: 700;
+  margin-top: -2px;
+}
+.desc-unboxing {
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 15px;
+}
+.container-unboxing {
+  width: 75%;
+  margin: 0px auto;
+  display: block;
   justify-content: center;
 }
-.catalog-header .simple-banner .js-responsive-image {
-  width: 80%;
-  height: 80%;
+.container-unboxing .flex {
+  display: flex;
 }
-.price a {
-  color: #6086c2;
-  font-family: Palmer Lake Print;
-  font-style: normal;
-}
-.desc {
-  white-space: nowrap;
-  text-align: center;
-  display: inline-block;
-  padding: 0;
-}
-.product__listing.product__grid .thumb img {
-  max-height: 152.66px;
-  max-width: 193.25px;
-}
-#product-facet {
-  padding: 90px 30px 30px 30px;
+.unboxing {
+  width: 25%;
+  margin-top: 5px;
+  text-align: center !important;
+  padding: 12px;
 }
 .skip,
 .skiptocontent,
