@@ -3,7 +3,7 @@
 <%@ taglib prefix="template" tagdir="/WEB-INF/tags/responsive/template"%>
 <%@ taglib prefix="cms" uri="http://hybris.com/tld/cmstags"%>
 
-<template:page pageTitle="${pageTitle}">
+<template:demoPage pageTitle="${pageTitle}">
     <cms:pageSlot position="Section1" var="feature">
         <cms:component component="${feature}" />
     </cms:pageSlot>
@@ -31,4 +31,6 @@
     </cms:pageSlot>
 
 
-</template:page>
+</template:demoPage>
+
+
