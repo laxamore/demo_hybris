@@ -19,7 +19,7 @@ module.exports = function(grunt) {
         jquery: {
             files: ['webroot/WEB-INF/_ui-src/responsive/lib/jquery*.js'],
             tasks: ['sync:syncjquery'],
-        },
+        }
     },
     less: {
         default: {
