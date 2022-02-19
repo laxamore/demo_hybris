@@ -302,10 +302,9 @@ INSERT_UPDATE DemoCMSComponent;$contentCV[unique=true];uid[unique=true];title;im
 INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];active;cmsComponents(&componentRef)
                          ;;UnboxingInTheBoxSlot-Homepage;true;TextUnboxingInTheBoxComponent1, TextUnboxingInTheBoxComponent2, TextUnboxingInTheBoxComponent3, TextUnboxingInTheBoxComponent4
 
+
 INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];position[unique=true];page(uid,$contentCV)[unique=true][default='homePage'];contentSlot(uid,$contentCV)[unique=true]
-                                ;;UnboxingInTheBox-homepage;UnboxingInTheBox;;UnboxingInTheBoxSlot-Homepage
-
-
+                                ;;UnboxingInTheBox-homepage;UnboxingInTheBox;;UnboxingInTheBoxSlot-Homepage\
 
 # Homepage Banner DEMO
 
@@ -349,3 +348,14 @@ INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active[d
 
 INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];position[unique=true];page(uid,$contentCV)[unique=true][default='DemoAboutPageTemplate'];contentSlot(uid,$contentCV)[unique=true]
                                 ;;Section1-AboutPage;Section1;;Section1Slot-AboutPage
+
+# Start Login Page
+INSERT_UPDATE JspIncludeComponent; $contentCV[unique = true]; uid[unique = true]     ; name                     ; page                         ; actions(uid, $contentCV); &componentRef
+                                 ;                          ; CustomerLoginComponent ; Customer Login Component ; demoAccountCustomerLogin.jsp ;                         ; CustomerLoginComponent
+
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]; cmsComponents(uid, $contentCV)
+                         ;                          ; LoginContentSlot  ; CustomerLoginComponent
+
+INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true]     ; position[unique = true]; page(uid, $contentCV)[unique = true][default = 'login']; contentSlot(uid, $contentCV)[unique = true]
+                                ;                          ; LoginContentSlot-login ; LoginContentSlot       ;                                                        ; LoginContentSlot
+# End Login Page

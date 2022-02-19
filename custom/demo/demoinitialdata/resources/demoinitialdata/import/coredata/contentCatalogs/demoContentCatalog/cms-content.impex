@@ -92,7 +92,7 @@ INSERT_UPDATE ContentPage; $contentCV[unique = true]; uid[unique = true]; name  
 
 
 
-# Product Grid page
+# Product Grid Page
 INSERT_UPDATE PageTemplate; $contentCV[unique = true]; uid[unique = true]      ; name                       ; frontendTemplateName         ; restrictedPageTypes(code); active[default = true]
                           ;                          ; ProductGridPageTemplate ; Product Grid Page Template ; category/demoProductGridPage ; CategoryPage             ;
 
@@ -147,10 +147,7 @@ INSERT_UPDATE ContentSlotForTemplate; $contentCV[unique = true]; uid[unique = tr
 
 INSERT_UPDATE CategoryPage; $contentCV[unique = true]; uid[unique = true]; name              ; masterTemplate(uid, $contentCV); defaultPage; approvalStatus(code)[default = 'approved']
                           ;                          ; productGrid       ; Product Grid Page ; ProductGridPageTemplate        ; true       ;
-# End Category Page
-# End Demo Site
-
-
+# End Product Grid Page
 
 #DEMO about INTHEBOX
 
@@ -212,3 +209,18 @@ INSERT_UPDATE ContentPage;$contentCV[unique=true];uid[unique=true];name;masterTe
                          ;;DemoAboutPageTemplate;About;DemoAboutTemplate;about;;;
 
 #END OF ABOUT
+
+# LOGIN page
+INSERT_UPDATE PageTemplate; $contentCV[unique = true]; uid[unique = true]; name                ; restrictedPageTypes(code); active[default = true]
+                          ;                          ; LoginPageTemplate ; Login Page Template ; ContentPage              ;
+
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]; name               ; active
+                         ;                          ; LoginContentSlot  ; Login Content SLot ; true
+
+INSERT_UPDATE ContentSlotName; name[unique = true]; template(uid, $contentCV)[unique = true][default = 'LoginPageTemplate']; validComponentTypes(code); compTypeGroup(code)
+                             ; LoginContentSlot   ;                                                                        ;                          ; wide
+
+INSERT_UPDATE ContentPage; $contentCV[unique = true]; uid[unique = true]; name       ; label ; masterTemplate(uid, $contentCV); defaultPage; approvalStatus(code)[default = 'approved']
+                         ;                          ; login             ; Login Page ; login ; LoginPageTemplate              ; true       ;
+# End LOGIN Page
+# End Demo Site

@@ -5,7 +5,7 @@
 # Import the Content Catalog
 #
 $contentCatalog = demoContentCatalog
-$languages = id, en
+$languages = id
 
 # Content catalog for CMS contents
 INSERT_UPDATE ContentCatalog; id[unique = true]
