@@ -149,8 +149,29 @@ main {
 
       a {
         color: white;
+        text-decoration: none;
       }
     }
+  }
+}
+
+.demo-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.demo-dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+
+  a {
+    color: #6086c2 !important;
   }
 }
 
@@ -407,7 +428,7 @@ main {
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 
