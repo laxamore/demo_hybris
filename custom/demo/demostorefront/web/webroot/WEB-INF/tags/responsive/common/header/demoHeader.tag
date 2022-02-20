@@ -63,11 +63,27 @@
 
             <%--Login--%>
             <div class="demo-bottom-header-login">
-                <cms:pageSlot position="LoginLink" var="component">
-                    <c:if test="${component.visible}">
-                        <cms:component component="${component}"/>
-                    </c:if>
-                </cms:pageSlot>
+                <sec:authorize access="!isAuthenticated()">
+                    <cms:pageSlot position="LoginLink" var="component">
+                        <c:if test="${component.visible}">
+                            <cms:component component="${component}"/>
+                        </c:if>
+                    </cms:pageSlot>
+                </sec:authorize>
+
+                <sec:authorize access="isAuthenticated()">
+                    <div class="demo-dropdown">
+                        <a href="#">
+                                ${user.name}${" "}
+                            <span class="caret"></span>
+                        </a>
+                        <div class="demo-dropdown-content">
+                            <a href="logout">
+                                Logout
+                            </a>
+                        </div>
+                    </div>
+                </sec:authorize>
             </div>
 
             <%--Cart--%>
