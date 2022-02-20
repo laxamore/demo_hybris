@@ -5,28 +5,33 @@
 # English Localisation
 
 # Macros / Replacement Parameter definitions
-$contentCatalog=demoContentCatalog
-$contentCatalogName=Demo Content Catalog
-$productCatalog=demoProductCatalog
-$productCatalogName=Demo Product Catalog
+$contentCatalog = demoContentCatalog
+$contentCatalogName = Demo Content Catalog
+$productCatalog = demoProductCatalog
+$productCatalogName = Demo Product Catalog
 
-$contentCV=catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]),CatalogVersion.version[default=Staged])[default=$contentCatalog:Staged]
-$productCV=catalogVersion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
+$contentCV = catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]), CatalogVersion.version[default=Staged])[default=$contentCatalog:Staged]
+$productCV = catalogVersion(catalog(id[default=$productCatalog]), version[default='Staged'])[unique=true, default=$productCatalog:Staged]
 
-$picture=media(code, $contentCV);
-$medias=medias(code, $contentCV);
-$mediaContainer=media(qualifier, $contentCV)[lang=$lang];
-$siteResource=jar:com.demo.initialdata.setup.InitialDataSystemSetup&/demoinitialdata/import/sampledata/contentCatalogs/$contentCatalog
-$productResource=jar:com.demo.initialdata.setup.InitialDataSystemSetup&/demoinitialdata/import/sampledata/productCatalogs/$productCatalog
+$picture = media(code, $contentCV);
+$medias = medias(code, $contentCV);
+$mediaContainer = media(qualifier, $contentCV)[lang=$lang];
+$siteResource = jar:com.demo.initialdata.setup.InitialDataSystemSetup&/demoinitialdata/import/sampledata/contentCatalogs/$contentCatalog
+$productResource = jar:com.demo.initialdata.setup.InitialDataSystemSetup&/demoinitialdata/import/sampledata/productCatalogs/$productCatalog
 
 # Language
-$lang=id
+$lang = id
 
-$backGroundImage=backGroundImage(code, $contentCV)
-$hoverOverImage=hoverOverImage(code, $contentCV)
-$Image=image(code, $contentCV)
+$backGroundImage = backGroundImage(code, $contentCV)
+$hoverOverImage = hoverOverImage(code, $contentCV)
+$Image = image(code, $contentCV)
 
 # Demo Website
+
+# Start Updating Page Title
+UPDATE ContentPage; $contentCV[unique = true]; uid[unique = true]; title[lang = $lang]
+                  ;                          ; homePage          ; Beli Kasur Online Tanpa Tibet
+# End Updating Page Title
 
 # Site Logo Component
 UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]; $picture[lang = $lang]
@@ -115,11 +120,11 @@ UPDATE FooterNavigationComponent; $contentCV[unique = true]; uid[unique = true] 
 
 #Banner About DEMO
 
-INSERT_UPDATE Media;mediaFormat(qualifier);$contentCV[unique=true];code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];mime[default='image/png'];realfilename;folder(qualifier)[default='images'];altText
-                   ;widescreen;;about-banner.png;$siteResource/images/banners/homepage/responsive/about-banner.png;;about-banner.png;;"Banner About"
+INSERT_UPDATE Media; mediaFormat(qualifier); $contentCV[unique = true]; code[unique = true]; @media[translator = de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite = true]; mime[default = 'image/png']; realfilename     ; folder(qualifier)[default = 'images']; altText
+                   ; widescreen            ;                          ; about-banner.png   ; $siteResource/images/banners/homepage/responsive/about-banner.png                              ;                            ; about-banner.png ;                                      ; "Banner About"
 
-INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
-                            ;demo-about-project;about-banner.png
+INSERT_UPDATE MediaContainer; qualifier[unique = true]; $medias; $contentCV[unique = true]
+                            ; demo-about-project      ; about-banner.png
 
-UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
-                                      ;;BannerDemoAbout;demo-about-project
+UPDATE SimpleResponsiveBannerComponent; $contentCV[unique = true]; uid[unique = true]; $mediaContainer
+                                      ;                          ; BannerDemoAbout   ; demo-about-project

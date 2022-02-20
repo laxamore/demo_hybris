@@ -28,3 +28,4 @@ bin/
 *backoffice_bof.jar
 Generated*
 **/node_modules
+**/_ui/**/style.css
