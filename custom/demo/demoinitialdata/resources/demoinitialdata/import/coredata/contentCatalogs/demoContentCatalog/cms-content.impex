@@ -177,12 +177,15 @@ INSERT_UPDATE ContentSlotName; name[unique = true]   ; template(uid, $contentCV)
                              ; CartLink              ;                                                                        ;                          ; navigation
 # End Headers
 #Body
-                             ; Section1              ;                                                                        ;                          ; wide
-                             ; Section2              ;                                                                        ;                          ; wide
-                             ; Section3              ;                                                                        ;                          ; wide
-                             ; Section4              ;                                                                        ;                          ; wide
-                             ; Section5              ;                                                                        ;                          ; wide
-                             ; Section6              ;                                                                        ;                          ; wide
+                             ;Section1                ;;;wide
+                             ;Section2                ;;;wide
+                             ;Section3A                ;;;wide
+                             ;Section3B                ;;;wide
+                             ;Section4A                ;;;wide
+                             ;Section4B                ;;;wide
+                             ;Section5A                ;;;wide
+                             ;Section5B                ;;;wide
+                             ;Section6                ;;;wide
 #End Body
 # Footers
                              ; FooterLogo1           ;                                                                        ;                          ; logo
