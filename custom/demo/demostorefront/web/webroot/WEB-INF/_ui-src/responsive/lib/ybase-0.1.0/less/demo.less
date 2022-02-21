@@ -149,8 +149,29 @@ main {
 
       a {
         color: white;
+        text-decoration: none;
       }
     }
+  }
+}
+
+.demo-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.demo-dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+
+  a {
+    color: #6086c2 !important;
   }
 }
 
@@ -317,6 +338,99 @@ main {
   }
 }
 
+.demo-login {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+
+  justify-content: center;
+  align-items: center;
+
+  h5 {
+    font-size: 20px;
+    padding: 3.5rem 0;
+  }
+
+  .demo-login-container {
+    display: flex;
+    flex-direction: column;
+    width: 440px;
+
+    justify-content: start;
+    align-items: start;
+
+    .demo-login-form {
+      width: 100%;
+      padding-bottom: 3rem;
+    }
+
+    button, input {
+      border: none;
+      border-radius: 8px;
+      width: 100%;
+      height: 50px;
+    }
+
+    input {
+      background-color: rgba(235, 237, 242, 0.4);
+    }
+
+    button {
+      background-color: #6086c2;
+      color: white;
+    }
+  }
+
+  .demo-login-register {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    justify-content: center;
+    align-items: center;
+
+    p {
+      color: #a7abc3;
+    }
+
+    p, a {
+      margin: 0;
+      padding: 0 1rem;
+    }
+  }
+}
+
+.home-banner-mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 /* batsu */
 .catalog-header{
   width: 100%;
@@ -365,3 +479,4 @@ main {
     font-weight: 400;
     text-align: center;
 }
+

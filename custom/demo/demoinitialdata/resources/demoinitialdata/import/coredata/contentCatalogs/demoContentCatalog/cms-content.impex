@@ -94,7 +94,7 @@ INSERT_UPDATE ContentPage; $contentCV[unique = true]; uid[unique = true]; name  
 
 
 
-# Product Grid page
+# Product Grid Page
 INSERT_UPDATE PageTemplate; $contentCV[unique = true]; uid[unique = true]      ; name                       ; frontendTemplateName         ; restrictedPageTypes(code); active[default = true]
                           ;                          ; ProductGridPageTemplate ; Product Grid Page Template ; category/demoProductGridPage ; CategoryPage             ;
 
@@ -156,5 +156,80 @@ INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]; name  
 
 INSERT_UPDATE CategoryPage; $contentCV[unique = true]; uid[unique = true]; name              ; masterTemplate(uid, $contentCV); defaultPage; approvalStatus(code)[default = 'approved']
                           ;                          ; productGrid       ; Product Grid Page ; ProductGridPageTemplate        ; true       ;
-# End Category Page
+# End Product Grid Page
+
+#DEMO about INTHEBOX
+
+
+INSERT_UPDATE PageTemplate;$contentCV[unique=true];uid[unique=true];name;frontendTemplateName;restrictedPageTypes(code);active[default=true]
+                          ;;DemoAboutTemplate;demo about template;about/DemoAboutTemplatePage;ContentPage;true
+
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]         ; name                          ; active
+                         ;                          ; Section1Slot-AboutPage     ; Section 1 Banner About        ; true
+
+INSERT_UPDATE ContentSlotName;name[unique=true];template(uid,$contentCV)[unique=true][default='DemoAboutTemplate'];validComponentTypes(code);compTypeGroup(code)
+# Headers
+                             ; TopLeftParagraph       ;                                                                              ;                          ; narrow
+                             ; TopRightNavigationBar  ;                                                                              ;                          ; navigation
+                             ; HeaderLogo             ;                                                                              ;                          ; logo
+                             ; MiddleNavigationBar    ;                                                                              ;                          ; navigation
+                             ; LoginLink              ;                                                                              ;                          ; navigation
+                             ; CartLink               ;                                                                              ;                          ; navigation
+# End Headers
+#Body
+                             ;Section1                ;;;wide
+                             ;Section2                ;;;wide
+                             ;Section3                ;;;wide
+                             ;Section4                ;;;wide
+                             ;Section5                ;;;wide
+                             ;Section6                ;;;wide
+#End Body
+# Footers
+                             ; FooterLogo1            ;                                                                              ;                          ; logo
+                             ; FooterLogo2            ;                                                                              ;                          ; logo
+                             ; FooterNavigation       ;                                                                              ;                          ; navigation
+                             ; FooterContact          ;                                                                              ;                          ; footer
+                             ; FooterCopyright        ;                                                                              ;                          ; footer
+# End Footers
+
+
+UPDATE PageTemplate;$contentCV[unique=true];uid[unique=true];velocityTemplate[translator=de.hybris.platform.commerceservices.impex.impl.FileLoaderValueTranslator]
+                   ;;DemoAboutTemplate;$jarResourceCms/structure-view/structure_demoAboutTemplate.vm
+
+INSERT_UPDATE ContentSlotForTemplate;$contentCV[unique=true];uid[unique=true];position[unique=true];pageTemplate(uid,$contentCV)[unique=true][default='DemoAboutTemplate'];contentSlot(uid,$contentCV)[unique=true];allowOverwrite
+# Headers
+                                    ;                          ; TopLeftParagraph-AboutPage       ; TopLeftParagraph       ;                                                                                  ; TopLeftParagraphSlot                       ; true
+                                    ;                          ; TopRightNavigationBar-AboutPage  ; TopRightNavigationBar  ;                                                                                  ; TopRightNavigationBarSlot                  ; true
+                                    ;                          ; HeaderLogo-AboutPage             ; HeaderLogo             ;                                                                                  ; HeaderLogoSlot                             ; true
+                                    ;                          ; MiddleNavigationBar-AboutPage    ; MiddleNavigationBar    ;                                                                                  ; MiddleNavigationBarSlot                    ; true
+                                    ;                          ; LoginLink-AboutPage              ; LoginLink              ;                                                                                  ; LoginLinkSlot                              ; true
+                                    ;                          ; CartLink-AboutPage               ; CartLink               ;                                                                                  ; CartLinkSlot                               ; true
+# End Headers
+
+# Footers
+                                    ;                          ; FooterLogo1-AboutPage            ; FooterLogo1            ;                                                                                  ; FooterLogo1Slot                            ; true
+                                    ;                          ; FooterLogo2-AboutPage            ; FooterLogo2            ;                                                                                  ; FooterLogo2Slot                            ; true
+                                    ;                          ; FooterNavigation-AboutPage       ; FooterNavigation       ;                                                                                  ; FooterNavigationSlot                       ; true
+                                    ;                          ; FooterContact-AboutPage          ; FooterContact          ;                                                                                  ; FooterContactSlot                          ; true
+                                    ;                          ; FooterCopyright-AboutPage        ; FooterCopyright        ;                                                                                  ; FooterCopyrightSlot                        ; true
+# End Footers
+
+INSERT_UPDATE ContentPage;$contentCV[unique=true];uid[unique=true];name;masterTemplate(uid,$contentCV);label;defaultPage[default='true'];approvalStatus(code)[default='approved'];homepage[default='true']
+                         ;;DemoAboutPageTemplate;About;DemoAboutTemplate;about;;;
+
+#END OF ABOUT
+
+# LOGIN page
+INSERT_UPDATE PageTemplate; $contentCV[unique = true]; uid[unique = true]; name                ; restrictedPageTypes(code); active[default = true]
+                          ;                          ; LoginPageTemplate ; Login Page Template ; ContentPage              ;
+
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]; name               ; active
+                         ;                          ; LoginContentSlot  ; Login Content SLot ; true
+
+INSERT_UPDATE ContentSlotName; name[unique = true]; template(uid, $contentCV)[unique = true][default = 'LoginPageTemplate']; validComponentTypes(code); compTypeGroup(code)
+                             ; LoginContentSlot   ;                                                                        ;                          ; wide
+
+INSERT_UPDATE ContentPage; $contentCV[unique = true]; uid[unique = true]; name       ; label ; masterTemplate(uid, $contentCV); defaultPage; approvalStatus(code)[default = 'approved']
+                         ;                          ; login             ; Login Page ; login ; LoginPageTemplate              ; true       ;
+# End LOGIN Page
 # End Demo Site
