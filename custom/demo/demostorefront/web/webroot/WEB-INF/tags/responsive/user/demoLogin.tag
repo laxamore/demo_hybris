@@ -1,6 +1,8 @@
 <%@ tag body-content="empty" trimDirectiveWhitespaces="true" %>
+
 <%@ attribute name="actionNameKey" required="true" type="java.lang.String" %>
 <%@ attribute name="action" required="true" type="java.lang.String" %>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
@@ -9,16 +11,16 @@
 
 <spring:htmlEscape defaultHtmlEscape="true"/>
 
-<div class="demo-login">
+<div class="demo-login-register">
     <h5>Masuk</h5>
     <form:form action="${action}" method="post" modelAttribute="loginForm">
-        <div class="demo-login-container">
-            <div class="demo-login-form">
-                <form:input cssClass="form-control" id="j_username" path="j_username"
+        <div class="demo-login-register-container">
+            <div class="demo-login-register-form">
+                <form:input cssClass="form-control" id="login.j_username" path="j_username"
                             placeholder="Alamat Email"/>
             </div>
-            <div class="demo-login-form">
-                <form:password cssClass="form-control" id="j_password" path="j_password" autocomplete="off"
+            <div class="demo-login-register-form">
+                <form:password cssClass="form-control" id="login.j_password" path="j_password" autocomplete="off"
                                placeholder="Kata Sandi"/>
             </div>
 
@@ -31,7 +33,7 @@
                 </ycommerce:testId>
             </div>
 
-            <div class="demo-login-form">
+            <div class="demo-login-register-form">
                 <ycommerce:testId code="loginAndCheckoutButton">
                     <button type="submit" class="btn btn-primary btn-block">
                         Masuk
@@ -39,7 +41,7 @@
                 </ycommerce:testId>
             </div>
 
-            <div class="demo-login-register">
+            <div class="demo-login-register-ask">
                 <p>Belum memiliki akun?</p>
                 <a href="register">Daftar Sekarang</a>
             </div>

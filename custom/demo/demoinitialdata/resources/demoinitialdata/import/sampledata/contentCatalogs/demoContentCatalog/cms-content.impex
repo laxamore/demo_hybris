@@ -385,6 +385,17 @@ INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];positi
                                 ;;Section2-AboutPage;Section2;;Section2Slot-AboutPage
 
 
+# Start Register Page
+INSERT_UPDATE JspIncludeComponent; $contentCV[unique = true]; uid[unique = true]        ; name                        ; page                            ; actions(uid, $contentCV); &componentRef
+                                 ;                          ; CustomerRegisterComponent ; Customer Register Component ; demoAccountCustomerRegister.jsp ;                         ; CustomerRegisterComponent
+
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]  ; cmsComponents(uid, $contentCV)
+                         ;                          ; RegisterContentSlot ; CustomerRegisterComponent
+
+INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true]           ; position[unique = true]; page(uid, $contentCV)[unique = true][default = 'register']; contentSlot(uid, $contentCV)[unique = true]
+                                ;                          ; RegisterContentSlot-register ; RegisterContentSlot    ;                                                           ; RegisterContentSlot
+# End Register Page
+
 
 #About info DEMO
 
