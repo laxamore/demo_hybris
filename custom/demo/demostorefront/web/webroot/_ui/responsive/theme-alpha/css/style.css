@@ -19125,6 +19125,26 @@ main {
   text-align: center !important;
   padding: 12px;
 }
+.page-DemoAboutPageTemplate .main__inner-wrapper .yCmsContentSlot {
+  background-color: #6086c2;
+}
+.page-DemoAboutPageTemplate .main__inner-wrapper .yCmsContentSlot .yCmsComponent .content {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+.page-DemoAboutPageTemplate .main__inner-wrapper .yCmsContentSlot .yCmsComponent .content div {
+  color: white;
+  text-align: center;
+  font-family: Verdana, sans-serif;
+}
+.page-DemoAboutPageTemplate .main__inner-wrapper .yCmsContentSlot .yCmsComponent .content div h2 {
+  font-size: 36px;
+  font-weight: 600;
+}
+.page-DemoAboutPageTemplate .main__inner-wrapper .yCmsContentSlot .yCmsComponent .content div p {
+  font-weight: 400;
+  font-size: 16px;
+}
 .skip,
 .skiptocontent,
 .skiptonavigation {
