@@ -12,10 +12,10 @@
 <!--		<property name="price" type="Double"/>-->
 	</bean>
 
-	<bean class="com.demo.facades.product.data.GenderData">
-		<property name="code" type="String"/>
-		<property name="name" type="String"/>
-	</bean>
+    <bean class="com.demo.facades.product.data.GenderData">
+        <property name="code" type="String"/>
+        <property name="name" type="String"/>
+    </bean>
 
 	<bean class="com.demo.facades.product.data.ProductData">
 		<property name="id" type="String"/>
@@ -38,4 +38,8 @@
 		<property name="paragraph" type="String"/>
 		<property name="time" type="String"/>
 	</bean>
+
+    <bean class="de.hybris.platform.commercefacades.user.data.RegisterData">
+        <property name="id" type="String"/>
+    </bean>
 </beans>

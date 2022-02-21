@@ -28,6 +28,11 @@ $Image=image(code, $contentCV)
 
 # Demo Website
 
+# Start Updating Page Title
+UPDATE ContentPage; $contentCV[unique = true]; uid[unique = true]; title[lang = $lang]
+                  ;                          ; homePage          ; Beli Kasur Online Tanpa Tibet
+# End Updating Page Title
+
 # Site Logo Component
 UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]; $picture[lang = $lang]
                             ;                          ; SiteLogoComponent ; /images/headers/header-logo-white.png ;
