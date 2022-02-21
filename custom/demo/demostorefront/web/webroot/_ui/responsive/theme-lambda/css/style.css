@@ -19081,6 +19081,28 @@ main {
   font-weight: 400;
   text-align: center;
 }
+#flex-cross-parent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#flex-cross-parent .flex-cross-child {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#flex-cross-parent .flex-cross-child a {
+  flex: 30%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
 .section-unboxing {
   margin-top: -2px;
   background-color: #d4effc;

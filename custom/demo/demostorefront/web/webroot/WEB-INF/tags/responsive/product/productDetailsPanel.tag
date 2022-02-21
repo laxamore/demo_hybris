@@ -1,8 +1,13 @@
-<%@ tag body-content="empty" trimDirectiveWhitespaces="true"%>
-<%@ taglib prefix="product" tagdir="/WEB-INF/tags/responsive/product"%>
+<%@ tag body-content="empty" trimDirectiveWhitespaces="true" %>
+<%@ taglib prefix="product" tagdir="/WEB-INF/tags/responsive/product" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="action" tagdir="/WEB-INF/tags/responsive/action" %>
 <%@ taglib prefix="cms" uri="http://hybris.com/tld/cmstags"%>
 <%@ taglib prefix="ycommerce" uri="http://hybris.com/tld/ycommercetags"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ attribute name="curDemoVariantProduct" required="true" type="com.demo.facades.product.data.DemoVariantProductData" %>
+
 
 <div class="product-details page-title">
 	<ycommerce:testId code="productDetails_productNamePrice_label_${product.code}">
@@ -22,7 +27,14 @@
 					<div class="product-details">
 						<product:productPromotionSection product="${product}"/>
 						<ycommerce:testId code="productDetails_productNamePrice_label_${product.code}">
+						<a>
+                            ${ycommerce:sanitizeHTML(curDemoVariantProduct.getType())}
+                            <br>
+                            ${ycommerce:sanitizeHTML(curDemoVariantProduct.getName())}
 							<product:productPricePanel product="${product}" />
+					        <br>
+
+					    </a>
 						</ycommerce:testId>
 						<div class="description">${ycommerce:sanitizeHTML(product.summary)}</div>
 					</div>

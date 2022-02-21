@@ -133,3 +133,11 @@ INSERT_UPDATE MediaContainer; qualifier[unique = true]; $medias; $contentCV[uniq
 
 UPDATE SimpleResponsiveBannerComponent; $contentCV[unique = true]; uid[unique = true]; $mediaContainer
                                       ;                          ; Catalog-Header    ; catalog-header
+
+#batsu modip
+UPDATE ProductReferencesComponent;$contentCV[unique=true];uid[unique=true];title[lang=$lang]
+                                 ;;CrossSelling;"You may also like..."
+                                 ;;Others;"Accessories"
+                                 ;;Similar;"You may also like..."
+                                 ;;accessories;"Accessories"
+

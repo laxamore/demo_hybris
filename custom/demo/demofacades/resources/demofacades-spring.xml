@@ -186,6 +186,8 @@
 <!--	DemoProduct-->
 	<alias alias="demoProductFacade" name="demoProductFacade"/>
 	<bean id="demoProductFacade" class="com.demo.facades.product.facade.impl.DemoProductFacadeImpl"/>
+	<alias alias="demoVariantProductFacade" name="demoVariantProductFacade"/>
+	<bean id="demoVariantProductFacade" class="com.demo.facades.product.facade.impl.DemoVariantProductFacadeImpl"/>
 	<alias alias="demoTestimonyFacade" name="demoTestimonyFacade"/>
 	<bean id="demoTestimonyFacade" class="com.demo.facades.testimony.facade.impl.DemoTestimonyFacadeImpl"/>
 <!--	DemoPopulator-->

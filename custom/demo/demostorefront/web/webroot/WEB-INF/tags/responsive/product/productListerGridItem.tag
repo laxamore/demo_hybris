@@ -24,7 +24,6 @@
 			<product:productPrimaryImage product="${product}" format="product"/>
 		</a>
 		<div class="details">
-
 			<ycommerce:testId code="product_productName">
 				<a class="name" href="${fn:escapeXml(productUrl)}">
 					<c:out escapeXml="false" value="${ycommerce:sanitizeHTML(product.name)}" />

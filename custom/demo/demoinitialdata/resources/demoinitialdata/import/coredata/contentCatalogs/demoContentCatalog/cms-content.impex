@@ -31,7 +31,6 @@ INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]        
                          ;                          ; BannerSlot                ; Banner Slot                   ; true
                          ;                          ; ProductCarouselSlot       ; Product Carousel Slot         ; true
                          ;                          ; UnboxingInTheBoxSlot      ; Unboxing In The Box Slot      ; true
-                         ;                          ; TestimonyHomeSlot         ; Testimony Homepage Slot       ; true
 # End HomePage Content
 # Footers
                          ;                          ; FooterLogo1Slot           ; Footer Logo 1 Slot            ; true
@@ -76,7 +75,6 @@ INSERT_UPDATE ContentSlotForTemplate; $contentCV[unique = true]; uid[unique = tr
                                     ;                          ; Banner-HomePage                ; Banner                 ;                                                                           ; BannerSlot                                 ; true
                                     ;                          ; ProductCarousel-HomePage       ; ProductCarousel        ;                                                                           ; ProductCarouselSlot                        ; true
                                     ;                          ; UnboxingInTheBox-HomePage      ; UnboxingInTheBox       ;                                                                           ; UnboxingInTheBoxSlot                       ; true
-                                    ;                          ; TestimonyHome-HomePage         ; TestimonyHome          ;                                                                           ; TestimonyHomeSlot                          ; true
 # End HomePage Content
 # Footers
                                     ;                          ; FooterLogo1-HomePage           ; FooterLogo1            ;                                                                           ; FooterLogo1Slot                            ; true
@@ -161,61 +159,61 @@ INSERT_UPDATE CategoryPage; $contentCV[unique = true]; uid[unique = true]; name 
 #DEMO about INTHEBOX
 
 
-INSERT_UPDATE PageTemplate;$contentCV[unique=true];uid[unique=true];name;frontendTemplateName;restrictedPageTypes(code);active[default=true]
-                          ;;DemoAboutTemplate;demo about template;about/DemoAboutTemplatePage;ContentPage;true
+INSERT_UPDATE PageTemplate; $contentCV[unique = true]; uid[unique = true]; name                ; frontendTemplateName        ; restrictedPageTypes(code); active[default = true]
+                          ;                          ; DemoAboutTemplate ; demo about template ; about/DemoAboutTemplatePage ; ContentPage              ; true
 
-INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]         ; name                          ; active
-                         ;                          ; Section1Slot-AboutPage     ; Section 1 Banner About        ; true
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]     ; name                   ; active
+                         ;                          ; Section1Slot-AboutPage ; Section 1 Banner About ; true
 
-INSERT_UPDATE ContentSlotName;name[unique=true];template(uid,$contentCV)[unique=true][default='DemoAboutTemplate'];validComponentTypes(code);compTypeGroup(code)
+INSERT_UPDATE ContentSlotName; name[unique = true]   ; template(uid, $contentCV)[unique = true][default = 'DemoAboutTemplate']; validComponentTypes(code); compTypeGroup(code)
 # Headers
-                             ; TopLeftParagraph       ;                                                                              ;                          ; narrow
-                             ; TopRightNavigationBar  ;                                                                              ;                          ; navigation
-                             ; HeaderLogo             ;                                                                              ;                          ; logo
-                             ; MiddleNavigationBar    ;                                                                              ;                          ; navigation
-                             ; LoginLink              ;                                                                              ;                          ; navigation
-                             ; CartLink               ;                                                                              ;                          ; navigation
+                             ; TopLeftParagraph      ;                                                                        ;                          ; narrow
+                             ; TopRightNavigationBar ;                                                                        ;                          ; navigation
+                             ; HeaderLogo            ;                                                                        ;                          ; logo
+                             ; MiddleNavigationBar   ;                                                                        ;                          ; navigation
+                             ; LoginLink             ;                                                                        ;                          ; navigation
+                             ; CartLink              ;                                                                        ;                          ; navigation
 # End Headers
 #Body
-                             ;Section1                ;;;wide
-                             ;Section2                ;;;wide
-                             ;Section3                ;;;wide
-                             ;Section4                ;;;wide
-                             ;Section5                ;;;wide
-                             ;Section6                ;;;wide
+                             ; Section1              ;                                                                        ;                          ; wide
+                             ; Section2              ;                                                                        ;                          ; wide
+                             ; Section3              ;                                                                        ;                          ; wide
+                             ; Section4              ;                                                                        ;                          ; wide
+                             ; Section5              ;                                                                        ;                          ; wide
+                             ; Section6              ;                                                                        ;                          ; wide
 #End Body
 # Footers
-                             ; FooterLogo1            ;                                                                              ;                          ; logo
-                             ; FooterLogo2            ;                                                                              ;                          ; logo
-                             ; FooterNavigation       ;                                                                              ;                          ; navigation
-                             ; FooterContact          ;                                                                              ;                          ; footer
-                             ; FooterCopyright        ;                                                                              ;                          ; footer
+                             ; FooterLogo1           ;                                                                        ;                          ; logo
+                             ; FooterLogo2           ;                                                                        ;                          ; logo
+                             ; FooterNavigation      ;                                                                        ;                          ; navigation
+                             ; FooterContact         ;                                                                        ;                          ; footer
+                             ; FooterCopyright       ;                                                                        ;                          ; footer
 # End Footers
 
 
-UPDATE PageTemplate;$contentCV[unique=true];uid[unique=true];velocityTemplate[translator=de.hybris.platform.commerceservices.impex.impl.FileLoaderValueTranslator]
-                   ;;DemoAboutTemplate;$jarResourceCms/structure-view/structure_demoAboutTemplate.vm
+UPDATE PageTemplate; $contentCV[unique = true]; uid[unique = true]; velocityTemplate[translator = de.hybris.platform.commerceservices.impex.impl.FileLoaderValueTranslator]
+                   ;                          ; DemoAboutTemplate ; $jarResourceCms/structure-view/structure_demoAboutTemplate.vm
 
-INSERT_UPDATE ContentSlotForTemplate;$contentCV[unique=true];uid[unique=true];position[unique=true];pageTemplate(uid,$contentCV)[unique=true][default='DemoAboutTemplate'];contentSlot(uid,$contentCV)[unique=true];allowOverwrite
+INSERT_UPDATE ContentSlotForTemplate; $contentCV[unique = true]; uid[unique = true]              ; position[unique = true]; pageTemplate(uid, $contentCV)[unique = true][default = 'DemoAboutTemplate']; contentSlot(uid, $contentCV)[unique = true]; allowOverwrite
 # Headers
-                                    ;                          ; TopLeftParagraph-AboutPage       ; TopLeftParagraph       ;                                                                                  ; TopLeftParagraphSlot                       ; true
-                                    ;                          ; TopRightNavigationBar-AboutPage  ; TopRightNavigationBar  ;                                                                                  ; TopRightNavigationBarSlot                  ; true
-                                    ;                          ; HeaderLogo-AboutPage             ; HeaderLogo             ;                                                                                  ; HeaderLogoSlot                             ; true
-                                    ;                          ; MiddleNavigationBar-AboutPage    ; MiddleNavigationBar    ;                                                                                  ; MiddleNavigationBarSlot                    ; true
-                                    ;                          ; LoginLink-AboutPage              ; LoginLink              ;                                                                                  ; LoginLinkSlot                              ; true
-                                    ;                          ; CartLink-AboutPage               ; CartLink               ;                                                                                  ; CartLinkSlot                               ; true
+                                    ;                          ; TopLeftParagraph-AboutPage      ; TopLeftParagraph       ;                                                                            ; TopLeftParagraphSlot                       ; true
+                                    ;                          ; TopRightNavigationBar-AboutPage ; TopRightNavigationBar  ;                                                                            ; TopRightNavigationBarSlot                  ; true
+                                    ;                          ; HeaderLogo-AboutPage            ; HeaderLogo             ;                                                                            ; HeaderLogoSlot                             ; true
+                                    ;                          ; MiddleNavigationBar-AboutPage   ; MiddleNavigationBar    ;                                                                            ; MiddleNavigationBarSlot                    ; true
+                                    ;                          ; LoginLink-AboutPage             ; LoginLink              ;                                                                            ; LoginLinkSlot                              ; true
+                                    ;                          ; CartLink-AboutPage              ; CartLink               ;                                                                            ; CartLinkSlot                               ; true
 # End Headers
 
 # Footers
-                                    ;                          ; FooterLogo1-AboutPage            ; FooterLogo1            ;                                                                                  ; FooterLogo1Slot                            ; true
-                                    ;                          ; FooterLogo2-AboutPage            ; FooterLogo2            ;                                                                                  ; FooterLogo2Slot                            ; true
-                                    ;                          ; FooterNavigation-AboutPage       ; FooterNavigation       ;                                                                                  ; FooterNavigationSlot                       ; true
-                                    ;                          ; FooterContact-AboutPage          ; FooterContact          ;                                                                                  ; FooterContactSlot                          ; true
-                                    ;                          ; FooterCopyright-AboutPage        ; FooterCopyright        ;                                                                                  ; FooterCopyrightSlot                        ; true
+                                    ;                          ; FooterLogo1-AboutPage           ; FooterLogo1            ;                                                                            ; FooterLogo1Slot                            ; true
+                                    ;                          ; FooterLogo2-AboutPage           ; FooterLogo2            ;                                                                            ; FooterLogo2Slot                            ; true
+                                    ;                          ; FooterNavigation-AboutPage      ; FooterNavigation       ;                                                                            ; FooterNavigationSlot                       ; true
+                                    ;                          ; FooterContact-AboutPage         ; FooterContact          ;                                                                            ; FooterContactSlot                          ; true
+                                    ;                          ; FooterCopyright-AboutPage       ; FooterCopyright        ;                                                                            ; FooterCopyrightSlot                        ; true
 # End Footers
 
-INSERT_UPDATE ContentPage;$contentCV[unique=true];uid[unique=true];name;masterTemplate(uid,$contentCV);label;defaultPage[default='true'];approvalStatus(code)[default='approved'];homepage[default='true']
-                         ;;DemoAboutPageTemplate;About;DemoAboutTemplate;about;;;
+INSERT_UPDATE ContentPage; $contentCV[unique = true]; uid[unique = true]    ; name  ; masterTemplate(uid, $contentCV); label ; defaultPage[default = 'true']; approvalStatus(code)[default = 'approved']; homepage[default = 'true']
+                         ;                          ; DemoAboutPageTemplate ; About ; DemoAboutTemplate              ; about ;                              ;                                           ;
 
 #END OF ABOUT
 
@@ -232,4 +230,73 @@ INSERT_UPDATE ContentSlotName; name[unique = true]; template(uid, $contentCV)[un
 INSERT_UPDATE ContentPage; $contentCV[unique = true]; uid[unique = true]; name       ; label ; masterTemplate(uid, $contentCV); defaultPage; approvalStatus(code)[default = 'approved']
                          ;                          ; login             ; Login Page ; login ; LoginPageTemplate              ; true       ;
 # End LOGIN Page
+
+# ProductDetailsPage - Batsu modip
+# Create Content Slots
+INSERT_UPDATE PageTemplate; $contentCV[unique = true]; uid[unique = true]         ; name                          ; frontendTemplateName           ; restrictedPageTypes(code); active[default = true]
+                          ;                          ; ProductDetailsPageTemplate ; Product Details Page Template ; product/demoProductLayout2Page ; ProductPage              ;
+
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]  ; name             ; active
+# ProductDetailsPage Content
+                         ;                          ; VariantSelectorSlot ; Variant Selector ; true
+                         ;                          ; AddToCartSlot       ; Add To Cart      ; true
+                         ;                          ; UpSellingSlot       ; Up Selling       ; true
+                         ;                          ; CrossSellingSlot    ; Cross Selling    ; true
+# End ProductDetailsPage Content
+
+
+INSERT_UPDATE ContentSlotName; name[unique = true]   ; template(uid, $contentCV)[unique = true][default = 'ProductDetailsPageTemplate']; validComponentTypes(code)       ; compTypeGroup(code)
+# Headers
+                             ; TopLeftParagraph      ;                                                                                 ;                                 ; narrow
+                             ; TopRightNavigationBar ;                                                                                 ;                                 ; navigation
+                             ; HeaderLogo            ;                                                                                 ;                                 ; logo
+                             ; MiddleNavigationBar   ;                                                                                 ;                                 ; navigation
+                             ; LoginLink             ;                                                                                 ;                                 ; navigation
+                             ; CartLink              ;                                                                                 ;                                 ; navigation
+# End Headers
+# ProductDetailsPage Content
+                             ; Section1              ;                                                                                 ;                                 ; wide
+                             ; Section2              ;                                                                                 ;                                 ; wide
+                             ; Section3              ;                                                                                 ;                                 ; wide
+                             ; Section4              ;                                                                                 ;                                 ; wide
+                             ; VariantSelector       ;                                                                                 ; ProductVariantSelectorComponent ; narrow
+                             ; AddToCart             ;                                                                                 ; ProductAddToCartComponent       ; narrow
+                             ; CrossSelling          ;                                                                                 ; ProductReferencesComponent      ; narrow
+                             ; UpSelling             ;                                                                                 ; ProductReferencesComponent      ; narrow
+# End ProductDetailsPage Content
+# Footers
+                             ; FooterLogo1           ;                                                                                 ;                                 ; logo
+                             ; FooterLogo2           ;                                                                                 ;                                 ; logo
+                             ; FooterNavigation      ;                                                                                 ;                                 ; navigation
+                             ; FooterContact         ;                                                                                 ;                                 ; footer
+                             ; FooterCopyright       ;                                                                                 ;                                 ; footer
+# End Footers
+
+INSERT_UPDATE ContentSlotForTemplate; $contentCV[unique = true]; uid[unique = true]                   ; position[unique = true]; pageTemplate(uid, $contentCV)[unique = true][default = 'ProductDetailsPageTemplate']; contentSlot(uid, $contentCV)[unique = true]; allowOverwrite
+# Headers
+                                    ;                          ; TopLeftParagraph-ProductDetails      ; TopLeftParagraph       ;                                                                                     ; TopLeftParagraphSlot                       ; true
+                                    ;                          ; TopRightNavigationBar-ProductDetails ; TopRightNavigationBar  ;                                                                                     ; TopRightNavigationBarSlot                  ; true
+                                    ;                          ; HeaderLogo-ProductDetails            ; HeaderLogo             ;                                                                                     ; HeaderLogoSlot                             ; true
+                                    ;                          ; MiddleNavigationBar-ProductDetails   ; MiddleNavigationBar    ;                                                                                     ; MiddleNavigationBarSlot                    ; true
+                                    ;                          ; LoginLink-ProductDetails             ; LoginLink              ;                                                                                     ; LoginLinkSlot                              ; true
+                                    ;                          ; CartLink-ProductDetails              ; CartLink               ;                                                                                     ; CartLinkSlot                               ; true
+# End Headers
+# ProductDetailsPage Content
+                                    ;                          ; VariantSelector-ProductDetails       ; VariantSelector        ;                                                                                     ; VariantSelectorSlot                        ; true
+                                    ;                          ; AddToCart-ProductDetails             ; AddToCart              ;                                                                                     ; AddToCartSlot                              ; true
+                                    ;                          ; UpSelling-ProductDetails             ; UpSelling              ;                                                                                     ; UpSellingSlot                              ; true
+                                    ;                          ; CrossSelling-ProductDetails          ; CrossSelling           ;                                                                                     ; CrossSellingSlot                           ; true
+# End ProductDetailsPage Content
+# Footers
+                                    ;                          ; FooterLogo1-ProductDetails           ; FooterLogo1            ;                                                                                     ; FooterLogo1Slot                            ; true
+                                    ;                          ; FooterLogo2-ProductDetails           ; FooterLogo2            ;                                                                                     ; FooterLogo2Slot                            ; true
+                                    ;                          ; FooterNavigation-ProductDetails      ; FooterNavigation       ;                                                                                     ; FooterNavigationSlot                       ; true
+                                    ;                          ; FooterContact-ProductDetails         ; FooterContact          ;                                                                                     ; FooterContactSlot                          ; true
+                                    ;                          ; FooterCopyright-ProductDetails       ; FooterCopyright        ;                                                                                     ; FooterCopyrightSlot                        ; true
+# End Footers
+
+INSERT_UPDATE ProductPage; $contentCV[unique = true]; uid[unique = true]; name            ; masterTemplate(uid, $contentCV); defaultPage; approvalStatus(code)[default = 'approved']
+                         ;                          ; productDetails    ; Product Details ; ProductDetailsPageTemplate     ; true       ;
+# End ProductDetailsPage - Batsu modip
+
 # End Demo Site
