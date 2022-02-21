@@ -8,10 +8,11 @@
         <cms:component component="${feature}" />
     </cms:pageSlot>
 
-    <cms:pageSlot position="Section2" var="feature" element="div" class="row no-margin" >
-        <cms:component component="${feature}" element="div" class="no-space yComponentWrapper"/>
-    </cms:pageSlot>
-
+    <div class="about-tentang">
+        <cms:pageSlot position="Section2" var="feature" element="div" class="row no-margin" >
+            <cms:component component="${feature}" element="div" class="no-space yComponentWrapper"/>
+        </cms:pageSlot>
+    </div>
 
     <cms:pageSlot position="Section3" var="feature" element="div" class="row no-margin" >
         <cms:component component="${feature}" element="div" class="no-space yComponentWrapper"/>

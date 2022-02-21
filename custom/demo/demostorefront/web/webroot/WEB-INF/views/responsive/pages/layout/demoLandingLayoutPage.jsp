@@ -35,13 +35,30 @@
     </div>
 
     <section class="section-unboxing">
-        <div class-
-        "container">
-        <h2 class="header-unboxing">UNBOXING INTHEBOX</h2>
+        <div class="container">
+            <h2 class="header-unboxing">UNBOXING INTHEBOX</h2>
         </div>
         <div class="container-unboxing">
             <cms:pageSlot position="UnboxingInTheBox" var="feature" element="div" class="row no-margin flex">
                 <div class="unboxing">
+                    <cms:component component="${feature}" element="div" class="no-space yComponentWrapper"/>
+                </div>
+            </cms:pageSlot>
+        </div>
+    </section>
+
+    <section class="section-testimony">
+        <div class="container header-testimony">
+            <h2>TESTIMONI</h2>
+        </div>
+        <div class="container text-testimony">
+            <h3>Banyak pembeli yang merasa puas dengan kualitas kasur INTHEBOX</h3>
+            <h3>Kami menerima beragam komentar positif dari pembeli di seluruh Indonesia, bahkan dari kalangan artis.
+                Bukan hanya pengalaman membeli kasur sping bed atau kasur busa, banyak juga yang merasa puas dengan produk INTHEBOX lainnya yang terdiri dari bantal, guling, dan sofa bed. </h3>
+        </div>
+        <div>
+            <cms:pageSlot position="TestimonyHome" var="feature" element="div" class="row no-margin flex" >
+                <div class="container">
                     <cms:component component="${feature}" element="div" class="no-space yComponentWrapper"/>
                 </div>
             </cms:pageSlot>
@@ -57,37 +74,34 @@
     </cms:pageSlot>
 
 
-    <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
 
-        // Next/previous controls
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-        // Thumbnail image controls
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("home-banner-mySlides");
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("home-banner-mySlides");
 
-            if (n > slides.length) {
-                slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = slides.length
-            }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slides[slideIndex - 1].style.display = "block";
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
 
-        }
-    </script>
+}
+</script>
+
 
 
 </template:demoPage>

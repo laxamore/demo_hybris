@@ -37,7 +37,7 @@ public class SizeValueProvider extends AbstractPropertyFieldValueProvider implem
         final Collection<String> fieldNames = getFieldNameProvider().getFieldNames(indexedProperty, null);
         if(null != product.getSize()){
             for(final String fieldName : fieldNames){
-                fieldValues.add(new FieldValue(fieldName, product.getSize()));
+                fieldValues.add(new FieldValue(fieldName, product.getSize() + " cm"));
             }
         }
         return fieldValues;

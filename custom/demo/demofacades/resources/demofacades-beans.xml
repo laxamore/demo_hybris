@@ -4,39 +4,40 @@
 -->
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="beans.xsd">
 
-    <bean class="de.hybris.platform.commercefacades.product.data.ProductData">
-        <property name="genders" type="java.util.List&lt;com.demo.facades.product.data.GenderData>"/>
-        <property name="size" type="String"/>
-        <property name="type" type="String"/>
-        <property name="desc" type="String"/>
-    </bean>
+	<bean class="de.hybris.platform.commercefacades.product.data.ProductData">
+		<property name="genders" type="java.util.List&lt;com.demo.facades.product.data.GenderData>"/>
+		<property name="size" type="String"/>
+		<property name="type" type="String"/>
+		<property name="desc" type="String"/>
+<!--		<property name="price" type="Double"/>-->
+	</bean>
 
     <bean class="com.demo.facades.product.data.GenderData">
         <property name="code" type="String"/>
         <property name="name" type="String"/>
     </bean>
 
-    <bean class="com.demo.facades.product.data.ProductData">
-        <property name="id" type="String"/>
-        <property name="name" type="String"/>
-        <property name="size" type="String"/>
-        <property name="price" type="com.demo.facades.product.data.PriceData"/>
-        <property name="quantity" type="String"/>
-        <property name="type" type="String"/>
-        <property name="desc" type="String"/>
-        <property name="testimony" type="com.demo.facades.product.data.Testimony"/>
-    </bean>
-    <bean class="com.demo.facades.product.data.PriceData">
-        <property name="code" type="String"/>
-        <property name="value" type="Integer"/>
-    </bean>
-    <bean class="com.demo.facades.product.data.Testimony">
-        <property name="code" type="String"/>
-        <property name="name" type="String"/>
-        <property name="text" type="String"/>
-        <property name="paragraph" type="String"/>
-        <property name="time" type="String"/>
-    </bean>
+	<bean class="com.demo.facades.product.data.ProductData">
+		<property name="id" type="String"/>
+		<property name="name" type="String"/>
+		<property name="size" type="String"/>
+		<property name="price" type="com.demo.facades.product.data.PriceData"/>
+		<property name="quantity" type="String"/>
+		<property name="type" type="String"/>
+		<property name="desc" type="String"/>
+		<property name="testimony" type="com.demo.facades.product.data.Testimony"/>
+	</bean>
+	<bean class="com.demo.facades.product.data.PriceData">
+		<property name="code" type="String"/>
+		<property name="value" type="Double"/>
+	</bean>
+	<bean class="com.demo.facades.product.data.Testimony">
+		<property name="code" type="String"/>
+		<property name="name" type="String"/>
+		<property name="text" type="String"/>
+		<property name="paragraph" type="String"/>
+		<property name="time" type="String"/>
+	</bean>
 
     <bean class="de.hybris.platform.commercefacades.user.data.RegisterData">
         <property name="id" type="String"/>

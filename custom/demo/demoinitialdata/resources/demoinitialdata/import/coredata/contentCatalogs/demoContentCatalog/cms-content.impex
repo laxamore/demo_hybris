@@ -31,6 +31,7 @@ INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]        
                          ;                          ; BannerSlot                ; Banner Slot                   ; true
                          ;                          ; ProductCarouselSlot       ; Product Carousel Slot         ; true
                          ;                          ; UnboxingInTheBoxSlot      ; Unboxing In The Box Slot      ; true
+                         ;                          ; TestimonyHomeSlot         ; Testimony Homepage Slot       ; true
 # End HomePage Content
 # Footers
                          ;                          ; FooterLogo1Slot           ; Footer Logo 1 Slot            ; true
@@ -75,6 +76,7 @@ INSERT_UPDATE ContentSlotForTemplate; $contentCV[unique = true]; uid[unique = tr
                                     ;                          ; Banner-HomePage                ; Banner                 ;                                                                           ; BannerSlot                                 ; true
                                     ;                          ; ProductCarousel-HomePage       ; ProductCarousel        ;                                                                           ; ProductCarouselSlot                        ; true
                                     ;                          ; UnboxingInTheBox-HomePage      ; UnboxingInTheBox       ;                                                                           ; UnboxingInTheBoxSlot                       ; true
+                                    ;                          ; TestimonyHome-HomePage         ; TestimonyHome          ;                                                                           ; TestimonyHomeSlot                          ; true
 # End HomePage Content
 # Footers
                                     ;                          ; FooterLogo1-HomePage           ; FooterLogo1            ;                                                                           ; FooterLogo1Slot                            ; true
@@ -134,6 +136,7 @@ INSERT_UPDATE ContentSlotForTemplate; $contentCV[unique = true]; uid[unique = tr
 # End Headers
 # Category Page Content
                                     ;                          ; Banner-ProductGridPage                 ; Banner                 ;                                                                                  ; BannerProductGridPageSlot                  ; true
+                                    ;                          ; Section1-ProductGridPage               ; Section1               ;                                                                                  ; Section1Slot                               ; true
                                     ;                          ; ProductLeftRefinements-ProductGridPage ; ProductLeftRefinements ;                                                                                  ; ProductLeftRefinementsSlot                 ; true
                                     ;                          ; ProductGrid-ProductGridPage            ; ProductGrid            ;                                                                                  ; ProductGridSlot                            ; true
 # End Category Page Content
@@ -144,6 +147,12 @@ INSERT_UPDATE ContentSlotForTemplate; $contentCV[unique = true]; uid[unique = tr
                                     ;                          ; FooterContact-ProductGridPage          ; FooterContact          ;                                                                                  ; FooterContactSlot                          ; true
                                     ;                          ; FooterCopyright-ProductGridPage        ; FooterCopyright        ;                                                                                  ; FooterCopyrightSlot                        ; true
 # End Footers
+# Product Details Page Template
+
+# Create Content Slots
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]; name                              ; active
+                         ;                          ; Section1Slot      ; Section 1 Slot for Catalog Banner ; true
+
 
 INSERT_UPDATE CategoryPage; $contentCV[unique = true]; uid[unique = true]; name              ; masterTemplate(uid, $contentCV); defaultPage; approvalStatus(code)[default = 'approved']
                           ;                          ; productGrid       ; Product Grid Page ; ProductGridPageTemplate        ; true       ;

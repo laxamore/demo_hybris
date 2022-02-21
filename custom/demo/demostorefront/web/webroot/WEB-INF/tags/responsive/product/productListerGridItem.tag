@@ -32,7 +32,7 @@
 			</ycommerce:testId>
             <br>
  			<ycommerce:testId code="product_productSize">
- 				<a class="desc" href="${fn:escapeXml(productUrl)}">
+ 				<a class="size" href="${fn:escapeXml(productUrl)}">
  					<c:out escapeXml="false" value="${ycommerce:sanitizeHTML(product.size)}" />
  				</a>
  			</ycommerce:testId>
@@ -53,7 +53,11 @@
 			</c:if>
 			
 			<ycommerce:testId code="product_productPrice">
-				<div class="price"><product:productListerItemPrice product="${product}"/></div>
+				<div class="price">
+				    <a  href="${fn:escapeXml(productUrl)}">
+				        <product:productListerItemPrice product="${product}"/>
+				    </a>
+				</div>
 			</ycommerce:testId>
 			<c:forEach var="variantOption" items="${product.variantOptions}">
 				<c:forEach items="${variantOption.variantOptionQualifiers}" var="variantOptionQualifier">
