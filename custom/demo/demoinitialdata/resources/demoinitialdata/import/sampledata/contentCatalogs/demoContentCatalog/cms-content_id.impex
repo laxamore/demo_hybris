@@ -151,31 +151,31 @@ UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[la
 
 #DEMO info
 
-UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[$lang]
+UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[lang=$lang]
                             ;;DemoAboutApa;"
-<div class=""about-info-apa"">
-    <h2>Apa Itu Kasur INTHEBOX?</h2><br>
-    <p>Kasur INTHEBOX adalah spring bed yang dikemas dalam box dan akan langsung mengembang sempurna ketika dibuka. Kini sudah ada banyak pilihan produk dengan harga yang terjangkau. Ketahui lebih lanjut agar kamu bisa memiliki tidur yang berkualitas.</p>
-    <br>
-    <a href=""#"" class=""btn btn-primary"" role=""button"">Selengkapnya</a>
-</div>
-"
+                                <div class=""about-info-apa"">
+                                    <h2>Apa Itu Kasur INTHEBOX?</h2><br>
+                                    <p>Kasur INTHEBOX adalah spring bed yang dikemas dalam box dan akan langsung mengembang sempurna ketika dibuka. Kini sudah ada banyak pilihan produk dengan harga yang terjangkau. Ketahui lebih lanjut agar kamu bisa memiliki tidur yang berkualitas.</p>
+                                    <br>
+                                    <a href=""#"" class=""btn btn-primary"" role=""button"">Selengkapnya</a>
+                                </div>
+                                "
                             ;;DemoAboutKenapa;"
-<div class=""about-info-kenapa"">
-    <h2>Kenapa Harus Pilih INTHEBOX?</h2><br>
-    <p>Ada banyak kelebihan kasur INTHEBOX, khususnya bisa meningkatkan kualitas tidur dan istirahat kamu. Semua produk INTHEBOX dibuat dengan material premium, teknologi modern, dan desain yang elegan. Bisa dapat bantal gratis, free ongkir, dan garansi 10 tahun.</p>
-    <br>
-    <a href=""#"" class=""btn btn-primary"" role=""button"">Selengkapnya</a>
-</div>
-"
+                                <div class=""about-info-kenapa"">
+                                    <h2>Kenapa Harus Pilih INTHEBOX?</h2><br>
+                                    <p>Ada banyak kelebihan kasur INTHEBOX, khususnya bisa meningkatkan kualitas tidur dan istirahat kamu. Semua produk INTHEBOX dibuat dengan material premium, teknologi modern, dan desain yang elegan. Bisa dapat bantal gratis, free ongkir, dan garansi 10 tahun.</p>
+                                    <br>
+                                    <a href=""#"" class=""btn btn-primary"" role=""button"">Selengkapnya</a>
+                                </div>
+                                "
                             ;;DemoAboutCara;"
-<div class=""about-info-cara"">
-    <h2>Cara Beli Kasur INTHEBOX</h2><br>
-    <p>Bisa dibeli melalui website dengan cara cek daftar produk, masukkan ke keranjang, dan lakukan pembayaran. Mau lebih praktis? Segera WhatsApp ke 0819234659. Bisa juga dibeli online di marketplace kesayangan kamu atau langsung ke supermarket besar di kotamu.</p>
-    <br>
-    <a href=""#"" class=""btn btn-primary"" role=""button"">Selengkapnya</a>
-</div>
-"
+                                <div class=""about-info-cara"">
+                                    <h2>Cara Beli Kasur INTHEBOX</h2><br>
+                                    <p>Bisa dibeli melalui website dengan cara cek daftar produk, masukkan ke keranjang, dan lakukan pembayaran. Mau lebih praktis? Segera WhatsApp ke 0819234659. Bisa juga dibeli online di marketplace kesayangan kamu atau langsung ke supermarket besar di kotamu.</p>
+                                    <br>
+                                    <a href=""#"" class=""btn btn-primary"" role=""button"">Selengkapnya</a>
+                                </div>
+                                "
 
 
 INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];mime[default='image/jpeg'];realfilename;folder(qualifier)[default='images'];altText
