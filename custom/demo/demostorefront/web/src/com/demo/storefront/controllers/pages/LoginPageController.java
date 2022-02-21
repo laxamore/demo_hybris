@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import de.hybris.platform.servicelayer.user.UserService;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.security.web.savedrequest.HttpSessionRequestCache;
 import org.springframework.stereotype.Controller;
@@ -32,76 +33,70 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
  */
 @Controller
 @RequestMapping(value = "/login")
-public class LoginPageController extends AbstractLoginPageController
-{
-	private HttpSessionRequestCache httpSessionRequestCache;
+public class LoginPageController extends AbstractLoginPageController {
+    @Resource
+    private UserService userService;
 
-	@Override
-	protected String getView()
-	{
-		return ControllerConstants.Views.Pages.Account.AccountLoginPage;
-	}
+    private HttpSessionRequestCache httpSessionRequestCache;
 
-	@Override
-	protected String getSuccessRedirect(final HttpServletRequest request, final HttpServletResponse response)
-	{
-		if (httpSessionRequestCache.getRequest(request, response) != null)
-		{
-			return httpSessionRequestCache.getRequest(request, response).getRedirectUrl();
-		}
-		return "/";
-	}
+    @Override
+    protected String getView() {
+        String currentUser = userService.getCurrentUser().getUid();
+        if (currentUser.equals("anonymous"))
+            return ControllerConstants.Views.Pages.Account.AccountLoginPage;
+        return "/";
+    }
 
-	@Override
-	protected AbstractPageModel getCmsPage() throws CMSItemNotFoundException
-	{
-		return getContentPageForLabelOrId("login");
-	}
+    @Override
+    protected String getSuccessRedirect(final HttpServletRequest request, final HttpServletResponse response) {
+        if (httpSessionRequestCache.getRequest(request, response) != null) {
+            return httpSessionRequestCache.getRequest(request, response).getRedirectUrl();
+        }
+        return "/";
+    }
+
+    @Override
+    protected AbstractPageModel getCmsPage() throws CMSItemNotFoundException {
+        return getContentPageForLabelOrId("login");
+    }
 
 
-	@Resource(name = "httpSessionRequestCache")
-	public void setHttpSessionRequestCache(final HttpSessionRequestCache accHttpSessionRequestCache)
-	{
-		this.httpSessionRequestCache = accHttpSessionRequestCache;
-	}
+    @Resource(name = "httpSessionRequestCache")
+    public void setHttpSessionRequestCache(final HttpSessionRequestCache accHttpSessionRequestCache) {
+        this.httpSessionRequestCache = accHttpSessionRequestCache;
+    }
 
-	@RequestMapping(method = RequestMethod.GET)
-	public String doLogin(@RequestHeader(value = "referer", required = false) final String referer,
-			@RequestParam(value = "error", defaultValue = "false") final boolean loginError, final Model model,
-			final HttpServletRequest request, final HttpServletResponse response, final HttpSession session)
-			throws CMSItemNotFoundException
-	{
-		if (!loginError)
-		{
-			storeReferer(referer, request, response);
-		}
-		return getDefaultLoginPage(loginError, session, model);
-	}
+    @RequestMapping(method = RequestMethod.GET)
+    public String doLogin(@RequestHeader(value = "referer", required = false) final String referer,
+                          @RequestParam(value = "error", defaultValue = "false") final boolean loginError, final Model model,
+                          final HttpServletRequest request, final HttpServletResponse response, final HttpSession session)
+            throws CMSItemNotFoundException {
+        if (!loginError) {
+            storeReferer(referer, request, response);
+        }
+        return getDefaultLoginPage(loginError, session, model);
+    }
 
-	protected void storeReferer(final String referer, final HttpServletRequest request, final HttpServletResponse response)
-	{
-		if (StringUtils.isNotBlank(referer) && !StringUtils.endsWith(referer, "/login")
-				&& StringUtils.contains(referer, request.getServerName()))
-		{
-			httpSessionRequestCache.saveRequest(request, response);
-		}
-	}
+    protected void storeReferer(final String referer, final HttpServletRequest request, final HttpServletResponse response) {
+        if (StringUtils.isNotBlank(referer) && !StringUtils.endsWith(referer, "/login")
+                && StringUtils.contains(referer, request.getServerName())) {
+            httpSessionRequestCache.saveRequest(request, response);
+        }
+    }
 
-	@RequestMapping(value = "/register", method = RequestMethod.POST)
-	public String doRegister(@RequestHeader(value = "referer", required = false) final String referer, final RegisterForm form,
-			final BindingResult bindingResult, final Model model, final HttpServletRequest request,
-			final HttpServletResponse response, final RedirectAttributes redirectModel) throws CMSItemNotFoundException
-	{
-		getRegistrationValidator().validate(form, bindingResult);
-		return processRegisterUserRequest(referer, form, bindingResult, model, request, response, redirectModel);
-	}
+    @RequestMapping(value = "/register", method = RequestMethod.POST)
+    public String doRegister(@RequestHeader(value = "referer", required = false) final String referer, final RegisterForm form,
+                             final BindingResult bindingResult, final Model model, final HttpServletRequest request,
+                             final HttpServletResponse response, final RedirectAttributes redirectModel) throws CMSItemNotFoundException {
+        getRegistrationValidator().validate(form, bindingResult);
+        return processRegisterUserRequest(referer, form, bindingResult, model, request, response, redirectModel);
+    }
 
-	@RequestMapping(value = "/register/termsandconditions", method = RequestMethod.GET)
-	public String getTermsAndConditions(final Model model) throws CMSItemNotFoundException
-	{
-		final ContentPageModel pageForRequest = getCmsPageService().getPageForLabel("/termsAndConditions");
-		storeCmsPageInModel(model, pageForRequest);
-		setUpMetaDataForContentPage(model, pageForRequest);
-		return ControllerConstants.Views.Fragments.Checkout.TermsAndConditionsPopup;
-	}
+    @RequestMapping(value = "/register/termsandconditions", method = RequestMethod.GET)
+    public String getTermsAndConditions(final Model model) throws CMSItemNotFoundException {
+        final ContentPageModel pageForRequest = getCmsPageService().getPageForLabel("/termsAndConditions");
+        storeCmsPageInModel(model, pageForRequest);
+        setUpMetaDataForContentPage(model, pageForRequest);
+        return ControllerConstants.Views.Fragments.Checkout.TermsAndConditionsPopup;
+    }
 }
