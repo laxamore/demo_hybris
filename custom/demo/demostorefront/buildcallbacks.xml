@@ -266,7 +266,8 @@
             			
             <copy overwrite="true" todir="${ext.demostorefront.path}/web/webroot/WEB-INF/messages">
                 				
-                <fileset dir="${ext.demostorefront.path}/web/webroot/WEB-INF/messages" includes="theme-@{sourceCode}-desktop_*.properties"/>
+                <fileset dir="${ext.demostorefront.path}/web/webroot/WEB-INF/messages" includes="base-id.properties"/>
+<!--                <fileset dir="${ext.demostorefront.path}/web/webroot/WEB-INF/messages" includes="theme-@{sourceCode}-desktop_*.properties"/>-->
                 				
                 <regexpmapper from="theme-(.*)-desktop_(.*).properties" to="theme-@{targetCode}-desktop_\2.properties"/>
                 				
@@ -306,7 +307,8 @@
                 				
                 <path>
                     					
-                    <fileset dir="${ext.demostorefront.path}/web/webroot/WEB-INF/messages" includes="theme-@{targetCode}-desktop_*.properties"/>
+                    <fileset dir="${ext.demostorefront.path}/web/webroot/WEB-INF/messages" includes="base_id.properties"/>
+<!--                    <fileset dir="${ext.demostorefront.path}/web/webroot/WEB-INF/messages" includes="theme-@{targetCode}-desktop_*.properties"/>-->
                     				
                 </path>
                 				

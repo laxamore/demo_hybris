@@ -20,58 +20,282 @@ $galleryImages = galleryImages(qualifier, $catalogVersion)
 $siteResource = jar:com.demo.initialdata.setup.InitialDataSystemSetup&/demoinitialdata/import/sampledata/productCatalogs/$productCatalog
 
 # Create Media
-INSERT_UPDATE Media; mediaFormat(qualifier); code[unique = true]         ; $media                                     ; mime[default = 'image/jpeg']; $catalogVersion; folder(qualifier)
-                   ; 1200Wx1200H           ; media-converse-picture      ; $siteResource/images/product/converse.jpg  ;                             ;                ; images
-                   ; 515Wx515H             ; media-converse-thumbnail    ; $siteResource/images/product/converse.jpg  ;                             ;                ; images ;
-                   ; 300Wx300H             ; media-converse-detail       ; $siteResource/images/product/converse.jpg  ;                             ;                ; images ;
-                   ; 96Wx96H               ; media-converse-other        ; $siteResource/images/product/converse.jpg  ;                             ;                ; images ;
-                   ; 65Wx65H               ; media-converse-normal       ; $siteResource/images/product/converse.jpg  ;                             ;                ; images ;
-                   ; 30Wx30H               ; media-converse-thumbnails   ; $siteResource/images/product/converse.jpg  ;                             ;                ; images ;
-                   ; 1200Wx1200H           ; media-pullnbear-picture     ; $siteResource/images/product/pullnbear.jpg ;                             ;                ; images
-                   ; 515Wx515H             ; media-pullnbear-thumbnail   ; $siteResource/images/product/pullnbear.jpg ;                             ;                ; images ;
-                   ; 300Wx300H             ; media-pullnbear-detail      ; $siteResource/images/product/pullnbear.jpg ;                             ;                ; images ;
-                   ; 96Wx96H               ; media-pullnbear-other       ; $siteResource/images/product/pullnbear.jpg ;                             ;                ; images ;
-                   ; 65Wx65H               ; media-pullnbear-normal      ; $siteResource/images/product/pullnbear.jpg ;                             ;                ; images ;
-                   ; 30Wx30H               ; media-pullnbear-thumbnails  ; $siteResource/images/product/pullnbear.jpg ;                             ;                ; images ;
-                   ; 1200Wx1200H           ; media-hurley-picture        ; $siteResource/images/product/hurley.jpg    ;                             ;                ; images
-                   ; 515Wx515H             ; media-hurley-thumbnail      ; $siteResource/images/product/hurley.jpg    ;                             ;                ; images ;
-                   ; 300Wx300H             ; media-hurley-detail         ; $siteResource/images/product/hurley.jpg    ;                             ;                ; images ;
-                   ; 96Wx96H               ; media-hurley-other          ; $siteResource/images/product/hurley.jpg    ;                             ;                ; images ;
-                   ; 65Wx65H               ; media-hurley-normal         ; $siteResource/images/product/hurley.jpg    ;                             ;                ; images ;
-                   ; 30Wx30H               ; media-hurley-thumbnails     ; $siteResource/images/product/hurley.jpg    ;                             ;                ; images ;
-                   ; 1200Wx1200H           ; media-cole-picture          ; $siteResource/images/product/cole.jpg      ;                             ;                ; images
-                   ; 515Wx515H             ; media-cole-thumbnail        ; $siteResource/images/product/cole.jpg      ;                             ;                ; images ;
-                   ; 300Wx300H             ; media-cole-detail           ; $siteResource/images/product/cole.jpg      ;                             ;                ; images ;
-                   ; 96Wx96H               ; media-cole-other            ; $siteResource/images/product/cole.jpg      ;                             ;                ; images ;
-                   ; 65Wx65H               ; media-cole-normal           ; $siteResource/images/product/cole.jpg      ;                             ;                ; images ;
-                   ; 30Wx30H               ; media-cole-thumbnails       ; $siteResource/images/product/cole.jpg      ;                             ;                ; images ;
+INSERT_UPDATE Media; mediaFormat(qualifier); code[unique = true]               ; $media                                            ; mime[default = 'image/jpeg']; $catalogVersion; folder(qualifier)
+# media kasur
+                   ; 1200Wx1200H           ; media-intheboxalpha-picture       ; $siteResource/images/product/intheboxalpha.jpg    ;                             ;                ; images
+                   ; 515Wx515H             ; media-intheboxalpha-thumbnail     ; $siteResource/images/product/intheboxalpha.jpg    ;                             ;                ; images ;
+                   ; 300Wx300H             ; media-intheboxalpha-detail        ; $siteResource/images/product/intheboxalpha.jpg    ;                             ;                ; images ;
+                   ; 96Wx96H               ; media-intheboxalpha-other         ; $siteResource/images/product/intheboxalpha.jpg    ;                             ;                ; images ;
+                   ; 65Wx65H               ; media-intheboxalpha-normal        ; $siteResource/images/product/intheboxalpha.jpg    ;                             ;                ; images ;
+                   ; 30Wx30H               ; media-intheboxalpha-thumbnails    ; $siteResource/images/product/intheboxalpha.jpg    ;                             ;                ; images ;
 
-                   ; 1200Wx1200H           ; media-cole-chino-picture    ; $siteResource/images/product/chino.jpeg    ;                             ;                ; images
-                   ; 515Wx515H             ; media-cole-chino-thumbnail  ; $siteResource/images/product/chino.jpeg    ;                             ;                ; images ;
-                   ; 300Wx300H             ; media-cole-chino-detail     ; $siteResource/images/product/chino.jpeg    ;                             ;                ; images ;
-                   ; 96Wx96H               ; media-cole-chino-other      ; $siteResource/images/product/chino.jpeg    ;                             ;                ; images ;
-                   ; 65Wx65H               ; media-cole-chino-normal     ; $siteResource/images/product/chino.jpeg    ;                             ;                ; images ;
-                   ; 30Wx30H               ; media-cole-chino-thumbnails ; $siteResource/images/product/chino.jpeg    ;                             ;                ; images ;
+                   ; 1200Wx1200H           ; media-intheboxx-picture           ; $siteResource/images/product/intheboxx.jpg        ;                             ;                ; images
+                   ; 515Wx515H             ; media-intheboxx-thumbnail         ; $siteResource/images/product/intheboxx.jpg        ;                             ;                ; images ;
+                   ; 300Wx300H             ; media-intheboxx-detail            ; $siteResource/images/product/intheboxx.jpg        ;                             ;                ; images ;
+                   ; 96Wx96H               ; media-intheboxx-other             ; $siteResource/images/product/intheboxx.jpg        ;                             ;                ; images ;
+                   ; 65Wx65H               ; media-intheboxx-normal            ; $siteResource/images/product/intheboxx.jpg        ;                             ;                ; images ;
+                   ; 30Wx30H               ; media-intheboxx-thumbnails        ; $siteResource/images/product/intheboxx.jpg        ;                             ;                ; images ;
+
+                   ; 1200Wx1200H           ; media-spacejam-picture            ; $siteResource/images/product/spacejam.jpg         ;                             ;                ; images
+                   ; 515Wx515H             ; media-spacejam-thumbnail          ; $siteResource/images/product/spacejam.jpg         ;                             ;                ; images ;
+                   ; 300Wx300H             ; media-spacejam-detail             ; $siteResource/images/product/spacejam.jpg         ;                             ;                ; images ;
+                   ; 96Wx96H               ; media-spacejam-other              ; $siteResource/images/product/spacejam.jpg         ;                             ;                ; images ;
+                   ; 65Wx65H               ; media-spacejam-normal             ; $siteResource/images/product/spacejam.jpg         ;                             ;                ; images ;
+                   ; 30Wx30H               ; media-spacejam-thumbnails         ; $siteResource/images/product/spacejam.jpg         ;                             ;                ; images ;
+
+                   ; 1200Wx1200H           ; media-spacejamplush-picture       ; $siteResource/images/product/spacejamplush.jpg    ;                             ;                ; images
+                   ; 515Wx515H             ; media-spacejamplush-thumbnail     ; $siteResource/images/product/spacejamplush.jpg    ;                             ;                ; images ;
+                   ; 300Wx300H             ; media-spacejamplush-detail        ; $siteResource/images/product/spacejamplush.jpg    ;                             ;                ; images ;
+                   ; 96Wx96H               ; media-spacejamplush-other         ; $siteResource/images/product/spacejamplush.jpg    ;                             ;                ; images ;
+                   ; 65Wx65H               ; media-spacejamplush-normal        ; $siteResource/images/product/spacejamplush.jpg    ;                             ;                ; images ;
+                   ; 30Wx30H               ; media-spacejamplush-thumbnails    ; $siteResource/images/product/spacejamplush.jpg    ;                             ;                ; images ;
+
+                   ; 1200Wx1200H           ; media-intheboxdash-picture        ; $siteResource/images/product/intheboxdash.jpg     ;                             ;                ; images
+                   ; 515Wx515H             ; media-intheboxdash-thumbnail      ; $siteResource/images/product/intheboxdash.jpg     ;                             ;                ; images ;
+                   ; 300Wx300H             ; media-intheboxdash-detail         ; $siteResource/images/product/intheboxdash.jpg     ;                             ;                ; images ;
+                   ; 96Wx96H               ; media-intheboxdash-other          ; $siteResource/images/product/intheboxdash.jpg     ;                             ;                ; images ;
+                   ; 65Wx65H               ; media-intheboxdash-normal         ; $siteResource/images/product/intheboxdash.jpg     ;                             ;                ; images ;
+                   ; 30Wx30H               ; media-intheboxdash-thumbnails     ; $siteResource/images/product/intheboxdash.jpg     ;                             ;                ; images ;
+
+                   ; 1200Wx1200H           ; media-inthebox101-picture         ; $siteResource/images/product/inthebox101.jpg      ;                             ;                ; images
+                   ; 515Wx515H             ; media-inthebox101-thumbnail       ; $siteResource/images/product/inthebox101.jpg      ;                             ;                ; images ;
+                   ; 300Wx300H             ; media-inthebox101-detail          ; $siteResource/images/product/inthebox101.jpg      ;                             ;                ; images ;
+                   ; 96Wx96H               ; media-inthebox101-other           ; $siteResource/images/product/inthebox101.jpg      ;                             ;                ; images ;
+                   ; 65Wx65H               ; media-inthebox101-normal          ; $siteResource/images/product/inthebox101.jpg      ;                             ;                ; images ;
+                   ; 30Wx30H               ; media-inthebox101-thumbnails      ; $siteResource/images/product/inthebox101.jpg      ;                             ;                ; images ;
+
+                   ; 1200Wx1200H           ; media-intheboxhybrid-picture      ; $siteResource/images/product/intheboxhybrid.jpg   ;                             ;                ; images
+                   ; 515Wx515H             ; media-intheboxhybrid-thumbnail    ; $siteResource/images/product/intheboxhybrid.jpg   ;                             ;                ; images ;
+                   ; 300Wx300H             ; media-intheboxhybrid-detail       ; $siteResource/images/product/intheboxhybrid.jpg   ;                             ;                ; images ;
+                   ; 96Wx96H               ; media-intheboxhybrid-other        ; $siteResource/images/product/intheboxhybrid.jpg   ;                             ;                ; images ;
+                   ; 65Wx65H               ; media-intheboxhybrid-normal       ; $siteResource/images/product/intheboxhybrid.jpg   ;                             ;                ; images ;
+                   ; 30Wx30H               ; media-intheboxhybrid-thumbnails   ; $siteResource/images/product/intheboxhybrid.jpg   ;                             ;                ; images ;
+
+                   ; 1200Wx1200H           ; media-intheboxhybrid15-picture    ; $siteResource/images/product/intheboxhybrid15.jpg ;                             ;                ; images
+                   ; 515Wx515H             ; media-intheboxhybrid15-thumbnail  ; $siteResource/images/product/intheboxhybrid15.jpg ;                             ;                ; images ;
+                   ; 300Wx300H             ; media-intheboxhybrid15-detail     ; $siteResource/images/product/intheboxhybrid15.jpg ;                             ;                ; images ;
+                   ; 96Wx96H               ; media-intheboxhybrid15-other      ; $siteResource/images/product/intheboxhybrid15.jpg ;                             ;                ; images ;
+                   ; 65Wx65H               ; media-intheboxhybrid15-normal     ; $siteResource/images/product/intheboxhybrid15.jpg ;                             ;                ; images ;
+                   ; 30Wx30H               ; media-intheboxhybrid15-thumbnails ; $siteResource/images/product/intheboxhybrid15.jpg ;                             ;                ; images ;
+
+                   ; 1200Wx1200H           ; media-intheboxkasur-picture       ; $siteResource/images/product/intheboxkasur.jpg    ;                             ;                ; images
+                   ; 515Wx515H             ; media-intheboxkasur-thumbnail     ; $siteResource/images/product/intheboxkasur.jpg    ;                             ;                ; images ;
+                   ; 300Wx300H             ; media-intheboxkasur-detail        ; $siteResource/images/product/intheboxkasur.jpg    ;                             ;                ; images ;
+                   ; 96Wx96H               ; media-intheboxkasur-other         ; $siteResource/images/product/intheboxkasur.jpg    ;                             ;                ; images ;
+                   ; 65Wx65H               ; media-intheboxkasur-normal        ; $siteResource/images/product/intheboxkasur.jpg    ;                             ;                ; images ;
+                   ; 30Wx30H               ; media-intheboxkasur-thumbnails    ; $siteResource/images/product/intheboxkasur.jpg    ;                             ;                ; images ;
+
+                   ; 1200Wx1200H           ; media-intheboxplus-picture        ; $siteResource/images/product/intheboxplus.jpg     ;                             ;                ; images
+                   ; 515Wx515H             ; media-intheboxplus-thumbnail      ; $siteResource/images/product/intheboxplus.jpg     ;                             ;                ; images ;
+                   ; 300Wx300H             ; media-intheboxplus-detail         ; $siteResource/images/product/intheboxplus.jpg     ;                             ;                ; images ;
+                   ; 96Wx96H               ; media-intheboxplus-other          ; $siteResource/images/product/intheboxplus.jpg     ;                             ;                ; images ;
+                   ; 65Wx65H               ; media-intheboxplus-normal         ; $siteResource/images/product/intheboxplus.jpg     ;                             ;                ; images ;
+                   ; 30Wx30H               ; media-intheboxplus-thumbnails     ; $siteResource/images/product/intheboxplus.jpg     ;                             ;                ; images ;
+
+                   ; 1200Wx1200H           ; media-organixhybrid-picture       ; $siteResource/images/product/intheboxhybrid15.jpg ;                             ;                ; images
+                   ; 515Wx515H             ; media-organixhybrid-thumbnail     ; $siteResource/images/product/intheboxhybrid15.jpg ;                             ;                ; images ;
+                   ; 300Wx300H             ; media-organixhybrid-detail        ; $siteResource/images/product/intheboxhybrid15.jpg ;                             ;                ; images ;
+                   ; 96Wx96H               ; media-organixhybrid-other         ; $siteResource/images/product/intheboxhybrid15.jpg ;                             ;                ; images ;
+                   ; 65Wx65H               ; media-organixhybrid-normal        ; $siteResource/images/product/intheboxhybrid15.jpg ;                             ;                ; images ;
+                   ; 30Wx30H               ; media-organixhybrid-thumbnails    ; $siteResource/images/product/intheboxhybrid15.jpg ;                             ;                ; images ;
+
+                   ; 1200Wx1200H           ; media-organixlite-picture         ; $siteResource/images/product/organixlite.jpg      ;                             ;                ; images
+                   ; 515Wx515H             ; media-organixlite-thumbnail       ; $siteResource/images/product/organixlite.jpg      ;                             ;                ; images ;
+                   ; 300Wx300H             ; media-organixlite-detail          ; $siteResource/images/product/organixlite.jpg      ;                             ;                ; images ;
+                   ; 96Wx96H               ; media-organixlite-other           ; $siteResource/images/product/organixlite.jpg      ;                             ;                ; images ;
+                   ; 65Wx65H               ; media-organixlite-normal          ; $siteResource/images/product/organixlite.jpg      ;                             ;                ; images ;
+                   ; 30Wx30H               ; media-organixlite-thumbnails      ; $siteResource/images/product/organixlite.jpg      ;                             ;                ; images ;
+
+                   ; 1200Wx1200H           ; media-organixplush-picture        ; $siteResource/images/product/organixplush.jpg     ;                             ;                ; images
+                   ; 515Wx515H             ; media-organixplush-thumbnail      ; $siteResource/images/product/organixplush.jpg     ;                             ;                ; images ;
+                   ; 300Wx300H             ; media-organixplush-detail         ; $siteResource/images/product/organixplush.jpg     ;                             ;                ; images ;
+                   ; 96Wx96H               ; media-organixplush-other          ; $siteResource/images/product/organixplush.jpg     ;                             ;                ; images ;
+                   ; 65Wx65H               ; media-organixplush-normal         ; $siteResource/images/product/organixplush.jpg     ;                             ;                ; images ;
+                   ; 30Wx30H               ; media-organixplush-thumbnails     ; $siteResource/images/product/organixplush.jpg     ;                             ;                ; images ;
+
+                   ; 1200Wx1200H           ; media-sofa-picture                ; $siteResource/images/product/sofa.jpg             ;                             ;                ; images
+                   ; 515Wx515H             ; media-sofa-thumbnail              ; $siteResource/images/product/sofa.jpg             ;                             ;                ; images ;
+                   ; 300Wx300H             ; media-sofa-detail                 ; $siteResource/images/product/sofa.jpg             ;                             ;                ; images ;
+                   ; 96Wx96H               ; media-sofa-other                  ; $siteResource/images/product/sofa.jpg             ;                             ;                ; images ;
+                   ; 65Wx65H               ; media-sofa-normal                 ; $siteResource/images/product/sofa.jpg             ;                             ;                ; images ;
+                   ; 30Wx30H               ; media-sofa-thumbnails             ; $siteResource/images/product/sofa.jpg             ;                             ;                ; images ;
+
+                   ; 1200Wx1200H           ; media-sofablack-picture           ; $siteResource/images/product/sofablack.jpg        ;                             ;                ; images
+                   ; 515Wx515H             ; media-sofablack-thumbnail         ; $siteResource/images/product/sofablack.jpg        ;                             ;                ; images ;
+                   ; 300Wx300H             ; media-sofablack-detail            ; $siteResource/images/product/sofablack.jpg        ;                             ;                ; images ;
+                   ; 96Wx96H               ; media-sofablack-other             ; $siteResource/images/product/sofablack.jpg        ;                             ;                ; images ;
+                   ; 65Wx65H               ; media-sofablack-normal            ; $siteResource/images/product/sofablack.jpg        ;                             ;                ; images ;
+                   ; 30Wx30H               ; media-sofablack-thumbnails        ; $siteResource/images/product/sofablack.jpg        ;                             ;                ; images ;
+
+                   ; 1200Wx1200H           ; media-kasurlipat-picture          ; $siteResource/images/product/kasurlipat.jpg       ;                             ;                ; images
+                   ; 515Wx515H             ; media-kasurlipat-thumbnail        ; $siteResource/images/product/kasurlipat.jpg       ;                             ;                ; images ;
+                   ; 300Wx300H             ; media-kasurlipat-detail           ; $siteResource/images/product/kasurlipat.jpg       ;                             ;                ; images ;
+                   ; 96Wx96H               ; media-kasurlipat-other            ; $siteResource/images/product/kasurlipat.jpg       ;                             ;                ; images ;
+                   ; 65Wx65H               ; media-kasurlipat-normal           ; $siteResource/images/product/kasurlipat.jpg       ;                             ;                ; images ;
+                   ; 30Wx30H               ; media-kasurlipat-thumbnails       ; $siteResource/images/product/kasurlipat.jpg       ;                             ;                ; images ;
+
+                   ; 1200Wx1200H           ; media-sofabed-picture             ; $siteResource/images/product/sofabed.jpg          ;                             ;                ; images
+                   ; 515Wx515H             ; media-sofabed-thumbnail           ; $siteResource/images/product/sofabed.jpg          ;                             ;                ; images ;
+                   ; 300Wx300H             ; media-sofabed-detail              ; $siteResource/images/product/sofabed.jpg          ;                             ;                ; images ;
+                   ; 96Wx96H               ; media-sofabed-other               ; $siteResource/images/product/sofabed.jpg          ;                             ;                ; images ;
+                   ; 65Wx65H               ; media-sofabed-normal              ; $siteResource/images/product/sofabed.jpg          ;                             ;                ; images ;
+                   ; 30Wx30H               ; media-sofabed-thumbnails          ; $siteResource/images/product/sofabed.jpg          ;                             ;                ; images ;
+
+                   ; 1200Wx1200H           ; media-bantal-picture              ; $siteResource/images/product/bantal.jpg           ;                             ;                ; images
+                   ; 515Wx515H             ; media-bantal-thumbnail            ; $siteResource/images/product/bantal.jpg           ;                             ;                ; images ;
+                   ; 300Wx300H             ; media-bantal-detail               ; $siteResource/images/product/bantal.jpg           ;                             ;                ; images ;
+                   ; 96Wx96H               ; media-bantal-other                ; $siteResource/images/product/bantal.jpg           ;                             ;                ; images ;
+                   ; 65Wx65H               ; media-bantal-normal               ; $siteResource/images/product/bantal.jpg           ;                             ;                ; images ;
+                   ; 30Wx30H               ; media-bantal-thumbnails           ; $siteResource/images/product/bantal.jpg           ;                             ;                ; images ;
+
+                   ; 1200Wx1200H           ; media-guling-picture              ; $siteResource/images/product/guling.jpg           ;                             ;                ; images
+                   ; 515Wx515H             ; media-guling-thumbnail            ; $siteResource/images/product/guling.jpg           ;                             ;                ; images ;
+                   ; 300Wx300H             ; media-guling-detail               ; $siteResource/images/product/guling.jpg           ;                             ;                ; images ;
+                   ; 96Wx96H               ; media-guling-other                ; $siteResource/images/product/guling.jpg           ;                             ;                ; images ;
+                   ; 65Wx65H               ; media-guling-normal               ; $siteResource/images/product/guling.jpg           ;                             ;                ; images ;
+                   ; 30Wx30H               ; media-guling-thumbnails           ; $siteResource/images/product/guling.jpg           ;                             ;                ; images ;
+
+
 
 # Create Media Containers
-INSERT_UPDATE MediaContainer; qualifier[unique = true]; $medias                                                                                                                                                                  ; $catalogVersion
-                            ; converse-medias         ; media-converse-picture,media-converse-picture,media-converse-thumbnail,media-converse-detail,media-converse-other,media-converse-normal,media-converse-thumbnails        ; ;
-                            ; pullnbear-medias        ; media-pullnbear-picture,media-pullnbear-picture,media-pullnbear-thumbnail,media-pullnbear-detail,media-pullnbear-other,media-pullnbear-normal,media-pullnbear-thumbnails ; ;
-                            ; hurley-medias           ; media-hurley-picture,media-hurley-picture,media-hurley-thumbnail,media-hurley-detail,media-hurley-other,media-hurley-normal,media-hurley-thumbnails                      ; ;
-                            ; cole-medias             ; media-cole-picture,media-cole-picture,media-cole-thumbnail,media-cole-detail,media-cole-other,media-cole-normal,media-cole-thumbnails                                    ; ;
-
-                            ; cole-chino-medias       ; media-cole-chino-picture, media-cole-chino-thumbnail, media-cole-chino-detail, media-cole-chino-other, media-cole-chino-normal, media-cole-chino-thumbnails              ; ;
+INSERT_UPDATE MediaContainer; qualifier[unique = true]; $medias                                                                                                                                                                                    ; $catalogVersion
+# media container kasur
+                            ; intheboxalpha-medias    ; media-intheboxalpha-picture,media-intheboxalpha-thumbnail,media-intheboxalpha-detail,media-intheboxalpha-other,media-intheboxalpha-normal,media-intheboxalpha-thumbnails                   ; ;
+                            ; intheboxx-medias        ; media-intheboxx-picture,media-intheboxx-thumbnail,media-intheboxx-detail,media-intheboxx-other,media-intheboxx-normal,media-intheboxx-thumbnails                                           ; ;
+                            ; spacejam-medias         ; media-spacejam-picture,media-spacejam-thumbnail,media-spacejam-detail,media-spacejam-other,media-spacejam-normal,media-spacejam-thumbnails                                                 ; ;
+                            ; spacejamplush-medias    ; media-spacejamplush-picture,media-spacejamplush-thumbnail,media-spacejamplush-detail,media-spacejamplush-other,media-spacejamplush-normal,media-spacejamplush-thumbnails                   ; ;
+                            ; intheboxdash-medias     ; media-intheboxdash-picture,media-intheboxdash-thumbnail,media-intheboxdash-detail,media-intheboxdash-other,media-intheboxdash-normal,media-intheboxdash-thumbnails                         ; ;
+                            ; inthebox101-medias      ; media-inthebox101-picture,media-inthebox101-thumbnail,media-inthebox101-detail,media-inthebox101-other,media-inthebox101-normal,media-inthebox101-thumbnails                               ; ;
+                            ; intheboxhybrid-medias   ; media-intheboxhybrid-picture,media-intheboxhybrid-thumbnail,media-intheboxhybrid-detail,media-intheboxhybrid-other,media-intheboxhybrid-normal,media-intheboxhybrid-thumbnails             ; ;
+                            ; intheboxhybrid15-medias ; media-intheboxhybrid15-picture,media-intheboxhybrid15-thumbnail,media-intheboxhybrid15-detail,media-intheboxhybrid15-other,media-intheboxhybrid15-normal,media-intheboxhybrid15-thumbnails ; ;
+                            ; intheboxkasur-medias    ; media-intheboxkasur-picture,media-intheboxkasur-thumbnail,media-intheboxkasur-detail,media-intheboxkasur-other,media-intheboxkasur-normal,media-intheboxkasur-thumbnails                   ; ;
+                            ; intheboxplus-medias     ; media-intheboxplus-picture,media-intheboxplus-thumbnail,media-intheboxplus-detail,media-intheboxplus-other,media-intheboxplus-normal,media-intheboxplus-thumbnails                         ; ;
+                            ; organixhybrid-medias    ; media-organixhybrid-picture,media-organixhybrid-thumbnail,media-organixhybrid-detail,media-organixhybrid-other,media-organixhybrid-normal,media-organixhybrid-thumbnails                   ; ;
+                            ; organixlite-medias      ; media-organixlite-picture,media-organixlite-thumbnail,media-organixlite-detail,media-organixlite-other,media-organixlite-normal,media-organixlite-thumbnails                               ; ;
+                            ; organixplush-medias     ; media-organixplush-picture,media-organixplush-thumbnail,media-organixplush-detail,media-organixplush-other,media-organixplush-normal,media-organixplush-thumbnails                         ; ;
+                            ; sofa-medias             ; media-sofa-picture,media-sofa-thumbnail,media-sofa-detail,media-sofa-other,media-sofa-normal,media-sofa-thumbnails                                                                         ; ;
+                            ; sofablack-medias        ; media-sofablack-picture,media-sofablack-thumbnail,media-sofablack-detail,media-sofablack-other,media-sofablack-normal,media-sofablack-thumbnails
+                            ; kasurlipat-medias       ; media-kasurlipat-picture,media-kasurlipat-thumbnail,media-kasurlipat-detail,media-kasurlipat-other,media-kasurlipat-normal,media-kasurlipat-thumbnails                                     ; ;
+                            ; sofabed-medias          ; media-sofabed-picture,media-sofabed-thumbnail,media-sofabed-detail,media-sofabed-other,media-sofabed-normal,media-sofabed-thumbnails                                                       ; ;
+                            ; guling-medias           ; media-guling-picture,media-guling-thumbnail,media-guling-detail,media-guling-other,media-guling-normal,media-guling-thumbnails                                                             ; ;
+                            ; bantal-medias           ; media-bantal-picture,media-bantal-thumbnail,media-bantal-detail,media-bantal-other,media-bantal-normal,media-bantal-thumbnails                                                             ; ;
 
 
 # Update Products with Media and Media Containers
-UPDATE Product; code[unique = true]; $picture                 ; $thumbnail                 ; $detail                 ; $others                ; $normal                 ; $thumbnails                 ; $galleryImages    ; $catalogVersion
-              ; CV-S1              ; media-converse-picture   ; media-converse-thumbnail   ; media-converse-detail   ; media-converse-other   ; media-converse-normal   ; media-converse-thumbnails   ; converse-medias   ;
-              ; CV-S2              ; media-converse-picture   ; media-converse-thumbnail   ; media-converse-detail   ; media-converse-other   ; media-converse-normal   ; media-converse-thumbnails   ; converse-medias   ;
-              ; PB-SHIRT-1         ; media-pullnbear-picture  ; media-pullnbear-thumbnail  ; media-pullnbear-detail  ; media-pullnbear-other  ; media-pullnbear-normal  ; media-pullnbear-thumbnails  ; pullnbear-medias  ;
-              ; PB-SHIRT-2         ; media-pullnbear-picture  ; media-pullnbear-thumbnail  ; media-pullnbear-detail  ; media-pullnbear-other  ; media-pullnbear-normal  ; media-pullnbear-thumbnails  ; pullnbear-medias  ;
-              ; HURLEY-T-1         ; media-hurley-picture     ; media-hurley-thumbnail     ; media-hurley-detail     ; media-hurley-other     ; media-hurley-normal     ; media-hurley-thumbnails     ; hurley-medias     ;
-              ; HURLEY-T-2         ; media-hurley-picture     ; media-hurley-thumbnail     ; media-hurley-detail     ; media-hurley-other     ; media-hurley-normal     ; media-hurley-thumbnails     ; hurley-medias     ;
-              ; COLE-T-1           ; media-cole-picture       ; media-cole-thumbnail       ; media-cole-detail       ; media-cole-other       ; media-cole-normal       ; media-cole-thumbnails       ; cole-medias       ;
+UPDATE Product; code[unique = true]; $picture                       ; $thumbnail                       ; $detail                       ; $others                      ; $normal                       ; $thumbnails                       ; $galleryImages          ; $catalogVersion
+# product with media
+              ; IA1                ; media-intheboxalpha-picture    ; media-intheboxalpha-thumbnail    ; media-intheboxalpha-detail    ; media-intheboxalpha-other    ; media-intheboxalpha-normal    ; media-intheboxalpha-thumbnails    ; intheboxalpha-medias    ;
+              ; IA2                ; media-intheboxalpha-picture    ; media-intheboxalpha-thumbnail    ; media-intheboxalpha-detail    ; media-intheboxalpha-other    ; media-intheboxalpha-normal    ; media-intheboxalpha-thumbnails    ; intheboxalpha-medias    ;
+              ; IA3                ; media-intheboxalpha-picture    ; media-intheboxalpha-thumbnail    ; media-intheboxalpha-detail    ; media-intheboxalpha-other    ; media-intheboxalpha-normal    ; media-intheboxalpha-thumbnails    ; intheboxalpha-medias    ;
+              ; IA4                ; media-intheboxalpha-picture    ; media-intheboxalpha-thumbnail    ; media-intheboxalpha-detail    ; media-intheboxalpha-other    ; media-intheboxalpha-normal    ; media-intheboxalpha-thumbnails    ; intheboxalpha-medias    ;
+              ; IA5                ; media-intheboxalpha-picture    ; media-intheboxalpha-thumbnail    ; media-intheboxalpha-detail    ; media-intheboxalpha-other    ; media-intheboxalpha-normal    ; media-intheboxalpha-thumbnails    ; intheboxalpha-medias    ;
+              ; IA6                ; media-intheboxalpha-picture    ; media-intheboxalpha-thumbnail    ; media-intheboxalpha-detail    ; media-intheboxalpha-other    ; media-intheboxalpha-normal    ; media-intheboxalpha-thumbnails    ; intheboxalpha-medias    ;
+              ; IA7                ; media-intheboxalpha-picture    ; media-intheboxalpha-thumbnail    ; media-intheboxalpha-detail    ; media-intheboxalpha-other    ; media-intheboxalpha-normal    ; media-intheboxalpha-thumbnails    ; intheboxalpha-medias    ;
 
-              ; COLE-C-1           ; media-cole-chino-picture ; media-cole-chino-thumbnail ; media-cole-chino-detail ; media-cole-chino-other ; media-cole-chino-normal ; media-cole-chino-thumbnails ; cole-chino-medias ;
+              ; IX1                ; media-intheboxx-picture        ; media-intheboxx-thumbnail        ; media-intheboxx-detail        ; media-intheboxx-other        ; media-intheboxx-normal        ; media-intheboxx-thumbnails        ; intheboxx-medias        ;
+              ; IX2                ; media-intheboxx-picture        ; media-intheboxx-thumbnail        ; media-intheboxx-detail        ; media-intheboxx-other        ; media-intheboxx-normal        ; media-intheboxx-thumbnails        ; intheboxx-medias        ;
+              ; IX3                ; media-intheboxx-picture        ; media-intheboxx-thumbnail        ; media-intheboxx-detail        ; media-intheboxx-other        ; media-intheboxx-normal        ; media-intheboxx-thumbnails        ; intheboxx-medias        ;
+              ; IX4                ; media-intheboxx-picture        ; media-intheboxx-thumbnail        ; media-intheboxx-detail        ; media-intheboxx-other        ; media-intheboxx-normal        ; media-intheboxx-thumbnails        ; intheboxx-medias        ;
+              ; IX5                ; media-intheboxx-picture        ; media-intheboxx-thumbnail        ; media-intheboxx-detail        ; media-intheboxx-other        ; media-intheboxx-normal        ; media-intheboxx-thumbnails        ; intheboxx-medias        ;
+              ; IX6                ; media-intheboxx-picture        ; media-intheboxx-thumbnail        ; media-intheboxx-detail        ; media-intheboxx-other        ; media-intheboxx-normal        ; media-intheboxx-thumbnails        ; intheboxx-medias        ;
+              ; IX7                ; media-intheboxx-picture        ; media-intheboxx-thumbnail        ; media-intheboxx-detail        ; media-intheboxx-other        ; media-intheboxx-normal        ; media-intheboxx-thumbnails        ; intheboxx-medias        ;
 
+              ; SJ1                ; media-spacejam-picture         ; media-spacejam-thumbnail         ; media-spacejam-detail         ; media-spacejam-other         ; media-spacejam-normal         ; media-spacejam-thumbnails         ; spacejam-medias         ;
+              ; SJ2                ; media-spacejam-picture         ; media-spacejam-thumbnail         ; media-spacejam-detail         ; media-spacejam-other         ; media-spacejam-normal         ; media-spacejam-thumbnails         ; spacejam-medias         ;
+              ; SJ3                ; media-spacejam-picture         ; media-spacejam-thumbnail         ; media-spacejam-detail         ; media-spacejam-other         ; media-spacejam-normal         ; media-spacejam-thumbnails         ; spacejam-medias         ;
+              ; SJ4                ; media-spacejam-picture         ; media-spacejam-thumbnail         ; media-spacejam-detail         ; media-spacejam-other         ; media-spacejam-normal         ; media-spacejam-thumbnails         ; spacejam-medias         ;
+              ; SJ5                ; media-spacejam-picture         ; media-spacejam-thumbnail         ; media-spacejam-detail         ; media-spacejam-other         ; media-spacejam-normal         ; media-spacejam-thumbnails         ; spacejam-medias         ;
+              ; SJ6                ; media-spacejam-picture         ; media-spacejam-thumbnail         ; media-spacejam-detail         ; media-spacejam-other         ; media-spacejam-normal         ; media-spacejam-thumbnails         ; spacejam-medias         ;
+              ; SJ7                ; media-spacejam-picture         ; media-spacejam-thumbnail         ; media-spacejam-detail         ; media-spacejam-other         ; media-spacejam-normal         ; media-spacejam-thumbnails         ; spacejam-medias         ;
+
+              ; SJPT1              ; media-spacejamplush-picture    ; media-spacejamplush-thumbnail    ; media-spacejamplush-detail    ; media-spacejamplush-other    ; media-spacejamplush-normal    ; media-spacejamplush-thumbnails    ; spacejamplush-medias    ;
+              ; SJPT2              ; media-spacejamplush-picture    ; media-spacejamplush-thumbnail    ; media-spacejamplush-detail    ; media-spacejamplush-other    ; media-spacejamplush-normal    ; media-spacejamplush-thumbnails    ; spacejamplush-medias    ;
+              ; SJPT3              ; media-spacejamplush-picture    ; media-spacejamplush-thumbnail    ; media-spacejamplush-detail    ; media-spacejamplush-other    ; media-spacejamplush-normal    ; media-spacejamplush-thumbnails    ; spacejamplush-medias    ;
+              ; SJPT4              ; media-spacejamplush-picture    ; media-spacejamplush-thumbnail    ; media-spacejamplush-detail    ; media-spacejamplush-other    ; media-spacejamplush-normal    ; media-spacejamplush-thumbnails    ; spacejamplush-medias    ;
+              ; SJPT5              ; media-spacejamplush-picture    ; media-spacejamplush-thumbnail    ; media-spacejamplush-detail    ; media-spacejamplush-other    ; media-spacejamplush-normal    ; media-spacejamplush-thumbnails    ; spacejamplush-medias    ;
+              ; SJPT6              ; media-spacejamplush-picture    ; media-spacejamplush-thumbnail    ; media-spacejamplush-detail    ; media-spacejamplush-other    ; media-spacejamplush-normal    ; media-spacejamplush-thumbnails    ; spacejamplush-medias    ;
+              ; SJPT7              ; media-spacejamplush-picture    ; media-spacejamplush-thumbnail    ; media-spacejamplush-detail    ; media-spacejamplush-other    ; media-spacejamplush-normal    ; media-spacejamplush-thumbnails    ; spacejamplush-medias    ;
+
+              ; ID1                ; media-intheboxdash-picture     ; media-intheboxdash-thumbnail     ; media-intheboxdash-detail     ; media-intheboxdash-other     ; media-intheboxdash-normal     ; media-intheboxdash-thumbnails     ; intheboxdash-medias     ;
+              ; ID2                ; media-intheboxdash-picture     ; media-intheboxdash-thumbnail     ; media-intheboxdash-detail     ; media-intheboxdash-other     ; media-intheboxdash-normal     ; media-intheboxdash-thumbnails     ; intheboxdash-medias     ;
+              ; ID3                ; media-intheboxdash-picture     ; media-intheboxdash-thumbnail     ; media-intheboxdash-detail     ; media-intheboxdash-other     ; media-intheboxdash-normal     ; media-intheboxdash-thumbnails     ; intheboxdash-medias     ;
+              ; ID4                ; media-intheboxdash-picture     ; media-intheboxdash-thumbnail     ; media-intheboxdash-detail     ; media-intheboxdash-other     ; media-intheboxdash-normal     ; media-intheboxdash-thumbnails     ; intheboxdash-medias     ;
+              ; ID5                ; media-intheboxdash-picture     ; media-intheboxdash-thumbnail     ; media-intheboxdash-detail     ; media-intheboxdash-other     ; media-intheboxdash-normal     ; media-intheboxdash-thumbnails     ; intheboxdash-medias     ;
+              ; ID6                ; media-intheboxdash-picture     ; media-intheboxdash-thumbnail     ; media-intheboxdash-detail     ; media-intheboxdash-other     ; media-intheboxdash-normal     ; media-intheboxdash-thumbnails     ; intheboxdash-medias     ;
+              ; ID7                ; media-intheboxdash-picture     ; media-intheboxdash-thumbnail     ; media-intheboxdash-detail     ; media-intheboxdash-other     ; media-intheboxdash-normal     ; media-intheboxdash-thumbnails     ; intheboxdash-medias     ;
+
+              ; I1011              ; media-inthebox101-picture      ; media-inthebox101-thumbnail      ; media-inthebox101-detail      ; media-inthebox101-other      ; media-inthebox101-normal      ; media-inthebox101-thumbnails      ; inthebox101-medias      ;
+              ; I1012              ; media-inthebox101-picture      ; media-inthebox101-thumbnail      ; media-inthebox101-detail      ; media-inthebox101-other      ; media-inthebox101-normal      ; media-inthebox101-thumbnails      ; inthebox101-medias      ;
+              ; I1013              ; media-inthebox101-picture      ; media-inthebox101-thumbnail      ; media-inthebox101-detail      ; media-inthebox101-other      ; media-inthebox101-normal      ; media-inthebox101-thumbnails      ; inthebox101-medias      ;
+              ; I1014              ; media-inthebox101-picture      ; media-inthebox101-thumbnail      ; media-inthebox101-detail      ; media-inthebox101-other      ; media-inthebox101-normal      ; media-inthebox101-thumbnails      ; inthebox101-medias      ;
+              ; I1015              ; media-inthebox101-picture      ; media-inthebox101-thumbnail      ; media-inthebox101-detail      ; media-inthebox101-other      ; media-inthebox101-normal      ; media-inthebox101-thumbnails      ; inthebox101-medias      ;
+              ; I1016              ; media-inthebox101-picture      ; media-inthebox101-thumbnail      ; media-inthebox101-detail      ; media-inthebox101-other      ; media-inthebox101-normal      ; media-inthebox101-thumbnails      ; inthebox101-medias      ;
+              ; I1017              ; media-inthebox101-picture      ; media-inthebox101-thumbnail      ; media-inthebox101-detail      ; media-inthebox101-other      ; media-inthebox101-normal      ; media-inthebox101-thumbnails      ; inthebox101-medias      ;
+
+              ; IH151              ; media-intheboxhybrid15-picture ; media-intheboxhybrid15-thumbnail ; media-intheboxhybrid15-detail ; media-intheboxhybrid15-other ; media-intheboxhybrid15-normal ; media-intheboxhybrid15-thumbnails ; intheboxhybrid15-medias ;
+              ; IH152              ; media-intheboxhybrid15-picture ; media-intheboxhybrid15-thumbnail ; media-intheboxhybrid15-detail ; media-intheboxhybrid15-other ; media-intheboxhybrid15-normal ; media-intheboxhybrid15-thumbnails ; intheboxhybrid15-medias ;
+              ; IH153              ; media-intheboxhybrid15-picture ; media-intheboxhybrid15-thumbnail ; media-intheboxhybrid15-detail ; media-intheboxhybrid15-other ; media-intheboxhybrid15-normal ; media-intheboxhybrid15-thumbnails ; intheboxhybrid15-medias ;
+              ; IH154              ; media-intheboxhybrid15-picture ; media-intheboxhybrid15-thumbnail ; media-intheboxhybrid15-detail ; media-intheboxhybrid15-other ; media-intheboxhybrid15-normal ; media-intheboxhybrid15-thumbnails ; intheboxhybrid15-medias ;
+              ; IH155              ; media-intheboxhybrid15-picture ; media-intheboxhybrid15-thumbnail ; media-intheboxhybrid15-detail ; media-intheboxhybrid15-other ; media-intheboxhybrid15-normal ; media-intheboxhybrid15-thumbnails ; intheboxhybrid15-medias ;
+              ; IH156              ; media-intheboxhybrid15-picture ; media-intheboxhybrid15-thumbnail ; media-intheboxhybrid15-detail ; media-intheboxhybrid15-other ; media-intheboxhybrid15-normal ; media-intheboxhybrid15-thumbnails ; intheboxhybrid15-medias ;
+              ; IH157              ; media-intheboxhybrid15-picture ; media-intheboxhybrid15-thumbnail ; media-intheboxhybrid15-detail ; media-intheboxhybrid15-other ; media-intheboxhybrid15-normal ; media-intheboxhybrid15-thumbnails ; intheboxhybrid15-medias ;
+
+              ; IH1                ; media-intheboxhybrid-picture   ; media-intheboxhybrid-thumbnail   ; media-intheboxhybrid-detail   ; media-intheboxhybrid-other   ; media-intheboxhybrid-normal   ; media-intheboxhybrid-thumbnails   ; intheboxhybrid-medias   ;
+              ; IH2                ; media-intheboxhybrid-picture   ; media-intheboxhybrid-thumbnail   ; media-intheboxhybrid-detail   ; media-intheboxhybrid-other   ; media-intheboxhybrid-normal   ; media-intheboxhybrid-thumbnails   ; intheboxhybrid-medias   ;
+              ; IH3                ; media-intheboxhybrid-picture   ; media-intheboxhybrid-thumbnail   ; media-intheboxhybrid-detail   ; media-intheboxhybrid-other   ; media-intheboxhybrid-normal   ; media-intheboxhybrid-thumbnails   ; intheboxhybrid-medias   ;
+              ; IH4                ; media-intheboxhybrid-picture   ; media-intheboxhybrid-thumbnail   ; media-intheboxhybrid-detail   ; media-intheboxhybrid-other   ; media-intheboxhybrid-normal   ; media-intheboxhybrid-thumbnails   ; intheboxhybrid-medias   ;
+              ; IH5                ; media-intheboxhybrid-picture   ; media-intheboxhybrid-thumbnail   ; media-intheboxhybrid-detail   ; media-intheboxhybrid-other   ; media-intheboxhybrid-normal   ; media-intheboxhybrid-thumbnails   ; intheboxhybrid-medias   ;
+              ; IH6                ; media-intheboxhybrid-picture   ; media-intheboxhybrid-thumbnail   ; media-intheboxhybrid-detail   ; media-intheboxhybrid-other   ; media-intheboxhybrid-normal   ; media-intheboxhybrid-thumbnails   ; intheboxhybrid-medias   ;
+              ; IH7                ; media-intheboxhybrid-picture   ; media-intheboxhybrid-thumbnail   ; media-intheboxhybrid-detail   ; media-intheboxhybrid-other   ; media-intheboxhybrid-normal   ; media-intheboxhybrid-thumbnails   ; intheboxhybrid-medias   ;
+
+              ; IK1                ; media-intheboxkasur-picture    ; media-intheboxkasur-thumbnail    ; media-intheboxkasur-detail    ; media-intheboxkasur-other    ; media-intheboxkasur-normal    ; media-intheboxkasur-thumbnails    ; intheboxkasur-medias    ;
+              ; IK2                ; media-intheboxkasur-picture    ; media-intheboxkasur-thumbnail    ; media-intheboxkasur-detail    ; media-intheboxkasur-other    ; media-intheboxkasur-normal    ; media-intheboxkasur-thumbnails    ; intheboxkasur-medias    ;
+              ; IK3                ; media-intheboxkasur-picture    ; media-intheboxkasur-thumbnail    ; media-intheboxkasur-detail    ; media-intheboxkasur-other    ; media-intheboxkasur-normal    ; media-intheboxkasur-thumbnails    ; intheboxkasur-medias    ;
+              ; IK4                ; media-intheboxkasur-picture    ; media-intheboxkasur-thumbnail    ; media-intheboxkasur-detail    ; media-intheboxkasur-other    ; media-intheboxkasur-normal    ; media-intheboxkasur-thumbnails    ; intheboxkasur-medias    ;
+              ; IK5                ; media-intheboxkasur-picture    ; media-intheboxkasur-thumbnail    ; media-intheboxkasur-detail    ; media-intheboxkasur-other    ; media-intheboxkasur-normal    ; media-intheboxkasur-thumbnails    ; intheboxkasur-medias    ;
+              ; IK6                ; media-intheboxkasur-picture    ; media-intheboxkasur-thumbnail    ; media-intheboxkasur-detail    ; media-intheboxkasur-other    ; media-intheboxkasur-normal    ; media-intheboxkasur-thumbnails    ; intheboxkasur-medias    ;
+              ; IK7                ; media-intheboxkasur-picture    ; media-intheboxkasur-thumbnail    ; media-intheboxkasur-detail    ; media-intheboxkasur-other    ; media-intheboxkasur-normal    ; media-intheboxkasur-thumbnails    ; intheboxkasur-medias    ;
+
+              ; IP1                ; media-intheboxplus-picture     ; media-intheboxplus-thumbnail     ; media-intheboxplus-detail     ; media-intheboxplus-other     ; media-intheboxplus-normal     ; media-intheboxplus-thumbnails     ; intheboxplus-medias     ;
+              ; IP2                ; media-intheboxplus-picture     ; media-intheboxplus-thumbnail     ; media-intheboxplus-detail     ; media-intheboxplus-other     ; media-intheboxplus-normal     ; media-intheboxplus-thumbnails     ; intheboxplus-medias     ;
+              ; IP3                ; media-intheboxplus-picture     ; media-intheboxplus-thumbnail     ; media-intheboxplus-detail     ; media-intheboxplus-other     ; media-intheboxplus-normal     ; media-intheboxplus-thumbnails     ; intheboxplus-medias     ;
+              ; IP4                ; media-intheboxplus-picture     ; media-intheboxplus-thumbnail     ; media-intheboxplus-detail     ; media-intheboxplus-other     ; media-intheboxplus-normal     ; media-intheboxplus-thumbnails     ; intheboxplus-medias     ;
+              ; IP5                ; media-intheboxplus-picture     ; media-intheboxplus-thumbnail     ; media-intheboxplus-detail     ; media-intheboxplus-other     ; media-intheboxplus-normal     ; media-intheboxplus-thumbnails     ; intheboxplus-medias     ;
+              ; IP6                ; media-intheboxplus-picture     ; media-intheboxplus-thumbnail     ; media-intheboxplus-detail     ; media-intheboxplus-other     ; media-intheboxplus-normal     ; media-intheboxplus-thumbnails     ; intheboxplus-medias     ;
+              ; IP7                ; media-intheboxplus-picture     ; media-intheboxplus-thumbnail     ; media-intheboxplus-detail     ; media-intheboxplus-other     ; media-intheboxplus-normal     ; media-intheboxplus-thumbnails     ; intheboxplus-medias     ;
+
+              ; OH1                ; media-organixhybrid-picture    ; media-organixhybrid-thumbnail    ; media-organixhybrid-detail    ; media-organixhybrid-other    ; media-organixhybrid-normal    ; media-organixhybrid-thumbnails    ; organixhybrid-medias    ;
+              ; OH2                ; media-organixhybrid-picture    ; media-organixhybrid-thumbnail    ; media-organixhybrid-detail    ; media-organixhybrid-other    ; media-organixhybrid-normal    ; media-organixhybrid-thumbnails    ; organixhybrid-medias    ;
+              ; OH3                ; media-organixhybrid-picture    ; media-organixhybrid-thumbnail    ; media-organixhybrid-detail    ; media-organixhybrid-other    ; media-organixhybrid-normal    ; media-organixhybrid-thumbnails    ; organixhybrid-medias    ;
+              ; OH4                ; media-organixhybrid-picture    ; media-organixhybrid-thumbnail    ; media-organixhybrid-detail    ; media-organixhybrid-other    ; media-organixhybrid-normal    ; media-organixhybrid-thumbnails    ; organixhybrid-medias    ;
+              ; OH5                ; media-organixhybrid-picture    ; media-organixhybrid-thumbnail    ; media-organixhybrid-detail    ; media-organixhybrid-other    ; media-organixhybrid-normal    ; media-organixhybrid-thumbnails    ; organixhybrid-medias    ;
+              ; OH6                ; media-organixhybrid-picture    ; media-organixhybrid-thumbnail    ; media-organixhybrid-detail    ; media-organixhybrid-other    ; media-organixhybrid-normal    ; media-organixhybrid-thumbnails    ; organixhybrid-medias    ;
+              ; OH7                ; media-organixhybrid-picture    ; media-organixhybrid-thumbnail    ; media-organixhybrid-detail    ; media-organixhybrid-other    ; media-organixhybrid-normal    ; media-organixhybrid-thumbnails    ; organixhybrid-medias    ;
+
+              ; OL1                ; media-organixlite-picture      ; media-organixlite-thumbnail      ; media-organixlite-detail      ; media-organixlite-other      ; media-organixlite-normal      ; media-organixlite-thumbnails      ; organixlite-medias      ;
+              ; OL2                ; media-organixlite-picture      ; media-organixlite-thumbnail      ; media-organixlite-detail      ; media-organixlite-other      ; media-organixlite-normal      ; media-organixlite-thumbnails      ; organixlite-medias      ;
+              ; OL3                ; media-organixlite-picture      ; media-organixlite-thumbnail      ; media-organixlite-detail      ; media-organixlite-other      ; media-organixlite-normal      ; media-organixlite-thumbnails      ; organixlite-medias      ;
+              ; OL4                ; media-organixlite-picture      ; media-organixlite-thumbnail      ; media-organixlite-detail      ; media-organixlite-other      ; media-organixlite-normal      ; media-organixlite-thumbnails      ; organixlite-medias      ;
+              ; OL5                ; media-organixlite-picture      ; media-organixlite-thumbnail      ; media-organixlite-detail      ; media-organixlite-other      ; media-organixlite-normal      ; media-organixlite-thumbnails      ; organixlite-medias      ;
+              ; OL6                ; media-organixlite-picture      ; media-organixlite-thumbnail      ; media-organixlite-detail      ; media-organixlite-other      ; media-organixlite-normal      ; media-organixlite-thumbnails      ; organixlite-medias      ;
+              ; OL7                ; media-organixlite-picture      ; media-organixlite-thumbnail      ; media-organixlite-detail      ; media-organixlite-other      ; media-organixlite-normal      ; media-organixlite-thumbnails      ; organixlite-medias      ;
+
+              ; OP1                ; media-organixplush-picture     ; media-organixplush-thumbnail     ; media-organixplush-detail     ; media-organixplush-other     ; media-organixplush-normal     ; media-organixplush-thumbnails     ; organixplush-medias     ;
+              ; OP2                ; media-organixplush-picture     ; media-organixplush-thumbnail     ; media-organixplush-detail     ; media-organixplush-other     ; media-organixplush-normal     ; media-organixplush-thumbnails     ; organixplush-medias     ;
+              ; OP3                ; media-organixplush-picture     ; media-organixplush-thumbnail     ; media-organixplush-detail     ; media-organixplush-other     ; media-organixplush-normal     ; media-organixplush-thumbnails     ; organixplush-medias     ;
+              ; OP4                ; media-organixplush-picture     ; media-organixplush-thumbnail     ; media-organixplush-detail     ; media-organixplush-other     ; media-organixplush-normal     ; media-organixplush-thumbnails     ; organixplush-medias     ;
+              ; OP5                ; media-organixplush-picture     ; media-organixplush-thumbnail     ; media-organixplush-detail     ; media-organixplush-other     ; media-organixplush-normal     ; media-organixplush-thumbnails     ; organixplush-medias     ;
+              ; OP6                ; media-organixplush-picture     ; media-organixplush-thumbnail     ; media-organixplush-detail     ; media-organixplush-other     ; media-organixplush-normal     ; media-organixplush-thumbnails     ; organixplush-medias     ;
+              ; OP7                ; media-organixplush-picture     ; media-organixplush-thumbnail     ; media-organixplush-detail     ; media-organixplush-other     ; media-organixplush-normal     ; media-organixplush-thumbnails     ; organixplush-medias     ;
+
+              ; S1                 ; media-sofa-picture             ; media-sofa-thumbnail             ; media-sofa-detail             ; media-sofa-other             ; media-sofa-normal             ; media-sofa-thumbnails             ; sofa-medias             ;
+              ; S2                 ; media-sofa-picture             ; media-sofa-thumbnail             ; media-sofa-detail             ; media-sofa-other             ; media-sofa-normal             ; media-sofa-thumbnails             ; sofa-medias             ;
+
+              ; KL1                ; media-kasurlipat-picture       ; media-kasurlipat-thumbnail       ; media-kasurlipat-detail       ; media-kasurlipat-other       ; media-kasurlipat-normal       ; media-kasurlipat-thumbnails       ; kasurlipat-medias       ;
+
+              ; SB1                ; media-sofabed-picture          ; media-sofabed-thumbnail          ; media-sofabed-detail          ; media-sofabed-other          ; media-sofabed-normal          ; media-sofabed-thumbnails          ; sofabed-medias          ;
+              ; SB2                ; media-sofabed-picture          ; media-sofabed-thumbnail          ; media-sofabed-detail          ; media-sofabed-other          ; media-sofabed-normal          ; media-sofabed-thumbnails          ; sofabed-medias          ;
+
+              ; B1                 ; media-bantal-picture           ; media-bantal-thumbnail           ; media-bantal-detail           ; media-bantal-other           ; media-bantal-normal           ; media-bantal-thumbnails           ; bantal-medias           ;
+
+              ; G1                 ; media-guling-picture           ; media-guling-thumbnail           ; media-guling-detail           ; media-guling-other           ; media-guling-normal           ; media-guling-thumbnails           ; guling-medias           ;

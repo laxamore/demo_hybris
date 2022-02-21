@@ -4,9 +4,9 @@
 # ImpEx for Importing Products Stock Levels and Warehouses
 
 # Macros / Replacement Parameter definitions
-$productCatalog = demoProductCatalog
-$productCatalogName = Demo Product Catalog
-$vendor = demo
+$productCatalog=demoProductCatalog
+$productCatalogName=Demo Product Catalog
+$vendor=demo
 
 $catalogVersion = catalogversion(catalog(id[default=$productCatalog]), version[default='Staged'])[unique=true, default=$productCatalog:Staged]
 
@@ -15,22 +15,230 @@ INSERT_UPDATE Vendor; code[unique = true]
                     ; $vendor
 
 INSERT_UPDATE Warehouse; code[unique = true]; vendor(code); default[default = true]; baseStores(uid)
-                       ; warehouse_demo ; $vendor     ;                        ; demo
+                       ; warehouse_demo     ; $vendor     ;                        ; demo
 
 INSERT_UPDATE StockLevel; available; warehouse(code)[unique = true]; inStockStatus(code); maxPreOrder; maxStockLevelHistoryCount; overSelling; preOrder; productCode[unique = true]; reserved
-                        ; 1000000  ; warehouse_demo            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; PB-SHIRT-1                ; 0
-                        ; 1000000  ; warehouse_demo            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; PB-SHIRT-2                ; 0
-                        ; 1000000  ; warehouse_demo            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; CV-S1                     ; 0
-                        ; 1000000  ; warehouse_demo            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; CV-S2                     ; 0
-                        ; 1000000  ; warehouse_demo            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; HURLEY-T-1                ; 0
-                        ; 1000000  ; warehouse_demo            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; HURLEY-T-2                ; 0
-                        ; 1000000  ; warehouse_demo            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; COLE-T-1                  ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IA1                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IA2                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IA3                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IA4                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IA5                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IA6                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IA7                       ; 0
+
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IX1                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IX2                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IX3                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IX4                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IX5                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IX6                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IX7                       ; 0
+
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; SJ1                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; SJ2                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; SJ3                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; SJ4                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; SJ5                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; SJ6                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; SJ7                       ; 0
+
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; SJPT1                     ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; SJPT2                     ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; SJPT3                     ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; SJPT4                     ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; SJPT5                     ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; SJPT6                     ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; SJPT7                     ; 0
+
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; ID1                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; ID2                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; ID3                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; ID4                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; ID5                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; ID6                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; ID7                       ; 0
+
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; I1011                     ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; I1012                     ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; I1013                     ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; I1014                     ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; I1015                     ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; I1016                     ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; I1017                     ; 0
+
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IH1                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IH2                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IH3                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IH4                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IH5                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IH6                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IH7                       ; 0
+
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IH151                     ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IH152                     ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IH153                     ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IH154                     ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IH155                     ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IH156                     ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IH157                     ; 0
+
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IK1                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IK2                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IK3                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IK4                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IK5                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IK6                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IK7                       ; 0
+
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IP1                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IP2                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IP3                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IP4                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IP5                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IP6                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; IP7                       ; 0
+
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; OH1                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; OH2                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; OH3                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; OH4                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; OH5                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; OH6                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; OH7                       ; 0
+
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; OL1                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; OL2                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; OL3                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; OL4                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; OL5                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; OL6                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; OL7                       ; 0
+
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; OP1                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; OP2                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; OP3                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; OP4                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; OP5                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; OP6                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; OP7                       ; 0
+
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; S1                        ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; S2                        ; 0
+
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; SB1                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; KL1                       ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; B1                        ; 0
+                        ; 1000000  ; warehouse_demo                ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; G1                        ; 0
 
 UPDATE Product; code[unique = true]; $catalogVersion; stockLevels(productCode, warehouse(code)); vendors(code)
-              ; PB-SHIRT-1         ;                ; PB-SHIRT-1:warehouse_demo            ; $vendor
-              ; PB-SHIRT-2         ;                ; PB-SHIRT-2:warehouse_demo            ; $vendor
-              ; CV-S1              ;                ; CV-S1:warehouse_demo                 ; $vendor
-              ; CV-S2              ;                ; CV-S2:warehouse_demo                 ; $vendor
-              ; HURLEY-T-1         ;                ; HURLEY-T-1:warehouse_demo            ; $vendor
-              ; HURLEY-T-2         ;                ; HURLEY-T-2:warehouse_demo            ; $vendor
-              ; COLE-T-1           ;                ; COLE-T-1:warehouse_demo              ; $vendor
+              ; IA1                ;                ; IA1:warehouse_demo                       ; $vendor
+              ; IX1                ;                ; IA1:warehouse_demo                       ; $vendor
+              ; SJ1                ;                ; IA1:warehouse_demo                       ; $vendor
+              ; SJPT1              ;                ; SJPT1:warehouse_demo                     ; $vendor
+              ; ID1                ;                ; ID1:warehouse_demo                       ; $vendor
+              ; I1011              ;                ; I1011:warehouse_demo                     ; $vendor
+              ; IH1                ;                ; IH1:warehouse_demo                       ; $vendor
+              ; IH151              ;                ; IH151:warehouse_demo                     ; $vendor
+              ; IK1                ;                ; IK1:warehouse_demo                       ; $vendor
+              ; IP1                ;                ; IP1:warehouse_demo                       ; $vendor
+              ; OH1                ;                ; OH1:warehouse_demo                       ; $vendor
+              ; OL1                ;                ; OL1:warehouse_demo                       ; $vendor
+              ; OP1                ;                ; OP1:warehouse_demo                       ; $vendor
+              ; S1                 ;                ; S1:warehouse_demo                        ; $vendor
+              ; SB1                ;                ; SB1:warehouse_demo                       ; $vendor
+              ; KL1                ;                ; KL1:warehouse_demo                       ; $vendor
+              ; G1                 ;                ; G1:warehouse_demo                        ; $vendor
+              ; B1                 ;                ; B1:warehouse_demo                        ; $vendor
+
+              ; IA2                ;                ; IA2:warehouse_demo                       ; $vendor
+              ; IX2                ;                ; IA2:warehouse_demo                       ; $vendor
+              ; SJ2                ;                ; IA2:warehouse_demo                       ; $vendor
+              ; SJPT2              ;                ; SJPT2:warehouse_demo                     ; $vendor
+              ; ID2                ;                ; ID2:warehouse_demo                       ; $vendor
+              ; I1012              ;                ; I1012:warehouse_demo                     ; $vendor
+              ; IH2                ;                ; IH2:warehouse_demo                       ; $vendor
+              ; IH152              ;                ; IH152:warehouse_demo                     ; $vendor
+              ; IK2                ;                ; IK2:warehouse_demo                       ; $vendor
+              ; IP2                ;                ; IP2:warehouse_demo                       ; $vendor
+              ; OH2                ;                ; OH2:warehouse_demo                       ; $vendor
+              ; OL2                ;                ; OL2:warehouse_demo                       ; $vendor
+              ; OP2                ;                ; OP2:warehouse_demo                       ; $vendor
+              ; S2                 ;                ; S2:warehouse_demo                        ; $vendor
+              ; SB2                ;                ; SB2:warehouse_demo                       ; $vendor
+              ; KL2                ;                ; KL2:warehouse_demo                       ; $vendor
+              ; G2                 ;                ; G2:warehouse_demo                        ; $vendor
+              ; B2                 ;                ; B2:warehouse_demo                        ; $vendor
+
+              ; IA3                ;                ; IA3:warehouse_demo                       ; $vendor
+              ; IX3                ;                ; IX3:warehouse_demo                       ; $vendor
+              ; SJ3                ;                ; SJ3:warehouse_demo                       ; $vendor
+              ; SJPT3              ;                ; SJPT3:warehouse_demo                     ; $vendor
+              ; ID3                ;                ; ID3:warehouse_demo                       ; $vendor
+              ; I1013              ;                ; I1013:warehouse_demo                     ; $vendor
+              ; IH3                ;                ; IH3:warehouse_demo                       ; $vendor
+              ; IH153              ;                ; IH153:warehouse_demo                     ; $vendor
+              ; IK3                ;                ; IK3:warehouse_demo                       ; $vendor
+              ; IP3                ;                ; IP3:warehouse_demo                       ; $vendor
+              ; OH3                ;                ; OH3:warehouse_demo                       ; $vendor
+              ; OL3                ;                ; OL3:warehouse_demo                       ; $vendor
+              ; OP3                ;                ; OP3:warehouse_demo                       ; $vendor
+
+
+              ; IA4                ;                ; IA4:warehouse_demo                       ; $vendor
+              ; IX4                ;                ; IX4:warehouse_demo                       ; $vendor
+              ; SJ4                ;                ; SJ4:warehouse_demo                       ; $vendor
+              ; SJPT4              ;                ; SJPT4:warehouse_demo                     ; $vendor
+              ; ID4                ;                ; ID4:warehouse_demo                       ; $vendor
+              ; I1014              ;                ; I1014:warehouse_demo                     ; $vendor
+              ; IH4                ;                ; IH4:warehouse_demo                       ; $vendor
+              ; IH154              ;                ; IH154:warehouse_demo                     ; $vendor
+              ; IK4                ;                ; IK4:warehouse_demo                       ; $vendor
+              ; IP4                ;                ; IP4:warehouse_demo                       ; $vendor
+              ; OH4                ;                ; OH4:warehouse_demo                       ; $vendor
+              ; OL4                ;                ; OL4:warehouse_demo                       ; $vendor
+              ; OP4                ;                ; OP4:warehouse_demo                       ; $vendor
+
+
+              ; IA5                ;                ; IA5:warehouse_demo                       ; $vendor
+              ; IX5                ;                ; IX5:warehouse_demo                       ; $vendor
+              ; SJ5                ;                ; SJ5:warehouse_demo                       ; $vendor
+              ; SJPT5              ;                ; SJPT5:warehouse_demo                     ; $vendor
+              ; ID5                ;                ; ID5:warehouse_demo                       ; $vendor
+              ; I1015              ;                ; I1015:warehouse_demo                     ; $vendor
+              ; IH5                ;                ; IH5:warehouse_demo                       ; $vendor
+              ; IH155              ;                ; IH155:warehouse_demo                     ; $vendor
+              ; IK5                ;                ; IK5:warehouse_demo                       ; $vendor
+              ; IP5                ;                ; IP5:warehouse_demo                       ; $vendor
+              ; OH5                ;                ; OH5:warehouse_demo                       ; $vendor
+              ; OL5                ;                ; OL5:warehouse_demo                       ; $vendor
+              ; OP5                ;                ; OP5:warehouse_demo                       ; $vendor
+
+
+              ; IA6                ;                ; IA6:warehouse_demo                       ; $vendor
+              ; IX6                ;                ; IX6:warehouse_demo                       ; $vendor
+              ; SJ6                ;                ; SJ6:warehouse_demo                       ; $vendor
+              ; SJPT6              ;                ; SJPT6:warehouse_demo                     ; $vendor
+              ; ID6                ;                ; ID6:warehouse_demo                       ; $vendor
+              ; I1016              ;                ; I1016:warehouse_demo                     ; $vendor
+              ; IH6                ;                ; IH6:warehouse_demo                       ; $vendor
+              ; IH156              ;                ; IH156:warehouse_demo                     ; $vendor
+              ; IK6                ;                ; IK6:warehouse_demo                       ; $vendor
+              ; IP6                ;                ; IP6:warehouse_demo                       ; $vendor
+              ; OH6                ;                ; OH6:warehouse_demo                       ; $vendor
+              ; OL6                ;                ; OL6:warehouse_demo                       ; $vendor
+              ; OP6                ;                ; OP6:warehouse_demo                       ; $vendor
+
+
+              ; IA7                ;                ; IA7:warehouse_demo                       ; $vendor
+              ; IX7                ;                ; IX7:warehouse_demo                       ; $vendor
+              ; SJ7                ;                ; SJ7:warehouse_demo                       ; $vendor
+              ; SJPT7              ;                ; SJPT7:warehouse_demo                     ; $vendor
+              ; ID7                ;                ; ID7:warehouse_demo                       ; $vendor
+              ; I1017              ;                ; I1017:warehouse_demo                     ; $vendor
+              ; IH7                ;                ; IH7:warehouse_demo                       ; $vendor
+              ; IH157              ;                ; IH157:warehouse_demo                     ; $vendor
+              ; IK7                ;                ; IK7:warehouse_demo                       ; $vendor
+              ; IP7                ;                ; IP7:warehouse_demo                       ; $vendor
+              ; OH7                ;                ; OH7:warehouse_demo                       ; $vendor
+              ; OL7                ;                ; OL7:warehouse_demo                       ; $vendor
+              ; OP7                ;                ; OP7:warehouse_demo                       ; $vendor

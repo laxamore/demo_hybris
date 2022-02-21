@@ -30,6 +30,19 @@
 					<c:out escapeXml="false" value="${ycommerce:sanitizeHTML(product.name)}" />
 				</a>
 			</ycommerce:testId>
+            <br>
+ 			<ycommerce:testId code="product_productSize">
+ 				<a class="size" href="${fn:escapeXml(productUrl)}">
+ 					<c:out escapeXml="false" value="${ycommerce:sanitizeHTML(product.size)}" />
+ 				</a>
+ 			</ycommerce:testId>
+            <br>
+			<ycommerce:testId code="product_productDesc">
+				<a class="desc" href="${fn:escapeXml(productUrl)}">
+					<c:out escapeXml="false" value="${ycommerce:sanitizeHTML(product.desc)}" />
+				</a>
+			</ycommerce:testId>
+
 		
 			<c:if test="${not empty product.potentialPromotions}">
 				<div class="promo">
@@ -40,7 +53,11 @@
 			</c:if>
 			
 			<ycommerce:testId code="product_productPrice">
-				<div class="price"><product:productListerItemPrice product="${product}"/></div>
+				<div class="price">
+				    <a  href="${fn:escapeXml(productUrl)}">
+				        <product:productListerItemPrice product="${product}"/>
+				    </a>
+				</div>
 			</ycommerce:testId>
 			<c:forEach var="variantOption" items="${product.variantOptions}">
 				<c:forEach items="${variantOption.variantOptionQualifiers}" var="variantOptionQualifier">
