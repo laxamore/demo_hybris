@@ -4,9 +4,9 @@
 # ImpEx for Importing Products Store Stock Levels into the Store
 
 # Macros / Replacement Parameter definitions
-$productCatalog=__PRODUCT_CATALOG_NAME__
-$productCatalogName=__PRODUCT_CATALOG_FULL_NAME__
-$vendor=__VENDOR_NAME__
+$productCatalog=demoProductCatalog
+$productCatalogName=Demo Product Catalog
+$vendor=demoVendor
 
 $catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
 

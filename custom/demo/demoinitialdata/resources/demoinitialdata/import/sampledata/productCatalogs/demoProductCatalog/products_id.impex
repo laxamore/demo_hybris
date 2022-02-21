@@ -1,7 +1,7 @@
 # -----------------------------------------------------------------------
 # Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
 # -----------------------------------------------------------------------
-# ImpEx for Importing Product Localisations
+# ImpEx for Importing Products
 
 # Macros / Replacement Parameter definitions
 $productCatalog = demoProductCatalog
@@ -11,20 +11,137 @@ $catalogVersion = catalogversion(catalog(id[default=$productCatalog]), version[d
 
 # Language
 $lang = id
+# Update Products with localization
+INSERT_UPDATE DemoProduct; code[unique = true]; $catalogVersion; name[lang = $lang]                            ; description[lang = $lang]
+                         ; INTHEBOX-ALPHA     ;                ; INTHEBOX ALPHA                                ; INTHEBOX ALPHA
+                         ; INTHEBOX-X         ;                ; INTHEBOX X                                    ; INTHEBOX X
+                         ; SPACEJAM           ;                ; 'SPACE JAM:A NEW LEGACY' COLLECTION           ; 'SPACE JAM:A NEW LEGACY' COLLECTION
+                         ; SPACEJAM-PLUSHTOP  ;                ; 'SPACE JAM:A NEW LEGACY' COLLECTION PLUSH TOP ; 'SPACE JAM:A NEW LEGACY' COLLECTION PLUSH TOP
+                         ; INTHEBOX-DASH      ;                ; INTHEBOX DASH                                 ; INTHEBOX DASH
+                         ; INTHEBOX-101       ;                ; INTHEBOX 101                                  ; INTHEBOX 101
+                         ; INTHEBOX-HYBRID    ;                ; INTHEBOX HYBRID                               ; INTHEBOX HYBRID
+                         ; INTHEBOX-HYBRID15  ;                ; INTHEBOX HYBRID 15                            ; INTHEBOX HYBRID 15
+                         ; INTHEBOX-KASUR     ;                ; KASUR INTHEBOX                                ; KASUR INTHEBOX
+                         ; INTHEBOX-PLUS      ;                ; INTHEBOX PLUS                                 ; INTHEBOX PLUS
+                         ; ORGANIX-HYBRID     ;                ; ORGANIX HYBRID                                ; ORGANIX HYBRID
+                         ; ORGANIX-LITE       ;                ; ORGANIX LITE                                  ; ORGANIX LITE
+                         ; ORGANIX-PLUSH      ;                ; ORGANIX PLUSH                                 ; ORGANIX PLUSH
+                         ; KASUR-LIPAT        ;                ; KASUR LIPAT                                   ; KASUR LIPAT
+                         ; SOFA               ;                ; SOFA                                          ; SOFA
+                         ; SOFA-BED           ;                ; SOFA BED                                      ; SOFA BED
+                         ; BANTAL             ;                ; BANTAL                                        ; BANTAL
+                         ; GULING             ;                ; GULING                                        ; GULING
 
-# Update allProducts with localisations
-UPDATE DemoProduct; code[unique = true]; $catalogVersion; name[lang = $lang]; description[lang = $lang]
-                      ; PULLNBEAR          ;                ; Pull & Bear       ; Pull & Bear T-Shirt
-                      ; CONVERSE           ;                ; Converse          ; Converse T-Shirt
-                      ; HURLEY             ;                ; Hurley            ; Hurley T-Shirt
-                      ; COLE               ;                ; Cole              ; Cole Jeans
 
-UPDATE DemoVariantProduct; code[unique = true]; name[lang = $lang]
-                             ; PB-SHIRT-1         ; Pull & Bear Shirt 1
-                             ; PB-SHIRT-2         ; Pull & Bear Shirt 1
-                             ; CV-S1              ; Converse Shirt 1
-                             ; CV-S2              ; Converse Shirt 2
-                             ; HURLEY-T-1         ; Husley Shirt 1
-                             ; HURLEY-T-2         ; Husley Shirt 1
-                             ; COLE-T-1           ; Cole Jeans 1
-                             ; COLE-C-1           ; Cole Chino 1
+INSERT_UPDATE DemoVariantProduct; code[unique = true]; name[lang = $lang]
+                                ; IA1                ; Kasur INTHEBOX Alpha Size 90x200
+                                ; IA2                ; Kasur INTHEBOX Alpha Size 100x200
+                                ; IA3                ; Kasur INTHEBOX Alpha Size 120x200
+                                ; IA4                ; Kasur INTHEBOX Alpha Size 140x200
+                                ; IA5                ; Kasur INTHEBOX Alpha Size 160x200
+                                ; IA6                ; Kasur INTHEBOX Alpha Size 180x200
+                                ; IA7                ; Kasur INTHEBOX Alpha Size 200x200
+
+                                ; IX1                ; INTHEBOX X Size 90x200
+                                ; IX2                ; INTHEBOX X Size 100x200
+                                ; IX3                ; INTHEBOX X Size 120x200
+                                ; IX4                ; INTHEBOX X Size 140x200
+                                ; IX5                ; INTHEBOX X Size 160x200
+                                ; IX6                ; INTHEBOX X Size 180x200
+                                ; IX7                ; INTHEBOX X Size 200x200
+
+                                ; SJ1                ; INTHEBOX "Space Jam:A New Legacy" Collection 90x200
+                                ; SJ2                ; INTHEBOX "Space Jam:A New Legacy" Collection 100x200
+                                ; SJ3                ; INTHEBOX "Space Jam:A New Legacy" Collection 120x200
+                                ; SJ4                ; INTHEBOX "Space Jam:A New Legacy" Collection 140x200
+                                ; SJ5                ; INTHEBOX "Space Jam:A New Legacy" Collection 160x200
+                                ; SJ6                ; INTHEBOX "Space Jam:A New Legacy" Collection 180x200
+                                ; SJ7                ; INTHEBOX "Space Jam:A New Legacy" Collection 200x200
+
+                                ; SJPT1              ; INTHEBOX "Space Jam:A New Legacy" Plush Top Collection 90x200
+                                ; SJPT2              ; INTHEBOX "Space Jam:A New Legacy" Plush Top Collection 100x200
+                                ; SJPT3              ; INTHEBOX "Space Jam:A New Legacy" Plush Top Collection 120x200
+                                ; SJPT4              ; INTHEBOX "Space Jam:A New Legacy" Plush Top Collection 140x200
+                                ; SJPT5              ; INTHEBOX "Space Jam:A New Legacy" Plush Top Collection 160x200
+                                ; SJPT6              ; INTHEBOX "Space Jam:A New Legacy" Plush Top Collection 180x200
+                                ; SJPT7              ; INTHEBOX "Space Jam:A New Legacy" Plush Top Collection 200x200
+
+                                ; ID1                ; INTHEBOX DASH 90x200
+                                ; ID2                ; INTHEBOX DASH 100x200
+                                ; ID3                ; INTHEBOX DASH 120x200
+                                ; ID4                ; INTHEBOX DASH 140x200
+                                ; ID5                ; INTHEBOX DASH 160x200
+                                ; ID6                ; INTHEBOX DASH 180x200
+                                ; ID7                ; INTHEBOX DASH 200x200
+
+                                ; I1011              ; INTHEBOX 101 90x200
+                                ; I1012              ; INTHEBOX 101 100x200
+                                ; I1013              ; INTHEBOX 101 120x200
+                                ; I1014              ; INTHEBOX 101 140x200
+                                ; I1015              ; INTHEBOX 101 160x200
+                                ; I1016              ; INTHEBOX 101 180x200
+                                ; I1017              ; INTHEBOX 101 200x200
+
+                                ; IH1                ; INTHEBOX HYBRID 90x200
+                                ; IH2                ; INTHEBOX HYBRID 100x200
+                                ; IH3                ; INTHEBOX HYBRID 120x200
+                                ; IH4                ; INTHEBOX HYBRID 140x200
+                                ; IH5                ; INTHEBOX HYBRID 160x200
+                                ; IH6                ; INTHEBOX HYBRID 180x200
+                                ; IH7                ; INTHEBOX HYBRID 200x200
+
+                                ; IH151              ; INTHEBOX HYBRID 15 90x200
+                                ; IH152              ; INTHEBOX HYBRID 15 100x200
+                                ; IH153              ; INTHEBOX HYBRID 15 120x200
+                                ; IH154              ; INTHEBOX HYBRID 15 140x200
+                                ; IH155              ; INTHEBOX HYBRID 15 160x200
+                                ; IH156              ; INTHEBOX HYBRID 15 180x200
+                                ; IH157              ; INTHEBOX HYBRID 15 200x200
+
+                                ; IK1                ; Kasur INTHEBOX 90x200
+                                ; IK2                ; Kasur INTHEBOX 100x200
+                                ; IK3                ; Kasur INTHEBOX 120x200
+                                ; IK4                ; Kasur INTHEBOX 140x200
+                                ; IK5                ; Kasur INTHEBOX 160x200
+                                ; IK6                ; Kasur INTHEBOX 180x200
+                                ; IK7                ; Kasur INTHEBOX 200x200
+
+                                ; IP1                ; INTHEBOX Plus 90x200
+                                ; IP2                ; INTHEBOX Plus 100x200
+                                ; IP3                ; INTHEBOX Plus 120x200
+                                ; IP4                ; INTHEBOX Plus 140x200
+                                ; IP5                ; INTHEBOX Plus 160x200
+                                ; IP6                ; INTHEBOX Plus 180x200
+                                ; IP7                ; INTHEBOX Plus 200x200
+
+                                ; OH1                ; INTHEBOX Organix Hybrid 90x200
+                                ; OH2                ; INTHEBOX Organix Hybrid 100x200
+                                ; OH3                ; INTHEBOX Organix Hybrid 120x200
+                                ; OH4                ; INTHEBOX Organix Hybrid 140x200
+                                ; OH5                ; INTHEBOX Organix Hybrid 160x200
+                                ; OH6                ; INTHEBOX Organix Hybrid 180x200
+                                ; OH7                ; INTHEBOX Organix Hybrid 200x200
+
+                                ; OL1                ; INTHEBOX Organix Lite 90x200
+                                ; OL2                ; INTHEBOX Organix Lite 100x200
+                                ; OL3                ; INTHEBOX Organix Lite 120x200
+                                ; OL4                ; INTHEBOX Organix Lite 140x200
+                                ; OL5                ; INTHEBOX Organix Lite 160x200
+                                ; OL6                ; INTHEBOX Organix Lite 180x200
+                                ; OL7                ; INTHEBOX Organix Lite 200x200
+
+                                ; OP1                ; INTHEBOX Organix Plush 90x200
+                                ; OP2                ; INTHEBOX Organix Plush 100x200
+                                ; OP3                ; INTHEBOX Organix Plush 120x200
+                                ; OP4                ; INTHEBOX Organix Plush 140x200
+                                ; OP5                ; INTHEBOX Organix Plush 160x200
+                                ; OP6                ; INTHEBOX Organix Plush 180x200
+                                ; OP7                ; INTHEBOX Organix Plush 200x200
+
+                                ; S1                 ; INTHEBOX SOFA 3 Seater
+                                ; S2                 ; INTHEBOX SOFA 3 Seater Black
+                                ; SB1                ; Super Single
+                                ; SB2                ; sofa bed 100
+                                ; KL1                ; Kasur Busa Lipat Travel Mattress
+                                ; G1                 ; Guling INTHEBOX
+                                ; B1                 ; Bantal INTHEBOX

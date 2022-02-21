@@ -1,33 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<hybrisconfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="resources/schemas/extensions.xsd">
-        <extensions>
-                <path dir="${HYBRIS_BIN_DIR}" />
+<hybrisconfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:noNamespaceSchemaLocation="resources/schemas/extensions.xsd">
+    <extensions>
+        <path dir="${HYBRIS_BIN_DIR}"/>
 
-                <!-- External extensions -->
-                <extension name="democore" />
-                <extension name="demobackoffice" />
-                <extension name="demofacades" />
-                <extension name="demofulfilmentprocess" />
-                <extension name="demoinitialdata" />
-                <extension name="demostorefront" />
+        <!-- External extensions -->
+        <extension name="democore"/>
+        <extension name="demobackoffice"/>
+        <extension name="demofacades"/>
+        <extension name="demofulfilmentprocess"/>
+        <extension name="demoinitialdata"/>
+        <extension name="demostorefront"/>
 
-                <!-- Internal extensions -->
-                <extension name="adaptivesearch" />
-                <extension name="adaptivesearchbackoffice" />
-                <extension name="adaptivesearchfacades" />
-                <extension name="adaptivesearchsamplesaddon" />
-                <extension name="adaptivesearchsolr" />
-                <extension name="adaptivesearchwebservices" />
-                <extension name="backofficesolrsearch" />
-                <extension name="solrfacetsearch" />
-                <extension name="solrfacetsearchbackoffice" />
-                <extension name="solrserver" />
-                <extension name="backofficesearchservices" />
-                <extension name="searchbackoffice" />
-                <extension name="cmsoccaddon" />
+        <!-- Internal extensions -->
+        <extension name="adaptivesearch"/>
+        <extension name="adaptivesearchbackoffice"/>
+        <extension name="adaptivesearchfacades"/>
+        <extension name="adaptivesearchsamplesaddon"/>
+        <extension name="adaptivesearchsolr"/>
+        <extension name="adaptivesearchwebservices"/>
+        <extension name="backofficesolrsearch"/>
+        <extension name="solrfacetsearch"/>
+        <extension name="solrfacetsearchbackoffice"/>
+        <extension name="solrserver"/>
+        <extension name="backofficesearchservices"/>
+        <extension name="searchbackoffice"/>
+        <extension name="cmsoccaddon"/>
 
-                <extension name="cmsbackoffice" />
-                <extension name="cmswebservices" />
-                <extension name="permissionswebservices" />
-        </extensions>
+        <extension name="cmsbackoffice"/>
+        <extension name="cmssmartedit"/>
+        <extension name="cmssmarteditwebservices"/>
+        <extension name="cmswebservices"/>
+        <extension name="permissionswebservices"/>
+        <extension name="previewwebservices"/>
+        <extension name="npmancillary"/>
+        <extension name="smartedit"/>
+        <extension name="smarteditaddon"/>
+        <extension name="smarteditwebservices"/>
+        <extension name="smartedittools"/>
+    </extensions>
 </hybrisconfig>

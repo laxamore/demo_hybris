@@ -31,8 +31,28 @@
 
         <!-- Add your item definitions here -->
 
-
         <!-- TypeGroups are for structure of this file only -->
+
+        <typegroup name="CustomCMSComponent">
+            <itemtype code="DemoCMSComponent" extends="SimpleCMSComponent" generate="true" autocreate="true" jaloclass="com.demo.core.jalo.DemoCMSComponent">
+                <description>Demo CMS Component</description>
+                <attributes>
+                    <attribute qualifier="title" type="java.lang.String">
+                        <modifiers read="true" write="true" />
+                        <persistence type="property" />
+                    </attribute>
+                    <attribute qualifier="image" type="Media">
+                        <modifiers read="true" write="true" />
+                        <persistence type="property" />
+                    </attribute>
+                    <attribute qualifier="description" type="java.lang.String">
+                        <modifiers write="true" read="true" />
+                        <persistence type="property" />
+                    </attribute>
+                </attributes>
+            </itemtype>
+        </typegroup>
+
 
         <typegroup name="Apparel">
             <itemtype code="ApparelProduct" extends="Product"
@@ -101,6 +121,108 @@
                         <persistence type="property"/>
                     </attribute>
                 </attributes>
+            </itemtype>
+        </typegroup>
+
+        <typegroup name="Demo">
+            <itemtype code="DemoProduct" autocreate="true" generate="true" extends="Product">
+                <attributes>
+                    <attribute qualifier="searchable" type="java.lang.Boolean">
+                        <description>Is searchable Product</description>
+                        <modifiers/>
+                        <defaultvalue>Boolean.valueOf(true)</defaultvalue>
+                        <persistence type="property"/>
+                    </attribute>
+                </attributes>
+            </itemtype>
+
+            <itemtype code="DemoVariantProduct" extends="VariantProduct" autocreate="true" generate="true">
+                <attributes>
+                    <attribute qualifier="type" type="java.lang.String">
+                        <description>Type</description>
+                        <modifiers search="true" write="true" read="true" optional="true" initial="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="size" type="java.lang.String">
+                        <description>Size</description>
+                        <modifiers search="true" write="true" read="true" optional="true" initial="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="desc" type="java.lang.String">
+                        <description>Desc</description>
+                        <modifiers search="true" write="true" read="true" optional="true" initial="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="price" type="java.lang.Double">
+                        <description>Price</description>
+                        <modifiers search="true" write="true" read="true" optional="true" initial="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                </attributes>
+            </itemtype>
+
+            <itemtype code="Testimony" autocreate="true" generate="true" extends="GenericItem"
+                      jaloclass="com.demo.core.jalo.Testimony">
+                <deployment table="Testimony" typecode="15140"/>
+                <attributes>
+                    <attribute qualifier="code" type="java.lang.String">
+                        <description>Testimony Code</description>
+                        <modifiers read="true" write="true" search="true" optional="false" unique="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="name" type="java.lang.String">
+                        <description>Testimony Name</description>
+                        <modifiers read="true" write="true" search="true" optional="true" unique="false"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="text" type="java.lang.String">
+                        <description>Testimony Text</description>
+                        <modifiers read="true" write="true" search="true" optional="true" unique="false"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="paragraph" type="java.lang.String">
+                        <description>Testimony Paragraph</description>
+                        <modifiers/>
+                        <persistence type="property">
+                            <columntype database="oracle">
+                                <value>CLOB</value>
+                            </columntype>
+                            <columntype database="sap">
+                                <value>NCLOB</value>
+                            </columntype>
+                            <columntype>
+                                <value>HYBRIS.LONG_STRING</value>
+                            </columntype>
+                        </persistence>
+                    </attribute>
+                    <attribute qualifier="time" type="java.util.Date">
+                        <description>Testimony Creation Time</description>
+                        <modifiers initial="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute type="java.lang.Double" qualifier="rating">
+                        <description>
+                            Testimony Rating
+                        </description>
+                        <modifiers optional="false"/>
+                        <defaultvalue>5.0</defaultvalue>
+                        <persistence type="property"/>
+                    </attribute>
+                    <!--                    <attribute qualifier="time" type="java.util.Date">-->
+                    <!--                        <description>Testimony Time</description>-->
+                    <!--                        <modifiers read="true" write="true" search="true" optional="true" unique="false"/>-->
+                    <!--                        <persistence type="property">-->
+                    <!--                            <columntype>-->
+                    <!--                                <value>HYBRIS.LONG_STRING</value>-->
+                    <!--                            </columntype>-->
+                    <!--                        </persistence>-->
+                    <!--                    </attribute>-->
+                </attributes>
+                <indexes>
+                    <index name="testimony_idx" unique="true">
+                        <key attribute="code"/>
+                    </index>
+                </indexes>
             </itemtype>
         </typegroup>
 
