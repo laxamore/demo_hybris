@@ -113,3 +113,9 @@ INSERT_UPDATE MediaContainer; qualifier[unique = true]; $medias; $contentCV[uniq
 
 UPDATE SimpleResponsiveBannerComponent; $contentCV[unique = true]; uid[unique = true]; $mediaContainer
                                       ;                          ; Catalog-Header    ; catalog-header
+#batsu modip - testimony homepage
+INSERT_UPDATE MediaContainer; qualifier[unique = true]; $medias; $contentCV[unique = true]
+                            ; testimony-homepage          ; /images/theme/catalog-header.png
+
+UPDATE SimpleResponsiveBannerComponent; $contentCV[unique = true]; uid[unique = true]; $mediaContainer
+                                      ;                          ; Testimony-Home    ; testimony-homepage

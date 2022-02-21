@@ -31,6 +31,7 @@ INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]        
                          ;                          ; BannerSlot                ; Banner Slot                   ; true
                          ;                          ; ProductCarouselSlot       ; Product Carousel Slot         ; true
                          ;                          ; UnboxingInTheBoxSlot      ; Unboxing In The Box Slot      ; true
+                         ;                          ; TestimonyHomeSlot         ; Testimony Homepage Slot       ; true
 # End HomePage Content
 # Footers
                          ;                          ; FooterLogo1Slot           ; Footer Logo 1 Slot            ; true
@@ -75,6 +76,7 @@ INSERT_UPDATE ContentSlotForTemplate; $contentCV[unique = true]; uid[unique = tr
                                     ;                          ; Banner-HomePage                ; Banner                 ;                                                                           ; BannerSlot                                 ; true
                                     ;                          ; ProductCarousel-HomePage       ; ProductCarousel        ;                                                                           ; ProductCarouselSlot                        ; true
                                     ;                          ; UnboxingInTheBox-HomePage      ; UnboxingInTheBox       ;                                                                           ; UnboxingInTheBoxSlot                       ; true
+                                    ;                          ; TestimonyHome-HomePage         ; TestimonyHome          ;                                                                           ; TestimonyHomeSlot                          ; true
 # End HomePage Content
 # Footers
                                     ;                          ; FooterLogo1-HomePage           ; FooterLogo1            ;                                                                           ; FooterLogo1Slot                            ; true
