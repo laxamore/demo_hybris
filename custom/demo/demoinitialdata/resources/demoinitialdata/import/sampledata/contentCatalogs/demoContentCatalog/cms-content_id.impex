@@ -197,8 +197,8 @@ UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];$picture[l
 
 
 #DEMO ABOUT FAQ
-
-UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[$lang]
+  
+UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[lang=$lang]
                             ;;DemoFAQHead;"<h2>Pertanyaan yang Sering Ditanyakan</h2>"
                             ;;DemoFAQQuest1;"<h3>Apakah INTHEBOX Hanya Menjual Spring Bed?</h3>"
                             ;;DemoFAQAns1;"<p>Tidak. Selain Spring Bed, ada INTHEBOX Hybrid yang merupakan kasur busa berkualitas. INTHEBOX juga menjual sofa, sofabed, bantal, dan juga guling.</p>"

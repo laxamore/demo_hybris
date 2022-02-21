@@ -427,10 +427,6 @@ INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];positi
                                 ;;Section5B-AboutPage;Section5B;;Section5BSlot-AboutPage
 
 
-
-
-
-
 #About FAQ DEMO
 INSERT_UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef
                                    ;;DemoFAQHead;FAQ Head;DemoFAQHead
@@ -455,7 +451,6 @@ INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];cmsComponents
                          ;;Section6HSlot-AboutPage;DemoFAQQuest4
                          ;;Section6ISlot-AboutPage;DemoFAQAns4
 
-
 INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];position[unique=true];page(uid,$contentCV)[unique=true][default='DemoAboutPageTemplate'];contentSlot(uid,$contentCV)[unique=true]
                                 ;;Section6A-AboutPage;Section6A;;Section6ASlot-AboutPage
                                 ;;Section6B-AboutPage;Section6B;;Section6BSlot-AboutPage
@@ -466,4 +461,5 @@ INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];positi
                                 ;;Section6G-AboutPage;Section6G;;Section6GSlot-AboutPage
                                 ;;Section6H-AboutPage;Section6H;;Section6HSlot-AboutPage
                                 ;;Section6I-AboutPage;Section6I;;Section6ISlot-AboutPage
+
 
