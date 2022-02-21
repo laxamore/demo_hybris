@@ -28,11 +28,13 @@
 					<cockpit code="BottomHeaderSlot"/>
 				</td>
 			</tr>
+			#batsu modip
 			<tr>
 				<td colspan="7" class="structureViewSection">
 					<cockpit code="Section1" />
 				</td>
 			</tr>
+			#kategori & produk
 			<tr>
 				<td colspan="2" class="structureViewSection">
 					<cockpit code="ProductLeftRefinements"/>

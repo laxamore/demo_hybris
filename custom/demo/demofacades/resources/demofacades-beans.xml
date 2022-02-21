@@ -9,6 +9,7 @@
 		<property name="size" type="String"/>
 		<property name="type" type="String"/>
 		<property name="desc" type="String"/>
+<!--		<property name="price" type="Double"/>-->
 	</bean>
 
 	<bean class="com.demo.facades.product.data.GenderData">
@@ -28,7 +29,7 @@
 	</bean>
 	<bean class="com.demo.facades.product.data.PriceData">
 		<property name="code" type="String"/>
-		<property name="value" type="Integer"/>
+		<property name="value" type="Double"/>
 	</bean>
 	<bean class="com.demo.facades.product.data.Testimony">
 		<property name="code" type="String"/>

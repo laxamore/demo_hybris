@@ -123,3 +123,13 @@ INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=tr
 
 UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
                                       ;;BannerDemoAbout;demo-about-project
+
+#batsu modip - Catalog Header
+INSERT_UPDATE Media; mediaFormat(qualifier); $contentCV[unique = true]; code[unique = true]              ; realfilename       ; @media[translator = de.hybris.platform.impex.jalo.media.MediaDataTranslator]; mime[default = 'image/jpeg']; altText            ; folder(qualifier)[default = 'images']
+                   ; widescreen            ;                          ; /images/theme/catalog-header.png ; catalog-header.png ; $siteResource/images/theme/catalog-header.png                               ; image/png                   ; hybris Accelerator ;
+
+INSERT_UPDATE MediaContainer; qualifier[unique = true]; $medias; $contentCV[unique = true]
+                            ; catalog-header          ; /images/theme/catalog-header.png
+
+UPDATE SimpleResponsiveBannerComponent; $contentCV[unique = true]; uid[unique = true]; $mediaContainer
+                                      ;                          ; Catalog-Header    ; catalog-header
