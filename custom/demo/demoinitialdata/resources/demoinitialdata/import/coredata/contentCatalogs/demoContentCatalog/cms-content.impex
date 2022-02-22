@@ -255,11 +255,12 @@ INSERT_UPDATE PageTemplate; $contentCV[unique = true]; uid[unique = true]; name 
                           ;                          ; CartPageTemplate  ; Cart Page Template ; ContentPage              ;
 
 INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]         ; name                           ; active
-                         ;                          ; TopContentSlot             ; Top Content SLot               ; true
-                         ;                          ; CenterLeftContentSlot      ; Center Left Content SLot       ; true
-                         ;                          ; CenterRightContentSlot     ; Center Right Content SLot      ; true
-                         ;                          ; BottomContentSlot          ; Bottom Content SLot            ; true
-                         ;                          ; EmptyCartMiddleContentSlot ; Empty Cart Middle Content SLot ; true
+                         ;                          ; CartTitleSlot              ; Cart Title Slot                ; true
+                         ;                          ; TopContentSlot             ; Top Content Slot               ; true
+                         ;                          ; CenterLeftContentSlot      ; Center Left Content Slot       ; true
+                         ;                          ; CenterRightContentSlot     ; Center Right Content Slot      ; true
+                         ;                          ; BottomContentSlot          ; Bottom Content Slot            ; true
+                         ;                          ; EmptyCartMiddleContentSlot ; Empty Cart Middle Content Slot ; true
 
 INSERT_UPDATE ContentSlotName; name[unique = true]        ; template(uid, $contentCV)[unique = true][default = 'CartPageTemplate']; validComponentTypes(code); compTypeGroup(code)
 # Headers
@@ -270,6 +271,7 @@ INSERT_UPDATE ContentSlotName; name[unique = true]        ; template(uid, $conte
                              ; LoginLink                  ;                                                                       ;                          ; navigation
                              ; CartLink                   ;                                                                       ;                          ; navigation
 # End Headers
+                             ; CartTitleSlot              ;                                                                       ;                          ; wide
                              ; TopContentSlot             ;                                                                       ;                          ; wide
                              ; CenterLeftContentSlot      ;                                                                       ;                          ; wide
                              ; CenterRightContentSlot     ;                                                                       ;                          ; wide
@@ -294,6 +296,7 @@ INSERT_UPDATE ContentSlotForTemplate; $contentCV[unique = true]; uid[unique = tr
                                     ;                          ; CartLink-CartPage                      ; CartLink                      ;                                                                           ; CartLinkSlot                               ; true
 # End Headers
 # CartPage Content
+                                    ;                          ; CartTitle-CartPage                     ; CartTitle                     ;                                                                           ; CartTitleSlot                              ; true
                                     ;                          ; TopContent-CartPage                    ; TopContent                    ;                                                                           ; TopContentSlot                             ; true
                                     ;                          ; CenterLeftContent-CartPage             ; CenterLeftContent             ;                                                                           ; CenterLeftContentSlot                      ; true
                                     ;                          ; CartContentCenterRightContent-CartPage ; CartContentCenterRightContent ;                                                                           ; CenterRightContentSlot                     ; true

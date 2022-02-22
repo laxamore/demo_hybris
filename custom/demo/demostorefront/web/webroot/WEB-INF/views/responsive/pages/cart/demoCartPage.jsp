@@ -13,21 +13,22 @@
     <cart:cartValidation/>
     <cart:cartPickupValidation/>
 
-    <div>
-        <div>
-            <cms:pageSlot position="TopContent" var="feature">
-                <cms:component component="${feature}" element="div" class="yComponentWrapper"/>
-            </cms:pageSlot>
-        </div>
+    <div class="demo-cart">
+        <cms:pageSlot position="CartTitle" var="feature">
+            <cms:component component="${feature}" element="h1" class="yComponentWrapper demo-cart-title"/>
+        </cms:pageSlot>
 
-        <c:if test="${not empty cartData.rootGroups}">
-            <cms:pageSlot position="CenterRightContentSlot" var="feature">
-                <cms:component component="${feature}" element="div" class="yComponentWrapper"/>
-            </cms:pageSlot>
-            <cms:pageSlot position="BottomContentSlot" var="feature">
-                <cms:component component="${feature}" element="div" class="yComponentWrapper"/>
-            </cms:pageSlot>
-        </c:if>
+        <cms:pageSlot position="TopContent" var="feature">
+            <cms:component component="${feature}" element="div" class="yComponentWrapper demo-cart-display"/>
+        </cms:pageSlot>
+
+        <cms:pageSlot position="CenterRightContentSlot" var="feature">
+            <cms:component component="${feature}" element="div" class="yComponentWrapper"/>
+        </cms:pageSlot>
+
+        <cms:pageSlot position="BottomContentSlot" var="feature">
+            <cms:component component="${feature}" element="div" class="yComponentWrapper"/>
+        </cms:pageSlot>
 
         <c:if test="${empty cartData.rootGroups}">
             <cms:pageSlot position="EmptyCartMiddleContent" var="feature">

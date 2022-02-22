@@ -427,25 +427,24 @@ INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true] 
                                 ;                          ; Section5B-AboutPage ; Section5B              ;                                                                        ; Section5BSlot-AboutPage
 
 # Start Cart Page
-INSERT_UPDATE JspIncludeComponent; $contentCV[unique = true]; uid[unique = true]  ; name                          ; page                  ; actions(uid, $contentCV); &componentRef
-                                 ;                          ; CartComponent       ; Cart Display Component        ; demoCartDisplay.jsp   ;                         ; CartComponent
-                                 ;                          ; CartTotalsComponent ; Cart Totals Display Component ; cartTotalsDisplay.jsp ;                         ; CartTotalsComponent
-                                 ;                          ; CheckoutComponent   ; Checkout Display Component    ; checkoutDisplay.jsp   ;                         ; CheckoutComponent
-
-# CMS CartSuggestion Components
-INSERT_UPDATE CartSuggestionComponent; $contentCV[unique = true]; uid[unique = true]; name             ; productReferenceTypes(code); maximumNumberProducts; filterPurchased; &componentRef
-                                     ;                          ; CartSuggestions   ; Cart Suggestions ; ACCESSORIES,SIMILAR        ; 20                   ; true           ; CartSuggestions
+INSERT_UPDATE JspIncludeComponent; $contentCV[unique = true]; uid[unique = true]  ; name                          ; page                      ; actions(uid, $contentCV); &componentRef
+                                 ;                          ; CartComponent       ; Cart Display Component        ; demoCartDisplay.jsp       ;                         ; CartComponent
+                                 ;                          ; CartTotalsComponent ; Cart Totals Display Component ; demoCartTotalsDisplay.jsp ;                         ; CartTotalsComponent
+                                 ;                          ; CheckoutComponent   ; Checkout Display Component    ; demoCheckoutDisplay.jsp   ;                         ; CheckoutComponent
 
 INSERT_UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]          ; name                           ; &componentRef
+                                   ;                          ; CartTitleParagraphComponent ; Cart Title Paragraph Component ; CartTitleParagraphComponent
                                    ;                          ; EmptyCartParagraphComponent ; Empty Cart Paragraph Component ; EmptyCartParagraphComponent
 
 UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]         ; cmsComponents(&componentRef)
+                  ;                          ; CartTitleSlot              ; CartTitleParagraphComponent
                   ;                          ; TopContentSlot             ; CartComponent
                   ;                          ; CenterRightContentSlot     ; CartTotalsComponent
-                  ;                          ; BottomContentSlot          ; CheckoutComponent,CartSuggestions
+                  ;                          ; BottomContentSlot          ; CheckoutComponent
                   ;                          ; EmptyCartMiddleContentSlot ; EmptyCartParagraphComponent
 
 INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true]                ; position[unique = true]; page(uid, $contentCV)[unique = true][default = 'cart']; contentSlot(uid, $contentCV)[unique = true]
+                                ;                          ; CartTitleSlot                     ; CartTitle              ;                                                       ; CartTitleSlot
                                 ;                          ; TopContentSlotForCartPage         ; TopContent             ;                                                       ; TopContentSlot
                                 ;                          ; CenterLeftContentSlotForCartPage  ; CenterLeftContentSlot  ;                                                       ; CenterLeftContentSlot
                                 ;                          ; CenterRightContentSlotForCartPage ; CenterRightContentSlot ;                                                       ; CenterRightContentSlot
