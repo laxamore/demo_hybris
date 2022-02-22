@@ -560,4 +560,6 @@
 		<property name="fieldNameProvider" ref="solrFieldNameProvider"/>
 	</bean>
 
+<!--	Cron Job -->
+<!--	<bean id="approvalStatusUpdateJob" class="com.demo.core.job.ApprovalStatusUpdateJob" parent="abstractJobPerformable" />-->
 </beans>

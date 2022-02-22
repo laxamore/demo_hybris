@@ -14,32 +14,33 @@ public class DemoTestimonyServiceImpl implements DemoTestimonyService {
     private DemoTestimonyDao demoTestimonyDao;
 
     @Override
-    public Testimony getTestimonyById(String name){
+    public List<TestimonyModel> getTestimonyForHomePage() {
+        List<TestimonyModel> testimonyModelList = demoTestimonyDao.getTestimonyForHomePage();
 
-        TestimonyModel testimonyModel = demoTestimonyDao.getTestimonyById(name);
-        Testimony testimony = new Testimony();
-
-        if(null != testimony){
-            testimony.setName(testimonyModel.getName());
-            testimony.setCode(testimonyModel.getCode());
-            testimony.setText(testimonyModel.getText());
-            testimony.setParagraph(testimonyModel.getParagraph());
-            return testimony;
+        if (testimonyModelList != null) {
+            return testimonyModelList;
         } else {
             return null;
         }
     }
-    @Override
-    public List<Testimony> getTestimony(){
-        TestimonyModel testimonyModel = (TestimonyModel) demoTestimonyDao.getTestimony();
-        Testimony testimony = new Testimony();
 
-        if(null != testimony){
-            testimony.setName(testimonyModel.getName());
-            testimony.setCode(testimonyModel.getCode());
-            testimony.setText(testimonyModel.getText());
-            testimony.setParagraph(testimonyModel.getParagraph());
-            return (List<Testimony>) testimony;
+    @Override
+    public List<TestimonyModel> getAllTestimony() {
+        List<TestimonyModel> testimonyModelList = demoTestimonyDao.getAllTestimony();
+
+        if (testimonyModelList != null) {
+            return testimonyModelList;
+        } else {
+            return null;
+        }
+    }
+
+    @Override
+    public List<List<Float>> getRatingAndReviewsTestimony() {
+        List<List<Float>> ratingAndReviews = demoTestimonyDao.getRatingAndReviewsTestimony();
+
+        if (ratingAndReviews != null) {
+            return ratingAndReviews;
         } else {
             return null;
         }
