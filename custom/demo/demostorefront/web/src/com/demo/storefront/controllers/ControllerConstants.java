@@ -123,7 +123,8 @@ public interface ControllerConstants {
 
             interface Cart // NOSONAR
             {
-                String CartPage = "pages/cart/cartPage"; // NOSONAR
+                //                String CartPage = "pages/cart/cartPage"; // NOSONAR
+                String CartPage = "pages/cart/demoCartPage"; // NOSONAR
             }
 
             interface StoreFinder // NOSONAR

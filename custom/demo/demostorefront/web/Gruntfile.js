@@ -22,7 +22,7 @@ module.exports = function (grunt) {
             },
             democustomjs: {
                 files: ['webroot/WEB-INF/_ui-src/responsive/lib/custom/*.js'],
-                tasks: ['sync:synccustomjs'],
+                tasks: ['sync:democustomjs'],
             }
         },
         less: {
@@ -78,7 +78,6 @@ module.exports = function (grunt) {
                 }]
             }
         }
-
     });
 
     // Plugins

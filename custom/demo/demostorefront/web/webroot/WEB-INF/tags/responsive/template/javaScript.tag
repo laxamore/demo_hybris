@@ -85,6 +85,9 @@
 
         <script src="${commonResourcePathHtml}/js/_autoload.js"></script>
 
+        <%-- Slick Carousel Library --%>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
         <%-- Demo Custom Javascript --%>
         <script src="${commonResourcePathHtml}/js/demo.js"></script>
 
