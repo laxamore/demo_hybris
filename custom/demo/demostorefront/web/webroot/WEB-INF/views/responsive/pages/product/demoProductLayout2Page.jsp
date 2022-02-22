@@ -13,16 +13,20 @@
         <div class="row flex-cross-child">
             <c:forEach items="${demoVariantProduct}" var="variantProduct">
                 <a href="${variantProduct.getId()}" class="cross-listing-details">
-                        ${variantProduct.getName()}<br>
-                        ${variantProduct.getSize()}<br>
-                        ${variantProduct.getDesc()}<br>
-                        ${variantProduct.getPicture()}<br>
-                        ${variantProduct.getPrice()}<br>
-                    <%-- ${variantProduct.getPriceValue()} --%>
+                        <img src="${variantProduct.getPicture().getURL()}" /><br>
+                        <h5 class="cross-name">${variantProduct.getName()}</h5>
+                        <div class="cross-size-desc">
+                            ${variantProduct.getSize()} cm<br>
+                            ${variantProduct.getDesc()}<br>
+                        </div>
+                        <div class="cross-price">
+                            Rp.${variantProduct.getPrice()}
+                        </div>
                 </a>
                 <br>
             </c:forEach>
         </div>
+        <a type="button" class="row flex-cross-child-button" href="https://localhost:9002/demostorefront/demo/id//c/catalog">Lihat semua produk</a>
     </div>
 	<cms:pageSlot position="CrossSelling" var="demoVariantProduct" element="div" class="productDetailsPageSectionCrossSelling">
 		<cms:component component="${demoVariantProduct}" element="div" class="productDetailsPageSectionCrossSelling-component"/>

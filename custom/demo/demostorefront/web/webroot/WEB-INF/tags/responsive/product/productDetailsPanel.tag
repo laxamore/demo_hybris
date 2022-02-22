@@ -9,14 +9,14 @@
 <%@ attribute name="curDemoVariantProduct" required="true" type="com.demo.facades.product.data.DemoVariantProductData" %>
 
 
-<div class="product-details page-title">
+<%-- <div class="product-details page-title">
 	<ycommerce:testId code="productDetails_productNamePrice_label_${product.code}">
 		<div class="name">${fn:escapeXml(product.name)}<span class="sku">ID</span><span class="code">${fn:escapeXml(product.code)}</span></div>
 	</ycommerce:testId>
 	<product:productReviewSummary product="${product}" showLinks="true"/>
-</div>
-<div class="row">
-	<div class="col-xs-10 col-xs-push-1 col-sm-6 col-sm-push-0 col-lg-4">
+</div> --%>
+<div class="row" id="flex-cross-parent-above">
+	<div class="col-xs-10 col-xs-push-1 col-sm-6 col-sm-push-0 col-lg-4" id="flex-cross-child-above">
 		<product:productImagePanel galleryImages="${galleryImages}" />
 	</div>
 	<div class="clearfix hidden-sm hidden-md hidden-lg"></div>
@@ -26,15 +26,32 @@
 				<div class="col-lg-6">
 					<div class="product-details">
 						<product:productPromotionSection product="${product}"/>
-						<ycommerce:testId code="productDetails_productNamePrice_label_${product.code}">
-						<a>
+						<ycommerce:testId code="productDetails_productNamePrice_label_${product.code}"><br>
+                        <h1 class="name">
                             ${ycommerce:sanitizeHTML(curDemoVariantProduct.getType())}
-                            <br>
+                        </h1> <br>
+                        <div>
                             ${ycommerce:sanitizeHTML(curDemoVariantProduct.getName())}
+                        </div><br>
+                        <div>
 							<product:productPricePanel product="${product}" />
-					        <br>
-
-					    </a>
+							Kasur ${ycommerce:sanitizeHTML(curDemoVariantProduct.getType())} size
+							${ycommerce:sanitizeHTML(curDemoVariantProduct.getSize())} cm <br>
+							${ycommerce:sanitizeHTML(curDemoVariantProduct.getDescription())}
+					    </div><br>
+					    <div class="button-pdp">
+					        <div>
+                                <button id="minus" type="button">-</button>
+                                <p id="num">1</p>
+                                <button id="plus" type="button">+</button>
+                            </div>
+                        </div>
+					    <div class="button-pdp">
+					        <div>
+                                <button class="tambah">Tambah ke keranjang</button>
+                                <button class="beli">Beli sekarang</button>
+                            </div>
+                        </div>
 						</ycommerce:testId>
 						<div class="description">${ycommerce:sanitizeHTML(product.summary)}</div>
 					</div>

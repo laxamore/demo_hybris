@@ -126,6 +126,7 @@ public class ProductPageController extends AbstractPageController {
         final ProductData productData = productFacade.getProductForCodeAndOptions(productCode, extraOptions);
         final List<DemoVariantProductData> demoVariantProductData = demoVariantProductFacade.getDemoVariantProductByType(productData.getBaseProduct());
         DemoVariantProductData curDemoVariantProduct = new DemoVariantProductData();
+        List<DemoVariantProductData> crossDemoVariantProduct = new ArrayList<DemoVariantProductData>();
 
         for (DemoVariantProductData e : demoVariantProductData) {
             if (e.getId().equals(productCode)) {
@@ -133,6 +134,12 @@ public class ProductPageController extends AbstractPageController {
                 break;
             }
         }
+        for (DemoVariantProductData e : demoVariantProductData) {
+            if (!e.getId().equals(productCode)) {
+                crossDemoVariantProduct.add(e);
+            }
+        }
+
 
         final String redirection = checkRequestUrl(request, response, productDataUrlResolver.resolve(productData));
         if (StringUtils.isNotEmpty(redirection)) {
@@ -144,7 +151,7 @@ public class ProductPageController extends AbstractPageController {
         populateProductDetailForDisplay(productCode, model, request, extraOptions);
 
         model.addAttribute("curDemoVariantProduct", curDemoVariantProduct);
-        model.addAttribute("demoVariantProduct", demoVariantProductData);
+        model.addAttribute("demoVariantProduct", crossDemoVariantProduct);
         model.addAttribute(new ReviewForm());
         model.addAttribute("pageType", PageType.PRODUCT.name());
         model.addAttribute("futureStockEnabled", Boolean.valueOf(Config.getBoolean(FUTURE_STOCK_ENABLED, false)));

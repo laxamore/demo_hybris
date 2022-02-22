@@ -4,9 +4,11 @@ import com.demo.core.model.DemoVariantProductModel;
 import com.demo.core.product.dao.DemoVariantProductDao;
 import com.demo.core.product.service.DemoVariantProductService;
 import com.demo.facades.product.data.DemoVariantProductData;
+import com.demo.facades.product.data.PriceData;
 
 
 import javax.annotation.Resource;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,6 +31,7 @@ public class DemoVariantProductServiceImpl implements DemoVariantProductService 
             productData.setType(productModel.getType());
             productData.setDescription(productModel.getDescription());
             productData.setPicture(productModel.getPicture());
+            productData.setPrice(BigDecimal.valueOf(productModel.getOwnEurope1Prices().iterator().next().getPrice()).toString());
             return productData;
         } else {
             return null;
@@ -48,6 +51,7 @@ public class DemoVariantProductServiceImpl implements DemoVariantProductService 
             productData.setType(productModel.getType());
             productData.setDescription(productModel.getDescription());
             productData.setPicture(productModel.getPicture());
+            productData.setPrice(BigDecimal.valueOf(productModel.getOwnEurope1Prices().iterator().next().getPrice()).toString());
             return (List<DemoVariantProductData>) productData;
         } else {
             return null;
@@ -66,7 +70,9 @@ public class DemoVariantProductServiceImpl implements DemoVariantProductService 
                 tempProductData.setDesc(e.getDesc());
                 tempProductData.setType(e.getType());
                 tempProductData.setName(e.getName());
-//                tempProductData.setDescription(productModel.getDescription());
+                tempProductData.setDescription(e.getDescription());
+                tempProductData.setPicture(e.getPicture());
+                tempProductData.setPrice(BigDecimal.valueOf(e.getOwnEurope1Prices().iterator().next().getPrice()).toString());
                 productData.add(tempProductData);
             }
             return productData;
