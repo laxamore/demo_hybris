@@ -11,12 +11,10 @@ $lang = id
 # Languages
 UPDATE Language; isocode[unique = true]; name[lang = $lang]
                ; id                    ; "Indonesia"
-               ; en                    ; "English"
 
 # Currencies
 UPDATE Currency; isocode[unique = true]; name[lang = $lang]
                ; IDR                   ; "Indonesia Rupiah"
-               ; USD                   ; "US Dollar"
 
 # Titles
 UPDATE Title; code[unique = true]; name[lang = $lang]

@@ -5,9 +5,11 @@
 
 <template:page pageTitle="${pageTitle}">
 
-	<cms:pageSlot position="Section1" var="feature" element="div" class="product-grid-section1-slot">
-		<cms:component component="${feature}" element="div" class="yComponentWrapper map product-grid-section1-component"/>
-	</cms:pageSlot>
+	<div class="row">
+		<cms:pageSlot position="Section1" var="feature" element="div" class="product-list-section1-slot">
+			<cms:component component="${feature}" element="div" class="catalog-header"/>
+		</cms:pageSlot>
+	</div>
 	
 	<div class="row">
 		<div class="col-xs-3">

@@ -148,6 +148,11 @@
                         <persistence type="property"/>
                     </attribute>
                     <attribute qualifier="desc" type="java.lang.String">
+                        <description>Desc</description>
+                        <modifiers search="true" write="true" read="true" optional="true" initial="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="price" type="java.lang.Double">
                         <description>Price</description>
                         <modifiers search="true" write="true" read="true" optional="true" initial="true"/>
                         <persistence type="property"/>

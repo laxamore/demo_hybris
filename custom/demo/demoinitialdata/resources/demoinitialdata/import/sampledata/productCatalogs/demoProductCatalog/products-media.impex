@@ -22,27 +22,6 @@ $siteResource = jar:com.demo.initialdata.setup.InitialDataSystemSetup&/demoiniti
 # Create Media
 INSERT_UPDATE Media; mediaFormat(qualifier); code[unique = true]               ; $media                                            ; mime[default = 'image/jpeg']; $catalogVersion; folder(qualifier)
 # media kasur
-                   ; 1200Wx1200H           ; media-hybrid-picture              ; $siteResource/images/product/hybrid.jpg           ;                             ;                ; images
-                   ; 515Wx515H             ; media-hybrid-thumbnail            ; $siteResource/images/product/hybrid.jpg           ;                             ;                ; images ;
-                   ; 300Wx300H             ; media-hybrid-detail               ; $siteResource/images/product/hybrid.jpg           ;                             ;                ; images ;
-                   ; 96Wx96H               ; media-hybrid-other                ; $siteResource/images/product/hybrid.jpg           ;                             ;                ; images ;
-                   ; 65Wx65H               ; media-hybrid-normal               ; $siteResource/images/product/hybrid.jpg           ;                             ;                ; images ;
-                   ; 30Wx30H               ; media-hybrid-thumbnails           ; $siteResource/images/product/hybrid.jpg           ;                             ;                ; images ;
-
-                   ; 1200Wx1200H           ; media-normal-picture              ; $siteResource/images/product/normal.png           ;                             ;                ; images
-                   ; 515Wx515H             ; media-normal-thumbnail            ; $siteResource/images/product/normal.png           ;                             ;                ; images ;
-                   ; 300Wx300H             ; media-normal-detail               ; $siteResource/images/product/normal.png           ;                             ;                ; images ;
-                   ; 96Wx96H               ; media-normal-other                ; $siteResource/images/product/normal.png           ;                             ;                ; images ;
-                   ; 65Wx65H               ; media-normal-normal               ; $siteResource/images/product/normal.png           ;                             ;                ; images ;
-                   ; 30Wx30H               ; media-normal-thumbnails           ; $siteResource/images/product/normal.png           ;                             ;                ; images ;
-
-                   ; 1200Wx1200H           ; media-x-picture                   ; $siteResource/images/product/x.png                ;                             ;                ; images
-                   ; 515Wx515H             ; media-x-thumbnail                 ; $siteResource/images/product/x.png                ;                             ;                ; images ;
-                   ; 300Wx300H             ; media-x-detail                    ; $siteResource/images/product/x.png                ;                             ;                ; images ;
-                   ; 96Wx96H               ; media-x-other                     ; $siteResource/images/product/x.png                ;                             ;                ; images ;
-                   ; 65Wx65H               ; media-x-normal                    ; $siteResource/images/product/x.png                ;                             ;                ; images ;
-                   ; 30Wx30H               ; media-x-thumbnails                ; $siteResource/images/product/x.png                ;                             ;                ; images ;
-
                    ; 1200Wx1200H           ; media-intheboxalpha-picture       ; $siteResource/images/product/intheboxalpha.jpg    ;                             ;                ; images
                    ; 515Wx515H             ; media-intheboxalpha-thumbnail     ; $siteResource/images/product/intheboxalpha.jpg    ;                             ;                ; images ;
                    ; 300Wx300H             ; media-intheboxalpha-detail        ; $siteResource/images/product/intheboxalpha.jpg    ;                             ;                ; images ;
@@ -181,10 +160,6 @@ INSERT_UPDATE Media; mediaFormat(qualifier); code[unique = true]               ;
 # Create Media Containers
 INSERT_UPDATE MediaContainer; qualifier[unique = true]; $medias                                                                                                                                                                                    ; $catalogVersion
 # media container kasur
-                            ; hybrid-medias           ; media-hybrid-picture,media-hybrid-thumbnail,media-hybrid-detail,media-hybrid-other,media-hybrid-normal,media-hybrid-thumbnails                                                             ; ;
-                            ; normal-medias           ; media-normal-picture,media-normal-thumbnail,media-normal-detail,media-normal-other,media-normal-normal,media-normal-thumbnails                                                             ; ;
-                            ; x-medias                ; media-x-picture,media-x-picture,media-x-thumbnail,media-x-detail,media-x-other,media-x-normal,media-x-thumbnails                                                                           ; ;
-
                             ; intheboxalpha-medias    ; media-intheboxalpha-picture,media-intheboxalpha-thumbnail,media-intheboxalpha-detail,media-intheboxalpha-other,media-intheboxalpha-normal,media-intheboxalpha-thumbnails                   ; ;
                             ; intheboxx-medias        ; media-intheboxx-picture,media-intheboxx-thumbnail,media-intheboxx-detail,media-intheboxx-other,media-intheboxx-normal,media-intheboxx-thumbnails                                           ; ;
                             ; spacejam-medias         ; media-spacejam-picture,media-spacejam-thumbnail,media-spacejam-detail,media-spacejam-other,media-spacejam-normal,media-spacejam-thumbnails                                                 ; ;

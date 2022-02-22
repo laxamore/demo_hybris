@@ -28,6 +28,11 @@ $Image=image(code, $contentCV)
 
 # Demo Website
 
+# Start Updating Page Title
+UPDATE ContentPage; $contentCV[unique = true]; uid[unique = true]; title[lang = $lang]
+                  ;                          ; homePage          ; Beli Kasur Online Tanpa Tibet
+# End Updating Page Title
+
 # Site Logo Component
 UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]; $picture[lang = $lang]
                             ;                          ; SiteLogoComponent ; /images/headers/header-logo-white.png ;
@@ -45,9 +50,29 @@ UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]     
 UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]      ; $picture[lang = $lang]
                             ;                          ; CartHeaderLogoComponent ; /images/headers/cart-icon.png
 
+# Bottom Left Footer Logo Component
+UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]   ; $picture[lang = $lang]
+                            ;                          ; FooterLogoComponent1 ; /images/logo/facebook.svg
+                            ;                          ; FooterLogoComponent2 ; /images/logo/instagram.svg
+                            ;                          ; FooterLogoComponent3 ; /images/logo/email.svg
+
+# Bottom Left Footer Logo Component
+UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]             ; $picture[lang = $lang]
+                            ;                          ; BottomLeftFooterLogoComponent1 ; /images/footers/footer-icon-call.png
+                            ;                          ; BottomLeftFooterLogoComponent2 ; /images/footers/footer-icon-message.png
+
+# Bottom Left Footer Paragraph Component
+UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]                  ; content[lang = $lang];
+                            ;                          ; BottomLeftFooterParagraphComponent1 ; "(021) 30306286"
+                            ;                          ; BottomLeftFooterParagraphComponent2 ; "+62 819 234 659"
+
+# Bottom Right Footer Paragraph Component
+UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]                  ; content[lang = $lang];
+                            ;                          ; BottomRightFooterParagraphComponent ; "Copyright © 2019-2022 PT Duta Mas Mandiri"
+
 # Navigation
 # Header
-# CMS Navigation Nodes
+
 UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]              ; linkName[lang = $lang]
                        ;                          ; AboutUsLink                     ; "Tentang Kami"
                        ;                          ; BlogsLink                       ; "Blog"
@@ -58,8 +83,10 @@ UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]          
                        ;                          ; LoginLink                       ; "LOGIN"
 
 # CMS Navigation Nodes
-UPDATE CMSNavigationNode; $contentCV[unique = true]; uid[unique = true]; title[lang = $lang]
-#                        ;                          ; MyAccountNavNode  ; "My Account"
+UPDATE CMSNavigationNode; $contentCV[unique = true]; uid[unique = true]  ; title[lang = $lang]
+                        ;                          ; ProductGroupNavNode ; PRODUK
+                        ;                          ; SupportGroupNavNode ; SUPPORT
+                        ;                          ; AboutGroupNavNode   ; ABOUT
 # End Header
 
 # Footer
@@ -81,3 +108,111 @@ UPDATE FooterNavigationComponent; $contentCV[unique = true]; uid[unique = true] 
                                 ;                          ; FooterNavigationComponent ; "Copyright © {0} SAP SE or an SAP affiliate company. All rights reserved."
 # End Footer
 # End Navigation
+
+
+
+
+#UPDATE BannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=$lang]
+#                      ;;BannerDemoInTheBoxComponent;banner-demo-project.jpg
+#                      ;;BannerDemoInTheBoxComponent-2;banner-demo-project-2.jpg
+
+
+
+#Banner About DEMO
+
+INSERT_UPDATE Media;mediaFormat(qualifier);$contentCV[unique=true];code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];mime[default='image/png'];realfilename;folder(qualifier)[default='images'];altText
+                   ;widescreen;;about-banner.png;$siteResource/images/banners/homepage/responsive/about-banner.png;;about-banner.png;;"Banner About"
+
+INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
+                            ;demo-about-project;about-banner.png
+
+UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
+                                      ;;BannerDemoAbout;demo-about-project
+
+#batsu modip - Catalog Header
+INSERT_UPDATE Media; mediaFormat(qualifier); $contentCV[unique = true]; code[unique = true]              ; realfilename       ; @media[translator = de.hybris.platform.impex.jalo.media.MediaDataTranslator]; mime[default = 'image/jpeg']; altText            ; folder(qualifier)[default = 'images']
+                   ; widescreen            ;                          ; /images/theme/catalog-header.png ; catalog-header.png ; $siteResource/images/theme/catalog-header.png                               ; image/png                   ; hybris Accelerator ;
+
+INSERT_UPDATE MediaContainer; qualifier[unique = true]; $medias; $contentCV[unique = true]
+                            ; catalog-header          ; /images/theme/catalog-header.png
+
+UPDATE SimpleResponsiveBannerComponent; $contentCV[unique = true]; uid[unique = true]; $mediaContainer
+                                      ;                          ; Catalog-Header    ; catalog-header
+
+
+
+
+#DEMO About tentang
+
+UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[lang=$lang]
+                            ;;DemoAboutTentang;"
+<div>
+    <h2>Tentang INTHEBOX</h2><br>
+    <p>INTHEBOX adalah merek kasur berkualitas dan perlengkapan tidur dengan material premium.</p>
+    <p>Produk lainnya terdiri dari bantal, guling, dan sofa bed. Semua pilihan produk menggunakan material berkualitas.</p>
+</div>
+"
+
+
+#DEMO info
+
+UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[lang=$lang]
+                            ;;DemoAboutApa;"
+                                <div class=""about-info-apa"">
+                                    <h2>Apa Itu Kasur INTHEBOX?</h2><br>
+                                    <p>Kasur INTHEBOX adalah spring bed yang dikemas dalam box dan akan langsung mengembang sempurna ketika dibuka. Kini sudah ada banyak pilihan produk dengan harga yang terjangkau. Ketahui lebih lanjut agar kamu bisa memiliki tidur yang berkualitas.</p>
+                                    <br>
+                                    <a href=""#"" class=""btn btn-primary"" role=""button"">Selengkapnya</a>
+                                </div>
+                                "
+                            ;;DemoAboutKenapa;"
+                                <div class=""about-info-kenapa"">
+                                    <h2>Kenapa Harus Pilih INTHEBOX?</h2><br>
+                                    <p>Ada banyak kelebihan kasur INTHEBOX, khususnya bisa meningkatkan kualitas tidur dan istirahat kamu. Semua produk INTHEBOX dibuat dengan material premium, teknologi modern, dan desain yang elegan. Bisa dapat bantal gratis, free ongkir, dan garansi 10 tahun.</p>
+                                    <br>
+                                    <a href=""#"" class=""btn btn-primary"" role=""button"">Selengkapnya</a>
+                                </div>
+                                "
+                            ;;DemoAboutCara;"
+                                <div class=""about-info-cara"">
+                                    <h2>Cara Beli Kasur INTHEBOX</h2><br>
+                                    <p>Bisa dibeli melalui website dengan cara cek daftar produk, masukkan ke keranjang, dan lakukan pembayaran. Mau lebih praktis? Segera WhatsApp ke 0819234659. Bisa juga dibeli online di marketplace kesayangan kamu atau langsung ke supermarket besar di kotamu.</p>
+                                    <br>
+                                    <a href=""#"" class=""btn btn-primary"" role=""button"">Selengkapnya</a>
+                                </div>
+                                "
+
+
+INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];mime[default='image/jpeg'];realfilename;folder(qualifier)[default='images'];altText
+                   ;;about-info-1.png;$siteResource/images/banners/homepage/responsive/about-info-1.png;;about-info-1.png;;"info 1"
+                   ;;about-info-2.png;$siteResource/images/banners/homepage/responsive/about-info-2.png;;about-info-2.png;;"info 2"
+                   ;;about-info-3.png;$siteResource/images/banners/homepage/responsive/about-info-3.png;;about-info-3.png;;"info 3"
+
+
+UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=$lang]
+                            ;;BannerInfo1Component;about-info-1.png
+                            ;;BannerInfo2Component;about-info-2.png
+                            ;;BannerInfo3Component;about-info-3.png
+
+
+
+#DEMO ABOUT FAQ
+
+UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[lang=$lang]
+                            ;;DemoFAQHead;"<h2>Pertanyaan yang Sering Ditanyakan</h2>"
+                            ;;DemoFAQQuest1;"<h3>Apakah INTHEBOX Hanya Menjual Spring Bed?</h3>"
+                            ;;DemoFAQAns1;"<p>Tidak. Selain Spring Bed, ada INTHEBOX Hybrid yang merupakan kasur busa berkualitas. INTHEBOX juga menjual sofa, sofabed, bantal, dan juga guling.</p>"
+                            ;;DemoFAQQuest2;"<h3>Berapa Harga Kasur INTHEBOX?</h3>"
+                            ;;DemoFAQAns2;"<p>Harga kasur INTHEBOX terjangkau mulai dari Rp999.000,- dan berbeda-beda tergantung ukuran dan tipe kasur yang dipilih.</p>"
+                            ;;DemoFAQQuest3;"<h3>Bagaimana Cara Beli di Website?</h3>"
+                            ;;DemoFAQAns3;"<p>1. Pilih produk yang Anda inginkan dan masukkan ke keranjang belanja kamu.<br>2. Klik 'selesaikan pesanan' jika pesanan sudah sesuai.<br>3. Pastikan isi nama penerima dan data alamat tujuan dengan lengkap.<br>4. Pilih metode pembayaran dan segera selesaikan transaksi.<br>5. Lakukan konfirmasi pembayaran melalui menu yang ada di website agar pesananmu bisa segera diproses.</p>"
+                            ;;DemoFAQQuest4;"<h3>Bagaimana Cara Dapat Garansi Kasur?</h3>"
+                            ;;DemoFAQAns4;"<p>Setelah beli, segera aktifkan garansi melalui website INTHEBOX pada menu Garansi. Cukup masukkan nomor pesanan dan nomor HP yang bisa dihubungi.</p>"
+
+
+
+# Start Cart Page
+UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]          ; content[lang = $lang]
+                            ;                          ; CartTitleParagraphComponent ; "Keranjang Belanja"
+                            ;                          ; EmptyCartParagraphComponent ; "<h2>Your shopping cart is empty</h2><p>Suggestions</p><ul><li>Browse our products by selecting a category above</li></ul>"
+# End Cart Page

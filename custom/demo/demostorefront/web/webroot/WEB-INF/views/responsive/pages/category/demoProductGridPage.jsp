@@ -4,9 +4,9 @@
 <%@ taglib prefix="storepickup" tagdir="/WEB-INF/tags/responsive/storepickup" %>
 
 <template:demoPage pageTitle="${pageTitle}">
-    <cms:pageSlot position="Banner" var="feature" element="div" class="product-grid-section1-slot">
+    <cms:pageSlot position="Section1" var="feature" element="div" class="product-grid-section1-slot">
         <cms:component component="${feature}" element="div"
-                       class="yComponentWrapper map product-grid-section1-component"/>
+                       class="catalog-header"/>
     </cms:pageSlot>
 
     <div class="row">
