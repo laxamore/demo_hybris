@@ -567,6 +567,29 @@
     <bean id="demoProductService" class="com.demo.core.product.service.impl.DemoProductServiceImpl"/>
     <alias name="demoProductDao" alias="demoProductDao"/>
     <bean id="demoProductDao" class="com.demo.core.product.dao.impl.DemoProductDaoImpl"/>
+    <!--	DemoTestimony-->
+    <alias name="demoTestimonyService" alias="demoTestimonyService"/>
+    <bean id="demoTestimonyService" class="com.demo.core.testimony.service.impl.DemoTestimonyServiceImpl"/>
+    <alias name="demoTestimonyDao" alias="demoTestimonyDao"/>
+    <bean id="demoTestimonyDao" class="com.demo.core.testimony.dao.impl.DemoTestimonyDaoImpl"/>
+    <!--	DemoProvider-->
+    <bean id="sizeValueProvider" class="com.demo.core.provider.SizeValueProvider"
+          parent="abstractPropertyFieldValueProvider">
+        <property name="fieldNameProvider" ref="solrFieldNameProvider"/>
+    </bean>
+    <bean id="descValueProvider" class="com.demo.core.provider.DescValueProvider"
+          parent="abstractPropertyFieldValueProvider">
+        <property name="fieldNameProvider" ref="solrFieldNameProvider"/>
+    </bean>
+    <bean id="typeValueProvider" class="com.demo.core.provider.TypeValueProvider"
+          parent="abstractPropertyFieldValueProvider">
+        <property name="fieldNameProvider" ref="solrFieldNameProvider"/>
+    </bean>
+    <!--	DemoProduct-->
+    <alias name="demoProductService" alias="demoProductService"/>
+    <bean id="demoProductService" class="com.demo.core.product.service.impl.DemoProductServiceImpl"/>
+    <alias name="demoProductDao" alias="demoProductDao"/>
+    <bean id="demoProductDao" class="com.demo.core.product.dao.impl.DemoProductDaoImpl"/>
     <alias name="demoVariantProductDao" alias="demoVariantProductDao"/>
     <bean id="demoVariantProductDao" class="com.demo.core.product.dao.impl.DemoVariantProductDaoImpl"/>
     <alias name="demoVariantProductService" alias="demoVariantProductService"/>
@@ -590,4 +613,6 @@
         <property name="fieldNameProvider" ref="solrFieldNameProvider"/>
     </bean>
 
+    <bean id="demoCustomerAccountService" class="com.demo.core.customer.impl.DemoCustomerAccountService"
+          parent="defaultCustomerAccountService"/>
 </beans>

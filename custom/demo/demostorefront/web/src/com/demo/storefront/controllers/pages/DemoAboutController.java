@@ -12,8 +12,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/about")
 public class DemoAboutController extends AbstractPageController {
     private static final String CUSTOM_PAGE = "about";
-
-    @RequestMapping(value = CUSTOM_PAGE,method = RequestMethod.GET)
     public String getAboutPage(final Model model) throws CMSItemNotFoundException {
         final ContentPageModel aboutPageData = getContentPageForLabelOrId(CUSTOM_PAGE);
         storeCmsPageInModel(model,aboutPageData);

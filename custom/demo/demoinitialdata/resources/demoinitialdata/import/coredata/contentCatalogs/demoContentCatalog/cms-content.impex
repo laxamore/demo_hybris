@@ -31,6 +31,7 @@ INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]        
                          ;                          ; BannerSlot                ; Banner Slot                   ; true
                          ;                          ; ProductCarouselSlot       ; Product Carousel Slot         ; true
                          ;                          ; UnboxingInTheBoxSlot      ; Unboxing In The Box Slot      ; true
+                         ;                          ; TestimonyHomeSlot         ; Testimony Homepage Slot       ; true
 # End HomePage Content
 # Footers
                          ;                          ; FooterLogo1Slot           ; Footer Logo 1 Slot            ; true
@@ -75,6 +76,7 @@ INSERT_UPDATE ContentSlotForTemplate; $contentCV[unique = true]; uid[unique = tr
                                     ;                          ; Banner-HomePage                ; Banner                 ;                                                                           ; BannerSlot                                 ; true
                                     ;                          ; ProductCarousel-HomePage       ; ProductCarousel        ;                                                                           ; ProductCarouselSlot                        ; true
                                     ;                          ; UnboxingInTheBox-HomePage      ; UnboxingInTheBox       ;                                                                           ; UnboxingInTheBoxSlot                       ; true
+                                    ;                          ; TestimonyHome-HomePage         ; TestimonyHome          ;                                                                           ; TestimonyHomeSlot                          ; true
 # End HomePage Content
 # Footers
                                     ;                          ; FooterLogo1-HomePage           ; FooterLogo1            ;                                                                           ; FooterLogo1Slot                            ; true
@@ -175,12 +177,23 @@ INSERT_UPDATE ContentSlotName; name[unique = true]   ; template(uid, $contentCV)
                              ; CartLink              ;                                                                        ;                          ; navigation
 # End Headers
 #Body
-                             ; Section1              ;                                                                        ;                          ; wide
-                             ; Section2              ;                                                                        ;                          ; wide
-                             ; Section3              ;                                                                        ;                          ; wide
-                             ; Section4              ;                                                                        ;                          ; wide
-                             ; Section5              ;                                                                        ;                          ; wide
-                             ; Section6              ;                                                                        ;                          ; wide
+                             ;Section1                ;;;wide
+                             ;Section2                ;;;wide
+                             ;Section3A               ;;;narrow
+                             ;Section3B               ;;;narrow
+                             ;Section4A               ;;;narrow
+                             ;Section4B               ;;;narrow
+                             ;Section5A               ;;;narrow
+                             ;Section5B               ;;;narrow
+                             ;Section6A               ;;;narrow
+                             ;Section6B               ;;;narrow
+                             ;Section6C               ;;;narrow
+                             ;Section6D               ;;;narrow
+                             ;Section6E               ;;;narrow
+                             ;Section6F               ;;;narrow
+                             ;Section6G               ;;;narrow
+                             ;Section6H               ;;;narrow
+                             ;Section6I               ;;;narrow
 #End Body
 # Footers
                              ; FooterLogo1           ;                                                                        ;                          ; logo
@@ -230,6 +243,20 @@ INSERT_UPDATE ContentSlotName; name[unique = true]; template(uid, $contentCV)[un
 INSERT_UPDATE ContentPage; $contentCV[unique = true]; uid[unique = true]; name       ; label ; masterTemplate(uid, $contentCV); defaultPage; approvalStatus(code)[default = 'approved']
                          ;                          ; login             ; Login Page ; login ; LoginPageTemplate              ; true       ;
 # End LOGIN Page
+
+# REGISTER page
+INSERT_UPDATE PageTemplate; $contentCV[unique = true]; uid[unique = true]   ; name                   ; restrictedPageTypes(code); active[default = true]
+                          ;                          ; RegisterPageTemplate ; Register Page Template ; ContentPage              ;
+
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]  ; name                  ; active
+                         ;                          ; RegisterContentSlot ; Register Content SLot ; true
+
+INSERT_UPDATE ContentSlotName; name[unique = true] ; template(uid, $contentCV)[unique = true][default = 'RegisterPageTemplate']; validComponentTypes(code); compTypeGroup(code)
+                             ; RegisterContentSlot ;                                                                           ;                          ; wide
+
+INSERT_UPDATE ContentPage; $contentCV[unique = true]; uid[unique = true]; name          ; label    ; masterTemplate(uid, $contentCV); defaultPage; approvalStatus(code)[default = 'approved']
+                         ;                          ; register          ; Register Page ; register ; RegisterPageTemplate           ; true       ;
+# End REGISTER Page
 
 # ProductDetailsPage - Batsu modip
 # Create Content Slots
