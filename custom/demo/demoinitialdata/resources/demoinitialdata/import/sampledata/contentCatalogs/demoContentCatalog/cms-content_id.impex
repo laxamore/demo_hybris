@@ -5,26 +5,26 @@
 # English Localisation
 
 # Macros / Replacement Parameter definitions
-$contentCatalog = demoContentCatalog
-$contentCatalogName = Demo Content Catalog
-$productCatalog = demoProductCatalog
-$productCatalogName = Demo Product Catalog
+$contentCatalog=demoContentCatalog
+$contentCatalogName=Demo Content Catalog
+$productCatalog=demoProductCatalog
+$productCatalogName=Demo Product Catalog
 
-$contentCV = catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]), CatalogVersion.version[default=Staged])[default=$contentCatalog:Staged]
-$productCV = catalogVersion(catalog(id[default=$productCatalog]), version[default='Staged'])[unique=true, default=$productCatalog:Staged]
+$contentCV=catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]),CatalogVersion.version[default=Staged])[default=$contentCatalog:Staged]
+$productCV=catalogVersion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
 
-$picture = media(code, $contentCV);
-$medias = medias(code, $contentCV);
-$mediaContainer = media(qualifier, $contentCV)[lang=$lang];
-$siteResource = jar:com.demo.initialdata.setup.InitialDataSystemSetup&/demoinitialdata/import/sampledata/contentCatalogs/$contentCatalog
-$productResource = jar:com.demo.initialdata.setup.InitialDataSystemSetup&/demoinitialdata/import/sampledata/productCatalogs/$productCatalog
+$picture=media(code, $contentCV);
+$medias=medias(code, $contentCV);
+$mediaContainer=media(qualifier, $contentCV)[lang=$lang];
+$siteResource=jar:com.demo.initialdata.setup.InitialDataSystemSetup&/demoinitialdata/import/sampledata/contentCatalogs/$contentCatalog
+$productResource=jar:com.demo.initialdata.setup.InitialDataSystemSetup&/demoinitialdata/import/sampledata/productCatalogs/$productCatalog
 
 # Language
-$lang = id
+$lang=id
 
-$backGroundImage = backGroundImage(code, $contentCV)
-$hoverOverImage = hoverOverImage(code, $contentCV)
-$Image = image(code, $contentCV)
+$backGroundImage=backGroundImage(code, $contentCV)
+$hoverOverImage=hoverOverImage(code, $contentCV)
+$Image=image(code, $contentCV)
 
 # Demo Website
 
@@ -120,14 +120,14 @@ UPDATE FooterNavigationComponent; $contentCV[unique = true]; uid[unique = true] 
 
 #Banner About DEMO
 
-INSERT_UPDATE Media; mediaFormat(qualifier); $contentCV[unique = true]; code[unique = true]; @media[translator = de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite = true]; mime[default = 'image/png']; realfilename     ; folder(qualifier)[default = 'images']; altText
-                   ; widescreen            ;                          ; about-banner.png   ; $siteResource/images/banners/homepage/responsive/about-banner.png                              ;                            ; about-banner.png ;                                      ; "Banner About"
+INSERT_UPDATE Media;mediaFormat(qualifier);$contentCV[unique=true];code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];mime[default='image/png'];realfilename;folder(qualifier)[default='images'];altText
+                   ;widescreen;;about-banner.png;$siteResource/images/banners/homepage/responsive/about-banner.png;;about-banner.png;;"Banner About"
 
-INSERT_UPDATE MediaContainer; qualifier[unique = true]; $medias; $contentCV[unique = true]
-                            ; demo-about-project      ; about-banner.png
+INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
+                            ;demo-about-project;about-banner.png
 
-UPDATE SimpleResponsiveBannerComponent; $contentCV[unique = true]; uid[unique = true]; $mediaContainer
-                                      ;                          ; BannerDemoAbout   ; demo-about-project
+UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
+                                      ;;BannerDemoAbout;demo-about-project
 
 #batsu modip - Catalog Header
 INSERT_UPDATE Media; mediaFormat(qualifier); $contentCV[unique = true]; code[unique = true]              ; realfilename       ; @media[translator = de.hybris.platform.impex.jalo.media.MediaDataTranslator]; mime[default = 'image/jpeg']; altText            ; folder(qualifier)[default = 'images']
@@ -144,8 +144,8 @@ UPDATE SimpleResponsiveBannerComponent; $contentCV[unique = true]; uid[unique = 
 
 #DEMO About tentang
 
-UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]; content[lang = $lang]
-                            ;                          ; DemoAboutTentang  ; "
+UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[lang=$lang]
+                            ;;DemoAboutTentang;"
 <div>
     <h2>Tentang INTHEBOX</h2><br>
     <p>INTHEBOX adalah merek kasur berkualitas dan perlengkapan tidur dengan material premium.</p>
@@ -156,8 +156,8 @@ UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]; con
 
 #DEMO info
 
-UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]; content[lang = $lang]
-                            ;                          ; DemoAboutApa      ; "
+UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[lang=$lang]
+                            ;;DemoAboutApa;"
                                 <div class=""about-info-apa"">
                                     <h2>Apa Itu Kasur INTHEBOX?</h2><br>
                                     <p>Kasur INTHEBOX adalah spring bed yang dikemas dalam box dan akan langsung mengembang sempurna ketika dibuka. Kini sudah ada banyak pilihan produk dengan harga yang terjangkau. Ketahui lebih lanjut agar kamu bisa memiliki tidur yang berkualitas.</p>
@@ -165,7 +165,7 @@ UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]; con
                                     <a href=""#"" class=""btn btn-primary"" role=""button"">Selengkapnya</a>
                                 </div>
                                 "
-                            ;                          ; DemoAboutKenapa   ; "
+                            ;;DemoAboutKenapa;"
                                 <div class=""about-info-kenapa"">
                                     <h2>Kenapa Harus Pilih INTHEBOX?</h2><br>
                                     <p>Ada banyak kelebihan kasur INTHEBOX, khususnya bisa meningkatkan kualitas tidur dan istirahat kamu. Semua produk INTHEBOX dibuat dengan material premium, teknologi modern, dan desain yang elegan. Bisa dapat bantal gratis, free ongkir, dan garansi 10 tahun.</p>
@@ -173,7 +173,7 @@ UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]; con
                                     <a href=""#"" class=""btn btn-primary"" role=""button"">Selengkapnya</a>
                                 </div>
                                 "
-                            ;                          ; DemoAboutCara     ; "
+                            ;;DemoAboutCara;"
                                 <div class=""about-info-cara"">
                                     <h2>Cara Beli Kasur INTHEBOX</h2><br>
                                     <p>Bisa dibeli melalui website dengan cara cek daftar produk, masukkan ke keranjang, dan lakukan pembayaran. Mau lebih praktis? Segera WhatsApp ke 0819234659. Bisa juga dibeli online di marketplace kesayangan kamu atau langsung ke supermarket besar di kotamu.</p>
@@ -183,16 +183,32 @@ UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]; con
                                 "
 
 
-INSERT_UPDATE Media; $contentCV[unique = true]; code[unique = true]; @media[translator = de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite = true]; mime[default = 'image/jpeg']; realfilename     ; folder(qualifier)[default = 'images']; altText
-                   ;                          ; about-info-1.png   ; $siteResource/images/banners/homepage/responsive/about-info-1.png                              ;                             ; about-info-1.png ;                                      ; "info 1"
-                   ;                          ; about-info-2.png   ; $siteResource/images/banners/homepage/responsive/about-info-2.png                              ;                             ; about-info-2.png ;                                      ; "info 2"
-                   ;                          ; about-info-3.png   ; $siteResource/images/banners/homepage/responsive/about-info-3.png                              ;                             ; about-info-3.png ;                                      ; "info 3"
+INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];mime[default='image/jpeg'];realfilename;folder(qualifier)[default='images'];altText
+                   ;;about-info-1.png;$siteResource/images/banners/homepage/responsive/about-info-1.png;;about-info-1.png;;"info 1"
+                   ;;about-info-2.png;$siteResource/images/banners/homepage/responsive/about-info-2.png;;about-info-2.png;;"info 2"
+                   ;;about-info-3.png;$siteResource/images/banners/homepage/responsive/about-info-3.png;;about-info-3.png;;"info 3"
 
 
-UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]   ; $picture[lang = $lang]
-                            ;                          ; BannerInfo1Component ; about-info-1.png
-                            ;                          ; BannerInfo2Component ; about-info-2.png
-                            ;                          ; BannerInfo3Component ; about-info-3.png
+UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=$lang]
+                            ;;BannerInfo1Component;about-info-1.png
+                            ;;BannerInfo2Component;about-info-2.png
+                            ;;BannerInfo3Component;about-info-3.png
+
+
+
+#DEMO ABOUT FAQ
+
+UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[lang=$lang]
+                            ;;DemoFAQHead;"<h2>Pertanyaan yang Sering Ditanyakan</h2>"
+                            ;;DemoFAQQuest1;"<h3>Apakah INTHEBOX Hanya Menjual Spring Bed?</h3>"
+                            ;;DemoFAQAns1;"<p>Tidak. Selain Spring Bed, ada INTHEBOX Hybrid yang merupakan kasur busa berkualitas. INTHEBOX juga menjual sofa, sofabed, bantal, dan juga guling.</p>"
+                            ;;DemoFAQQuest2;"<h3>Berapa Harga Kasur INTHEBOX?</h3>"
+                            ;;DemoFAQAns2;"<p>Harga kasur INTHEBOX terjangkau mulai dari Rp999.000,- dan berbeda-beda tergantung ukuran dan tipe kasur yang dipilih.</p>"
+                            ;;DemoFAQQuest3;"<h3>Bagaimana Cara Beli di Website?</h3>"
+                            ;;DemoFAQAns3;"<p>1. Pilih produk yang Anda inginkan dan masukkan ke keranjang belanja kamu.<br>2. Klik 'selesaikan pesanan' jika pesanan sudah sesuai.<br>3. Pastikan isi nama penerima dan data alamat tujuan dengan lengkap.<br>4. Pilih metode pembayaran dan segera selesaikan transaksi.<br>5. Lakukan konfirmasi pembayaran melalui menu yang ada di website agar pesananmu bisa segera diproses.</p>"
+                            ;;DemoFAQQuest4;"<h3>Bagaimana Cara Dapat Garansi Kasur?</h3>"
+                            ;;DemoFAQAns4;"<p>Setelah beli, segera aktifkan garansi melalui website INTHEBOX pada menu Garansi. Cukup masukkan nomor pesanan dan nomor HP yang bisa dihubungi.</p>"
+
 
 
 # Start Cart Page

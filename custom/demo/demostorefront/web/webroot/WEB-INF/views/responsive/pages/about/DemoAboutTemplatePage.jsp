@@ -59,9 +59,85 @@
             </div>
 
 
-        <cms:pageSlot position="Section6" var="feature" element="div" class="row no-margin" >
-            <cms:component component="${feature}" element="div" class="no-space yComponentWrapper"/>
-        </cms:pageSlot>
+        <div class="faq" id="faq">
+                <div class="faq-head">
+                    <cms:pageSlot position="Section6A" var="feature" element="div" class="row no-margin" >
+                        <cms:component component="${feature}" element="div" class="no-space yComponentWrapper"/>
+                    </cms:pageSlot>
+                </div>
+                <div class="faq-content">
+                    <div class="faq-content-row">
+                        <a class="question collapsible">
+                            <cms:pageSlot position="Section6B" var="feature" element="div" class="row no-margin" >
+                                    <cms:component component="${feature}" element="div" class="no-space yComponentWrapper"/>
+                            </cms:pageSlot>
+                        </a>
+                        <div class="answer" id="faq0">
+                            <cms:pageSlot position="Section6C" var="feature" element="div" class="row no-margin" >
+                                    <cms:component component="${feature}" element="div" class="no-space yComponentWrapper"/>
+                            </cms:pageSlot>
+                        </div>
+                    </div>
+                    <div class="faq-content-row">
+                        <a class="question collapsible">
+                            <cms:pageSlot position="Section6D" var="feature" element="div" class="row no-margin" >
+                                <cms:component component="${feature}" element="div" class="no-space yComponentWrapper"/>
+                            </cms:pageSlot>
+                        </a>
+                        <div class="answer" id="faq1">
+                            <cms:pageSlot position="Section6E" var="feature" element="div" class="row no-margin" >
+                                    <cms:component component="${feature}" element="div" class="no-space yComponentWrapper"/>
+                            </cms:pageSlot>
+                        </div>
+                    </div>
+                    <div class="faq-content-row">
+                        <a class="question collapsible">
+                            <cms:pageSlot position="Section6F" var="feature" element="div" class="row no-margin" >
+                                <cms:component component="${feature}" element="div" class="no-space yComponentWrapper"/>
+                            </cms:pageSlot>
+                        </a>
+                        <div class="answer" id="faq2">
+                            <cms:pageSlot position="Section6G" var="feature" element="div" class="row no-margin" >
+                                <cms:component component="${feature}" element="div" class="no-space yComponentWrapper"/>
+                            </cms:pageSlot>
+                        </div>
+                    </div>
+                    <div class="faq-content-row">
+                        <a class="question collapsible">
+                            <cms:pageSlot position="Section6H" var="feature" element="div" class="row no-margin" >
+                                <cms:component component="${feature}" element="div" class="no-space yComponentWrapper"/>
+                            </cms:pageSlot>
+                        </a>
+                        <div class="answer" id="faq3">
+                            <cms:pageSlot position="Section6I" var="feature" element="div" class="row no-margin" >
+                                <cms:component component="${feature}" element="div" class="no-space yComponentWrapper"/>
+                            </cms:pageSlot>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        <script>
+
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                  content.style.maxHeight = null;
+                } else {
+                  content.style.maxHeight = content.scrollHeight + "px";
+                }
+              });
+            }
+
+
+        </script>
 
 
 </template:demoPage>

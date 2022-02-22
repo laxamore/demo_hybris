@@ -177,15 +177,23 @@ INSERT_UPDATE ContentSlotName; name[unique = true]   ; template(uid, $contentCV)
                              ; CartLink              ;                                                                        ;                          ; navigation
 # End Headers
 #Body
-                             ; Section1              ;                                                                        ;                          ; wide
-                             ; Section2              ;                                                                        ;                          ; wide
-                             ; Section3A             ;                                                                        ;                          ; wide
-                             ; Section3B             ;                                                                        ;                          ; wide
-                             ; Section4A             ;                                                                        ;                          ; wide
-                             ; Section4B             ;                                                                        ;                          ; wide
-                             ; Section5A             ;                                                                        ;                          ; wide
-                             ; Section5B             ;                                                                        ;                          ; wide
-                             ; Section6              ;                                                                        ;                          ; wide
+                             ;Section1                ;;;wide
+                             ;Section2                ;;;wide
+                             ;Section3A               ;;;narrow
+                             ;Section3B               ;;;narrow
+                             ;Section4A               ;;;narrow
+                             ;Section4B               ;;;narrow
+                             ;Section5A               ;;;narrow
+                             ;Section5B               ;;;narrow
+                             ;Section6A               ;;;narrow
+                             ;Section6B               ;;;narrow
+                             ;Section6C               ;;;narrow
+                             ;Section6D               ;;;narrow
+                             ;Section6E               ;;;narrow
+                             ;Section6F               ;;;narrow
+                             ;Section6G               ;;;narrow
+                             ;Section6H               ;;;narrow
+                             ;Section6I               ;;;narrow
 #End Body
 # Footers
                              ; FooterLogo1           ;                                                                        ;                          ; logo
