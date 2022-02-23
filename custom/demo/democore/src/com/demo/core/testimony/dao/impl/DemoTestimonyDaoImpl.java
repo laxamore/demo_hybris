@@ -13,8 +13,8 @@ import java.util.List;
 
 public class DemoTestimonyDaoImpl implements DemoTestimonyDao {
 
-    private static final String QUERY_DEMO_TESTIMONY = "SELECT {pk} FROM {testimony} ORDER BY {rating}";
-    private static final String QUERY_DEMO_TESTIMONY_FOR_HOMEPAGE = "SELECT {pk} FROM {testimony} ORDER BY {rating} DESC LIMIT 3";
+    private static final String QUERY_DEMO_TESTIMONY = "SELECT {pk} FROM {testimony} ORDER BY {rating} DESC, {time} DESC";
+    private static final String QUERY_DEMO_TESTIMONY_FOR_HOMEPAGE = "SELECT {pk} FROM {testimony} ORDER BY {rating} DESC, {time} DESC LIMIT 3";
     private static final String QUERY_DEMO_TESTIMONY_RATING_REVIEWS = "SELECT AVG({rating}) AS rating, COUNT({name}) AS reviews FROM {testimony}";
 
 
