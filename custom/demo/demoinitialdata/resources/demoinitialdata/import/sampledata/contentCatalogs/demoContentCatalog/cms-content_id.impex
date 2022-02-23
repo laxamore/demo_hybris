@@ -210,3 +210,9 @@ UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[la
                             ;;DemoFAQAns4;"<p>Setelah beli, segera aktifkan garansi melalui website INTHEBOX pada menu Garansi. Cukup masukkan nomor pesanan dan nomor HP yang bisa dihubungi.</p>"
 
 
+
+# Start Cart Page
+UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]          ; content[lang = $lang]
+                            ;                          ; CartTitleParagraphComponent ; "Keranjang Belanja"
+                            ;                          ; EmptyCartParagraphComponent ; "<h2>Your shopping cart is empty</h2><p>Suggestions</p><ul><li>Browse our products by selecting a category above</li></ul>"
+# End Cart Page
