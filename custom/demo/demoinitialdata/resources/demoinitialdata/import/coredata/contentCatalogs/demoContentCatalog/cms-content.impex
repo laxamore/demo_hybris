@@ -54,6 +54,7 @@ INSERT_UPDATE ContentSlotName; name[unique = true]   ; template(uid, $contentCV)
                              ; Banner                ;                                                                       ;                          ; wide
                              ; ProductCarousel       ;                                                                       ;                          ; wide
                              ; UnboxingInTheBox      ;                                                                       ;                          ; wide
+                             ; Testimony             ;                                                                       ;                          ; wide
 # End HomePage Content
 # Footers
                              ; FooterLogo1           ;                                                                       ;                          ; logo
@@ -322,4 +323,56 @@ INSERT_UPDATE ContentSlotForTemplate; $contentCV[unique = true]; uid[unique = tr
 INSERT_UPDATE ContentPage; $contentCV[unique = true]; uid[unique = true]; name      ; label; masterTemplate(uid, $contentCV); defaultPage; approvalStatus(code)[default = 'approved']
                          ;                          ; cart              ; Cart Page ; cart ; CartPageTemplate               ; true       ;
 # End Cart Page
+# End Category Page
+
+
+
+# Testimony  Page
+INSERT_UPDATE PageTemplate; $contentCV[unique = true]; uid[unique = true]              ; name                    ; frontendTemplateName            ; restrictedPageTypes(code); active[default = true]
+                          ;                   ; TestimonyPageTemplate    ; Testimony Page Template ; testimony/testimonyPageTemplate ; ContentPage          ;
+
+
+INSERT_UPDATE ContentSlotName; name[unique = true]    ; template(uid, $contentCV)[unique = true][default = 'TestimonyPageTemplate']; validComponentTypes(code); compTypeGroup(code)
+# Headers
+                             ; TopLeftParagraph       ;                                                                              ;                          ; narrow
+                             ; TopRightNavigationBar  ;                                                                              ;                          ; navigation
+                             ; HeaderLogo             ;                                                                              ;                          ; logo
+                             ; MiddleNavigationBar    ;                                                                              ;                          ; navigation
+                             ; LoginLink              ;                                                                              ;                          ; navigation
+                             ; CartLink               ;                                                                              ;                          ; navigation
+# End Headers
+
+                             ; Testimony              ;                                                                              ;                          ; wide
+
+# Footers
+                             ; FooterLogo             ;                                                                              ;                          ; logo
+                             ; FooterSubscribe        ;                                                                              ;                          ; narrow
+                             ; FooterHeader           ;                                                                              ;                          ; footer
+                             ; FooterNavigation       ;                                                                              ;                          ; navigation
+                             ; FooterContact          ;                                                                              ;                          ; footer
+                             ; FooterCopyright        ;                                                                              ;                          ; footer
+
+
+INSERT_UPDATE ContentSlotForTemplate; $contentCV[unique = true]; uid[unique = true]             ; position[unique = true]; pageTemplate(uid, $contentCV)[unique = true][default = 'TestimonyPageTemplate']; contentSlot(uid, $contentCV)[unique = true]; allowOverwrite
+# Headers
+                                    ;                          ; TopLeftParagraph-TestimonyPageTemplate      ; TopLeftParagraph       ;                                                                           ; TopLeftParagraphSlot                       ; true
+                                    ;                          ; TopRightNavigationBar-TestimonyPageTemplate ; TopRightNavigationBar  ;                                                                           ; TopRightNavigationBarSlot                  ; true
+                                    ;                          ; HeaderLogo-TestimonyPageTemplate            ; HeaderLogo             ;                                                                           ; HeaderLogoSlot                             ; true
+                                    ;                          ; MiddleNavigationBar-TestimonyPageTemplate   ; MiddleNavigationBar    ;                                                                           ; MiddleNavigationBarSlot                    ; true
+                                    ;                          ; LoginLink-TestimonyPageTemplate             ; LoginLink              ;                                                                           ; LoginLinkSlot                              ; true
+                                    ;                          ; CartLink-TestimonyPageTemplate              ; CartLink               ;                                                                           ; CartLinkSlot                               ; true
+# End Headers
+# Footers
+                                    ;                          ; FooterLogo-TestimonyPageTemplate            ; FooterLogo             ;                                                                           ; FooterLogoSlot                             ; true
+                                    ;                          ; FooterSubscribe-TestimonyPageTemplate       ; FooterSubscribe        ;                                                                           ; FooterSubscribeSlot                        ; true
+                                    ;                          ; FooterHeader-TestimonyPageTemplate          ; FooterHeader           ;                                                                           ; FooterHeaderSlot                           ; true
+                                    ;                          ; FooterNavigation-TestimonyPageTemplate      ; FooterNavigation       ;                                                                           ; FooterNavigationSlot                       ; true
+                                    ;                          ; FooterContact-TestimonyPageTemplate         ; FooterContact          ;                                                                           ; FooterContactSlot                          ; true
+                                    ;                          ; FooterCopyright-TestimonyPageTemplate       ; FooterCopyright        ;                                                                           ; FooterCopyrightSlot                        ; true
+
+
+INSERT_UPDATE ContentPage;$contentCV[unique=true];uid[unique=true];name;masterTemplate(uid,$contentCV);label;defaultPage[default='true'];approvalStatus(code)[default='approved'];homepage[default='false']
+                         ;                       ;TestimonyPage   ;Testimony Page;TestimonyPageTemplate;testimonyPage;;;
+
+
 # End Demo Site

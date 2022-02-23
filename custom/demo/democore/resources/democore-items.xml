@@ -53,7 +53,6 @@
             </itemtype>
         </typegroup>
 
-
         <typegroup name="Apparel">
             <itemtype code="ApparelProduct" extends="Product"
                       autocreate="true" generate="true"

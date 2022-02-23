@@ -488,3 +488,35 @@ INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true] 
                                 ;                          ; EmptyCartMiddleForCartPage        ; EmptyCartMiddleContent ;                                                       ; EmptyCartMiddleContentSlot
 # End Cart Page
 
+
+INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];position[unique=true];page(uid,$contentCV)[unique=true][default='homePage'];contentSlot(uid,$contentCV)[unique=true]
+                                ;;UnboxingInTheBox-homepage;UnboxingInTheBox;;UnboxingInTheBoxSlot-Homepage
+
+
+
+# Testimony home page
+
+INSERT_UPDATE JspIncludeComponent;$contentCV[unique=true];uid[unique=true];name;page;actions(uid,$contentCV);&componentRef
+                                 ;;TestimonyComponent;Testimony Component;/WEB-INF/views/responsive/pages/testimony/testimony.jsp;;TestimonyComponent
+
+INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];active;cmsComponents(&componentRef)
+                         ;;Testimony_ContentSlot;true;TestimonyComponent
+
+INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];position[unique=true];page(uid,$contentCV)[unique=true][default='homePage'];contentSlot(uid,$contentCV)[unique=true]
+                                ;;Testimony;Testimony;;Testimony_ContentSlot
+
+
+# Testimoni Page list
+
+INSERT_UPDATE JspIncludeComponent;$contentCV[unique=true];uid[unique=true];name;page;actions(uid,$contentCV);&componentRef
+                                 ;;TestimonyListComponent;Testimony List Component;/WEB-INF/views/responsive/pages/testimony/testimonyList.jsp;;TestimonyListComponent
+
+INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];active;cmsComponents(&componentRef)
+                         ;;TestimonyList_ContentSlot;true;TestimonyListComponent
+
+INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];position[unique=true];page(uid,$contentCV)[unique=true][default='TestimonyPage'];contentSlot(uid,$contentCV)[unique=true]
+                                ;;TestimonyList;Testimony;;TestimonyList_ContentSlot
+
+
+
+
