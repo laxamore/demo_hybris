@@ -585,7 +585,4 @@
           parent="abstractPropertyFieldValueProvider">
         <property name="fieldNameProvider" ref="solrFieldNameProvider"/>
     </bean>
-
-    <bean id="demoCustomerAccountService" class="com.demo.core.customer.impl.DemoCustomerAccountService"
-          parent="defaultCustomerAccountService"/>
 </beans>

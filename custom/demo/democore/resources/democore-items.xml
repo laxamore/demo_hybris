@@ -34,20 +34,21 @@
         <!-- TypeGroups are for structure of this file only -->
 
         <typegroup name="CustomCMSComponent">
-            <itemtype code="DemoCMSComponent" extends="SimpleCMSComponent" generate="true" autocreate="true" jaloclass="com.demo.core.jalo.DemoCMSComponent">
+            <itemtype code="DemoCMSComponent" extends="SimpleCMSComponent" generate="true" autocreate="true"
+                      jaloclass="com.demo.core.jalo.DemoCMSComponent">
                 <description>Demo CMS Component</description>
                 <attributes>
                     <attribute qualifier="title" type="java.lang.String">
-                        <modifiers read="true" write="true" />
-                        <persistence type="property" />
+                        <modifiers read="true" write="true"/>
+                        <persistence type="property"/>
                     </attribute>
                     <attribute qualifier="image" type="Media">
-                        <modifiers read="true" write="true" />
-                        <persistence type="property" />
+                        <modifiers read="true" write="true"/>
+                        <persistence type="property"/>
                     </attribute>
                     <attribute qualifier="description" type="java.lang.String">
-                        <modifiers write="true" read="true" />
-                        <persistence type="property" />
+                        <modifiers write="true" read="true"/>
+                        <persistence type="property"/>
                     </attribute>
                 </attributes>
             </itemtype>
@@ -222,6 +223,16 @@
                         <key attribute="code"/>
                     </index>
                 </indexes>
+            </itemtype>
+
+            <itemtype code="Customer" autocreate="false" generate="false">
+                <attributes>
+                    <attribute qualifier="nik" type="java.lang.String">
+                        <description>Testimony Code</description>
+                        <modifiers/>
+                        <persistence type="property"/>
+                    </attribute>
+                </attributes>
             </itemtype>
         </typegroup>
 

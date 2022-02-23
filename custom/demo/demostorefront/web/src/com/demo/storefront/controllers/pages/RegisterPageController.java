@@ -123,7 +123,7 @@ public class RegisterPageController extends AbstractRegisterPageController {
         data.setLogin(form.getEmail());
         data.setPassword(form.getPwd());
         data.setTitleCode(form.getTitleCode());
-        data.setId(form.getId());
+        data.setNik(form.getNik());
 
         try {
             demoCustomerFacade.register(data);

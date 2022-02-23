@@ -25,8 +25,8 @@
             </div>
 
             <div class="demo-login-register-form">
-                <form:input cssClass="form-control" id="register.id" path="id"
-                            placeholder="User ID"/>
+                <form:input cssClass="form-control" id="register.nik" path="nik"
+                            placeholder="NIK"/>
             </div>
 
             <div class="demo-login-register-form">
