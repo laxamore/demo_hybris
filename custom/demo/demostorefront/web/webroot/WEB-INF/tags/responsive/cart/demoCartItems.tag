@@ -43,25 +43,21 @@
                     <div class="demo-cart-qty">
                         <button class="demo-cart-qty-min">-</button>
                         <div>
-                            <c:url value="/cart/update" var="cartUpdateFormAction"/>
-                            <c:set var="cartDataJson"
-                                   value='{"cartCode" : "${ycommerce:encodeJSON(cartData.code)}","productPostPrice":"${ycommerce:encodeJSON(entry.basePrice.value)}","productName":"${ycommerce:encodeJSON(entry.product.name)}"}'>
-
-                            </c:set>
-                            <form:form id="updateCartForm${entry.entryNumber}" action="${cartUpdateFormAction}"
-                                       method="post"
-                                       modelAttribute="updateQuantityForm${entry.entryNumber}"
-                                       class="js-qty-form${entry.entryNumber} updateForm"
-                                       data-cart="${fn:escapeXml(cartDataJson)}">
-                                <input type="hidden" name="entryNumber" value="${entryNumberHtml}"/>
-                                <input type="hidden" name="productCode" value="${productCodeHtml}"/>
-                                <input type="hidden" name="initialQuantity" value="${quantityHtml}"/>
-                                <form:label cssClass="" path="quantity"
-                                            for="quantity${entry.entryNumber}"></form:label>
-                                <form:input cssClass="js-update-entry-quantity-input"
-                                            disabled="${not entry.updateable}" type="text" size="1" maxlength="10"
-                                            id="quantity_${entry.entryNumber}" path="quantity"/>
-                            </form:form>
+                                <%--                            <c:url value="/cart/update" var="cartUpdateFormAction"/>--%>
+                                <%--                            <form:form id="updateCartForm${entry.entryNumber}" action="${cartUpdateFormAction}"--%>
+                                <%--                                       method="post"--%>
+                                <%--                                       modelAttribute="updateQuantityForm${entry.entryNumber}"--%>
+                                <%--                                       class="js-qty-form${entry.entryNumber} updateForm">--%>
+                            <input type="hidden" name="entryNumber" value="${entryNumberHtml}"/>
+                            <input type="hidden" name="productCode" value="${productCodeHtml}"/>
+                            <input type="hidden" name="initialQuantity" value="${quantityHtml}"/>
+                            <input name="quantity" value="${entry.quantity}"/>
+                                <%--                            <form:label cssClass="" path="quantity"--%>
+                                <%--                                        for="quantity${entry.entryNumber}"></form:label>--%>
+                                <%--                            <form:input cssClass="js-update-entry-quantity-input"--%>
+                                <%--                                        disabled="${not entry.updateable}" type="text" size="1" maxlength="10"--%>
+                                <%--                                        id="quantity_${entry.entryNumber}" path="quantity"/>--%>
+                                <%--                            </form:form>--%>
 
                             <form:form id="cartEntryActionForm" action="" method="post">
                                 <c:url value="/cart/entry/execute/REMOVE" var="entryActionUrl"/>
