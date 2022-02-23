@@ -46,9 +46,9 @@ $(".demo-cart-data").map((i, el) => {
 $(document).ready(function() {
     $('.section-topbanner').slick();
     $('.owl-wrapper').slick({
-        dots: true,
         infinite: true,
-        slidesToShow: 2,
-        slidesToScroll: 2
+        slidesToShow: 36,
+        slidesToScroll: 1
     });
 })
+
