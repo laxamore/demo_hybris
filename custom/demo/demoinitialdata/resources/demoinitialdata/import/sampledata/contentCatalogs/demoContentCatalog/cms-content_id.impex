@@ -110,11 +110,13 @@ UPDATE FooterNavigationComponent; $contentCV[unique = true]; uid[unique = true] 
 # End Navigation
 
 
-
-
-#UPDATE BannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=$lang]
-#                      ;;BannerDemoInTheBoxComponent;banner-demo-project.jpg
-#                      ;;BannerDemoInTheBoxComponent-2;banner-demo-project-2.jpg
+#Home Product Carousel
+UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[lang=$lang]
+                            ;;TitleProductCarouselComponent;"
+                                <h2>BELI <em>KASUR</em> INTHEBOX</h2><br>
+                                <p>Tersedia beragam jenis kasur INTHEBOX dengan kualitas premium.<br>
+                                Pilih spring bed berkualitas dengan ukuran kasur sesuai kebutuhan.</p>
+                            "
 
 
 

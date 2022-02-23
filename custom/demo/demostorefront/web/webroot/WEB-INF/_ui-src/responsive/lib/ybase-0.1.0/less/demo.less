@@ -401,35 +401,6 @@ main {
   }
 }
 
-.home-banner-mySlides {
-  display: none;
-}
-
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
 
 /* batsu */
 .catalog-header {
@@ -746,4 +717,47 @@ main {
     max-width: 455px;
     padding: 1rem;
   }
+}
+
+
+.section-productcarousel{
+    background-color:#6086c2;
+    margin-bottom:20px;
+    .productcarousel-head{
+        h2{
+            color:white;
+        }
+        em{
+            color:white;
+        }
+        p{
+            color:white;
+        }
+    }
+    .productcarousel-body{
+        .carousel__component{
+            .carousel__component--headline{
+                display:none;
+            }
+            .carousel__component--carousel{
+                .owl-wrapper-outer{
+                    .owl-wrapper{
+                        .owl-item{
+                            background-color:white;
+                            border-radius:10px;
+                            margin-right:10px;
+
+                            .carousel__item--name{
+                                font-size:10px;
+                            }
+                            .carousel__item--price{
+                                font-size:10px;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
 }

@@ -40,3 +40,15 @@ $(".demo-cart-data").map((i, el) => {
         });
     }
 })
+
+
+//home banner
+$(document).ready(function() {
+    $('.section-topbanner').slick();
+    $('.owl-wrapper').slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 2
+    });
+})
