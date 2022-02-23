@@ -57,7 +57,8 @@ public class HomePageController extends AbstractPageController
 
 //		Data Testimony For Home Page
 		model.addAttribute("testimony", demoTestimonyService.getTestimonyForHomePage());
-		model.addAttribute("testimony_rating_reviews", demoTestimonyService.getRatingAndReviewsTestimony());
+		model.addAttribute("testimony_avg_rating", demoTestimonyService.getAVGRating());
+		model.addAttribute("testimony_total_reviews", demoTestimonyService.getTotalReviews());
 
 		return getViewForPage(model);
 	}

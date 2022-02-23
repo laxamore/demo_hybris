@@ -1,5 +1,6 @@
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/functions" prefix = "fn" %>
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <div class="container">
     <h2 class="header-testimoni">TESTIMONI</h2>
 </div>
@@ -10,11 +11,11 @@
     </div>
 </div>
 <div class="container rating p2">
-    <c:forEach begin = "1" end = "${testimony_rating_reviews.get(0)[0]}">
+    <c:forEach begin = "1" end = "${testimony_avg_rating}">
         <img src="${commonResourcePath}/images/star-full.png" style="margin-left: 5px;">
     </c:forEach>
     <div style="margin-left: 15px">
-        ${testimony_rating_reviews.get(0)[0]}/5 (${testimony_rating_reviews.get(0)[1]} Reviews)
+        ${testimony_avg_rating}/5 (${testimony_total_reviews} Reviews)
     </div>
 </div>
 <div class="container">

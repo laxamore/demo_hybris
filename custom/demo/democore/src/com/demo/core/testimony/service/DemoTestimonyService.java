@@ -8,5 +8,6 @@ import java.util.List;
 public interface DemoTestimonyService {
     List<TestimonyModel> getTestimonyForHomePage();
     List<TestimonyModel> getAllTestimony();
-    List<List<Float>> getRatingAndReviewsTestimony();
+    float getAVGRating();
+    int getTotalReviews();
 }
