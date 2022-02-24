@@ -336,8 +336,8 @@ INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true] 
 
 
 #Home Product Carousel
-INSERT_UPDATE ProductCarouselComponent;$contentCV[unique=true] ;uid[unique=true]              ;name                           ;products(code,$productCV)                                                    ;scroll(code)  ;popup ;searchQuery ;categoryCode ;&componentRef
-                                      ;                        ;DemoProductCarouselComponent  ;Beli KASUR InTheBox  ;IA1,IA2,IA3,IH1,IH2,IH3,IX1,IX2,IX3,SJ1,SJ2,SJ3,ID1,ID2,ID3,I1011,I1012,I1013          ;allVisible    ;false ;            ;             ;DemoProductCarouselComponent
+INSERT_UPDATE ProductCarouselComponent;$contentCV[unique=true] ;uid[unique=true]              ;name                 ;products(code,$productCV)                                                                                          ;scroll(code)  ;popup ;searchQuery ;categoryCode ;&componentRef
+                                      ;                        ;DemoProductCarouselComponent  ;Beli KASUR InTheBox  ;IA1,IA2,IA3,IH1,IH2,IH3,IX1,IX2,IX3,SJ1,SJ2,SJ3,ID1,ID2,ID3,SJPT1,SJPT2,SJPT3,IH151,IH152,IH153,I1011,I1012,I1013  ;allVisible    ;false ;            ;             ;DemoProductCarouselComponent
 
 INSERT_UPDATE CMSParagraphComponent;$contentCV[unique=true] ;uid[unique=true]               ;name                    ;&componentRef
                                    ;                        ;TitleProductCarouselComponent  ;Product Carousel title  ;TitleProductCarouselComponent

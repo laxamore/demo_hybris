@@ -17,7 +17,9 @@
                 <cms:component component="${feature}"/>
             </cms:pageSlot>
         </div>
-        <div class="productcarousel-body">
+        <div class="col-xs-2">
+        </div>
+        <div class="productcarousel-body col-xs-8">
             <cms:pageSlot position="ProductCarousel" var="feature">
                 <cms:component component="${feature}"/>
             </cms:pageSlot>

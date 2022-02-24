@@ -1,3 +1,5 @@
+@font-face {font-family: "Bw Gradual"; src: url("//db.onlinewebfonts.com/t/9c012a100c1e4e7c4411382d3bc15526.eot"); src: url("//db.onlinewebfonts.com/t/9c012a100c1e4e7c4411382d3bc15526.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/9c012a100c1e4e7c4411382d3bc15526.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/9c012a100c1e4e7c4411382d3bc15526.woff") format("woff"), url("//db.onlinewebfonts.com/t/9c012a100c1e4e7c4411382d3bc15526.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/9c012a100c1e4e7c4411382d3bc15526.svg#Bw Gradual") format("svg"); }
+
 main {
   display: flex;
   flex-direction: column;
@@ -722,20 +724,28 @@ main {
 
 .section-productcarousel{
     background-color:#6086c2;
-    margin-bottom:20px;
-    width:100%;
+    padding-top: clamp(20px, 3vw, 3vw);
+    padding-bottom: clamp(20px, 2vw, 2vw);
+    margin-bottom: clamp(20px, 3vw, 3vw);
     .productcarousel-head{
+        color:white;
+        font-family: "Bw gradual", sans-serif;
+        text-align:center;
         h2{
-            color:white;
+            font-size: clamp(20px, 2.5vw, 2.5vw);
+            font-weight:600;
         }
         em{
-            color:white;
+            font-family: "Permanent Marker", sans-serif;
+            color:#7fc5f9;
         }
         p{
-            color:white;
+            font-weight:400;
+            font-size: clamp(12px, 1.5vw, 1.5vw);
         }
     }
     .productcarousel-body{
+
         .carousel__component{
             .carousel__component--headline{
                 display:none;
@@ -749,10 +759,13 @@ main {
                             margin-right:10px;
 
                             .carousel__item--name{
-                                font-size:10px;
+                                font-size: clamp(10px, 1vw, 1vw);
+                                font-family:"Bw Gradual";
                             }
                             .carousel__item--price{
-                                font-size:10px;
+                                font-size: clamp(10px, 1vw, 1vw);
+                                font-family:"Permanent Marker";
+                                color:#7fc5f9;
                             }
                         }
 
@@ -762,3 +775,4 @@ main {
         }
     }
 }
+

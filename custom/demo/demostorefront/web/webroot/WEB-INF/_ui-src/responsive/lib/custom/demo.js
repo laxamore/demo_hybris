@@ -45,10 +45,24 @@ $(".demo-cart-data").map((i, el) => {
 //home banner
 $(document).ready(function() {
     $('.section-topbanner').slick();
-    $('.owl-wrapper').slick({
-        infinite: true,
-        slidesToShow: 36,
-        slidesToScroll: 1
-    });
+
 })
+
+//PAGE ABOUT
+var about_coll = document.getElementsByClassName("about-collapsible");
+var about_i;
+
+for (about_i = 0; about_i < about_coll.length; about_i++) {
+    about_coll[about_i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+
+
 

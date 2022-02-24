@@ -67,7 +67,7 @@
                 </div>
                 <div class="faq-content">
                     <div class="faq-content-row">
-                        <a class="question collapsible">
+                        <a class="question about-collapsible">
                             <cms:pageSlot position="Section6B" var="feature" element="div" class="row no-margin" >
                                     <cms:component component="${feature}" element="div" class="no-space yComponentWrapper"/>
                             </cms:pageSlot>
@@ -79,7 +79,7 @@
                         </div>
                     </div>
                     <div class="faq-content-row">
-                        <a class="question collapsible">
+                        <a class="question about-collapsible">
                             <cms:pageSlot position="Section6D" var="feature" element="div" class="row no-margin" >
                                 <cms:component component="${feature}" element="div" class="no-space yComponentWrapper"/>
                             </cms:pageSlot>
@@ -91,7 +91,7 @@
                         </div>
                     </div>
                     <div class="faq-content-row">
-                        <a class="question collapsible">
+                        <a class="question about-collapsible">
                             <cms:pageSlot position="Section6F" var="feature" element="div" class="row no-margin" >
                                 <cms:component component="${feature}" element="div" class="no-space yComponentWrapper"/>
                             </cms:pageSlot>
@@ -103,7 +103,7 @@
                         </div>
                     </div>
                     <div class="faq-content-row">
-                        <a class="question collapsible">
+                        <a class="question about-collapsible">
                             <cms:pageSlot position="Section6H" var="feature" element="div" class="row no-margin" >
                                 <cms:component component="${feature}" element="div" class="no-space yComponentWrapper"/>
                             </cms:pageSlot>
@@ -116,29 +116,6 @@
                     </div>
                 </div>
             </div>
-
-
-
-        <script>
-
-            var coll = document.getElementsByClassName("collapsible");
-            var i;
-
-            for (i = 0; i < coll.length; i++) {
-              coll[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.maxHeight){
-                  content.style.maxHeight = null;
-                } else {
-                  content.style.maxHeight = content.scrollHeight + "px";
-                }
-              });
-            }
-
-
-        </script>
-
 
 </template:demoPage>
 
