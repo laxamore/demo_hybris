@@ -24,33 +24,29 @@
 			<product:productPrimaryImage product="${product}" format="product"/>
 		</a>
 		<div class="details">
-
 			<ycommerce:testId code="product_productName">
 				<a class="name" href="${fn:escapeXml(productUrl)}">
 					<c:out escapeXml="false" value="${ycommerce:sanitizeHTML(product.name)}" />
 				</a>
-			</ycommerce:testId>
-            <br>
+			</ycommerce:testId><br>
  			<ycommerce:testId code="product_productSize">
  				<a class="size" href="${fn:escapeXml(productUrl)}">
  					<c:out escapeXml="false" value="${ycommerce:sanitizeHTML(product.size)}" />
  				</a>
- 			</ycommerce:testId>
-            <br>
+ 			</ycommerce:testId><br>
 			<ycommerce:testId code="product_productDesc">
 				<a class="desc" href="${fn:escapeXml(productUrl)}">
 					<c:out escapeXml="false" value="${ycommerce:sanitizeHTML(product.desc)}" />
 				</a>
 			</ycommerce:testId>
 
-		
-			<c:if test="${not empty product.potentialPromotions}">
+			<%--<c:if test="${not empty product.potentialPromotions}">
 				<div class="promo">
 					<c:forEach items="${product.potentialPromotions}" var="promotion">
 						${ycommerce:sanitizeHTML(promotion.description)}
 					</c:forEach>
 				</div>
-			</c:if>
+			</c:if>--%>
 			
 			<ycommerce:testId code="product_productPrice">
 				<div class="price">
@@ -59,7 +55,8 @@
 				    </a>
 				</div>
 			</ycommerce:testId>
-			<c:forEach var="variantOption" items="${product.variantOptions}">
+
+			<%--<c:forEach var="variantOption" items="${product.variantOptions}">
 				<c:forEach items="${variantOption.variantOptionQualifiers}" var="variantOptionQualifier">
 					<c:if test="${variantOptionQualifier.qualifier eq 'rollupProperty'}">
 	                    <c:set var="rollupProperty" value="${variantOptionQualifier.value}"/>
@@ -72,9 +69,8 @@
 	                </c:if>
 				</c:forEach>
 				<img style="width: 32px; height: 32px;" src="${imageUrlHtml}" title="${variantNameHtml}" alt="${variantNameHtml}"/>
-			</c:forEach>
+			</c:forEach>--%>
 		</div>
-
 
 		<c:set var="product" value="${product}" scope="request"/>
 		<c:set var="addToCartText" value="${addToCartText}" scope="request"/>

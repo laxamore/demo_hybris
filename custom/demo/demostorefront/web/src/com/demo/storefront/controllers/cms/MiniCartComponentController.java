@@ -3,7 +3,7 @@
  */
 package com.demo.storefront.controllers.cms;
 
-import de.hybris.platform.acceleratorcms.model.components.MiniCartComponentModel;
+import  de.hybris.platform.acceleratorcms.model.components.MiniCartComponentModel;
 import de.hybris.platform.commercefacades.order.CartFacade;
 import de.hybris.platform.commercefacades.order.data.CartData;
 import de.hybris.platform.commercefacades.product.data.PriceData;

@@ -18,7 +18,7 @@ public class DemoRegistrationValidation extends RegistrationValidator {
         final String pwd = registerForm.getPwd();
         final String checkPwd = registerForm.getCheckPwd();
 //        final boolean termsCheck = registerForm.isTermsCheck();
-        final String id = registerForm.getId();
+        final String nik = registerForm.getNik();
 
         validateTitleCode(errors, titleCode);
         validateName(errors, firstName, "firstName", "register.firstName.invalid");
@@ -29,18 +29,18 @@ public class DemoRegistrationValidation extends RegistrationValidator {
             errors.rejectValue("firstName", "register.name.invalid");
         }
 
-        validateId(errors, id, "id", "register.id.invalid");
+        validateNik(errors, nik, "nik", "register.nik.invalid");
         validateEmail(errors, email);
         validatePassword(errors, pwd);
         comparePasswords(errors, pwd, checkPwd);
 //        validateTermsAndConditions(errors, termsCheck);
     }
 
-    protected void validateId(final Errors errors, final String id, final String propertyId, final String property) {
-        if (StringUtils.isBlank(id)) {
-            errors.rejectValue(propertyId, property);
-        } else if (StringUtils.length(id) > 255) {
-            errors.rejectValue(propertyId, property);
+    protected void validateNik(final Errors errors, final String nik, final String propertyNik, final String property) {
+        if (StringUtils.isBlank(nik)) {
+            errors.rejectValue(propertyNik, property);
+        } else if (StringUtils.length(nik) > 255) {
+            errors.rejectValue(propertyNik, property);
         }
     }
 }
