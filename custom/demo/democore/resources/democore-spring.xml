@@ -588,4 +588,6 @@
 
     <bean id="demoCustomerAccountService" class="com.demo.core.customer.impl.DemoCustomerAccountService"
           parent="defaultCustomerAccountService"/>
+
+    <bean id="approvalStatusUpdateJob" class="com.demo.core.job.ApprovalStatusUpdateJob" />
 </beans>

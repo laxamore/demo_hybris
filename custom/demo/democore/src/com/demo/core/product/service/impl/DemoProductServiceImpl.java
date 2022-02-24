@@ -40,4 +40,15 @@ public class DemoProductServiceImpl implements DemoProductService {
             return null;
         }
     }
+
+    @Override
+    public List<ProductModel> getProductModel() {
+        List<ProductModel> productModel = demoProductDao.getProduct();
+
+        if (productModel != null) {
+            return productModel;
+        } else {
+            return null;
+        }
+    }
 }
