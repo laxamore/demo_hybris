@@ -56,7 +56,7 @@ public interface ControllerConstants {
             String SubCategoryListComponent = _Prefix + SubCategoryListComponentModel._TYPECODE + _Suffix; // NOSONAR
             String SimpleResponsiveBannerComponent = _Prefix + SimpleResponsiveBannerComponentModel._TYPECODE + _Suffix; // NOSONAR
             String CMSTabParagraphContainer = _Prefix + CMSTabParagraphContainerModel._TYPECODE + _Suffix; // NOSONAR
-			String DemoCMSComponent = _Prefix + DemoCMSComponentModel._TYPECODE + _Suffix;
+            String DemoCMSComponent = _Prefix + DemoCMSComponentModel._TYPECODE + _Suffix;
         }
     }
 
@@ -92,20 +92,30 @@ public interface ControllerConstants {
             {
                 String CheckoutRegisterPage = "pages/checkout/checkoutRegisterPage"; // NOSONAR
                 String CheckoutConfirmationPage = "pages/checkout/checkoutConfirmationPage"; // NOSONAR
-                String CheckoutLoginPage = "pages/checkout/checkoutLoginPage"; // NOSONAR
+                //                String CheckoutLoginPage = "pages/checkout/checkoutLoginPage"; // NOSONAR
+                String CheckoutLoginPage = "pages/checkout/demoCheckoutLoginPage"; // NOSONAR
             }
 
             interface MultiStepCheckout // NOSONAR
             {
-                String AddEditDeliveryAddressPage = "pages/checkout/multi/addEditDeliveryAddressPage"; // NOSONAR
-                String ChooseDeliveryMethodPage = "pages/checkout/multi/chooseDeliveryMethodPage"; // NOSONAR
-                String ChoosePickupLocationPage = "pages/checkout/multi/choosePickupLocationPage"; // NOSONAR
-                String AddPaymentMethodPage = "pages/checkout/multi/addPaymentMethodPage"; // NOSONAR
-                String CheckoutSummaryPage = "pages/checkout/multi/checkoutSummaryPage"; // NOSONAR
-                String HostedOrderPageErrorPage = "pages/checkout/multi/hostedOrderPageErrorPage"; // NOSONAR
-                String HostedOrderPostPage = "pages/checkout/multi/hostedOrderPostPage"; // NOSONAR
-                String SilentOrderPostPage = "pages/checkout/multi/silentOrderPostPage"; // NOSONAR
-                String GiftWrapPage = "pages/checkout/multi/giftWrapPage"; // NOSONAR
+                //                String AddEditDeliveryAddressPage = "pages/checkout/multi/addEditDeliveryAddressPage"; // NOSONAR
+//                String ChooseDeliveryMethodPage = "pages/checkout/multi/chooseDeliveryMethodPage"; // NOSONAR
+//                String ChoosePickupLocationPage = "pages/checkout/multi/choosePickupLocationPage"; // NOSONAR
+//                String AddPaymentMethodPage = "pages/checkout/multi/addPaymentMethodPage"; // NOSONAR
+//                String CheckoutSummaryPage = "pages/checkout/multi/checkoutSummaryPage"; // NOSONAR
+//                String HostedOrderPageErrorPage = "pages/checkout/multi/hostedOrderPageErrorPage"; // NOSONAR
+//                String HostedOrderPostPage = "pages/checkout/multi/hostedOrderPostPage"; // NOSONAR
+//                String SilentOrderPostPage = "pages/checkout/multi/silentOrderPostPage"; // NOSONAR
+//                String GiftWrapPage = "pages/checkout/multi/giftWrapPage"; // NOSONAR
+                String AddEditDeliveryAddressPage = "pages/checkout/multi/demoAddEditDeliveryAddressPage"; // NOSONAR
+                String ChooseDeliveryMethodPage = "pages/checkout/multi/demoChooseDeliveryMethodPage"; // NOSONAR
+                String ChoosePickupLocationPage = "pages/checkout/multi/demoChoosePickupLocationPage"; // NOSONAR
+                String AddPaymentMethodPage = "pages/checkout/multi/demoAddPaymentMethodPage"; // NOSONAR
+                String CheckoutSummaryPage = "pages/checkout/multi/demoCheckoutSummaryPage"; // NOSONAR
+                String HostedOrderPageErrorPage = "pages/checkout/multi/demoHostedOrderPageErrorPage"; // NOSONAR
+                String HostedOrderPostPage = "pages/checkout/multi/demoHostedOrderPostPage"; // NOSONAR
+                String SilentOrderPostPage = "pages/checkout/multi/demoSilentOrderPostPage"; // NOSONAR
+                String GiftWrapPage = "pages/checkout/multi/demoGiftWrapPage"; // NOSONAR
             }
 
             interface Password // NOSONAR
