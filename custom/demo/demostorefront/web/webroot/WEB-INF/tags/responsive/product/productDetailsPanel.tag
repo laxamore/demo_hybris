@@ -28,30 +28,29 @@
 						<product:productPromotionSection product="${product}"/>
 						<ycommerce:testId code="productDetails_productNamePrice_label_${product.code}"><br>
                         <h1 class="name">
-                            ${ycommerce:sanitizeHTML(curDemoVariantProduct.getType())}
+                            <ycommerce:testId code="searchPage_productName_link_${curDemoVariantProduct.type}">
+                                ${ycommerce:sanitizeHTML(curDemoVariantProduct.type)}
+                            </ycommerce:testId>
                         </h1> <br>
                         <div>
-                            ${ycommerce:sanitizeHTML(curDemoVariantProduct.getName())}
+                            <ycommerce:testId code="searchPage_productName_link_${curDemoVariantProduct.name}">
+                                ${ycommerce:sanitizeHTML(curDemoVariantProduct.name)}
+                            </ycommerce:testId>
                         </div><br>
                         <div>
 							<product:productPricePanel product="${product}" />
-							Kasur ${ycommerce:sanitizeHTML(curDemoVariantProduct.getType())} size
-							${ycommerce:sanitizeHTML(curDemoVariantProduct.getSize())} cm <br>
-							${ycommerce:sanitizeHTML(curDemoVariantProduct.getDescription())}
-					    </div><br>
-					    <div class="button-pdp">
-					        <div>
-                                <button id="minus" type="button">-</button>
-                                <p id="num">1</p>
-                                <button id="plus" type="button">+</button>
-                            </div>
-                        </div>
-					    <div class="button-pdp">
-					        <div>
-                                <button class="tambah">Tambah ke keranjang</button>
-                                <button class="beli">Beli sekarang</button>
-                            </div>
-                        </div>
+							Kasur
+                            <ycommerce:testId code="searchPage_productName_link_${curDemoVariantProduct.type}">
+                                ${ycommerce:sanitizeHTML(curDemoVariantProduct.type)}
+                            </ycommerce:testId>
+							size
+							<ycommerce:testId code="searchPage_productName_link_${curDemoVariantProduct.size}">
+                                ${ycommerce:sanitizeHTML(curDemoVariantProduct.size)}
+                            </ycommerce:testId> cm<br>
+							<ycommerce:testId code="searchPage_productName_link_${curDemoVariantProduct.description}">
+                                ${ycommerce:sanitizeHTML(curDemoVariantProduct.description)}
+                            </ycommerce:testId><br>
+					    </div>
 						</ycommerce:testId>
 						<div class="description">${ycommerce:sanitizeHTML(product.summary)}</div>
 					</div>
@@ -61,9 +60,14 @@
 					<cms:pageSlot position="VariantSelector" var="component" element="div" class="page-details-variants-select">
 						<cms:component component="${component}" element="div" class="yComponentWrapper page-details-variants-select-component"/>
 					</cms:pageSlot>
-					<cms:pageSlot position="AddToCart" var="component" element="div" class="page-details-variants-select">
-						<cms:component component="${component}" element="div" class="yComponentWrapper page-details-add-to-cart-component"/>
-					</cms:pageSlot>
+					<div id="button-pdp">
+					    <div id="flex-button-pdp">
+                            <cms:pageSlot position="AddToCart" var="component" element="div" class="page-details-variants-select">
+                                <cms:component component="${component}" element="div" class="yComponentWrapper page-details-add-to-cart-component1"/>
+                                <cms:component component="${component}" element="div" class="yComponentWrapper page-details-add-to-cart-component2"/>
+                            </cms:pageSlot>
+                        </div>
+                    </div>
 				</div>
 			</div>
 		</div>

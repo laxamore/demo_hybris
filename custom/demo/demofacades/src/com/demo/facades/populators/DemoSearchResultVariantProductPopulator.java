@@ -10,6 +10,7 @@ public class DemoSearchResultVariantProductPopulator extends SearchResultProduct
     public void populate(final SearchResultValueData source, final ProductData target) {
 
         target.setType(this.<String>getValue(source, "type"));
+        target.setName(this.<String>getValue(source, "name"));
 //        target.setPrice(this.<String>getValue(source, "price"));
         target.setSize(this.<String>getValue(source, "size"));
         target.setDesc(this.<String>getValue(source, "desc"));

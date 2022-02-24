@@ -147,7 +147,7 @@ INSERT_UPDATE ContentSlotForTemplate; $contentCV[unique = true]; uid[unique = tr
                                     ;                          ; FooterContact-ProductGridPage          ; FooterContact          ;                                                                                  ; FooterContactSlot                          ; true
                                     ;                          ; FooterCopyright-ProductGridPage        ; FooterCopyright        ;                                                                                  ; FooterCopyrightSlot                        ; true
 # End Footers
-# Product Details Page Template
+# Product Category Page Template
 
 # Create Content Slots
 INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]; name                              ; active
@@ -177,23 +177,23 @@ INSERT_UPDATE ContentSlotName; name[unique = true]   ; template(uid, $contentCV)
                              ; CartLink              ;                                                                        ;                          ; navigation
 # End Headers
 #Body
-                             ;Section1                ;;;wide
-                             ;Section2                ;;;wide
-                             ;Section3A               ;;;narrow
-                             ;Section3B               ;;;narrow
-                             ;Section4A               ;;;narrow
-                             ;Section4B               ;;;narrow
-                             ;Section5A               ;;;narrow
-                             ;Section5B               ;;;narrow
-                             ;Section6A               ;;;narrow
-                             ;Section6B               ;;;narrow
-                             ;Section6C               ;;;narrow
-                             ;Section6D               ;;;narrow
-                             ;Section6E               ;;;narrow
-                             ;Section6F               ;;;narrow
-                             ;Section6G               ;;;narrow
-                             ;Section6H               ;;;narrow
-                             ;Section6I               ;;;narrow
+                             ; Section1              ;                                                                        ;                          ; wide
+                             ; Section2              ;                                                                        ;                          ; wide
+                             ; Section3A             ;                                                                        ;                          ; narrow
+                             ; Section3B             ;                                                                        ;                          ; narrow
+                             ; Section4A             ;                                                                        ;                          ; narrow
+                             ; Section4B             ;                                                                        ;                          ; narrow
+                             ; Section5A             ;                                                                        ;                          ; narrow
+                             ; Section5B             ;                                                                        ;                          ; narrow
+                             ; Section6A             ;                                                                        ;                          ; narrow
+                             ; Section6B             ;                                                                        ;                          ; narrow
+                             ; Section6C             ;                                                                        ;                          ; narrow
+                             ; Section6D             ;                                                                        ;                          ; narrow
+                             ; Section6E             ;                                                                        ;                          ; narrow
+                             ; Section6F             ;                                                                        ;                          ; narrow
+                             ; Section6G             ;                                                                        ;                          ; narrow
+                             ; Section6H             ;                                                                        ;                          ; narrow
+                             ; Section6I             ;                                                                        ;                          ; narrow
 #End Body
 # Footers
                              ; FooterLogo1           ;                                                                        ;                          ; logo

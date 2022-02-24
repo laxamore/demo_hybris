@@ -41,22 +41,26 @@ $(".demo-cart-data").map((i, el) => {
     }
 })
 
-
 //batsu modip
-var count = document.getElementById("num").innerHTML;
-$(document).ready(function() {
-    $("#plus").on("click", function() {
-        if(count>0){
-            count++;
-            $("#num").html(count);
-        }
-    })
+$(".js-qty-selector-plus").on("click", function(){
+    $(".js-qty-selector-minus").removeAttr("disabled");
 })
-$(document).ready(function() {
-    $("#minus").on("click", function() {
-        if(count>1){
-            count--;
-            $("#num").html(count);
-        }
-    })
+$(".page-details-add-to-cart-component2 #addToCartButton").text("Beli sekarang");
+$(".page-details-add-to-cart-component1 #addToCartButton").text("Tambah ke keranjang");
+$(".page-details-add-to-cart-component2 #addToCartButton").on("click", function(){
+  setTimeout(function() {
+    location.href="/demostorefront/demo/id/cart";
+  }, 20);
 })
+
+
+
+
+
+
+
+
+
+
+
+

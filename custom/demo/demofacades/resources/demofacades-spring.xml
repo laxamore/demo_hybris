@@ -211,6 +211,8 @@
     <!--	DemoProduct-->
     <alias alias="demoProductFacade" name="demoProductFacade"/>
     <bean id="demoProductFacade" class="com.demo.facades.product.facade.impl.DemoProductFacadeImpl"/>
+    <alias alias="demoVariantProductFacade" name="demoVariantProductFacade"/>
+    <bean id="demoVariantProductFacade" class="com.demo.facades.product.facade.impl.DemoVariantProductFacadeImpl"/>
     <alias alias="demoTestimonyFacade" name="demoTestimonyFacade"/>
     <bean id="demoTestimonyFacade" class="com.demo.facades.testimony.facade.impl.DemoTestimonyFacadeImpl"/>
     <!--	DemoPopulator-->
@@ -219,19 +221,6 @@
           class="com.demo.facades.populators.DemoSearchResultProductPopulator"
           parent="defaultCommerceSearchResultProductPopulator">
     </bean>
-	<!--	DemoProduct-->
-	<alias alias="demoProductFacade" name="demoProductFacade"/>
-	<bean id="demoProductFacade" class="com.demo.facades.product.facade.impl.DemoProductFacadeImpl"/>
-	<alias alias="demoVariantProductFacade" name="demoVariantProductFacade"/>
-	<bean id="demoVariantProductFacade" class="com.demo.facades.product.facade.impl.DemoVariantProductFacadeImpl"/>
-	<alias alias="demoTestimonyFacade" name="demoTestimonyFacade"/>
-	<bean id="demoTestimonyFacade" class="com.demo.facades.testimony.facade.impl.DemoTestimonyFacadeImpl"/>
-	<!--	DemoPopulator-->
-	<alias name="defaultDemoSearchResultProductPopulator" alias="demoSearchResultProductPopulator"/>
-	<bean id="defaultDemoSearchResultProductPopulator"
-		  class="com.demo.facades.populators.DemoSearchResultProductPopulator"
-		  parent="defaultCommerceSearchResultProductPopulator">
-	</bean>
 
     <bean parent="modifyPopulatorList">
         <property name="list" ref="commerceSearchResultProductConverter"/>
@@ -241,19 +230,19 @@
     <!-- Demo Customer Facade Impl for overriding Default Customer Facade Register -->
     <bean id="demoCustomerFacade" class="com.demo.facades.customer.impl.DemoCustomerFacade"
           parent="defaultCustomerFacade"/>
-	<bean parent="modifyPopulatorList">
-		<property name="list" ref="commerceSearchResultProductConverter"/>
-		<property name="add" ref="demoSearchResultProductPopulator"/>
-	</bean>
+    <bean parent="modifyPopulatorList">
+        <property name="list" ref="commerceSearchResultProductConverter"/>
+        <property name="add" ref="demoSearchResultProductPopulator"/>
+    </bean>
+    <!--	DemoVariantPopulator-->
+    <alias name="defaultDemoSearchResultVariantProductPopulator" alias="demoSearchResultVariantProductPopulator"/>
+    <bean id="defaultDemoSearchResultVariantProductPopulator"
+          class="com.demo.facades.populators.DemoSearchResultVariantProductPopulator"
+          parent="defaultCommerceSearchResultProductPopulator">
+    </bean>
 
-	<alias name="defaultDemoSearchResultVariantProductPopulator" alias="demoSearchResultVariantProductPopulator"/>
-	<bean id="defaultDemoSearchResultVariantProductPopulator"
-		  class="com.demo.facades.populators.DemoSearchResultVariantProductPopulator"
-		  parent="defaultCommerceSearchResultProductPopulator">
-	</bean>
-
-	<bean parent="modifyPopulatorList">
-		<property name="list" ref="commerceSearchResultProductConverter"/>
-		<property name="add" ref="demoSearchResultVariantProductPopulator"/>
-	</bean>
+    <bean parent="modifyPopulatorList">
+        <property name="list" ref="commerceSearchResultProductConverter"/>
+        <property name="add" ref="demoSearchResultVariantProductPopulator"/>
+    </bean>
 </beans>

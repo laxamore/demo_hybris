@@ -18,7 +18,7 @@ main {
   flex-grow: 1;
   width: 100%;
   max-width: 1080px;
-
+  font-family: Comfortaa, cursive;
   background: white;
   justify-content: start;
   align-items: center;
@@ -87,7 +87,8 @@ main {
     flex-grow: 1;
     width: 100%;
     max-width: 1080px;
-
+    font-family: Comfortaa, cursive;
+    font-weight: bold;
     justify-content: center;
     align-items: center;
     padding: 3rem 4rem;
@@ -181,7 +182,7 @@ main {
   flex-direction: column;
   width: 100%;
   background-color: #7fc5f9;
-
+  font-family: Comfortaa, cursive;
   align-items: center;
   justify-content: center;
 
@@ -190,7 +191,6 @@ main {
     flex-direction: row;
     width: 100%;
     max-width: 1080px;
-
     padding: 4rem;
 
     .demo-footer-container {
@@ -442,17 +442,9 @@ main {
     justify-content: center;
 
     .js-responsive-image {
-      width: 80%;
-      height: 80%;
+      width: 75%;
+      height: 75%;
     }
-  }
-}
-
-.price {
-  a {
-    color: #6086c2;
-    font-family: Palmer Lake Print;
-    font-style: normal;
   }
 }
 
@@ -466,10 +458,6 @@ main {
 .product__listing.product__grid .thumb img {
   max-height: 152.66px;
   max-width: 193.25px;
-}
-
-#product-facet {
-  padding: 90px 30px 30px 30px;
 }
 
 .header-testimony {
@@ -609,36 +597,82 @@ main {
             width: 400px;
         }
 }
-.button-pdp{
-    cursor: pointer;
-    -webkit-box-align: center;
-    display: flex;
-    flex-direction: row;
-    .tambah{
-        margin-right: 10px;
-        padding: 10px 10px;
-        border: 1px solid #e8ecfa;
-        background: transparent;
-        color: #a7abc3;
-        border-radius: .25rem
-    }
-    .tambah:hover{
-        background-color: #7fc5f9;
-        color: #fff;
-    }
-    .beli{
-        margin-left: 10px;
-        padding: 10px 40px;
-        border: 1px solid #6086c2;
-        background-color: #6086c2;
-        color: #fff;
-        border-radius: .25rem
-    }
-    .beli:hover{
-        background-color: #7fc5f9;
+.product-details{
+    font-weight: bold;
+    text-align: justify;
+    justify-content: justify;
+    .price{
+        font-family: Permanent Marker, cursive;
+        font-weight: bold;
+        font-size: 35px;
+        font-style: italic;
         color: #6086c2;
     }
-    #plus, #num, #minus{
+}
+#button-pdp{
+    display: flex;
+    flex-direction: row;
+    font-family: Comfortaa, cursive;
+    #flex-button-pdp{
+        display: flex;
+        flex-direction: row;
+        .page-details-add-to-cart-component1{
+            position: relative;
+            .qty-selector .input-group .js-qty-selector{
+
+            }
+            .clearfix{
+                display: none !important;
+            }
+            .actions{
+                #addToCartTitle{
+                    display: none !important;
+                }
+                #addToCartButton{
+                    margin-right: 10px;
+                    padding: 10px 10px;
+                    border: 1px solid #e8ecfa;
+                    background: transparent;
+                    color: #a7abc3;
+                    border-radius: .25rem
+                }
+                #addToCartButton:hover{
+                    background-color: #7fc5f9;
+                    color: #fff;
+                }
+            }
+        }
+
+        .page-details-add-to-cart-component2{
+            position: relative;
+            left: 195px;
+            bottom: 53px;
+            .js-qty-selector{
+                display: none !important;
+            }
+            .clearfix{
+                display: none !important;
+            }
+            .actions{
+                #addToCartTitle{
+                    display: none !important;
+                }
+                #addToCartButton{
+                    margin-left: 10px;
+                    padding: 10px 40px;
+                    border: 1px solid #6086c2;
+                    background-color: #6086c2;
+                    color: #fff;
+                    border-radius: .25rem
+                }
+                #addToCartButton:hover{
+                    background-color: #7fc5f9;
+                    color: #6086c2;
+                }
+            }
+        }
+    }
+    #plus, #pdpAddtoCartInput, #minus{
         border: 1px solid #f7fbff;
         background-color: #f7fbff !important;
         color: #6086c2 !important;
@@ -658,22 +692,18 @@ main {
         background-color: #6086c2 !important;
         color: #f7fbff !important;
     }
-    #num{
+    #pdpAddtoCartInput{
         text-align: center;
         align-items: center;
         margin: 20px 130px;
     }
 }
-.product-details{
+#catalog-head{
+    text-align: center;
+    font-family: Voces, cursive;
     font-weight: bold;
-    .price{
-        font-family: Permanent Marker, cursive;
-        font-weight: bold;
-        font-size: 35px;
-        font-style: italic;
-        color: #6086c2;
-    }
 }
+
 .col-xs-3, .col-sm-12.col-md-9{
     font-family: Noto Sans, cursive;
 }
@@ -683,7 +713,7 @@ main {
   flex-grow: 1;
   flex-direction: column;
   width: 100%;
-
+  font-family: Comfortaa, cursive;
   justify-content: center;
   align-items: center;
   padding: 4rem 0;
@@ -696,6 +726,7 @@ main {
     width: 100%;
     text-align: center;
     font-weight: bold;
+    font-family: Voces, cursive;
   }
 
   .demo-cart-display {
@@ -790,6 +821,7 @@ main {
                 font-size: 28px;
                 font-weight: bold;
                 font-style: italic;
+                font-family: Permanent Marker, cursive;
                 padding-top: 2rem;
               }
             }
@@ -840,6 +872,7 @@ main {
             font-size: 28px;
             font-weight: bold;
             font-style: italic;
+            font-family: Permanent Marker, cursive;
           }
         }
 
@@ -850,6 +883,7 @@ main {
         .demo-cart-data-qty {
           justify-content: center;
           width: 20%;
+          font-family: Permanent Marker, cursive;
         }
 
         .demo-cart-data-total {
@@ -902,7 +936,7 @@ main {
 .demo-cart-order-total {
   display: flex;
   flex-direction: row;
-
+  font-family: Permanent Marker, cursive;
   justify-content: center;
   align-items: center;
 
