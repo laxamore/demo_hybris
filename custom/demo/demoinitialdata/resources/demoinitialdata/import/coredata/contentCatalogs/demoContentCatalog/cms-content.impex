@@ -148,7 +148,7 @@ INSERT_UPDATE ContentSlotForTemplate; $contentCV[unique = true]; uid[unique = tr
                                     ;                          ; FooterContact-ProductGridPage          ; FooterContact          ;                                                                                  ; FooterContactSlot                          ; true
                                     ;                          ; FooterCopyright-ProductGridPage        ; FooterCopyright        ;                                                                                  ; FooterCopyrightSlot                        ; true
 # End Footers
-# Product Details Page Template
+# Product Category Page Template
 
 # Create Content Slots
 INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]; name                              ; active
@@ -178,23 +178,23 @@ INSERT_UPDATE ContentSlotName; name[unique = true]   ; template(uid, $contentCV)
                              ; CartLink              ;                                                                        ;                          ; navigation
 # End Headers
 #Body
-                             ;Section1                ;;;wide
-                             ;Section2                ;;;wide
-                             ;Section3A               ;;;narrow
-                             ;Section3B               ;;;narrow
-                             ;Section4A               ;;;narrow
-                             ;Section4B               ;;;narrow
-                             ;Section5A               ;;;narrow
-                             ;Section5B               ;;;narrow
-                             ;Section6A               ;;;narrow
-                             ;Section6B               ;;;narrow
-                             ;Section6C               ;;;narrow
-                             ;Section6D               ;;;narrow
-                             ;Section6E               ;;;narrow
-                             ;Section6F               ;;;narrow
-                             ;Section6G               ;;;narrow
-                             ;Section6H               ;;;narrow
-                             ;Section6I               ;;;narrow
+                             ; Section1              ;                                                                        ;                          ; wide
+                             ; Section2              ;                                                                        ;                          ; wide
+                             ; Section3A             ;                                                                        ;                          ; narrow
+                             ; Section3B             ;                                                                        ;                          ; narrow
+                             ; Section4A             ;                                                                        ;                          ; narrow
+                             ; Section4B             ;                                                                        ;                          ; narrow
+                             ; Section5A             ;                                                                        ;                          ; narrow
+                             ; Section5B             ;                                                                        ;                          ; narrow
+                             ; Section6A             ;                                                                        ;                          ; narrow
+                             ; Section6B             ;                                                                        ;                          ; narrow
+                             ; Section6C             ;                                                                        ;                          ; narrow
+                             ; Section6D             ;                                                                        ;                          ; narrow
+                             ; Section6E             ;                                                                        ;                          ; narrow
+                             ; Section6F             ;                                                                        ;                          ; narrow
+                             ; Section6G             ;                                                                        ;                          ; narrow
+                             ; Section6H             ;                                                                        ;                          ; narrow
+                             ; Section6I             ;                                                                        ;                          ; narrow
 #End Body
 # Footers
                              ; FooterLogo1           ;                                                                        ;                          ; logo
@@ -374,5 +374,74 @@ INSERT_UPDATE ContentSlotForTemplate; $contentCV[unique = true]; uid[unique = tr
 INSERT_UPDATE ContentPage;$contentCV[unique=true];uid[unique=true];name;masterTemplate(uid,$contentCV);label;defaultPage[default='true'];approvalStatus(code)[default='approved'];homepage[default='false']
                          ;                       ;TestimonyPage   ;Testimony Page;TestimonyPageTemplate;testimonyPage;;;
 
+
+
+# ProductDetailsPage - Batsu modip
+# Create Content Slots
+INSERT_UPDATE PageTemplate; $contentCV[unique = true]; uid[unique = true]         ; name                          ; frontendTemplateName           ; restrictedPageTypes(code); active[default = true]
+                          ;                          ; ProductDetailsPageTemplate ; Product Details Page Template ; product/demoProductLayout2Page ; ProductPage              ;
+
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]  ; name             ; active
+# ProductDetailsPage Content
+                         ;                          ; VariantSelectorSlot ; Variant Selector ; true
+                         ;                          ; AddToCartSlot       ; Add To Cart      ; true
+                         ;                          ; UpSellingSlot       ; Up Selling       ; true
+                         ;                          ; CrossSellingSlot    ; Cross Selling    ; true
+# End ProductDetailsPage Content
+
+
+INSERT_UPDATE ContentSlotName; name[unique = true]   ; template(uid, $contentCV)[unique = true][default = 'ProductDetailsPageTemplate']; validComponentTypes(code)       ; compTypeGroup(code)
+# Headers
+                             ; TopLeftParagraph      ;                                                                                 ;                                 ; narrow
+                             ; TopRightNavigationBar ;                                                                                 ;                                 ; navigation
+                             ; HeaderLogo            ;                                                                                 ;                                 ; logo
+                             ; MiddleNavigationBar   ;                                                                                 ;                                 ; navigation
+                             ; LoginLink             ;                                                                                 ;                                 ; navigation
+                             ; CartLink              ;                                                                                 ;                                 ; navigation
+# End Headers
+# ProductDetailsPage Content
+                             ; Section1              ;                                                                                 ;                                 ; wide
+                             ; Section2              ;                                                                                 ;                                 ; wide
+                             ; Section3              ;                                                                                 ;                                 ; wide
+                             ; Section4              ;                                                                                 ;                                 ; wide
+                             ; VariantSelector       ;                                                                                 ; ProductVariantSelectorComponent ; narrow
+                             ; AddToCart             ;                                                                                 ; ProductAddToCartComponent       ; narrow
+                             ; CrossSelling          ;                                                                                 ; ProductReferencesComponent      ; narrow
+                             ; UpSelling             ;                                                                                 ; ProductReferencesComponent      ; narrow
+# End ProductDetailsPage Content
+# Footers
+                             ; FooterLogo1           ;                                                                                 ;                                 ; logo
+                             ; FooterLogo2           ;                                                                                 ;                                 ; logo
+                             ; FooterNavigation      ;                                                                                 ;                                 ; navigation
+                             ; FooterContact         ;                                                                                 ;                                 ; footer
+                             ; FooterCopyright       ;                                                                                 ;                                 ; footer
+# End Footers
+
+INSERT_UPDATE ContentSlotForTemplate; $contentCV[unique = true]; uid[unique = true]                   ; position[unique = true]; pageTemplate(uid, $contentCV)[unique = true][default = 'ProductDetailsPageTemplate']; contentSlot(uid, $contentCV)[unique = true]; allowOverwrite
+# Headers
+                                    ;                          ; TopLeftParagraph-ProductDetails      ; TopLeftParagraph       ;                                                                                     ; TopLeftParagraphSlot                       ; true
+                                    ;                          ; TopRightNavigationBar-ProductDetails ; TopRightNavigationBar  ;                                                                                     ; TopRightNavigationBarSlot                  ; true
+                                    ;                          ; HeaderLogo-ProductDetails            ; HeaderLogo             ;                                                                                     ; HeaderLogoSlot                             ; true
+                                    ;                          ; MiddleNavigationBar-ProductDetails   ; MiddleNavigationBar    ;                                                                                     ; MiddleNavigationBarSlot                    ; true
+                                    ;                          ; LoginLink-ProductDetails             ; LoginLink              ;                                                                                     ; LoginLinkSlot                              ; true
+                                    ;                          ; CartLink-ProductDetails              ; CartLink               ;                                                                                     ; CartLinkSlot                               ; true
+# End Headers
+# ProductDetailsPage Content
+                                    ;                          ; VariantSelector-ProductDetails       ; VariantSelector        ;                                                                                     ; VariantSelectorSlot                        ; true
+                                    ;                          ; AddToCart-ProductDetails             ; AddToCart              ;                                                                                     ; AddToCartSlot                              ; true
+                                    ;                          ; UpSelling-ProductDetails             ; UpSelling              ;                                                                                     ; UpSellingSlot                              ; true
+                                    ;                          ; CrossSelling-ProductDetails          ; CrossSelling           ;                                                                                     ; CrossSellingSlot                           ; true
+# End ProductDetailsPage Content
+# Footers
+                                    ;                          ; FooterLogo1-ProductDetails           ; FooterLogo1            ;                                                                                     ; FooterLogo1Slot                            ; true
+                                    ;                          ; FooterLogo2-ProductDetails           ; FooterLogo2            ;                                                                                     ; FooterLogo2Slot                            ; true
+                                    ;                          ; FooterNavigation-ProductDetails      ; FooterNavigation       ;                                                                                     ; FooterNavigationSlot                       ; true
+                                    ;                          ; FooterContact-ProductDetails         ; FooterContact          ;                                                                                     ; FooterContactSlot                          ; true
+                                    ;                          ; FooterCopyright-ProductDetails       ; FooterCopyright        ;                                                                                     ; FooterCopyrightSlot                        ; true
+# End Footers
+
+INSERT_UPDATE ProductPage; $contentCV[unique = true]; uid[unique = true]; name            ; masterTemplate(uid, $contentCV); defaultPage; approvalStatus(code)[default = 'approved']
+                         ;                          ; productDetails    ; Product Details ; ProductDetailsPageTemplate     ; true       ;
+# End ProductDetailsPage - Batsu modip
 
 # End Demo Site

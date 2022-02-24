@@ -36,7 +36,7 @@ INSERT_UPDATE SolrIndexConfig; name[unique = true]; batchSize; numberOfThreads; 
 
 # Create the faceted search configuration
 INSERT_UPDATE SolrSearchConfig; description[unique = true]; pageSize
-                              ; $searchConfigName         ; 12
+                              ; $searchConfigName         ; 98
 
 # Declare the indexed type Product
 INSERT_UPDATE SolrIndexedType; identifier[unique = true]; type(code); variant; sorts(&sortRefID)
@@ -137,5 +137,5 @@ INSERT_UPDATE SolrIndexedProperty; solrIndexedType(identifier)[unique = true]; n
                                  ; $solrIndexedType                          ; desc               ; string    ; false                     ;                      ; Refine         ; Alpha          ; 100     ; false  ; false                        ; descValueProvider ;
                                  ; $solrIndexedType                          ; type               ; string    ; false                     ;                      ; Refine         ; Alpha          ; 100     ; true   ; false                        ; typeValueProvider ;
 
-INSERT_UPDATE SolrIndexedProperty; solrIndexedType(identifier)[unique = true]; name[unique = true]  ; type(code); facet[default = true]; facetType(code); visible; fieldValueProvider           ; rangeSets(name)   ;sortableType(code) ;priority   ;currency
-                                 ; $solrIndexedType                          ; price                ; double    ;                      ; Refine         ; true   ; productPriceValueProvider    ; demoPriceRangeIDR ;double             ;100        ;true
+INSERT_UPDATE SolrIndexedProperty; solrIndexedType(identifier)[unique = true]; name[unique = true]; type(code); facet[default = true]; facetType(code); visible; fieldValueProvider        ; rangeSets(name)   ; sortableType(code); priority; currency
+                                 ; $solrIndexedType                          ; price              ; double    ;                      ; Refine         ; true   ; productPriceValueProvider ; demoPriceRangeIDR ; double            ; 100     ; true
