@@ -22,17 +22,19 @@
             <cms:component component="${feature}" element="div" class="yComponentWrapper demo-cart-display"/>
         </cms:pageSlot>
 
-        <cms:pageSlot position="CenterRightContentSlot" var="feature">
-            <cms:component component="${feature}" element="div" class="yComponentWrapper"/>
-        </cms:pageSlot>
+        <c:if test="${not empty cartData.rootGroups}">
+            <cms:pageSlot position="CenterRightContentSlot" var="feature">
+                <cms:component component="${feature}" element="div" class="yComponentWrapper"/>
+            </cms:pageSlot>
 
-        <cms:pageSlot position="BottomContentSlot" var="feature">
-            <cms:component component="${feature}" element="div" class="yComponentWrapper"/>
-        </cms:pageSlot>
+            <cms:pageSlot position="BottomContentSlot" var="feature">
+                <cms:component component="${feature}" element="div" class="yComponentWrapper"/>
+            </cms:pageSlot>
+        </c:if>
 
         <c:if test="${empty cartData.rootGroups}">
             <cms:pageSlot position="EmptyCartMiddleContent" var="feature">
-                <cms:component component="${feature}" element="div" class="yComponentWrapper content__empty"/>
+                <cms:component component="${feature}" element="div" class="yComponentWrapper demo-cart-empty"/>
             </cms:pageSlot>
         </c:if>
     </div>

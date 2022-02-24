@@ -9,7 +9,7 @@
 <spring:htmlEscape defaultHtmlEscape="true" />
 
 <div class="image-gallery js-gallery">
-    <span class="image-gallery__zoom-icon glyphicon glyphicon-resize-full"></span>
+    <%--<span class="image-gallery__zoom-icon glyphicon glyphicon-resize-full"></span>--%>
 
     <c:choose>
         <c:when test="${galleryImages == null || galleryImages.size() == 0}">
@@ -32,7 +32,7 @@
                                 <c:url value="${imagePath}" var="imageUrl" />
                             </c:otherwise>
                         </c:choose>
-                        <img class="lazyOwl" data-src="${fn:escapeXml(imageUrl)}"/>
+                        <%-- <img class="lazyOwl" data-src="${fn:escapeXml(imageUrl)}"/> --%>
                     </div>
                 </div>
             </div>
@@ -43,7 +43,7 @@
                 <c:forEach items="${galleryImages}" var="container" varStatus="varStatus">
                     <div class="item">
                         <div>
-                            <img class="lazyOwl" data-src="${fn:escapeXml(container.product.url)}"
+                            <img class="lazyOwl" id="detail-image" data-src="${fn:escapeXml(container.product.url)}"
                                  data-zoom-image="${fn:escapeXml(container.superZoom.url)}"
                                  alt="${fn:escapeXml(container.thumbnail.altText)}" >
                         </div>

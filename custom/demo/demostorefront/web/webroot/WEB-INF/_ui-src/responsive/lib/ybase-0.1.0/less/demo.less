@@ -1,7 +1,28 @@
+@font-face {font-family: "Bw Gradual"; src: url("//db.onlinewebfonts.com/t/9c012a100c1e4e7c4411382d3bc15526.eot"); src: url("//db.onlinewebfonts.com/t/9c012a100c1e4e7c4411382d3bc15526.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/9c012a100c1e4e7c4411382d3bc15526.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/9c012a100c1e4e7c4411382d3bc15526.woff") format("woff"), url("//db.onlinewebfonts.com/t/9c012a100c1e4e7c4411382d3bc15526.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/9c012a100c1e4e7c4411382d3bc15526.svg#Bw Gradual") format("svg"); }
+
 main {
   display: flex;
   flex-direction: column;
   height: 100vh;
+}
+
+.main__inner-wrapper {
+  height: max-content;
+}
+
+.demo-main {
+  display: flex;
+  width: 100%;
+  height: max-content;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.demo-content {
+  width: 100%;
+  max-width: 1080px;
+  max-height: 100%;
 }
 
 .demo-headers {
@@ -18,7 +39,7 @@ main {
   flex-grow: 1;
   width: 100%;
   max-width: 1080px;
-
+  font-family: Comfortaa, cursive;
   background: white;
   justify-content: start;
   align-items: center;
@@ -87,7 +108,8 @@ main {
     flex-grow: 1;
     width: 100%;
     max-width: 1080px;
-
+    font-family: Comfortaa, cursive;
+    font-weight: bold;
     justify-content: center;
     align-items: center;
     padding: 3rem 4rem;
@@ -181,7 +203,7 @@ main {
   flex-direction: column;
   width: 100%;
   background-color: #7fc5f9;
-
+  font-family: Comfortaa, cursive;
   align-items: center;
   justify-content: center;
 
@@ -190,7 +212,6 @@ main {
     flex-direction: row;
     width: 100%;
     max-width: 1080px;
-
     padding: 4rem;
 
     .demo-footer-container {
@@ -401,35 +422,6 @@ main {
   }
 }
 
-.home-banner-mySlides {
-  display: none;
-}
-
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
 
 /* batsu */
 .catalog-header {
@@ -442,17 +434,9 @@ main {
     justify-content: center;
 
     .js-responsive-image {
-      width: 80%;
-      height: 80%;
+      width: 100%;
+      height: 100%;
     }
-  }
-}
-
-.price {
-  a {
-    color: #6086c2;
-    font-family: Palmer Lake Print;
-    font-style: normal;
   }
 }
 
@@ -466,10 +450,6 @@ main {
 .product__listing.product__grid .thumb img {
   max-height: 152.66px;
   max-width: 193.25px;
-}
-
-#product-facet {
-  padding: 90px 30px 30px 30px;
 }
 
 .header-testimony {
@@ -487,13 +467,245 @@ main {
   font-weight: 400;
   text-align: center;
 }
+.product__listing.product__grid .product-item{
+    width: 20%;
+    .details{
+        text-align: left;
+        .size, .name, .desc{
+            color: black;
+        }
+        .size:hover,.name:hover,.desc:hover{
+            color: #6086c2;
+        }
+        .price{
+            font-family: Permanent Marker, cursive;
+            color: #6086c2;
+            font-style: italic;
+        }
+        .price:hover{
+            color: #6086c2;
+        }
+        .name{
+            font-size: 14px;
+            font-weight: bold;
+        }
+    }
+}
+#flex-cross-parent{
+//         font-family: Gideon Roman, cursive;
+     font-family: Comfortaa, cursive;
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     .flex-cross-child{
+         width: 100%;
+         max-width: 1000px;
+         display: flex;
+         flex-direction: row;
+         flex-wrap: wrap;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+         a{
+             flex: 30%;
+             margin-left: 10px;
+             margin-right: 10px;
+             img{
+                 width: 260px;
+                 height: 260px;
+             }
+         }
+     }
+     .flex-cross-child-button{
+          width: 200px;
+          height: 40px;
+          font-size: 13px;
+          background-color: #6086c2;
+          border: none;
+          text-align: center;
+          color: #fff;
+          font-weight: 700;
+          padding: 11px 25px 8px;
+          margin: 50px 0px;
+          line-height: 1.5;
+          border-radius: .25rem;
+     }
+     .flex-cross-child-button:hover{
+          background-color: #7fc5f9;
+          color: #6086c2;
+     }
+}
+.cross-listing-details{
+    color: black;
+    font-weight: bold;
+    align-items: center;
+    text-align: left;
+    .cross-name{
+        font-weight: bold;
+        font-size: 15px;
+        margin: 20px 0px 3px 0px;
+    }
+    .cross-price{
+        font-family: Permanent Marker, cursive;
+        color: #6086c2;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2rem;
+        line-height: .8;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        font-style: italic;
+    }
+    .cross-size-desc{
+        font-weight: normal;
+    }
+}
+.cross-listing-details:hover{
+    color: #6086c2;
+}
+#flex-cross-parent-above{
+//         font-family: Gideon Roman, cursive;
+        font-family: Comfortaa, cursive;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 40px 0px 40px;
+        div{
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: left;
+            align-items: start;
+            text-align: left;
+        }
+        img{
+            height: 400px;
+            width: 400px;
+        }
+}
+.product-details{
+    font-weight: bold;
+    text-align: justify;
+    justify-content: center;
+    .price{
+        font-family: Permanent Marker, cursive;
+        font-weight: bold;
+        font-size: 35px;
+        font-style: italic;
+        color: #6086c2;
+    }
+}
+#button-pdp{
+    display: flex;
+    flex-direction: row;
+    font-family: Comfortaa, cursive;
+    #flex-button-pdp{
+        display: flex;
+        flex-direction: row;
+        .page-details-add-to-cart-component1{
+            position: relative;
+            .qty-selector .input-group .js-qty-selector{
+
+            }
+            .clearfix{
+                display: none !important;
+            }
+            .actions{
+                #addToCartTitle{
+                    display: none !important;
+                }
+                #addToCartButton{
+                    margin-right: 10px;
+                    padding: 10px 10px;
+                    border: 1px solid #e8ecfa;
+                    background: transparent;
+                    color: #a7abc3;
+                    border-radius: .25rem
+                }
+                #addToCartButton:hover{
+                    background-color: #7fc5f9;
+                    color: #fff;
+                }
+            }
+        }
+
+        .page-details-add-to-cart-component2{
+            position: relative;
+            left: 195px;
+            bottom: 53px;
+            .js-qty-selector{
+                display: none !important;
+            }
+            .clearfix{
+                display: none !important;
+            }
+            .actions{
+                #addToCartTitle{
+                    display: none !important;
+                }
+                #addToCartButton{
+                    margin-left: 10px;
+                    padding: 10px 40px;
+                    border: 1px solid #6086c2;
+                    background-color: #6086c2;
+                    color: #fff;
+                    border-radius: .25rem
+                }
+                #addToCartButton:hover{
+                    background-color: #7fc5f9;
+                    color: #6086c2;
+                }
+            }
+        }
+    }
+    #plus, #pdpAddtoCartInput, #minus{
+        border: 1px solid #f7fbff;
+        background-color: #f7fbff !important;
+        color: #6086c2 !important;
+        font-style: italic;
+        width: 35px;
+        height: 35px;
+        text-align: center;
+        font-weight: 1800;
+        font-size: 3rem;
+        border-radius: 25px;
+    }
+    #plus, #minus{
+        line-height: 0;
+        margin: 20px 0px;
+    }
+    #plus:hover, #minus:hover{
+        background-color: #6086c2 !important;
+        color: #f7fbff !important;
+    }
+    #pdpAddtoCartInput{
+        text-align: center;
+        align-items: center;
+        margin: 20px 130px;
+    }
+}
+#catalog-head{
+    text-align: center;
+    font-family: Voces, cursive;
+    font-weight: bold;
+}
+
+.col-xs-3, .col-sm-12.col-md-9{
+    font-family: Noto Sans, cursive;
+}
 
 .demo-cart {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
   width: 100%;
-
+  font-family: Comfortaa, cursive;
   justify-content: center;
   align-items: center;
   padding: 4rem 0;
@@ -506,6 +718,7 @@ main {
     width: 100%;
     text-align: center;
     font-weight: bold;
+    font-family: Voces, cursive;
   }
 
   .demo-cart-display {
@@ -600,6 +813,7 @@ main {
                 font-size: 28px;
                 font-weight: bold;
                 font-style: italic;
+                font-family: Permanent Marker, cursive;
                 padding-top: 2rem;
               }
             }
@@ -628,16 +842,14 @@ main {
               justify-content: center;
               align-items: center;
               padding: 0 1rem;
-
-              form {
-                padding-bottom: 1rem;
-              }
             }
 
             input {
               font-size: 24px;
               text-align: center;
               border-style: none;
+              padding-bottom: 1rem;
+              width: 50px;
             }
 
             input:focus {
@@ -650,6 +862,7 @@ main {
             font-size: 28px;
             font-weight: bold;
             font-style: italic;
+            font-family: Permanent Marker, cursive;
           }
         }
 
@@ -660,6 +873,7 @@ main {
         .demo-cart-data-qty {
           justify-content: center;
           width: 20%;
+          font-family: Permanent Marker, cursive;
         }
 
         .demo-cart-data-total {
@@ -674,6 +888,15 @@ main {
       width: 120px;
       height: 120px;
     }
+  }
+
+  .demo-cart-empty {
+    h4 {
+      font-weight: bold;
+    }
+
+    text-align: center;
+    font-weight: bold;
   }
 }
 
@@ -712,7 +935,7 @@ main {
 .demo-cart-order-total {
   display: flex;
   flex-direction: row;
-
+  font-family: Permanent Marker, cursive;
   justify-content: center;
   align-items: center;
 
@@ -747,3 +970,59 @@ main {
     padding: 1rem;
   }
 }
+
+
+.section-productcarousel{
+    background-color:#6086c2;
+    padding-top: clamp(20px, 3vw, 3vw);
+    padding-bottom: clamp(20px, 2vw, 2vw);
+    margin-bottom: clamp(20px, 3vw, 3vw);
+    .productcarousel-head{
+        color:white;
+        font-family: "Bw gradual", sans-serif;
+        text-align:center;
+        h2{
+            font-size: clamp(20px, 2.5vw, 2.5vw);
+            font-weight:600;
+        }
+        em{
+            font-family: "Permanent Marker", sans-serif;
+            color:#7fc5f9;
+        }
+        p{
+            font-weight:400;
+            font-size: clamp(12px, 1.5vw, 1.5vw);
+        }
+    }
+    .productcarousel-body{
+
+        .carousel__component{
+            .carousel__component--headline{
+                display:none;
+            }
+            .carousel__component--carousel{
+                .owl-wrapper-outer{
+                    .owl-wrapper{
+                        .owl-item{
+                            background-color:white;
+                            border-radius:10px;
+                            margin-right:10px;
+
+                            .carousel__item--name{
+                                font-size: clamp(10px, 1vw, 1vw);
+                                font-family:"Bw Gradual";
+                            }
+                            .carousel__item--price{
+                                font-size: clamp(10px, 1vw, 1vw);
+                                font-family:"Permanent Marker";
+                                color:#7fc5f9;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+

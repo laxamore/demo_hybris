@@ -3,13 +3,13 @@ package com.demo.storefront.forms;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.RegisterForm;
 
 public class DemoRegisterForm extends RegisterForm {
-    private String id;
+    private String nik;
 
-    public String getId() {
-        return id;
+    public String getNik() {
+        return nik;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setNik(String nik) {
+        this.nik = nik;
     }
 }
