@@ -39,13 +39,13 @@ INSERT_UPDATE Trigger;cronJob(code)[unique=true];second[default=0];minute[defaul
 # Run the CloseStagnantServiceTicketsJob at 12:05 AM every day
 ;ticketsStagnationJob;;;12;0;;;;true;
 
-#
-#INSERT_UPDATE ServicelayerJob; code[unique=true]; springId[unique=true]
-#                             ;myJob             ;approvalStatusUpdateJob
-#
-#INSERT_UPDATE CronJob; code[unique=true];job(code);sessionLanguage(isocode)[default = en]
-#                     ;approvalStatusCronJob         ;myJob    ;
-#
-#INSERT_UPDATE Trigger; cronJob(code)[unique=true]; active; cronExpression
-#                     ;approvalStatusCronJob                  ;true   ;0 0/1 * 1/1 * ? *
+
+INSERT_UPDATE ServicelayerJob; code[unique=true]; springId[unique=true]
+                             ;myJob             ;approvalStatusUpdateJob
+
+INSERT_UPDATE CronJob; code[unique=true];job(code);sessionLanguage(isocode)[default = en]
+                     ;approvalStatusCronJob         ;myJob    ;
+
+INSERT_UPDATE Trigger; cronJob(code)[unique=true]; active; cronExpression
+                     ;approvalStatusCronJob                  ;true   ;0 0/1 * 1/1 * ? *
 
