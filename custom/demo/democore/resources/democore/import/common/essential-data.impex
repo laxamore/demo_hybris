@@ -16,7 +16,6 @@
 # * MediaFormats                               s
 # * Tax & Tax Groups
 # * Jobs
-#% impex.setLocale(Locale.GERMAN);
 
 # Languages
 INSERT_UPDATE Language; isocode[unique = true]; fallbackLanguages(isocode); active[default = true]
@@ -24,7 +23,7 @@ INSERT_UPDATE Language; isocode[unique = true]; fallbackLanguages(isocode); acti
 
 # Currencies
 INSERT_UPDATE Currency; isocode[unique = true]; conversion; digits; symbol
-                      ; IDR                   ; 1         ; 2     ; Rp.
+                      ; IDR                   ; 1         ; 0     ; Rp.
 
 # Vendor
 INSERT_UPDATE Vendor; code[unique = true]; name
@@ -65,10 +64,13 @@ INSERT_UPDATE MediaFormat; qualifier[unique = true]
 
 # Tax & Tax Groups
 INSERT_UPDATE UserTaxGroup; code[unique = true]
+                          ; id-taxes
 
 INSERT_UPDATE ProductTaxGroup; code[unique = true]
+                             ; id-sales-tax-full
 
 INSERT_UPDATE Tax; code[unique = true]; value; currency(isocode)
+                 ; id-sales-tax-full  ; 0    ; IDR
 
 INSERT_UPDATE ServicelayerJob; code[unique = true]             ; springId[unique = true]
                              ; cartRemovalJob                  ; cartRemovalJob
@@ -77,5 +79,5 @@ INSERT_UPDATE ServicelayerJob; code[unique = true]             ; springId[unique
                              ; quoteExpiredJobPerformable      ; quoteExpiredJobPerformable
 
 # Deactivate Frontend Restriction on category by default for perfomance purposes
-UPDATE SearchRestriction; code[unique = true]; active[default = false]
-                        ; Frontend_RestrictedCategory
+UPDATE SearchRestriction; code[unique = true]         ; active[default = false]
+                        ; Frontend_RestrictedCategory ;
