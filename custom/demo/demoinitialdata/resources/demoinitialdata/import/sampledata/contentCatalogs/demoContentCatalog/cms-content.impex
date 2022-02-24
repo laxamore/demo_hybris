@@ -428,39 +428,39 @@ INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true] 
 
 
 #About FAQ DEMO
-INSERT_UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef
-                                   ;;DemoFAQHead;FAQ Head;DemoFAQHead
-                                   ;;DemoFAQQuest1;FAQ Question 1;DemoFAQQuest1
-                                   ;;DemoFAQAns1;FAQ Answer 1;DemoFAQAns1
-                                   ;;DemoFAQQuest2;FAQ Question 2;DemoFAQQuest2
-                                   ;;DemoFAQAns2;FAQ Answer 2;DemoFAQAns2
-                                   ;;DemoFAQQuest3;FAQ Question 3;DemoFAQQuest3
-                                   ;;DemoFAQAns3;FAQ Answer 3;DemoFAQAns3
-                                   ;;DemoFAQQuest4;FAQ Question 4;DemoFAQQuest4
-                                   ;;DemoFAQAns4;FAQ Answer 4;DemoFAQAns4
+INSERT_UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]; name           ; &componentRef
+                                   ;                          ; DemoFAQHead       ; FAQ Head       ; DemoFAQHead
+                                   ;                          ; DemoFAQQuest1     ; FAQ Question 1 ; DemoFAQQuest1
+                                   ;                          ; DemoFAQAns1       ; FAQ Answer 1   ; DemoFAQAns1
+                                   ;                          ; DemoFAQQuest2     ; FAQ Question 2 ; DemoFAQQuest2
+                                   ;                          ; DemoFAQAns2       ; FAQ Answer 2   ; DemoFAQAns2
+                                   ;                          ; DemoFAQQuest3     ; FAQ Question 3 ; DemoFAQQuest3
+                                   ;                          ; DemoFAQAns3       ; FAQ Answer 3   ; DemoFAQAns3
+                                   ;                          ; DemoFAQQuest4     ; FAQ Question 4 ; DemoFAQQuest4
+                                   ;                          ; DemoFAQAns4       ; FAQ Answer 4   ; DemoFAQAns4
 
 
-INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];cmsComponents(&componentRef)
-                         ;;Section6ASlot-AboutPage;DemoFAQHead
-                         ;;Section6BSlot-AboutPage;DemoFAQQuest1
-                         ;;Section6CSlot-AboutPage;DemoFAQAns1
-                         ;;Section6DSlot-AboutPage;DemoFAQQuest2
-                         ;;Section6ESlot-AboutPage;DemoFAQAns2
-                         ;;Section6FSlot-AboutPage;DemoFAQQuest3
-                         ;;Section6GSlot-AboutPage;DemoFAQAns3
-                         ;;Section6HSlot-AboutPage;DemoFAQQuest4
-                         ;;Section6ISlot-AboutPage;DemoFAQAns4
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]      ; cmsComponents(&componentRef)
+                         ;                          ; Section6ASlot-AboutPage ; DemoFAQHead
+                         ;                          ; Section6BSlot-AboutPage ; DemoFAQQuest1
+                         ;                          ; Section6CSlot-AboutPage ; DemoFAQAns1
+                         ;                          ; Section6DSlot-AboutPage ; DemoFAQQuest2
+                         ;                          ; Section6ESlot-AboutPage ; DemoFAQAns2
+                         ;                          ; Section6FSlot-AboutPage ; DemoFAQQuest3
+                         ;                          ; Section6GSlot-AboutPage ; DemoFAQAns3
+                         ;                          ; Section6HSlot-AboutPage ; DemoFAQQuest4
+                         ;                          ; Section6ISlot-AboutPage ; DemoFAQAns4
 
-INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];position[unique=true];page(uid,$contentCV)[unique=true][default='DemoAboutPageTemplate'];contentSlot(uid,$contentCV)[unique=true]
-                                ;;Section6A-AboutPage;Section6A;;Section6ASlot-AboutPage
-                                ;;Section6B-AboutPage;Section6B;;Section6BSlot-AboutPage
-                                ;;Section6C-AboutPage;Section6C;;Section6CSlot-AboutPage
-                                ;;Section6D-AboutPage;Section6D;;Section6DSlot-AboutPage
-                                ;;Section6E-AboutPage;Section6E;;Section6ESlot-AboutPage
-                                ;;Section6F-AboutPage;Section6F;;Section6FSlot-AboutPage
-                                ;;Section6G-AboutPage;Section6G;;Section6GSlot-AboutPage
-                                ;;Section6H-AboutPage;Section6H;;Section6HSlot-AboutPage
-                                ;;Section6I-AboutPage;Section6I;;Section6ISlot-AboutPage
+INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true]  ; position[unique = true]; page(uid, $contentCV)[unique = true][default = 'DemoAboutPageTemplate']; contentSlot(uid, $contentCV)[unique = true]
+                                ;                          ; Section6A-AboutPage ; Section6A              ;                                                                        ; Section6ASlot-AboutPage
+                                ;                          ; Section6B-AboutPage ; Section6B              ;                                                                        ; Section6BSlot-AboutPage
+                                ;                          ; Section6C-AboutPage ; Section6C              ;                                                                        ; Section6CSlot-AboutPage
+                                ;                          ; Section6D-AboutPage ; Section6D              ;                                                                        ; Section6DSlot-AboutPage
+                                ;                          ; Section6E-AboutPage ; Section6E              ;                                                                        ; Section6ESlot-AboutPage
+                                ;                          ; Section6F-AboutPage ; Section6F              ;                                                                        ; Section6FSlot-AboutPage
+                                ;                          ; Section6G-AboutPage ; Section6G              ;                                                                        ; Section6GSlot-AboutPage
+                                ;                          ; Section6H-AboutPage ; Section6H              ;                                                                        ; Section6HSlot-AboutPage
+                                ;                          ; Section6I-AboutPage ; Section6I              ;                                                                        ; Section6ISlot-AboutPage
 
 # Start Cart Page
 INSERT_UPDATE JspIncludeComponent; $contentCV[unique = true]; uid[unique = true]  ; name                          ; page                      ; actions(uid, $contentCV); &componentRef
@@ -489,34 +489,98 @@ INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true] 
 # End Cart Page
 
 
-INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];position[unique=true];page(uid,$contentCV)[unique=true][default='homePage'];contentSlot(uid,$contentCV)[unique=true]
-                                ;;UnboxingInTheBox-homepage;UnboxingInTheBox;;UnboxingInTheBoxSlot-Homepage
+INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true]        ; position[unique = true]; page(uid, $contentCV)[unique = true][default = 'homePage']; contentSlot(uid, $contentCV)[unique = true]
+                                ;                          ; UnboxingInTheBox-homepage ; UnboxingInTheBox       ;                                                           ; UnboxingInTheBoxSlot-Homepage
 
 
 
 # Testimony home page
 
-INSERT_UPDATE JspIncludeComponent;$contentCV[unique=true];uid[unique=true];name;page;actions(uid,$contentCV);&componentRef
-                                 ;;TestimonyComponent;Testimony Component;/WEB-INF/views/responsive/pages/testimony/testimony.jsp;;TestimonyComponent
+INSERT_UPDATE JspIncludeComponent; $contentCV[unique = true]; uid[unique = true] ; name                ; page                                                    ; actions(uid, $contentCV); &componentRef
+                                 ;                          ; TestimonyComponent ; Testimony Component ; /WEB-INF/views/responsive/pages/testimony/testimony.jsp ;                         ; TestimonyComponent
 
-INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];active;cmsComponents(&componentRef)
-                         ;;Testimony_ContentSlot;true;TestimonyComponent
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]    ; active; cmsComponents(&componentRef)
+                         ;                          ; Testimony_ContentSlot ; true  ; TestimonyComponent
 
-INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];position[unique=true];page(uid,$contentCV)[unique=true][default='homePage'];contentSlot(uid,$contentCV)[unique=true]
-                                ;;Testimony;Testimony;;Testimony_ContentSlot
+INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true]; position[unique = true]; page(uid, $contentCV)[unique = true][default = 'homePage']; contentSlot(uid, $contentCV)[unique = true]
+                                ;                          ; Testimony         ; Testimony              ;                                                           ; Testimony_ContentSlot
 
 
 # Testimoni Page list
 
-INSERT_UPDATE JspIncludeComponent;$contentCV[unique=true];uid[unique=true];name;page;actions(uid,$contentCV);&componentRef
-                                 ;;TestimonyListComponent;Testimony List Component;/WEB-INF/views/responsive/pages/testimony/testimonyList.jsp;;TestimonyListComponent
+INSERT_UPDATE JspIncludeComponent; $contentCV[unique = true]; uid[unique = true]     ; name                     ; page                                                        ; actions(uid, $contentCV); &componentRef
+                                 ;                          ; TestimonyListComponent ; Testimony List Component ; /WEB-INF/views/responsive/pages/testimony/testimonyList.jsp ;                         ; TestimonyListComponent
 
-INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];active;cmsComponents(&componentRef)
-                         ;;TestimonyList_ContentSlot;true;TestimonyListComponent
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]        ; active; cmsComponents(&componentRef)
+                         ;                          ; TestimonyList_ContentSlot ; true  ; TestimonyListComponent
 
-INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];position[unique=true];page(uid,$contentCV)[unique=true][default='TestimonyPage'];contentSlot(uid,$contentCV)[unique=true]
-                                ;;TestimonyList;Testimony;;TestimonyList_ContentSlot
-
-
+INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true]; position[unique = true]; page(uid, $contentCV)[unique = true][default = 'TestimonyPage']; contentSlot(uid, $contentCV)[unique = true]
+                                ;                          ; TestimonyList     ; Testimony              ;                                                                ; TestimonyList_ContentSlot
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Anonymouse Checkout
+INSERT_UPDATE JspIncludeComponent; $contentCV[unique = true]; uid[unique = true]                  ; name                                   ; page                                                           ; actions(uid, $contentCV); &componentRef
+                                 ;                          ; AnonymousConsentManagementComponent ; Anonymous Consent Management Component ; /WEB-INF/views/responsive/pages/consent/consentmanagement.jsp  ;                         ; AnonymousConsentManagementComponent
+                                 ;                          ; CookieNotificationComponent         ; Cookie Notification Component          ; /WEB-INF/views/responsive/pages/consent/cookienotification.jsp ;                         ; CookieNotificationComponent
+
+# Content Slots
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]; active; cmsComponents(&componentRef)[mode = append]
+                         ;                          ; TopHeaderSlot     ; true  ; CookieNotificationComponent,AnonymousConsentManagementComponent
+
+
+
+
+
+### Checkout Login
+INSERT_UPDATE JspIncludeComponent; $contentCV[unique = true]; uid[unique = true]                      ; name                                        ; page                              ; actions(uid, $contentCV); &componentRef
+                                 ;                          ; ReturningCustomerCheckoutLoginComponent ; Returning Customer Checkout Login Component ; checkouReturningCustomerLogin.jsp ;                         ; ReturningCustomerCheckoutLoginComponent
+                                 ;                          ; GuestCheckoutLoginComponent             ; Guest Checkout Login Component              ; checkoutGuestLogin.jsp            ;                         ; GuestCheckoutLoginComponent
+
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]              ; name                                  ; active; cmsComponents(&componentRef);;;
+                         ;                          ; LeftContentSlot-checkout-login  ; Left Content Slot for Checkout Login  ; true  ; ReturningCustomerCheckoutLoginComponent
+                         ;                          ; RightContentSlot-checkout-login ; Right Content Slot for Checkout Login ; true  ; GuestCheckoutLoginComponent
+
+INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true]              ; position[unique = true]; page(uid, $contentCV)[unique = true][default = 'checkout-login']; contentSlot(uid, $contentCV)[unique = true]
+                                ;                          ; LeftContentSlot-checkout-login  ; LeftContentSlot        ;                                                                 ; LeftContentSlot-checkout-login
+                                ;                          ; RightContentSlot-checkout-login ; RightContentSlot       ;                                                                 ; RightContentSlot-checkout-login
+
+
+
+
+
+
+
+
+
+
+
+######## Order Confirmation Page Start #######
+
+INSERT_UPDATE JspIncludeComponent; $contentCV[unique = true]; uid[unique = true]                       ; name                                           ; page                                                                       ; actions(uid, $contentCV); &componentRef
+                                 ;                          ; OrderConfirmationThankMessageComponent   ; Order Confirmation Thank You Message Component ; checkoutConfirmationThankMessage.jsp                                       ;                         ; OrderConfirmationThankMessageComponent
+                                 ;                          ; OrderConfirmationOverviewComponent       ; Order Confirmation Overview Info Component     ; /WEB-INF/views/responsive/pages/account/accountOrderDetailOverview.jsp     ;                         ; OrderConfirmationOverviewComponent
+                                 ;                          ; OrderConfirmationTotalsComponent         ; Order Confirmation Totals Component            ; /WEB-INF/views/responsive/pages/account/accountOrderDetailOrderTotals.jsp  ;                         ; OrderConfirmationTotalsComponent
+                                 ;                          ; OrderConfirmationShippingComponent       ; Order Confirmation Shipping Info Component     ; /WEB-INF/views/responsive/pages/account/accountOrderDetailShippingInfo.jsp ;                         ; OrderConfirmationShippingComponent
+                                 ;                          ; OrderConfirmationItemsComponent          ; Order Confirmation Items Info Component        ; /WEB-INF/views/responsive/pages/account/accountOrderDetailItems.jsp        ;                         ; OrderConfirmationItemsComponent
+                                 ;                          ; OrderConfirmationContinueButtonComponent ; Order Confirmation Continue Button Component   ; checkoutConfirmationContinueButton.jsp                                     ;                         ; OrderConfirmationContinueButtonComponent
+
+# ContentSlotForPage
+INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true]            ; position[unique = true]; page(uid, $contentCV)[unique = true][default = 'orderConfirmationPage']; contentSlot(uid, $contentCV)[unique = true]
+                                ;                          ; BodyContent-orderConfirmation ; BodyContent            ;                                                                        ; BodyContent-orderConfirmation
+
+# ContentSlot
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]            ; name                                     ; active; cmsComponents(&componentRef)
+                         ;                          ; BodyContent-orderConfirmation ; Body Content Slot for Order Confirmation ; true  ; OrderConfirmationThankMessageComponent,OrderConfirmationOverviewComponent,OrderConfirmationItemsComponent,OrderConfirmationShippingComponent,OrderConfirmationTotalsComponent,OrderConfirmationContinueButtonComponent

@@ -4,6 +4,25 @@ main {
   height: 100vh;
 }
 
+.main__inner-wrapper {
+  height: max-content;
+}
+
+.demo-main {
+  display: flex;
+  width: 100%;
+  height: max-content;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.demo-content {
+  width: 100%;
+  max-width: 1080px;
+  max-height: 100%;
+}
+
 .demo-headers {
   display: flex;
   flex-direction: column;
@@ -442,8 +461,8 @@ main {
     justify-content: center;
 
     .js-responsive-image {
-      width: 80%;
-      height: 80%;
+      width: 100%;
+      height: 100%;
     }
   }
 }

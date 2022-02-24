@@ -9,14 +9,14 @@
 <c:url value="/cart/checkout" var="checkoutUrl" scope="session"/>
 <div class="demo-cart-option">
     <div class="demo-cart-option-continue">
-        <button data-continue-shopping-url="c/catalog">
+        <button class="js-continue-shopping-button" data-continue-shopping-url="c/catalog">
             <spring:theme code="cart.page.continue"/>
         </button>
     </div>
 
     <div class="demo-cart-option-checkout">
         <ycommerce:testId code="checkoutButton">
-            <button data-checkout-url="${fn:escapeXml(checkoutUrl)}">
+            <button class="js-continue-checkout-button" data-checkout-url="${fn:escapeXml(checkoutUrl)}">
                 <spring:theme code="checkout.checkout"/>
             </button>
         </ycommerce:testId>
