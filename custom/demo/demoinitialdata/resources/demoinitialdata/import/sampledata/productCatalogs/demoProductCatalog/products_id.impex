@@ -33,115 +33,115 @@ INSERT_UPDATE DemoProduct; code[unique = true]; $catalogVersion; name[lang = $la
                          ; GULING             ;                ; GULING                                        ; GULING
 
 
-INSERT_UPDATE DemoVariantProduct; code[unique = true]; name[lang = $lang]
-                                ; IA1                ; Kasur INTHEBOX Alpha Size 90x200
-                                ; IA2                ; Kasur INTHEBOX Alpha Size 100x200
-                                ; IA3                ; Kasur INTHEBOX Alpha Size 120x200
-                                ; IA4                ; Kasur INTHEBOX Alpha Size 140x200
-                                ; IA5                ; Kasur INTHEBOX Alpha Size 160x200
-                                ; IA6                ; Kasur INTHEBOX Alpha Size 180x200
-                                ; IA7                ; Kasur INTHEBOX Alpha Size 200x200
+INSERT_UPDATE DemoVariantProduct; code[unique = true]; name[lang = $lang]                                             ; description[lang = $lang]
+                                ; IA1                ; INTHEBOX Alpha Size 90x200                                     ; Kasur INTHEBOX Alpha ialah kasur spring bed, yang menggunakan per bonnell. Selain itu, busa premium dengan kepadatan tinggi yang dilapisi kain supersoft menambah kenyamanan tidur anda dan cocok untuk digunakan sehari-hari.
+                                ; IA2                ; INTHEBOX Alpha Size 100x200                                    ; Kasur INTHEBOX Alpha ialah kasur spring bed, yang menggunakan per bonnell. Selain itu, busa premium dengan kepadatan tinggi yang dilapisi kain supersoft menambah kenyamanan tidur anda dan cocok untuk digunakan sehari-hari.
+                                ; IA3                ; INTHEBOX Alpha Size 120x200                                    ; Kasur INTHEBOX Alpha ialah kasur spring bed, yang menggunakan per bonnell. Selain itu, busa premium dengan kepadatan tinggi yang dilapisi kain supersoft menambah kenyamanan tidur anda dan cocok untuk digunakan sehari-hari.
+                                ; IA4                ; INTHEBOX Alpha Size 140x200                                    ; Kasur INTHEBOX Alpha ialah kasur spring bed, yang menggunakan per bonnell. Selain itu, busa premium dengan kepadatan tinggi yang dilapisi kain supersoft menambah kenyamanan tidur anda dan cocok untuk digunakan sehari-hari.
+                                ; IA5                ; INTHEBOX Alpha Size 160x200                                    ; Kasur INTHEBOX Alpha ialah kasur spring bed, yang menggunakan per bonnell. Selain itu, busa premium dengan kepadatan tinggi yang dilapisi kain supersoft menambah kenyamanan tidur anda dan cocok untuk digunakan sehari-hari.
+                                ; IA6                ; INTHEBOX Alpha Size 180x200                                    ; Kasur INTHEBOX Alpha ialah kasur spring bed, yang menggunakan per bonnell. Selain itu, busa premium dengan kepadatan tinggi yang dilapisi kain supersoft menambah kenyamanan tidur anda dan cocok untuk digunakan sehari-hari.
+                                ; IA7                ; INTHEBOX Alpha Size 200x200                                    ; Kasur INTHEBOX Alpha ialah kasur spring bed, yang menggunakan per bonnell. Selain itu, busa premium dengan kepadatan tinggi yang dilapisi kain supersoft menambah kenyamanan tidur anda dan cocok untuk digunakan sehari-hari.
 
-                                ; IX1                ; INTHEBOX X Size 90x200
-                                ; IX2                ; INTHEBOX X Size 100x200
-                                ; IX3                ; INTHEBOX X Size 120x200
-                                ; IX4                ; INTHEBOX X Size 140x200
-                                ; IX5                ; INTHEBOX X Size 160x200
-                                ; IX6                ; INTHEBOX X Size 180x200
-                                ; IX7                ; INTHEBOX X Size 200x200
+                                ; IX1                ; INTHEBOX X Size 90x200                                         ; Kasur dengan tambahan plush top atau lapisan tambahan di bagian atas kasur, yang menambah keempukan dan kenyamanan pada kasur. Dilengkapi material premium dan desain elegan dari Raffi Ahmad.
+                                ; IX2                ; INTHEBOX X Size 100x200                                        ; Kasur dengan tambahan plush top atau lapisan tambahan di bagian atas kasur, yang menambah keempukan dan kenyamanan pada kasur. Dilengkapi material premium dan desain elegan dari Raffi Ahmad.
+                                ; IX3                ; INTHEBOX X Size 120x200                                        ; Kasur dengan tambahan plush top atau lapisan tambahan di bagian atas kasur, yang menambah keempukan dan kenyamanan pada kasur. Dilengkapi material premium dan desain elegan dari Raffi Ahmad.
+                                ; IX4                ; INTHEBOX X Size 140x200                                        ; Kasur dengan tambahan plush top atau lapisan tambahan di bagian atas kasur, yang menambah keempukan dan kenyamanan pada kasur. Dilengkapi material premium dan desain elegan dari Raffi Ahmad.
+                                ; IX5                ; INTHEBOX X Size 160x200                                        ; Kasur dengan tambahan plush top atau lapisan tambahan di bagian atas kasur, yang menambah keempukan dan kenyamanan pada kasur. Dilengkapi material premium dan desain elegan dari Raffi Ahmad.
+                                ; IX6                ; INTHEBOX X Size 180x200                                        ; Kasur dengan tambahan plush top atau lapisan tambahan di bagian atas kasur, yang menambah keempukan dan kenyamanan pada kasur. Dilengkapi material premium dan desain elegan dari Raffi Ahmad.
+                                ; IX7                ; INTHEBOX X Size 200x200                                        ; Kasur dengan tambahan plush top atau lapisan tambahan di bagian atas kasur, yang menambah keempukan dan kenyamanan pada kasur. Dilengkapi material premium dan desain elegan dari Raffi Ahmad.
 
-                                ; SJ1                ; INTHEBOX "Space Jam:A New Legacy" Collection 90x200
-                                ; SJ2                ; INTHEBOX "Space Jam:A New Legacy" Collection 100x200
-                                ; SJ3                ; INTHEBOX "Space Jam:A New Legacy" Collection 120x200
-                                ; SJ4                ; INTHEBOX "Space Jam:A New Legacy" Collection 140x200
-                                ; SJ5                ; INTHEBOX "Space Jam:A New Legacy" Collection 160x200
-                                ; SJ6                ; INTHEBOX "Space Jam:A New Legacy" Collection 180x200
-                                ; SJ7                ; INTHEBOX "Space Jam:A New Legacy" Collection 200x200
+                                ; SJ1                ; INTHEBOX "Space Jam:A New Legacy" Collection 90x200            ; tes
+                                ; SJ2                ; INTHEBOX "Space Jam:A New Legacy" Collection 100x200           ; tes
+                                ; SJ3                ; INTHEBOX "Space Jam:A New Legacy" Collection 120x200           ; tes
+                                ; SJ4                ; INTHEBOX "Space Jam:A New Legacy" Collection 140x200           ; tes
+                                ; SJ5                ; INTHEBOX "Space Jam:A New Legacy" Collection 160x200           ; tes
+                                ; SJ6                ; INTHEBOX "Space Jam:A New Legacy" Collection 180x200           ; tes
+                                ; SJ7                ; INTHEBOX "Space Jam:A New Legacy" Collection 200x200           ; tes
 
-                                ; SJPT1              ; INTHEBOX "Space Jam:A New Legacy" Plush Top Collection 90x200
-                                ; SJPT2              ; INTHEBOX "Space Jam:A New Legacy" Plush Top Collection 100x200
-                                ; SJPT3              ; INTHEBOX "Space Jam:A New Legacy" Plush Top Collection 120x200
-                                ; SJPT4              ; INTHEBOX "Space Jam:A New Legacy" Plush Top Collection 140x200
-                                ; SJPT5              ; INTHEBOX "Space Jam:A New Legacy" Plush Top Collection 160x200
-                                ; SJPT6              ; INTHEBOX "Space Jam:A New Legacy" Plush Top Collection 180x200
-                                ; SJPT7              ; INTHEBOX "Space Jam:A New Legacy" Plush Top Collection 200x200
+                                ; SJPT1              ; INTHEBOX "Space Jam:A New Legacy" Plush Top Collection 90x200  ; Kasur dengan tambahan plush top atau lapisan tambahan di bagian atas kasur, yang menambah keempukan dan kenyamanan pada kasur.
+                                ; SJPT2              ; INTHEBOX "Space Jam:A New Legacy" Plush Top Collection 100x200 ; Kasur dengan tambahan plush top atau lapisan tambahan di bagian atas kasur, yang menambah keempukan dan kenyamanan pada kasur.
+                                ; SJPT3              ; INTHEBOX "Space Jam:A New Legacy" Plush Top Collection 120x200 ; Kasur dengan tambahan plush top atau lapisan tambahan di bagian atas kasur, yang menambah keempukan dan kenyamanan pada kasur.
+                                ; SJPT4              ; INTHEBOX "Space Jam:A New Legacy" Plush Top Collection 140x200 ; Kasur dengan tambahan plush top atau lapisan tambahan di bagian atas kasur, yang menambah keempukan dan kenyamanan pada kasur.
+                                ; SJPT5              ; INTHEBOX "Space Jam:A New Legacy" Plush Top Collection 160x200 ; Kasur dengan tambahan plush top atau lapisan tambahan di bagian atas kasur, yang menambah keempukan dan kenyamanan pada kasur.
+                                ; SJPT6              ; INTHEBOX "Space Jam:A New Legacy" Plush Top Collection 180x200 ; Kasur dengan tambahan plush top atau lapisan tambahan di bagian atas kasur, yang menambah keempukan dan kenyamanan pada kasur.
+                                ; SJPT7              ; INTHEBOX "Space Jam:A New Legacy" Plush Top Collection 200x200 ; Kasur dengan tambahan plush top atau lapisan tambahan di bagian atas kasur, yang menambah keempukan dan kenyamanan pada kasur.
 
-                                ; ID1                ; INTHEBOX DASH 90x200
-                                ; ID2                ; INTHEBOX DASH 100x200
-                                ; ID3                ; INTHEBOX DASH 120x200
-                                ; ID4                ; INTHEBOX DASH 140x200
-                                ; ID5                ; INTHEBOX DASH 160x200
-                                ; ID6                ; INTHEBOX DASH 180x200
-                                ; ID7                ; INTHEBOX DASH 200x200
+                                ; ID1                ; INTHEBOX Dash 90x200                                           ; Dikenal dengan ukuran kasur no 4 (ukuran kasur paling kecil). Cocok digunakan untuk tidur sendiri.
+                                ; ID2                ; INTHEBOX Dash 100x200                                          ; Dikenal dengan ukuran kasur no 4 (ukuran kasur paling kecil). Cocok digunakan untuk tidur sendiri.
+                                ; ID3                ; INTHEBOX Dash 120x200                                          ; Dikenal dengan ukuran kasur no 4 (ukuran kasur paling kecil). Cocok digunakan untuk tidur sendiri.
+                                ; ID4                ; INTHEBOX Dash 140x200                                          ; Dikenal dengan ukuran kasur no 4 (ukuran kasur paling kecil). Cocok digunakan untuk tidur sendiri.                                                                      ; Dikenal dengan ukuran kasur no 4 (ukuran kasur paling kecil). Cocok digunakan untuk tidur sendiri.
+                                ; ID5                ; INTHEBOX Dash 160x200                                          ; Dikenal dengan ukuran kasur no 4 (ukuran kasur paling kecil). Cocok digunakan untuk tidur sendiri.
+                                ; ID6                ; INTHEBOX Dash 180x200                                          ; Dikenal dengan ukuran kasur no 4 (ukuran kasur paling kecil). Cocok digunakan untuk tidur sendiri.
+                                ; ID7                ; INTHEBOX Dash 200x200                                          ; Dikenal dengan ukuran kasur no 4 (ukuran kasur paling kecil). Cocok digunakan untuk tidur sendiri.
 
-                                ; I1011              ; INTHEBOX 101 90x200
-                                ; I1012              ; INTHEBOX 101 100x200
-                                ; I1013              ; INTHEBOX 101 120x200
-                                ; I1014              ; INTHEBOX 101 140x200
-                                ; I1015              ; INTHEBOX 101 160x200
-                                ; I1016              ; INTHEBOX 101 180x200
-                                ; I1017              ; INTHEBOX 101 200x200
+                                ; I1011              ; INTHEBOX 101 90x200                                            ; Dikenal dengan ukuran kasur no 4 (ukuran kasur paling kecil). Cocok digunakan untuk tidur sendiri. Memiliki tampilan waterfall, terlihat lebih fresh, dan lebih modern.
+                                ; I1012              ; INTHEBOX 101 100x200                                           ; Dikenal dengan ukuran kasur no 4 (ukuran kasur paling kecil). Cocok digunakan untuk tidur sendiri. Memiliki tampilan waterfall, terlihat lebih fresh, dan lebih modern.
+                                ; I1013              ; INTHEBOX 101 120x200                                           ; Dikenal dengan ukuran kasur no 4 (ukuran kasur paling kecil). Cocok digunakan untuk tidur sendiri. Memiliki tampilan waterfall, terlihat lebih fresh, dan lebih modern. ; Dikenal dengan ukuran kasur no 4 (ukuran kasur paling kecil). Cocok digunakan untuk tidur sendiri. Memiliki tampilan waterfall, terlihat lebih fresh, dan lebih modern.
+                                ; I1014              ; INTHEBOX 101 140x200                                           ; Dikenal dengan ukuran kasur no 4 (ukuran kasur paling kecil). Cocok digunakan untuk tidur sendiri. Memiliki tampilan waterfall, terlihat lebih fresh, dan lebih modern.
+                                ; I1015              ; INTHEBOX 101 160x200                                           ; Dikenal dengan ukuran kasur no 4 (ukuran kasur paling kecil). Cocok digunakan untuk tidur sendiri. Memiliki tampilan waterfall, terlihat lebih fresh, dan lebih modern.
+                                ; I1016              ; INTHEBOX 101 180x200                                           ; Dikenal dengan ukuran kasur no 4 (ukuran kasur paling kecil). Cocok digunakan untuk tidur sendiri. Memiliki tampilan waterfall, terlihat lebih fresh, dan lebih modern.
+                                ; I1017              ; INTHEBOX 101 200x200                                           ; Dikenal dengan ukuran kasur no 4 (ukuran kasur paling kecil). Cocok digunakan untuk tidur sendiri. Memiliki tampilan waterfall, terlihat lebih fresh, dan lebih modern.
 
-                                ; IH1                ; INTHEBOX HYBRID 90x200
-                                ; IH2                ; INTHEBOX HYBRID 100x200
-                                ; IH3                ; INTHEBOX HYBRID 120x200
-                                ; IH4                ; INTHEBOX HYBRID 140x200
-                                ; IH5                ; INTHEBOX HYBRID 160x200
-                                ; IH6                ; INTHEBOX HYBRID 180x200
-                                ; IH7                ; INTHEBOX HYBRID 200x200
+                                ; IH1                ; INTHEBOX Hybrid 90x200                                         ; INTHEBOX Hybrid terdiri dari memory foam dan busa yang tidak mudah kempes. Kasur ini menggunakan kain jenis jacquard yang membuat tampilan kasur terlihat lebih cantik dan mewah.
+                                ; IH2                ; INTHEBOX Hybrid 100x200                                        ; INTHEBOX Hybrid terdiri dari memory foam dan busa yang tidak mudah kempes. Kasur ini menggunakan kain jenis jacquard yang membuat tampilan kasur terlihat lebih cantik dan mewah.
+                                ; IH3                ; INTHEBOX Hybrid 120x200                                        ; INTHEBOX Hybrid terdiri dari memory foam dan busa yang tidak mudah kempes. Kasur ini menggunakan kain jenis jacquard yang membuat tampilan kasur terlihat lebih cantik dan mewah.
+                                ; IH4                ; INTHEBOX Hybrid 140x200                                        ; INTHEBOX Hybrid terdiri dari memory foam dan busa yang tidak mudah kempes. Kasur ini menggunakan kain jenis jacquard yang membuat tampilan kasur terlihat lebih cantik dan mewah.
+                                ; IH5                ; INTHEBOX Hybrid 160x200                                        ; INTHEBOX Hybrid terdiri dari memory foam dan busa yang tidak mudah kempes. Kasur ini menggunakan kain jenis jacquard yang membuat tampilan kasur terlihat lebih cantik dan mewah.
+                                ; IH6                ; INTHEBOX Hybrid 180x200                                        ; INTHEBOX Hybrid terdiri dari memory foam dan busa yang tidak mudah kempes. Kasur ini menggunakan kain jenis jacquard yang membuat tampilan kasur terlihat lebih cantik dan mewah.
+                                ; IH7                ; INTHEBOX Hybrid 200x200                                        ; INTHEBOX Hybrid terdiri dari memory foam dan busa yang tidak mudah kempes. Kasur ini menggunakan kain jenis jacquard yang membuat tampilan kasur terlihat lebih cantik dan mewah.
 
-                                ; IH151              ; INTHEBOX HYBRID 15 90x200
-                                ; IH152              ; INTHEBOX HYBRID 15 100x200
-                                ; IH153              ; INTHEBOX HYBRID 15 120x200
-                                ; IH154              ; INTHEBOX HYBRID 15 140x200
-                                ; IH155              ; INTHEBOX HYBRID 15 160x200
-                                ; IH156              ; INTHEBOX HYBRID 15 180x200
-                                ; IH157              ; INTHEBOX HYBRID 15 200x200
+                                ; IH151              ; INTHEBOX Hybrid 15 90x200                                      ; INTHEBOX Hybrid 15 terdiri dari memory foam dan busa yang tidak mudah kempes. Kasur ini menggunakan kain jenis jacquard yang membuat tampilan kasur terlihat lebih cantik dan mewah.
+                                ; IH152              ; INTHEBOX Hybrid 15 100x200                                     ; INTHEBOX Hybrid 15 terdiri dari memory foam dan busa yang tidak mudah kempes. Kasur ini menggunakan kain jenis jacquard yang membuat tampilan kasur terlihat lebih cantik dan mewah.
+                                ; IH153              ; INTHEBOX Hybrid 15 120x200                                     ; INTHEBOX Hybrid 15 terdiri dari memory foam dan busa yang tidak mudah kempes. Kasur ini menggunakan kain jenis jacquard yang membuat tampilan kasur terlihat lebih cantik dan mewah.
+                                ; IH154              ; INTHEBOX Hybrid 15 140x200                                     ; INTHEBOX Hybrid 15 terdiri dari memory foam dan busa yang tidak mudah kempes. Kasur ini menggunakan kain jenis jacquard yang membuat tampilan kasur terlihat lebih cantik dan mewah.
+                                ; IH155              ; INTHEBOX Hybrid 15 160x200                                     ; INTHEBOX Hybrid 15 terdiri dari memory foam dan busa yang tidak mudah kempes. Kasur ini menggunakan kain jenis jacquard yang membuat tampilan kasur terlihat lebih cantik dan mewah.
+                                ; IH156              ; INTHEBOX Hybrid 15 180x200                                     ; INTHEBOX Hybrid 15 terdiri dari memory foam dan busa yang tidak mudah kempes. Kasur ini menggunakan kain jenis jacquard yang membuat tampilan kasur terlihat lebih cantik dan mewah.
+                                ; IH157              ; INTHEBOX Hybrid 15 200x200                                     ; INTHEBOX Hybrid 15 terdiri dari memory foam dan busa yang tidak mudah kempes. Kasur ini menggunakan kain jenis jacquard yang membuat tampilan kasur terlihat lebih cantik dan mewah.
 
-                                ; IK1                ; Kasur INTHEBOX 90x200
-                                ; IK2                ; Kasur INTHEBOX 100x200
-                                ; IK3                ; Kasur INTHEBOX 120x200
-                                ; IK4                ; Kasur INTHEBOX 140x200
-                                ; IK5                ; Kasur INTHEBOX 160x200
-                                ; IK6                ; Kasur INTHEBOX 180x200
-                                ; IK7                ; Kasur INTHEBOX 200x200
+                                ; IK1                ; Kasur INTHEBOX 90x200                                          ; Dikenal dengan ukuran kasur no 4 (ukuran kasur paling kecil). Cocok digunakan untuk tidur sendiri. Dilengkapi material premium agar tidur lebih nyenyak.
+                                ; IK2                ; Kasur INTHEBOX 100x200                                         ; Dikenal dengan ukuran kasur no 4 (ukuran kasur paling kecil). Cocok digunakan untuk tidur sendiri. Dilengkapi material premium agar tidur lebih nyenyak.
+                                ; IK3                ; Kasur INTHEBOX 120x200                                         ; Dikenal dengan ukuran kasur no 4 (ukuran kasur paling kecil). Cocok digunakan untuk tidur sendiri. Dilengkapi material premium agar tidur lebih nyenyak.
+                                ; IK4                ; Kasur INTHEBOX 140x200                                         ; Dikenal dengan ukuran kasur no 4 (ukuran kasur paling kecil). Cocok digunakan untuk tidur sendiri. Dilengkapi material premium agar tidur lebih nyenyak.
+                                ; IK5                ; Kasur INTHEBOX 160x200                                         ; Dikenal dengan ukuran kasur no 4 (ukuran kasur paling kecil). Cocok digunakan untuk tidur sendiri. Dilengkapi material premium agar tidur lebih nyenyak.
+                                ; IK6                ; Kasur INTHEBOX 180x200                                         ; Dikenal dengan ukuran kasur no 4 (ukuran kasur paling kecil). Cocok digunakan untuk tidur sendiri. Dilengkapi material premium agar tidur lebih nyenyak.
+                                ; IK7                ; Kasur INTHEBOX 200x200                                         ; Dikenal dengan ukuran kasur no 4 (ukuran kasur paling kecil). Cocok digunakan untuk tidur sendiri. Dilengkapi material premium agar tidur lebih nyenyak.
 
-                                ; IP1                ; INTHEBOX Plus 90x200
-                                ; IP2                ; INTHEBOX Plus 100x200
-                                ; IP3                ; INTHEBOX Plus 120x200
-                                ; IP4                ; INTHEBOX Plus 140x200
-                                ; IP5                ; INTHEBOX Plus 160x200
-                                ; IP6                ; INTHEBOX Plus 180x200
-                                ; IP7                ; INTHEBOX Plus 200x200
+                                ; IP1                ; INTHEBOX Plus 90x200                                           ; Dikenal dengan ukuran kasur no 4 (ukuran kasur paling kecil). Cocok digunakan untuk tidur sendiri.
+                                ; IP2                ; INTHEBOX Plus 100x200                                          ; Dikenal dengan ukuran kasur no 4 (ukuran kasur paling kecil). Cocok digunakan untuk tidur sendiri.
+                                ; IP3                ; INTHEBOX Plus 120x200                                          ; Dikenal dengan ukuran kasur no 4 (ukuran kasur paling kecil). Cocok digunakan untuk tidur sendiri.
+                                ; IP4                ; INTHEBOX Plus 140x200                                          ; Dikenal dengan ukuran kasur no 4 (ukuran kasur paling kecil). Cocok digunakan untuk tidur sendiri.
+                                ; IP5                ; INTHEBOX Plus 160x200                                          ; Dikenal dengan ukuran kasur no 4 (ukuran kasur paling kecil). Cocok digunakan untuk tidur sendiri.
+                                ; IP6                ; INTHEBOX Plus 180x200                                          ; Dikenal dengan ukuran kasur no 4 (ukuran kasur paling kecil). Cocok digunakan untuk tidur sendiri.
+                                ; IP7                ; INTHEBOX Plus 200x200                                          ; Dikenal dengan ukuran kasur no 4 (ukuran kasur paling kecil). Cocok digunakan untuk tidur sendiri.
 
-                                ; OH1                ; INTHEBOX Organix Hybrid 90x200
-                                ; OH2                ; INTHEBOX Organix Hybrid 100x200
-                                ; OH3                ; INTHEBOX Organix Hybrid 120x200
-                                ; OH4                ; INTHEBOX Organix Hybrid 140x200
-                                ; OH5                ; INTHEBOX Organix Hybrid 160x200
-                                ; OH6                ; INTHEBOX Organix Hybrid 180x200
-                                ; OH7                ; INTHEBOX Organix Hybrid 200x200
+                                ; OH1                ; INTHEBOX Organix Hybrid 90x200                                 ; INTHEBOX Organix Hybrid merupakan kasur busa terbaru dari INTHEBOX yang didesain dengan bahan natural serta lapisan latex dan memory foam yang dapat mengikuti lekuk tubuh sehingga dapat menopang tubuh dengan maksimal.
+                                ; OH2                ; INTHEBOX Organix Hybrid 100x200                                ; INTHEBOX Organix Hybrid merupakan kasur busa terbaru dari INTHEBOX yang didesain dengan bahan natural serta lapisan latex dan memory foam yang dapat mengikuti lekuk tubuh sehingga dapat menopang tubuh dengan maksimal.
+                                ; OH3                ; INTHEBOX Organix Hybrid 120x200                                ; INTHEBOX Organix Hybrid merupakan kasur busa terbaru dari INTHEBOX yang didesain dengan bahan natural serta lapisan latex dan memory foam yang dapat mengikuti lekuk tubuh sehingga dapat menopang tubuh dengan maksimal.
+                                ; OH4                ; INTHEBOX Organix Hybrid 140x200                                ; INTHEBOX Organix Hybrid merupakan kasur busa terbaru dari INTHEBOX yang didesain dengan bahan natural serta lapisan latex dan memory foam yang dapat mengikuti lekuk tubuh sehingga dapat menopang tubuh dengan maksimal.
+                                ; OH5                ; INTHEBOX Organix Hybrid 160x200                                ; INTHEBOX Organix Hybrid merupakan kasur busa terbaru dari INTHEBOX yang didesain dengan bahan natural serta lapisan latex dan memory foam yang dapat mengikuti lekuk tubuh sehingga dapat menopang tubuh dengan maksimal.
+                                ; OH6                ; INTHEBOX Organix Hybrid 180x200                                ; INTHEBOX Organix Hybrid merupakan kasur busa terbaru dari INTHEBOX yang didesain dengan bahan natural serta lapisan latex dan memory foam yang dapat mengikuti lekuk tubuh sehingga dapat menopang tubuh dengan maksimal.
+                                ; OH7                ; INTHEBOX Organix Hybrid 200x200                                ; INTHEBOX Organix Hybrid merupakan kasur busa terbaru dari INTHEBOX yang didesain dengan bahan natural serta lapisan latex dan memory foam yang dapat mengikuti lekuk tubuh sehingga dapat menopang tubuh dengan maksimal.
 
-                                ; OL1                ; INTHEBOX Organix Lite 90x200
-                                ; OL2                ; INTHEBOX Organix Lite 100x200
-                                ; OL3                ; INTHEBOX Organix Lite 120x200
-                                ; OL4                ; INTHEBOX Organix Lite 140x200
-                                ; OL5                ; INTHEBOX Organix Lite 160x200
-                                ; OL6                ; INTHEBOX Organix Lite 180x200
-                                ; OL7                ; INTHEBOX Organix Lite 200x200
+                                ; OL1                ; INTHEBOX Organix Lite 90x200                                   ; INTHEBOX Organix Lite merupakan kasur spring bed dari INTHEBOX terbaru dengan bahan natural serta lapisan latex. Setiap lapisan kasur ini dibuat menggunakan bahan premium demi menghadirkan pengalaman tidur yang nyaman.
+                                ; OL2                ; INTHEBOX Organix Lite 100x200                                  ; INTHEBOX Organix Lite merupakan kasur spring bed dari INTHEBOX terbaru dengan bahan natural serta lapisan latex. Setiap lapisan kasur ini dibuat menggunakan bahan premium demi menghadirkan pengalaman tidur yang nyaman.
+                                ; OL3                ; INTHEBOX Organix Lite 120x200                                  ; INTHEBOX Organix Lite merupakan kasur spring bed dari INTHEBOX terbaru dengan bahan natural serta lapisan latex. Setiap lapisan kasur ini dibuat menggunakan bahan premium demi menghadirkan pengalaman tidur yang nyaman.
+                                ; OL4                ; INTHEBOX Organix Lite 140x200                                  ; INTHEBOX Organix Lite merupakan kasur spring bed dari INTHEBOX terbaru dengan bahan natural serta lapisan latex. Setiap lapisan kasur ini dibuat menggunakan bahan premium demi menghadirkan pengalaman tidur yang nyaman.
+                                ; OL5                ; INTHEBOX Organix Lite 160x200                                  ; INTHEBOX Organix Lite merupakan kasur spring bed dari INTHEBOX terbaru dengan bahan natural serta lapisan latex. Setiap lapisan kasur ini dibuat menggunakan bahan premium demi menghadirkan pengalaman tidur yang nyaman.
+                                ; OL6                ; INTHEBOX Organix Lite 180x200                                  ; INTHEBOX Organix Lite merupakan kasur spring bed dari INTHEBOX terbaru dengan bahan natural serta lapisan latex. Setiap lapisan kasur ini dibuat menggunakan bahan premium demi menghadirkan pengalaman tidur yang nyaman.
+                                ; OL7                ; INTHEBOX Organix Lite 200x200                                  ; INTHEBOX Organix Lite merupakan kasur spring bed dari INTHEBOX terbaru dengan bahan natural serta lapisan latex. Setiap lapisan kasur ini dibuat menggunakan bahan premium demi menghadirkan pengalaman tidur yang nyaman.
 
-                                ; OP1                ; INTHEBOX Organix Plush 90x200
-                                ; OP2                ; INTHEBOX Organix Plush 100x200
-                                ; OP3                ; INTHEBOX Organix Plush 120x200
-                                ; OP4                ; INTHEBOX Organix Plush 140x200
-                                ; OP5                ; INTHEBOX Organix Plush 160x200
-                                ; OP6                ; INTHEBOX Organix Plush 180x200
-                                ; OP7                ; INTHEBOX Organix Plush 200x200
+                                ; OP1                ; INTHEBOX Organix Plush 90x200                                  ; INTHEBOX Organix Plush merupakan tipe tertinggi dari seri Organix yang hadir dengan bahan-bahan natural seperti lapisan latex dan memiliki lapisan paling lengkap yang memberikan dukungan optimal demi menghadirkan pengalaman tidur senyaman mungkin.
+                                ; OP2                ; INTHEBOX Organix Plush 100x200                                 ; INTHEBOX Organix Plush merupakan tipe tertinggi dari seri Organix yang hadir dengan bahan-bahan natural seperti lapisan latex dan memiliki lapisan paling lengkap yang memberikan dukungan optimal demi menghadirkan pengalaman tidur senyaman mungkin.
+                                ; OP3                ; INTHEBOX Organix Plush 120x200                                 ; INTHEBOX Organix Plush merupakan tipe tertinggi dari seri Organix yang hadir dengan bahan-bahan natural seperti lapisan latex dan memiliki lapisan paling lengkap yang memberikan dukungan optimal demi menghadirkan pengalaman tidur senyaman mungkin.
+                                ; OP4                ; INTHEBOX Organix Plush 140x200                                 ; INTHEBOX Organix Plush merupakan tipe tertinggi dari seri Organix yang hadir dengan bahan-bahan natural seperti lapisan latex dan memiliki lapisan paling lengkap yang memberikan dukungan optimal demi menghadirkan pengalaman tidur senyaman mungkin.
+                                ; OP5                ; INTHEBOX Organix Plush 160x200                                 ; INTHEBOX Organix Plush merupakan tipe tertinggi dari seri Organix yang hadir dengan bahan-bahan natural seperti lapisan latex dan memiliki lapisan paling lengkap yang memberikan dukungan optimal demi menghadirkan pengalaman tidur senyaman mungkin.
+                                ; OP6                ; INTHEBOX Organix Plush 180x200                                 ; INTHEBOX Organix Plush merupakan tipe tertinggi dari seri Organix yang hadir dengan bahan-bahan natural seperti lapisan latex dan memiliki lapisan paling lengkap yang memberikan dukungan optimal demi menghadirkan pengalaman tidur senyaman mungkin.
+                                ; OP7                ; INTHEBOX Organix Plush 200x200                                 ; INTHEBOX Organix Plush merupakan tipe tertinggi dari seri Organix yang hadir dengan bahan-bahan natural seperti lapisan latex dan memiliki lapisan paling lengkap yang memberikan dukungan optimal demi menghadirkan pengalaman tidur senyaman mungkin.
 
-                                ; S1                 ; INTHEBOX SOFA 3 Seater
-                                ; S2                 ; INTHEBOX SOFA 3 Seater Black
-                                ; SB1                ; Super Single
-                                ; SB2                ; sofa bed 100
-                                ; KL1                ; Kasur Busa Lipat Travel Mattress
-                                ; G1                 ; Guling INTHEBOX
-                                ; B1                 ; Bantal INTHEBOX
+                                ; S1                 ; INTHEBOX SOFA 3 Seater                                         ; Sofa 3 Seater yang minimalis, dengan rangka besi dan dudukan pocket spring yang memberikan kenyamanan lebih.
+                                ; S2                 ; INTHEBOX SOFA 3 Seater Black                                   ; Sofa 3 Seater yang minimalis, dengan rangka besi dan dudukan pocket spring yang memberikan kenyamanan lebih.
+                                ; SB1                ; Super Single                                                   ; Cocok digunakan istirahat dan bersantai di rumah. Dilengkapi material premium yang empuk dan nyaman dengan desain elegan dari Raffi Ahmad.
+                                ; SB2                ; sofa bed 100                                                   ; Cocok digunakan istirahat dan bersantai di rumah. Dilengkapi material premium yang empuk dan nyaman dengan desain elegan dari Raffi Ahmad.
+                                ; KL1                ; Kasur Busa Lipat Travel Mattress                               ; Kasur lipat yang nyaman, sangat praktis, simple, dan mudah dibawa bepergian, dengan kemasan dalam tas yang memudahkan penyimpanan.
+                                ; G1                 ; Guling INTHEBOX                                                ; Guling premium dengan komposisi kapas organik, virgin fiber, dan hollow fiber. Ukuran guling pas untuk memberikan kenyamanan saat memeluknya.
+                                ; B1                 ; Bantal INTHEBOX                                                ; Bantal premium dengan komposisi kapas organik, virgin fiber, dan hollow fiber. Ukuran bantal pas untuk menopang leher dengan baik dan nyaman.

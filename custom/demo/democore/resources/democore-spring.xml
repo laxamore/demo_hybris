@@ -585,4 +585,10 @@
           parent="abstractPropertyFieldValueProvider">
         <property name="fieldNameProvider" ref="solrFieldNameProvider"/>
     </bean>
+
+    <!--	DemoVariantProduct-->
+    <bean id="demoVariantProductDao" class="com.demo.core.product.dao.impl.DemoVariantProductDaoImpl"/>
+    <alias name="demoVariantProductService" alias="demoVariantProductService"/>
+    <bean id="demoVariantProductService" class="com.demo.core.product.service.impl.DemoVariantProductServiceImpl"/>
+    
 </beans>

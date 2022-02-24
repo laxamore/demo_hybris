@@ -59,13 +59,9 @@
 			</div>
 		</div>
 		<div class="action">
-
 			<form:form  data-id="add_to_cart_storepickup_form" data-class="add_to_cart_storepickup_form" action="${addToCartToPickupInStoreUrl}" method="post">
 			<input type="hidden"  class="js-store-id" >
 			<input type="hidden" class="js-store-productcode" name="productCodePost" value=""/>
-
-
-
 
 			<div class="qty-selector js-qty-selector"> 
 				<div class="input-group">
