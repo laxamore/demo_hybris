@@ -39,12 +39,18 @@
             <h2 class="header-unboxing">UNBOXING INTHEBOX</h2>
         </div>
         <div class="container-unboxing">
-            <cms:pageSlot position="UnboxingInTheBox" var="feature" element="div" class="row no-margin flex">
+            <cms:pageSlot position="UnboxingInTheBox" var="feature" element="div" class="flex" >
                 <div class="unboxing">
-                    <cms:component component="${feature}" element="div" class="no-space yComponentWrapper"/>
+                    <cms:component component="${feature}" />
                 </div>
             </cms:pageSlot>
         </div>
+    </section>
+
+    <section class="section-testimoni">
+        <cms:pageSlot position="Testimony" var="feature" element="div">
+            <cms:component component="${feature}" element="div" />
+        </cms:pageSlot>
     </section>
 
     <cms:pageSlot position="Section4" var="feature" element="div" class="row no-margin">

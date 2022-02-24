@@ -5,7 +5,7 @@ import com.demo.core.model.TestimonyModel;
 import java.util.List;
 
 public interface DemoTestimonyDao {
-
-    TestimonyModel getTestimonyById(String name);
-    List<TestimonyModel> getTestimony();
+    List<TestimonyModel> getTestimonyForHomePage();
+    List<TestimonyModel> getAllTestimony();
+    List<List<Float>> getRatingAndReviewsTestimony();
 }
