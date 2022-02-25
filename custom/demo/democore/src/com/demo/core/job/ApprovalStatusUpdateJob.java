@@ -1,6 +1,6 @@
 package com.demo.core.job;
 
-import com.demo.core.product.service.DemoProductService;
+import com.demo.core.product.service.DemoVariantProductService;
 import de.hybris.platform.catalog.enums.ArticleApprovalStatus;
 import de.hybris.platform.commerceservices.setup.SetupSyncJobService;
 import de.hybris.platform.core.model.product.ProductModel;
@@ -20,7 +20,7 @@ import java.util.List;
 public class ApprovalStatusUpdateJob extends AbstractJobPerformable<CronJobModel> {
 
     @Resource
-    DemoProductService demoProductService;
+    DemoVariantProductService demoVariantProductService;
 
     @Resource
     ModelService modelService;
@@ -34,9 +34,9 @@ public class ApprovalStatusUpdateJob extends AbstractJobPerformable<CronJobModel
     @Override
     public PerformResult perform(CronJobModel cronJobModel) {
 
-        List<ProductModel> product = demoProductService.getProductModel();
+        List<ProductModel> product = demoVariantProductService.getProductModel();
 
-        for (ProductModel productModel: product) {
+        for (ProductModel productModel : product) {
             if (productModel.getApprovalStatus() != ArticleApprovalStatus.APPROVED) {
                 productModel.setApprovalStatus(ArticleApprovalStatus.APPROVED);
                 modelService.save(productModel);

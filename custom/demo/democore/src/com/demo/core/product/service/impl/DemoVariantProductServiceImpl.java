@@ -4,7 +4,7 @@ import com.demo.core.model.DemoVariantProductModel;
 import com.demo.core.product.dao.DemoVariantProductDao;
 import com.demo.core.product.service.DemoVariantProductService;
 import com.demo.facades.product.data.DemoVariantProductData;
-import com.demo.facades.product.data.PriceData;
+import de.hybris.platform.core.model.product.ProductModel;
 
 
 import javax.annotation.Resource;
@@ -76,6 +76,17 @@ public class DemoVariantProductServiceImpl implements DemoVariantProductService 
                 productData.add(tempProductData);
             }
             return productData;
+        } else {
+            return null;
+        }
+    }
+
+    @Override
+    public List<ProductModel> getProductModel() {
+        List<ProductModel> productModel = demoVariantProductDao.getProduct();
+
+        if (productModel != null) {
+            return productModel;
         } else {
             return null;
         }

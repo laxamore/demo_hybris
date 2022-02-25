@@ -38,6 +38,11 @@
                             </ycommerce:testId>
                         </div><br>
                         <div>
+                            <ycommerce:testId code="productDetails_productNamePrice_label_${product.type}">
+                                ${ycommerce:sanitizeHTML(product.type)}
+                            </ycommerce:testId>
+                        </div><br>
+                        <div>
 							<product:productPricePanel product="${product}" />
 							Kasur
                             <ycommerce:testId code="searchPage_productName_link_${curDemoVariantProduct.type}">
