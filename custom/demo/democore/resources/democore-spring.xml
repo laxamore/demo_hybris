@@ -590,5 +590,9 @@
     <bean id="demoVariantProductDao" class="com.demo.core.product.dao.impl.DemoVariantProductDaoImpl"/>
     <alias name="demoVariantProductService" alias="demoVariantProductService"/>
     <bean id="demoVariantProductService" class="com.demo.core.product.service.impl.DemoVariantProductServiceImpl"/>
-    
+
+    <bean id="demoCustomerAccountService" class="com.demo.core.customer.impl.DemoCustomerAccountService"
+          parent="defaultCustomerAccountService"/>
+
+    <bean id="approvalStatusUpdateJob" class="com.demo.core.job.ApprovalStatusUpdateJob" />
 </beans>
