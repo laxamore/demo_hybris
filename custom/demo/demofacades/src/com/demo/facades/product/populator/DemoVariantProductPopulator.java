@@ -33,5 +33,8 @@ public class DemoVariantProductPopulator implements Populator<DemoVariantProduct
         if (demoVariantProductModel.getDescription() != null) {
             demoVariantProductData.setDescription(demoVariantProductModel.getDescription());
         }
+        if (demoVariantProductModel.getPicture() != null) {
+            demoVariantProductData.setPicture(demoVariantProductModel.getPicture());
+        }
     }
 }

@@ -5,10 +5,10 @@ import com.demo.core.product.dao.DemoVariantProductDao;
 import com.demo.core.product.service.DemoVariantProductService;
 import com.demo.facades.product.data.DemoVariantProductData;
 import de.hybris.platform.core.model.product.ProductModel;
+import de.hybris.platform.servicelayer.dto.converter.Converter;
 
 
 import javax.annotation.Resource;
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,21 +17,17 @@ public class DemoVariantProductServiceImpl implements DemoVariantProductService 
     @Resource(name = "demoVariantProductDao")
     private DemoVariantProductDao demoVariantProductDao;
 
+    @Resource(name = "demoVariantProductConverter")
+    private Converter<DemoVariantProductModel, DemoVariantProductData> demoVariantProductPopulator;
+
     @Override
     public DemoVariantProductData getDemoVariantProductById(String name) {
-
         DemoVariantProductModel productModel = demoVariantProductDao.getDemoVariantProductById(name);
-        DemoVariantProductData productData = new DemoVariantProductData();
 
-        if (null != productData) {
-            productData.setId(productModel.getCode());
-            productData.setName(productModel.getName());
-            productData.setSize((productModel.getSize()));
-            productData.setDesc(productModel.getDesc());
-            productData.setType(productModel.getType());
-            productData.setDescription(productModel.getDescription());
-            productData.setPicture(productModel.getPicture());
-            productData.setPrice(BigDecimal.valueOf(productModel.getOwnEurope1Prices().iterator().next().getPrice()).toString());
+        if (null != productModel) {
+            DemoVariantProductData productData = new DemoVariantProductData();
+            productData = demoVariantProductPopulator.convert(productModel, productData);
+
             return productData;
         } else {
             return null;
@@ -41,17 +37,11 @@ public class DemoVariantProductServiceImpl implements DemoVariantProductService 
     @Override
     public List<DemoVariantProductData> getDemoVariantProduct() {
         DemoVariantProductModel productModel = (DemoVariantProductModel) demoVariantProductDao.getDemoVariantProduct();
-        DemoVariantProductData productData = new DemoVariantProductData();
 
         if (null != productModel) {
-            productData.setId(productModel.getCode());
-            productData.setName(productModel.getName());
-            productData.setSize((productModel.getSize()));
-            productData.setDesc(productModel.getDesc());
-            productData.setType(productModel.getType());
-            productData.setDescription(productModel.getDescription());
-            productData.setPicture(productModel.getPicture());
-            productData.setPrice(BigDecimal.valueOf(productModel.getOwnEurope1Prices().iterator().next().getPrice()).toString());
+            DemoVariantProductData productData = new DemoVariantProductData();
+            productData = demoVariantProductPopulator.convert(productModel, productData);
+
             return (List<DemoVariantProductData>) productData;
         } else {
             return null;
@@ -62,17 +52,12 @@ public class DemoVariantProductServiceImpl implements DemoVariantProductService 
         List<DemoVariantProductModel> productModel = demoVariantProductDao.getDemoVariantProductByType(type);
         List<DemoVariantProductData> productData = new ArrayList<DemoVariantProductData>();
 
+
         if (null != productModel) {
             for (DemoVariantProductModel e : productModel) {
                 DemoVariantProductData tempProductData = new DemoVariantProductData();
-                tempProductData.setId(e.getCode());
-                tempProductData.setSize(e.getSize());
-                tempProductData.setDesc(e.getDesc());
-                tempProductData.setType(e.getType());
-                tempProductData.setName(e.getName());
-                tempProductData.setDescription(e.getDescription());
-                tempProductData.setPicture(e.getPicture());
-                tempProductData.setPrice(BigDecimal.valueOf(e.getOwnEurope1Prices().iterator().next().getPrice()).toString());
+                tempProductData = demoVariantProductPopulator.convert(e, tempProductData);
+
                 productData.add(tempProductData);
             }
             return productData;
