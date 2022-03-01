@@ -208,14 +208,12 @@
 
     <bean id="genderData" class="com.demo.facades.product.data.GenderData" scope="prototype"/>
 
-    <!--	DemoProduct-->
-    <alias alias="demoProductFacade" name="demoProductFacade"/>
-    <bean id="demoProductFacade" class="com.demo.facades.product.facade.impl.DemoProductFacadeImpl"/>
+    <!--	Demo Variant Product-->
     <alias alias="demoVariantProductFacade" name="demoVariantProductFacade"/>
     <bean id="demoVariantProductFacade" class="com.demo.facades.product.facade.impl.DemoVariantProductFacadeImpl"/>
     <alias alias="demoTestimonyFacade" name="demoTestimonyFacade"/>
     <bean id="demoTestimonyFacade" class="com.demo.facades.testimony.facade.impl.DemoTestimonyFacadeImpl"/>
-    <!--	DemoPopulator-->
+    <!--	Demo Variant List Populator-->
     <alias name="defaultDemoSearchResultProductPopulator" alias="demoSearchResultProductPopulator"/>
     <bean id="defaultDemoSearchResultProductPopulator"
           class="com.demo.facades.populators.DemoSearchResultProductPopulator"
@@ -234,15 +232,17 @@
         <property name="list" ref="commerceSearchResultProductConverter"/>
         <property name="add" ref="demoSearchResultProductPopulator"/>
     </bean>
-    <!--	DemoVariantPopulator-->
-    <alias name="defaultDemoSearchResultVariantProductPopulator" alias="demoSearchResultVariantProductPopulator"/>
-    <bean id="defaultDemoSearchResultVariantProductPopulator"
-          class="com.demo.facades.populators.DemoSearchResultVariantProductPopulator"
-          parent="defaultCommerceSearchResultProductPopulator">
-    </bean>
 
-    <bean parent="modifyPopulatorList">
-        <property name="list" ref="commerceSearchResultProductConverter"/>
-        <property name="add" ref="demoSearchResultVariantProductPopulator"/>
+    <!-- Demo Variant Details Populator -->
+    <bean id="demoVariantProductConverter" parent="abstractPopulatingConverter">
+        <property name="targetClass" value="com.demo.facades.product.data.DemoVariantProductData"/>
+        <property name="populators">
+            <list>
+                <ref bean="demoVariantProductPopulator"/>
+            </list>
+        </property>
     </bean>
+    <bean id="demoVariantProductPopulator"
+          class="com.demo.facades.product.populator.DemoVariantProductPopulator"/>
+
 </beans>

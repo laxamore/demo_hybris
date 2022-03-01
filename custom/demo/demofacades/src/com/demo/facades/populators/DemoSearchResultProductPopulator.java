@@ -7,10 +7,8 @@ import de.hybris.platform.commerceservices.search.resultdata.SearchResultValueDa
 public class DemoSearchResultProductPopulator extends SearchResultProductPopulator {
 
     @Override
-    public void populate(final SearchResultValueData source, final ProductData target){
+    public void populate(final SearchResultValueData source, final ProductData target) {
 
-//        target.setType(this.<String>getValue(source, "type"));
-//        target.setPrice(this.<String>getValue(source, "price"));
         target.setSize(this.<String>getValue(source, "size"));
         target.setDesc(this.<String>getValue(source, "desc"));
     }

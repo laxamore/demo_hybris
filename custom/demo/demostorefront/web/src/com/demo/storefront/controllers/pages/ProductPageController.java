@@ -125,6 +125,7 @@ public class ProductPageController extends AbstractPageController {
 
         final ProductData productData = productFacade.getProductForCodeAndOptions(productCode, extraOptions);
         final List<DemoVariantProductData> demoVariantProductData = demoVariantProductFacade.getDemoVariantProductByType(productData.getBaseProduct());
+
         DemoVariantProductData curDemoVariantProduct = new DemoVariantProductData();
         List<DemoVariantProductData> crossDemoVariantProduct = new ArrayList<DemoVariantProductData>();
 

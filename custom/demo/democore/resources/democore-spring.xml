@@ -562,11 +562,6 @@
         <property name="ticketBusinessService" ref="ticketBusinessService"/>
     </bean>
 
-    <!--	DemoProduct-->
-    <alias name="demoProductService" alias="demoProductService"/>
-    <bean id="demoProductService" class="com.demo.core.product.service.impl.DemoProductServiceImpl"/>
-    <alias name="demoProductDao" alias="demoProductDao"/>
-    <bean id="demoProductDao" class="com.demo.core.product.dao.impl.DemoProductDaoImpl"/>
     <!--	DemoTestimony-->
     <alias name="demoTestimonyService" alias="demoTestimonyService"/>
     <bean id="demoTestimonyService" class="com.demo.core.testimony.service.impl.DemoTestimonyServiceImpl"/>
@@ -591,8 +586,8 @@
     <alias name="demoVariantProductService" alias="demoVariantProductService"/>
     <bean id="demoVariantProductService" class="com.demo.core.product.service.impl.DemoVariantProductServiceImpl"/>
 
-    <bean id="demoCustomerAccountService" class="com.demo.core.customer.impl.DemoCustomerAccountService"
-          parent="defaultCustomerAccountService"/>
+    <!--    <bean id="demoCustomerAccountService" class="com.demo.core.customer.impl.DemoCustomerAccountService"-->
+    <!--          parent="defaultCustomerAccountService"/>-->
 
-    <bean id="approvalStatusUpdateJob" class="com.demo.core.job.ApprovalStatusUpdateJob" />
+    <bean id="approvalStatusUpdateJob" class="com.demo.core.job.ApprovalStatusUpdateJob"/>
 </beans>
